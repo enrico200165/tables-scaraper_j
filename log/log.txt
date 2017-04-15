@@ -1,0 +1,1029 @@
+19:43:49,140 ERROR RestoreKissako:25 - non existing file: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_data.gz
+19:49:11,656 ERROR RestoreKissako:25 - non existing file: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it121001_data.gz
+20:03:58,718 INFO  JavaRunCommand:9 - ex: cp v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_data.gz v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+20:04:14,640 INFO  JavaRunCommand:9 - ex: cp v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_data.gz v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+20:06:41,375 INFO  JavaRunCommand:9 - ex: cp v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_data.gz v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+20:06:41,390 INFO  JavaRunCommand:24 - Here is the standard output of the command:
+
+20:06:41,453 INFO  JavaRunCommand:30 - stderr: 
+20:07:02,156 INFO  JavaRunCommand:9 - ex: cp v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_data.gz v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+20:07:02,171 INFO  JavaRunCommand:24 - stdout: 
+20:07:02,218 INFO  JavaRunCommand:30 - stderr: 
+20:07:15,281 INFO  JavaRunCommand:9 - ex: cp v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_data.gz v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+20:07:15,312 INFO  JavaRunCommand:24 - stdout: 
+20:07:15,406 INFO  JavaRunCommand:30 - stderr: 
+20:07:40,046 INFO  JavaRunCommand:9 - ex: cp v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_data.gz v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+20:07:40,125 INFO  JavaRunCommand:24 - stdout: 
+20:07:40,218 INFO  JavaRunCommand:30 - stderr: 
+20:08:34,843 INFO  JavaRunCommand:9 - ex: cp v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_data.gz v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+20:08:34,859 INFO  JavaRunCommand:24 - stdout: 
+20:08:34,921 INFO  JavaRunCommand:30 - stderr: 
+20:08:34,921 INFO  JavaRunCommand:9 - ex: unzip v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+20:08:34,937 INFO  JavaRunCommand:24 - stdout: 
+20:08:34,984 INFO  JavaRunCommand:26 - Archive:  v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+20:08:35,093 INFO  JavaRunCommand:30 - stderr: 
+20:08:35,093 INFO  JavaRunCommand:32 -   End-of-central-directory signature not found.  Either this file is not
+20:08:35,093 INFO  JavaRunCommand:32 -   a zipfile, or it constitutes one disk of a multi-part archive.  In the
+20:08:35,093 INFO  JavaRunCommand:32 -   latter case the central directory and zipfile comment will be found on
+20:08:35,093 INFO  JavaRunCommand:32 -   the last disk(s) of this archive.
+20:08:35,093 INFO  JavaRunCommand:32 - unzip:  cannot find zipfile directory in v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz,
+20:08:35,093 INFO  JavaRunCommand:32 -         and cannot find v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz.zip, period.
+20:10:11,687 INFO  JavaRunCommand:9 - ex: cp v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_data.gz v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+20:10:11,703 INFO  JavaRunCommand:24 - stdout: 
+20:10:11,750 INFO  JavaRunCommand:30 - stderr: 
+20:10:11,750 INFO  JavaRunCommand:9 - ex: gzip -d v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+20:10:11,765 INFO  JavaRunCommand:24 - stdout: 
+20:10:14,218 INFO  JavaRunCommand:30 - stderr: 
+20:14:02,828 INFO  JavaRunCommand:9 - ex: cp v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_data.gz v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+20:14:02,843 INFO  JavaRunCommand:24 - stdout: 
+20:14:02,906 INFO  JavaRunCommand:30 - stderr: 
+20:14:02,906 INFO  JavaRunCommand:9 - ex: gzip -d v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+20:14:02,906 INFO  JavaRunCommand:24 - stdout: 
+20:14:05,546 INFO  JavaRunCommand:30 - stderr: 
+20:14:12,281 INFO  JavaRunCommand:9 - ex: mysql --verbose --user=root --password=Ruthdan0 < v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw
+20:14:21,265 INFO  JavaRunCommand:24 - stdout: 
+20:14:21,375 INFO  JavaRunCommand:26 - mysql  Ver 14.14 Distrib 5.5.27, for Win32 (x86)
+20:14:21,375 INFO  JavaRunCommand:26 - Copyright (c) 2000, 2011, Oracle and/or its affiliates. All rights reserved.
+20:14:21,375 INFO  JavaRunCommand:26 - 
+20:14:21,375 INFO  JavaRunCommand:26 - Oracle is a registered trademark of Oracle Corporation and/or its
+20:14:21,375 INFO  JavaRunCommand:26 - affiliates. Other names may be trademarks of their respective
+20:14:21,390 INFO  JavaRunCommand:26 - owners.
+20:14:21,390 INFO  JavaRunCommand:26 - 
+20:14:21,390 INFO  JavaRunCommand:26 - Usage: mysql [OPTIONS] [database]
+20:14:21,390 INFO  JavaRunCommand:26 -   -?, --help          Display this help and exit.
+20:14:21,390 INFO  JavaRunCommand:26 -   -I, --help          Synonym for -?
+20:14:21,390 INFO  JavaRunCommand:26 -   --auto-rehash       Enable automatic rehashing. One doesn't need to use
+20:14:21,390 INFO  JavaRunCommand:26 -                       'rehash' to get table and field completion, but startup
+20:14:21,390 INFO  JavaRunCommand:26 -                       and reconnecting may take a longer time. Disable with
+20:14:21,390 INFO  JavaRunCommand:26 -                       --disable-auto-rehash.
+20:14:21,390 INFO  JavaRunCommand:26 -                       (Defaults to on; use --skip-auto-rehash to disable.)
+20:14:21,390 INFO  JavaRunCommand:26 -   -A, --no-auto-rehash 
+20:14:21,390 INFO  JavaRunCommand:26 -                       No automatic rehashing. One has to use 'rehash' to get
+20:14:21,390 INFO  JavaRunCommand:26 -                       table and field completion. This gives a quicker start of
+20:14:21,390 INFO  JavaRunCommand:26 -                       mysql and disables rehashing on reconnect.
+20:14:21,390 INFO  JavaRunCommand:26 -   --auto-vertical-output 
+20:14:21,390 INFO  JavaRunCommand:26 -                       Automatically switch to vertical output mode if the
+20:14:21,390 INFO  JavaRunCommand:26 -                       result is wider than the terminal width.
+20:14:21,390 INFO  JavaRunCommand:26 -   -B, --batch         Don't use history file. Disable interactive behavior.
+20:14:21,390 INFO  JavaRunCommand:26 -                       (Enables --silent.)
+20:14:21,390 INFO  JavaRunCommand:26 -   --character-sets-dir=name 
+20:14:21,390 INFO  JavaRunCommand:26 -                       Directory for character set files.
+20:14:21,390 INFO  JavaRunCommand:26 -   --column-type-info  Display column type information.
+20:14:21,390 INFO  JavaRunCommand:26 -   -c, --comments      Preserve comments. Send comments to the server. The
+20:14:21,390 INFO  JavaRunCommand:26 -                       default is --skip-comments (discard comments), enable
+20:14:21,390 INFO  JavaRunCommand:26 -                       with --comments.
+20:14:21,390 INFO  JavaRunCommand:26 -   -C, --compress      Use compression in server/client protocol.
+20:14:21,390 INFO  JavaRunCommand:26 -   -#, --debug[=#]     This is a non-debug version. Catch this and exit.
+20:14:21,390 INFO  JavaRunCommand:26 -   --debug-check       Check memory and open file usage at exit.
+20:14:21,390 INFO  JavaRunCommand:26 -   -T, --debug-info    Print some debug info at exit.
+20:14:21,390 INFO  JavaRunCommand:26 -   -D, --database=name Database to use.
+20:14:21,390 INFO  JavaRunCommand:26 -   --default-character-set=name 
+20:14:21,390 INFO  JavaRunCommand:26 -                       Set the default character set.
+20:14:21,390 INFO  JavaRunCommand:26 -   --delimiter=name    Delimiter to be used.
+20:14:21,390 INFO  JavaRunCommand:26 -   --enable-cleartext-plugin 
+20:14:21,390 INFO  JavaRunCommand:26 -                       Enable/disable the clear text authentication plugin.
+20:14:21,390 INFO  JavaRunCommand:26 -   -e, --execute=name  Execute command and quit. (Disables --force and history
+20:14:21,390 INFO  JavaRunCommand:26 -                       file.)
+20:14:21,390 INFO  JavaRunCommand:26 -   -E, --vertical      Print the output of a query (rows) vertically.
+20:14:21,390 INFO  JavaRunCommand:26 -   -f, --force         Continue even if we get an SQL error.
+20:14:21,390 INFO  JavaRunCommand:26 -   -G, --named-commands 
+20:14:21,390 INFO  JavaRunCommand:26 -                       Enable named commands. Named commands mean this program's
+20:14:21,390 INFO  JavaRunCommand:26 -                       internal commands; see mysql> help . When enabled, the
+20:14:21,390 INFO  JavaRunCommand:26 -                       named commands can be used from any line of the query,
+20:14:21,390 INFO  JavaRunCommand:26 -                       otherwise only from the first line, before an enter.
+20:14:21,390 INFO  JavaRunCommand:26 -                       Disable with --disable-named-commands. This option is
+20:14:21,390 INFO  JavaRunCommand:26 -                       disabled by default.
+20:14:21,390 INFO  JavaRunCommand:26 -   -i, --ignore-spaces Ignore space after function names.
+20:14:21,390 INFO  JavaRunCommand:26 -   --init-command=name SQL Command to execute when connecting to MySQL server.
+20:14:21,390 INFO  JavaRunCommand:26 -                       Will automatically be re-executed when reconnecting.
+20:14:21,390 INFO  JavaRunCommand:26 -   --local-infile      Enable/disable LOAD DATA LOCAL INFILE.
+20:14:21,390 INFO  JavaRunCommand:26 -   -b, --no-beep       Turn off beep on error.
+20:14:21,390 INFO  JavaRunCommand:26 -   -h, --host=name     Connect to host.
+20:14:21,390 INFO  JavaRunCommand:26 -   -H, --html          Produce HTML output.
+20:14:21,390 INFO  JavaRunCommand:26 -   -X, --xml           Produce XML output.
+20:14:21,390 INFO  JavaRunCommand:26 -   --line-numbers      Write line numbers for errors.
+20:14:21,390 INFO  JavaRunCommand:26 -                       (Defaults to on; use --skip-line-numbers to disable.)
+20:14:21,390 INFO  JavaRunCommand:26 -   -L, --skip-line-numbers 
+20:14:21,390 INFO  JavaRunCommand:26 -                       Don't write line number for errors.
+20:14:21,390 INFO  JavaRunCommand:26 -   -n, --unbuffered    Flush buffer after each query.
+20:14:21,390 INFO  JavaRunCommand:26 -   --column-names      Write column names in results.
+20:14:21,390 INFO  JavaRunCommand:26 -                       (Defaults to on; use --skip-column-names to disable.)
+20:14:21,390 INFO  JavaRunCommand:26 -   -N, --skip-column-names 
+20:14:21,390 INFO  JavaRunCommand:26 -                       Don't write column names in results.
+20:14:21,390 INFO  JavaRunCommand:26 -   --sigint-ignore     Ignore SIGINT (CTRL-C).
+20:14:21,390 INFO  JavaRunCommand:26 -   -o, --one-database  Ignore statements except those that occur while the
+20:14:21,390 INFO  JavaRunCommand:26 -                       default database is the one named at the command line.
+20:14:21,390 INFO  JavaRunCommand:26 -   -p, --password[=name] 
+20:14:21,390 INFO  JavaRunCommand:26 -                       Password to use when connecting to server. If password is
+20:14:21,390 INFO  JavaRunCommand:26 -                       not given it's asked from the tty.
+20:14:21,390 INFO  JavaRunCommand:26 -   -W, --pipe          Use named pipes to connect to server.
+20:14:21,390 INFO  JavaRunCommand:26 -   -P, --port=#        Port number to use for connection or 0 for default to, in
+20:14:21,390 INFO  JavaRunCommand:26 -                       order of preference, my.cnf, $MYSQL_TCP_PORT,
+20:14:21,390 INFO  JavaRunCommand:26 -                       /etc/services, built-in default (3306).
+20:14:21,390 INFO  JavaRunCommand:26 -   --prompt=name       Set the mysql prompt to this value.
+20:14:21,390 INFO  JavaRunCommand:26 -   --protocol=name     The protocol to use for connection (tcp, socket, pipe,
+20:14:21,390 INFO  JavaRunCommand:26 -                       memory).
+20:14:21,390 INFO  JavaRunCommand:26 -   -q, --quick         Don't cache result, print it row by row. This may slow
+20:14:21,390 INFO  JavaRunCommand:26 -                       down the server if the output is suspended. Doesn't use
+20:14:21,390 INFO  JavaRunCommand:26 -                       history file.
+20:14:21,390 INFO  JavaRunCommand:26 -   -r, --raw           Write fields without conversion. Used with --batch.
+20:14:21,390 INFO  JavaRunCommand:26 -   --reconnect         Reconnect if the connection is lost. Disable with
+20:14:21,390 INFO  JavaRunCommand:26 -                       --disable-reconnect. This option is enabled by default.
+20:14:21,390 INFO  JavaRunCommand:26 -                       (Defaults to on; use --skip-reconnect to disable.)
+20:14:21,390 INFO  JavaRunCommand:26 -   -s, --silent        Be more silent. Print results with a tab as separator,
+20:14:21,390 INFO  JavaRunCommand:26 -                       each row on new line.
+20:14:21,390 INFO  JavaRunCommand:26 -   --shared-memory-base-name=name 
+20:14:21,390 INFO  JavaRunCommand:26 -                       Base name of shared memory.
+20:14:21,390 INFO  JavaRunCommand:26 -   -S, --socket=name   The socket file to use for connection.
+20:14:21,390 INFO  JavaRunCommand:26 -   --ssl               Enable SSL for connection (automatically enabled with
+20:14:21,390 INFO  JavaRunCommand:26 -                       other flags).
+20:14:21,390 INFO  JavaRunCommand:26 -   --ssl-ca=name       CA file in PEM format (check OpenSSL docs, implies
+20:14:21,390 INFO  JavaRunCommand:26 -                       --ssl).
+20:14:21,390 INFO  JavaRunCommand:26 -   --ssl-capath=name   CA directory (check OpenSSL docs, implies --ssl).
+20:14:21,390 INFO  JavaRunCommand:26 -   --ssl-cert=name     X509 cert in PEM format (implies --ssl).
+20:14:21,406 INFO  JavaRunCommand:26 -   --ssl-cipher=name   SSL cipher to use (implies --ssl).
+20:14:21,406 INFO  JavaRunCommand:26 -   --ssl-key=name      X509 key in PEM format (implies --ssl).
+20:14:21,406 INFO  JavaRunCommand:26 -   --ssl-verify-server-cert 
+20:14:21,406 INFO  JavaRunCommand:26 -                       Verify server's "Common Name" in its cert against
+20:14:21,406 INFO  JavaRunCommand:26 -                       hostname used when connecting. This option is disabled by
+20:14:21,406 INFO  JavaRunCommand:26 -                       default.
+20:14:21,406 INFO  JavaRunCommand:26 -   -t, --table         Output in table format.
+20:14:21,406 INFO  JavaRunCommand:26 -   --tee=name          Append everything into outfile. See interactive help (\h)
+20:14:21,406 INFO  JavaRunCommand:26 -                       also. Does not work in batch mode. Disable with
+20:14:21,406 INFO  JavaRunCommand:26 -                       --disable-tee. This option is disabled by default.
+20:14:21,406 INFO  JavaRunCommand:26 -   -u, --user=name     User for login if not current user.
+20:14:21,406 INFO  JavaRunCommand:26 -   -U, --safe-updates  Only allow UPDATE and DELETE that uses keys.
+20:14:21,406 INFO  JavaRunCommand:26 -   -U, --i-am-a-dummy  Synonym for option --safe-updates, -U.
+20:14:21,406 INFO  JavaRunCommand:26 -   -v, --verbose       Write more. (-v -v -v gives the table output format).
+20:14:21,406 INFO  JavaRunCommand:26 -   -V, --version       Output version information and exit.
+20:14:21,406 INFO  JavaRunCommand:26 -   -w, --wait          Wait and retry if connection is down.
+20:14:21,406 INFO  JavaRunCommand:26 -   --connect-timeout=# Number of seconds before connection timeout.
+20:14:21,406 INFO  JavaRunCommand:26 -   --max-allowed-packet=# 
+20:14:21,406 INFO  JavaRunCommand:26 -                       The maximum packet length to send to or receive from
+20:14:21,406 INFO  JavaRunCommand:26 -                       server.
+20:14:21,406 INFO  JavaRunCommand:26 -   --net-buffer-length=# 
+20:14:21,406 INFO  JavaRunCommand:26 -                       The buffer size for TCP/IP and socket communication.
+20:14:21,406 INFO  JavaRunCommand:26 -   --select-limit=#    Automatic limit for SELECT when using --safe-updates.
+20:14:21,406 INFO  JavaRunCommand:26 -   --max-join-size=#   Automatic limit for rows in a join when using
+20:14:21,406 INFO  JavaRunCommand:26 -                       --safe-updates.
+20:14:21,406 INFO  JavaRunCommand:26 -   --secure-auth       Refuse client connecting to server if it uses old
+20:14:21,406 INFO  JavaRunCommand:26 -                       (pre-4.1.1) protocol.
+20:14:21,406 INFO  JavaRunCommand:26 -   --server-arg=name   Send embedded server this as a parameter.
+20:14:21,406 INFO  JavaRunCommand:26 -   --show-warnings     Show warnings after every statement.
+20:14:21,406 INFO  JavaRunCommand:26 -   --plugin-dir=name   Directory for client-side plugins.
+20:14:21,406 INFO  JavaRunCommand:26 -   --default-auth=name Default authentication client-side plugin to use.
+20:14:21,406 INFO  JavaRunCommand:26 - 
+20:14:21,406 INFO  JavaRunCommand:26 - Default options are read from the following files in the given order:
+20:14:21,406 INFO  JavaRunCommand:26 - C:\WINDOWS\my.ini C:\WINDOWS\my.cnf C:\my.ini C:\my.cnf V:\xampp\mysql\my.ini V:\xampp\mysql\my.cnf 
+20:14:21,406 INFO  JavaRunCommand:26 - The following groups are read: mysql client
+20:14:21,406 INFO  JavaRunCommand:26 - The following options may be given as the first argument:
+20:14:21,406 INFO  JavaRunCommand:26 - --print-defaults        Print the program argument list and exit.
+20:14:21,406 INFO  JavaRunCommand:26 - --no-defaults           Don't read default options from any option file.
+20:14:21,406 INFO  JavaRunCommand:26 - --defaults-file=#       Only read default options from the given file #.
+20:14:21,406 INFO  JavaRunCommand:26 - --defaults-extra-file=# Read this file after the global files are read.
+20:14:21,406 INFO  JavaRunCommand:26 - 
+20:14:21,406 INFO  JavaRunCommand:26 - Variables (--variable-name=value)
+20:14:21,406 INFO  JavaRunCommand:26 - and boolean options {FALSE|TRUE}  Value (after reading options)
+20:14:21,406 INFO  JavaRunCommand:26 - --------------------------------- ----------------------------------------
+20:14:21,406 INFO  JavaRunCommand:26 - auto-rehash                       TRUE
+20:14:21,406 INFO  JavaRunCommand:26 - auto-vertical-output              FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - character-sets-dir                (No default value)
+20:14:21,406 INFO  JavaRunCommand:26 - column-type-info                  FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - comments                          FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - compress                          FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - debug-check                       FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - debug-info                        FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - database                          (No default value)
+20:14:21,406 INFO  JavaRunCommand:26 - default-character-set             auto
+20:14:21,406 INFO  JavaRunCommand:26 - delimiter                         ;
+20:14:21,406 INFO  JavaRunCommand:26 - enable-cleartext-plugin           FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - vertical                          FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - force                             FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - named-commands                    FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - ignore-spaces                     FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - init-command                      (No default value)
+20:14:21,406 INFO  JavaRunCommand:26 - local-infile                      FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - no-beep                           FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - host                              (No default value)
+20:14:21,406 INFO  JavaRunCommand:26 - html                              FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - xml                               FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - line-numbers                      TRUE
+20:14:21,406 INFO  JavaRunCommand:26 - unbuffered                        FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - column-names                      TRUE
+20:14:21,406 INFO  JavaRunCommand:26 - sigint-ignore                     FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - port                              0
+20:14:21,406 INFO  JavaRunCommand:26 - prompt                            mysql> 
+20:14:21,406 INFO  JavaRunCommand:26 - quick                             FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - raw                               FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - reconnect                         FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - shared-memory-base-name           (No default value)
+20:14:21,406 INFO  JavaRunCommand:26 - socket                            (No default value)
+20:14:21,406 INFO  JavaRunCommand:26 - ssl                               FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - ssl-ca                            (No default value)
+20:14:21,406 INFO  JavaRunCommand:26 - ssl-capath                        (No default value)
+20:14:21,406 INFO  JavaRunCommand:26 - ssl-cert                          (No default value)
+20:14:21,406 INFO  JavaRunCommand:26 - ssl-cipher                        (No default value)
+20:14:21,406 INFO  JavaRunCommand:26 - ssl-key                           (No default value)
+20:14:21,406 INFO  JavaRunCommand:26 - ssl-verify-server-cert            FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - table                             FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - user                              root
+20:14:21,406 INFO  JavaRunCommand:26 - safe-updates                      FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - i-am-a-dummy                      FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - connect-timeout                   0
+20:14:21,406 INFO  JavaRunCommand:26 - max-allowed-packet                16777216
+20:14:21,406 INFO  JavaRunCommand:26 - net-buffer-length                 16384
+20:14:21,406 INFO  JavaRunCommand:26 - select-limit                      1000
+20:14:21,406 INFO  JavaRunCommand:26 - max-join-size                     1000000
+20:14:21,406 INFO  JavaRunCommand:26 - secure-auth                       FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - show-warnings                     FALSE
+20:14:21,406 INFO  JavaRunCommand:26 - plugin-dir                        (No default value)
+20:14:21,406 INFO  JavaRunCommand:26 - default-auth                      (No default value)
+20:14:21,437 INFO  JavaRunCommand:30 - stderr: 
+20:14:21,437 ERROR RestoreKissako:36 - non existing file: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_data
+18:04:05,937 INFO  JavaRunCommand:9 - ex: cp v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_data.gz v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:04:06,015 INFO  JavaRunCommand:24 - stdout: 
+18:04:06,531 INFO  JavaRunCommand:30 - stderr: 
+18:04:06,531 INFO  JavaRunCommand:32 - cygwin warning:
+18:04:06,531 INFO  JavaRunCommand:32 -   MS-DOS style path detected: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:04:06,531 INFO  JavaRunCommand:32 -   Preferred POSIX equivalent is: /cygdrive/v/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:04:06,531 INFO  JavaRunCommand:32 -   CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+18:04:06,531 INFO  JavaRunCommand:32 -   Consult the user's guide for more details about POSIX paths:
+18:04:06,531 INFO  JavaRunCommand:32 -     http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+18:04:06,531 INFO  JavaRunCommand:9 - ex: gzip -d v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:04:06,578 INFO  JavaRunCommand:24 - stdout: 
+18:05:13,265 INFO  JavaRunCommand:9 - ex: cp v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_data.gz v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:05:13,343 INFO  JavaRunCommand:24 - stdout: 
+18:05:13,515 INFO  JavaRunCommand:30 - stderr: 
+18:05:13,515 INFO  JavaRunCommand:32 - cygwin warning:
+18:05:13,515 INFO  JavaRunCommand:32 -   MS-DOS style path detected: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:05:13,515 INFO  JavaRunCommand:32 -   Preferred POSIX equivalent is: /cygdrive/v/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:05:13,515 INFO  JavaRunCommand:32 -   CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+18:05:13,515 INFO  JavaRunCommand:32 -   Consult the user's guide for more details about POSIX paths:
+18:05:13,515 INFO  JavaRunCommand:32 -     http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+18:05:13,515 INFO  JavaRunCommand:9 - ex: gzip -d v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:05:13,546 INFO  JavaRunCommand:24 - stdout: 
+18:05:54,234 INFO  JavaRunCommand:9 - ex: cp v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_data.gz v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:06:02,812 INFO  JavaRunCommand:24 - stdout: 
+18:06:04,671 INFO  JavaRunCommand:30 - stderr: 
+18:06:05,796 INFO  JavaRunCommand:32 - cygwin warning:
+18:06:06,656 INFO  JavaRunCommand:32 -   MS-DOS style path detected: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:06:07,437 INFO  JavaRunCommand:32 -   Preferred POSIX equivalent is: /cygdrive/v/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:06:08,156 INFO  JavaRunCommand:32 -   CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+18:06:12,437 INFO  JavaRunCommand:32 -   Consult the user's guide for more details about POSIX paths:
+18:06:12,953 INFO  JavaRunCommand:32 -     http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+18:06:13,500 INFO  JavaRunCommand:9 - ex: gzip -d v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:06:13,500 INFO  JavaRunCommand:24 - stdout: 
+18:07:13,015 INFO  JavaRunCommand:9 - ex: cp v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_data.gz v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:07:13,093 INFO  JavaRunCommand:24 - stdout: 
+18:07:13,281 INFO  JavaRunCommand:30 - stderr: 
+18:07:13,281 INFO  JavaRunCommand:32 - cygwin warning:
+18:07:13,281 INFO  JavaRunCommand:32 -   MS-DOS style path detected: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:07:13,281 INFO  JavaRunCommand:32 -   Preferred POSIX equivalent is: /cygdrive/v/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:07:13,296 INFO  JavaRunCommand:32 -   CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+18:07:13,296 INFO  JavaRunCommand:32 -   Consult the user's guide for more details about POSIX paths:
+18:07:13,296 INFO  JavaRunCommand:32 -     http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+18:07:15,546 INFO  JavaRunCommand:9 - ex: gzip -d v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:07:15,578 INFO  JavaRunCommand:24 - stdout: 
+18:10:15,781 INFO  JavaRunCommand:9 - ex: cp v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_data.gz v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:10:15,796 INFO  JavaRunCommand:24 - stdout: 
+18:10:15,875 INFO  JavaRunCommand:30 - stderr: 
+18:10:15,875 INFO  JavaRunCommand:32 - cygwin warning:
+18:10:15,875 INFO  JavaRunCommand:32 -   MS-DOS style path detected: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:10:15,875 INFO  JavaRunCommand:32 -   Preferred POSIX equivalent is: /cygdrive/v/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:10:15,875 INFO  JavaRunCommand:32 -   CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+18:10:15,875 INFO  JavaRunCommand:32 -   Consult the user's guide for more details about POSIX paths:
+18:10:15,875 INFO  JavaRunCommand:32 -     http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+18:10:15,875 INFO  JavaRunCommand:9 - ex: gzip -d v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:10:15,890 INFO  JavaRunCommand:24 - stdout: 
+18:10:18,515 INFO  JavaRunCommand:30 - stderr: 
+18:10:18,515 INFO  JavaRunCommand:32 - cygwin warning:
+18:10:18,515 INFO  JavaRunCommand:32 -   MS-DOS style path detected: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:10:18,515 INFO  JavaRunCommand:32 -   Preferred POSIX equivalent is: /cygdrive/v/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:10:18,515 INFO  JavaRunCommand:32 -   CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+18:10:18,515 INFO  JavaRunCommand:32 -   Consult the user's guide for more details about POSIX paths:
+18:10:18,515 INFO  JavaRunCommand:32 -     http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+18:10:18,515 INFO  JavaRunCommand:9 - ex: mysql --verbose --user=root --password=Ruthdan0 < v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw
+18:10:19,359 INFO  JavaRunCommand:24 - stdout: 
+18:10:19,453 INFO  JavaRunCommand:26 - mysql  Ver 14.14 Distrib 5.5.27, for Win32 (x86)
+18:10:19,453 INFO  JavaRunCommand:26 - Copyright (c) 2000, 2011, Oracle and/or its affiliates. All rights reserved.
+18:10:19,453 INFO  JavaRunCommand:26 - 
+18:10:19,453 INFO  JavaRunCommand:26 - Oracle is a registered trademark of Oracle Corporation and/or its
+18:10:19,453 INFO  JavaRunCommand:26 - affiliates. Other names may be trademarks of their respective
+18:10:19,453 INFO  JavaRunCommand:26 - owners.
+18:10:19,453 INFO  JavaRunCommand:26 - 
+18:10:19,453 INFO  JavaRunCommand:26 - Usage: mysql [OPTIONS] [database]
+18:10:19,453 INFO  JavaRunCommand:26 -   -?, --help          Display this help and exit.
+18:10:19,453 INFO  JavaRunCommand:26 -   -I, --help          Synonym for -?
+18:10:19,453 INFO  JavaRunCommand:26 -   --auto-rehash       Enable automatic rehashing. One doesn't need to use
+18:10:19,453 INFO  JavaRunCommand:26 -                       'rehash' to get table and field completion, but startup
+18:10:19,453 INFO  JavaRunCommand:26 -                       and reconnecting may take a longer time. Disable with
+18:10:19,453 INFO  JavaRunCommand:26 -                       --disable-auto-rehash.
+18:10:19,453 INFO  JavaRunCommand:26 -                       (Defaults to on; use --skip-auto-rehash to disable.)
+18:10:19,453 INFO  JavaRunCommand:26 -   -A, --no-auto-rehash 
+18:10:19,453 INFO  JavaRunCommand:26 -                       No automatic rehashing. One has to use 'rehash' to get
+18:10:19,453 INFO  JavaRunCommand:26 -                       table and field completion. This gives a quicker start of
+18:10:19,453 INFO  JavaRunCommand:26 -                       mysql and disables rehashing on reconnect.
+18:10:19,453 INFO  JavaRunCommand:26 -   --auto-vertical-output 
+18:10:19,453 INFO  JavaRunCommand:26 -                       Automatically switch to vertical output mode if the
+18:10:19,453 INFO  JavaRunCommand:26 -                       result is wider than the terminal width.
+18:10:19,453 INFO  JavaRunCommand:26 -   -B, --batch         Don't use history file. Disable interactive behavior.
+18:10:19,453 INFO  JavaRunCommand:26 -                       (Enables --silent.)
+18:10:19,453 INFO  JavaRunCommand:26 -   --character-sets-dir=name 
+18:10:19,453 INFO  JavaRunCommand:26 -                       Directory for character set files.
+18:10:19,453 INFO  JavaRunCommand:26 -   --column-type-info  Display column type information.
+18:10:19,453 INFO  JavaRunCommand:26 -   -c, --comments      Preserve comments. Send comments to the server. The
+18:10:19,453 INFO  JavaRunCommand:26 -                       default is --skip-comments (discard comments), enable
+18:10:19,453 INFO  JavaRunCommand:26 -                       with --comments.
+18:10:19,453 INFO  JavaRunCommand:26 -   -C, --compress      Use compression in server/client protocol.
+18:10:19,453 INFO  JavaRunCommand:26 -   -#, --debug[=#]     This is a non-debug version. Catch this and exit.
+18:10:19,453 INFO  JavaRunCommand:26 -   --debug-check       Check memory and open file usage at exit.
+18:10:19,453 INFO  JavaRunCommand:26 -   -T, --debug-info    Print some debug info at exit.
+18:10:19,453 INFO  JavaRunCommand:26 -   -D, --database=name Database to use.
+18:10:19,453 INFO  JavaRunCommand:26 -   --default-character-set=name 
+18:10:19,453 INFO  JavaRunCommand:26 -                       Set the default character set.
+18:10:19,453 INFO  JavaRunCommand:26 -   --delimiter=name    Delimiter to be used.
+18:10:19,453 INFO  JavaRunCommand:26 -   --enable-cleartext-plugin 
+18:10:19,453 INFO  JavaRunCommand:26 -                       Enable/disable the clear text authentication plugin.
+18:10:19,453 INFO  JavaRunCommand:26 -   -e, --execute=name  Execute command and quit. (Disables --force and history
+18:10:19,453 INFO  JavaRunCommand:26 -                       file.)
+18:10:19,453 INFO  JavaRunCommand:26 -   -E, --vertical      Print the output of a query (rows) vertically.
+18:10:19,453 INFO  JavaRunCommand:26 -   -f, --force         Continue even if we get an SQL error.
+18:10:19,453 INFO  JavaRunCommand:26 -   -G, --named-commands 
+18:10:19,453 INFO  JavaRunCommand:26 -                       Enable named commands. Named commands mean this program's
+18:10:19,453 INFO  JavaRunCommand:26 -                       internal commands; see mysql> help . When enabled, the
+18:10:19,453 INFO  JavaRunCommand:26 -                       named commands can be used from any line of the query,
+18:10:19,453 INFO  JavaRunCommand:26 -                       otherwise only from the first line, before an enter.
+18:10:19,453 INFO  JavaRunCommand:26 -                       Disable with --disable-named-commands. This option is
+18:10:19,453 INFO  JavaRunCommand:26 -                       disabled by default.
+18:10:19,453 INFO  JavaRunCommand:26 -   -i, --ignore-spaces Ignore space after function names.
+18:10:19,453 INFO  JavaRunCommand:26 -   --init-command=name SQL Command to execute when connecting to MySQL server.
+18:10:19,453 INFO  JavaRunCommand:26 -                       Will automatically be re-executed when reconnecting.
+18:10:19,453 INFO  JavaRunCommand:26 -   --local-infile      Enable/disable LOAD DATA LOCAL INFILE.
+18:10:19,453 INFO  JavaRunCommand:26 -   -b, --no-beep       Turn off beep on error.
+18:10:19,453 INFO  JavaRunCommand:26 -   -h, --host=name     Connect to host.
+18:10:19,453 INFO  JavaRunCommand:26 -   -H, --html          Produce HTML output.
+18:10:19,453 INFO  JavaRunCommand:26 -   -X, --xml           Produce XML output.
+18:10:19,453 INFO  JavaRunCommand:26 -   --line-numbers      Write line numbers for errors.
+18:10:19,453 INFO  JavaRunCommand:26 -                       (Defaults to on; use --skip-line-numbers to disable.)
+18:10:19,453 INFO  JavaRunCommand:26 -   -L, --skip-line-numbers 
+18:10:19,453 INFO  JavaRunCommand:26 -                       Don't write line number for errors.
+18:10:19,453 INFO  JavaRunCommand:26 -   -n, --unbuffered    Flush buffer after each query.
+18:10:19,453 INFO  JavaRunCommand:26 -   --column-names      Write column names in results.
+18:10:19,453 INFO  JavaRunCommand:26 -                       (Defaults to on; use --skip-column-names to disable.)
+18:10:19,453 INFO  JavaRunCommand:26 -   -N, --skip-column-names 
+18:10:19,453 INFO  JavaRunCommand:26 -                       Don't write column names in results.
+18:10:19,453 INFO  JavaRunCommand:26 -   --sigint-ignore     Ignore SIGINT (CTRL-C).
+18:10:19,453 INFO  JavaRunCommand:26 -   -o, --one-database  Ignore statements except those that occur while the
+18:10:19,453 INFO  JavaRunCommand:26 -                       default database is the one named at the command line.
+18:10:19,453 INFO  JavaRunCommand:26 -   -p, --password[=name] 
+18:10:19,453 INFO  JavaRunCommand:26 -                       Password to use when connecting to server. If password is
+18:10:19,453 INFO  JavaRunCommand:26 -                       not given it's asked from the tty.
+18:10:19,453 INFO  JavaRunCommand:26 -   -W, --pipe          Use named pipes to connect to server.
+18:10:19,453 INFO  JavaRunCommand:26 -   -P, --port=#        Port number to use for connection or 0 for default to, in
+18:10:19,453 INFO  JavaRunCommand:26 -                       order of preference, my.cnf, $MYSQL_TCP_PORT,
+18:10:19,453 INFO  JavaRunCommand:26 -                       /etc/services, built-in default (3306).
+18:10:19,453 INFO  JavaRunCommand:26 -   --prompt=name       Set the mysql prompt to this value.
+18:10:19,453 INFO  JavaRunCommand:26 -   --protocol=name     The protocol to use for connection (tcp, socket, pipe,
+18:10:19,453 INFO  JavaRunCommand:26 -                       memory).
+18:10:19,453 INFO  JavaRunCommand:26 -   -q, --quick         Don't cache result, print it row by row. This may slow
+18:10:19,453 INFO  JavaRunCommand:26 -                       down the server if the output is suspended. Doesn't use
+18:10:19,453 INFO  JavaRunCommand:26 -                       history file.
+18:10:19,468 INFO  JavaRunCommand:26 -   -r, --raw           Write fields without conversion. Used with --batch.
+18:10:19,468 INFO  JavaRunCommand:26 -   --reconnect         Reconnect if the connection is lost. Disable with
+18:10:19,468 INFO  JavaRunCommand:26 -                       --disable-reconnect. This option is enabled by default.
+18:10:19,468 INFO  JavaRunCommand:26 -                       (Defaults to on; use --skip-reconnect to disable.)
+18:10:19,468 INFO  JavaRunCommand:26 -   -s, --silent        Be more silent. Print results with a tab as separator,
+18:10:19,468 INFO  JavaRunCommand:26 -                       each row on new line.
+18:10:19,468 INFO  JavaRunCommand:26 -   --shared-memory-base-name=name 
+18:10:19,468 INFO  JavaRunCommand:26 -                       Base name of shared memory.
+18:10:19,468 INFO  JavaRunCommand:26 -   -S, --socket=name   The socket file to use for connection.
+18:10:19,468 INFO  JavaRunCommand:26 -   --ssl               Enable SSL for connection (automatically enabled with
+18:10:19,468 INFO  JavaRunCommand:26 -                       other flags).
+18:10:19,468 INFO  JavaRunCommand:26 -   --ssl-ca=name       CA file in PEM format (check OpenSSL docs, implies
+18:10:19,468 INFO  JavaRunCommand:26 -                       --ssl).
+18:10:19,468 INFO  JavaRunCommand:26 -   --ssl-capath=name   CA directory (check OpenSSL docs, implies --ssl).
+18:10:19,468 INFO  JavaRunCommand:26 -   --ssl-cert=name     X509 cert in PEM format (implies --ssl).
+18:10:19,468 INFO  JavaRunCommand:26 -   --ssl-cipher=name   SSL cipher to use (implies --ssl).
+18:10:19,468 INFO  JavaRunCommand:26 -   --ssl-key=name      X509 key in PEM format (implies --ssl).
+18:10:19,468 INFO  JavaRunCommand:26 -   --ssl-verify-server-cert 
+18:10:19,468 INFO  JavaRunCommand:26 -                       Verify server's "Common Name" in its cert against
+18:10:19,468 INFO  JavaRunCommand:26 -                       hostname used when connecting. This option is disabled by
+18:10:19,468 INFO  JavaRunCommand:26 -                       default.
+18:10:19,468 INFO  JavaRunCommand:26 -   -t, --table         Output in table format.
+18:10:19,468 INFO  JavaRunCommand:26 -   --tee=name          Append everything into outfile. See interactive help (\h)
+18:10:19,468 INFO  JavaRunCommand:26 -                       also. Does not work in batch mode. Disable with
+18:10:19,468 INFO  JavaRunCommand:26 -                       --disable-tee. This option is disabled by default.
+18:10:19,468 INFO  JavaRunCommand:26 -   -u, --user=name     User for login if not current user.
+18:10:19,468 INFO  JavaRunCommand:26 -   -U, --safe-updates  Only allow UPDATE and DELETE that uses keys.
+18:10:19,468 INFO  JavaRunCommand:26 -   -U, --i-am-a-dummy  Synonym for option --safe-updates, -U.
+18:10:19,468 INFO  JavaRunCommand:26 -   -v, --verbose       Write more. (-v -v -v gives the table output format).
+18:10:19,468 INFO  JavaRunCommand:26 -   -V, --version       Output version information and exit.
+18:10:19,468 INFO  JavaRunCommand:26 -   -w, --wait          Wait and retry if connection is down.
+18:10:19,468 INFO  JavaRunCommand:26 -   --connect-timeout=# Number of seconds before connection timeout.
+18:10:19,468 INFO  JavaRunCommand:26 -   --max-allowed-packet=# 
+18:10:19,468 INFO  JavaRunCommand:26 -                       The maximum packet length to send to or receive from
+18:10:19,468 INFO  JavaRunCommand:26 -                       server.
+18:10:19,468 INFO  JavaRunCommand:26 -   --net-buffer-length=# 
+18:10:19,468 INFO  JavaRunCommand:26 -                       The buffer size for TCP/IP and socket communication.
+18:10:19,468 INFO  JavaRunCommand:26 -   --select-limit=#    Automatic limit for SELECT when using --safe-updates.
+18:10:19,468 INFO  JavaRunCommand:26 -   --max-join-size=#   Automatic limit for rows in a join when using
+18:10:19,468 INFO  JavaRunCommand:26 -                       --safe-updates.
+18:10:19,468 INFO  JavaRunCommand:26 -   --secure-auth       Refuse client connecting to server if it uses old
+18:10:19,468 INFO  JavaRunCommand:26 -                       (pre-4.1.1) protocol.
+18:10:19,468 INFO  JavaRunCommand:26 -   --server-arg=name   Send embedded server this as a parameter.
+18:10:19,468 INFO  JavaRunCommand:26 -   --show-warnings     Show warnings after every statement.
+18:10:19,468 INFO  JavaRunCommand:26 -   --plugin-dir=name   Directory for client-side plugins.
+18:10:19,468 INFO  JavaRunCommand:26 -   --default-auth=name Default authentication client-side plugin to use.
+18:10:19,468 INFO  JavaRunCommand:26 - 
+18:10:19,468 INFO  JavaRunCommand:26 - Default options are read from the following files in the given order:
+18:10:19,468 INFO  JavaRunCommand:26 - C:\WINDOWS\my.ini C:\WINDOWS\my.cnf C:\my.ini C:\my.cnf V:\xampp\mysql\my.ini V:\xampp\mysql\my.cnf 
+18:10:19,468 INFO  JavaRunCommand:26 - The following groups are read: mysql client
+18:10:19,468 INFO  JavaRunCommand:26 - The following options may be given as the first argument:
+18:10:19,468 INFO  JavaRunCommand:26 - --print-defaults        Print the program argument list and exit.
+18:10:19,468 INFO  JavaRunCommand:26 - --no-defaults           Don't read default options from any option file.
+18:10:19,468 INFO  JavaRunCommand:26 - --defaults-file=#       Only read default options from the given file #.
+18:10:19,468 INFO  JavaRunCommand:26 - --defaults-extra-file=# Read this file after the global files are read.
+18:10:19,468 INFO  JavaRunCommand:26 - 
+18:10:19,468 INFO  JavaRunCommand:26 - Variables (--variable-name=value)
+18:10:19,468 INFO  JavaRunCommand:26 - and boolean options {FALSE|TRUE}  Value (after reading options)
+18:10:19,468 INFO  JavaRunCommand:26 - --------------------------------- ----------------------------------------
+18:10:19,468 INFO  JavaRunCommand:26 - auto-rehash                       TRUE
+18:10:19,468 INFO  JavaRunCommand:26 - auto-vertical-output              FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - character-sets-dir                (No default value)
+18:10:19,468 INFO  JavaRunCommand:26 - column-type-info                  FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - comments                          FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - compress                          FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - debug-check                       FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - debug-info                        FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - database                          (No default value)
+18:10:19,468 INFO  JavaRunCommand:26 - default-character-set             auto
+18:10:19,468 INFO  JavaRunCommand:26 - delimiter                         ;
+18:10:19,468 INFO  JavaRunCommand:26 - enable-cleartext-plugin           FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - vertical                          FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - force                             FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - named-commands                    FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - ignore-spaces                     FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - init-command                      (No default value)
+18:10:19,468 INFO  JavaRunCommand:26 - local-infile                      FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - no-beep                           FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - host                              (No default value)
+18:10:19,468 INFO  JavaRunCommand:26 - html                              FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - xml                               FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - line-numbers                      TRUE
+18:10:19,468 INFO  JavaRunCommand:26 - unbuffered                        FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - column-names                      TRUE
+18:10:19,468 INFO  JavaRunCommand:26 - sigint-ignore                     FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - port                              0
+18:10:19,468 INFO  JavaRunCommand:26 - prompt                            mysql> 
+18:10:19,468 INFO  JavaRunCommand:26 - quick                             FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - raw                               FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - reconnect                         FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - shared-memory-base-name           (No default value)
+18:10:19,468 INFO  JavaRunCommand:26 - socket                            (No default value)
+18:10:19,468 INFO  JavaRunCommand:26 - ssl                               FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - ssl-ca                            (No default value)
+18:10:19,468 INFO  JavaRunCommand:26 - ssl-capath                        (No default value)
+18:10:19,468 INFO  JavaRunCommand:26 - ssl-cert                          (No default value)
+18:10:19,468 INFO  JavaRunCommand:26 - ssl-cipher                        (No default value)
+18:10:19,468 INFO  JavaRunCommand:26 - ssl-key                           (No default value)
+18:10:19,468 INFO  JavaRunCommand:26 - ssl-verify-server-cert            FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - table                             FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - user                              root
+18:10:19,468 INFO  JavaRunCommand:26 - safe-updates                      FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - i-am-a-dummy                      FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - connect-timeout                   0
+18:10:19,468 INFO  JavaRunCommand:26 - max-allowed-packet                16777216
+18:10:19,468 INFO  JavaRunCommand:26 - net-buffer-length                 16384
+18:10:19,468 INFO  JavaRunCommand:26 - select-limit                      1000
+18:10:19,468 INFO  JavaRunCommand:26 - max-join-size                     1000000
+18:10:19,468 INFO  JavaRunCommand:26 - secure-auth                       FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - show-warnings                     FALSE
+18:10:19,468 INFO  JavaRunCommand:26 - plugin-dir                        (No default value)
+18:10:19,468 INFO  JavaRunCommand:26 - default-auth                      (No default value)
+18:10:19,468 INFO  JavaRunCommand:30 - stderr: 
+18:10:19,515 ERROR RestoreKissako:36 - non existing file: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_data
+18:15:11,796 INFO  JavaRunCommand:9 - ex: cp v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_data.gz v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:15:11,875 INFO  JavaRunCommand:24 - stdout: 
+18:15:11,984 INFO  JavaRunCommand:30 - stderr: 
+18:15:12,000 INFO  JavaRunCommand:32 - cygwin warning:
+18:15:12,000 INFO  JavaRunCommand:32 -   MS-DOS style path detected: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:15:12,000 INFO  JavaRunCommand:32 -   Preferred POSIX equivalent is: /cygdrive/v/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:15:12,000 INFO  JavaRunCommand:32 -   CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+18:15:12,000 INFO  JavaRunCommand:32 -   Consult the user's guide for more details about POSIX paths:
+18:15:12,000 INFO  JavaRunCommand:32 -     http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+18:15:12,593 INFO  JavaRunCommand:9 - ex: rm -f v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw
+18:15:12,625 INFO  JavaRunCommand:24 - stdout: 
+18:15:12,750 INFO  JavaRunCommand:30 - stderr: 
+18:15:12,750 INFO  JavaRunCommand:32 - cygwin warning:
+18:15:12,750 INFO  JavaRunCommand:32 -   MS-DOS style path detected: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw
+18:15:12,750 INFO  JavaRunCommand:32 -   Preferred POSIX equivalent is: /cygdrive/v/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw
+18:15:12,750 INFO  JavaRunCommand:32 -   CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+18:15:12,750 INFO  JavaRunCommand:32 -   Consult the user's guide for more details about POSIX paths:
+18:15:12,750 INFO  JavaRunCommand:32 -     http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+18:15:13,906 INFO  JavaRunCommand:9 - ex: gzip -d v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:15:13,953 INFO  JavaRunCommand:24 - stdout: 
+18:15:16,312 INFO  JavaRunCommand:30 - stderr: 
+18:15:16,312 INFO  JavaRunCommand:32 - cygwin warning:
+18:15:16,312 INFO  JavaRunCommand:32 -   MS-DOS style path detected: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:15:16,328 INFO  JavaRunCommand:32 -   Preferred POSIX equivalent is: /cygdrive/v/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:15:16,328 INFO  JavaRunCommand:32 -   CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+18:15:16,328 INFO  JavaRunCommand:32 -   Consult the user's guide for more details about POSIX paths:
+18:15:16,343 INFO  JavaRunCommand:32 -     http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+18:15:20,453 INFO  JavaRunCommand:9 - ex: mysql --verbose --user=root --password=Ruthdan0 < v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw
+18:15:20,765 INFO  JavaRunCommand:24 - stdout: 
+18:15:20,828 INFO  JavaRunCommand:26 - mysql  Ver 14.14 Distrib 5.5.27, for Win32 (x86)
+18:15:20,828 INFO  JavaRunCommand:26 - Copyright (c) 2000, 2011, Oracle and/or its affiliates. All rights reserved.
+18:15:20,828 INFO  JavaRunCommand:26 - 
+18:15:20,828 INFO  JavaRunCommand:26 - Oracle is a registered trademark of Oracle Corporation and/or its
+18:15:20,843 INFO  JavaRunCommand:26 - affiliates. Other names may be trademarks of their respective
+18:15:20,843 INFO  JavaRunCommand:26 - owners.
+18:15:20,843 INFO  JavaRunCommand:26 - 
+18:15:20,843 INFO  JavaRunCommand:26 - Usage: mysql [OPTIONS] [database]
+18:15:20,843 INFO  JavaRunCommand:26 -   -?, --help          Display this help and exit.
+18:15:20,843 INFO  JavaRunCommand:26 -   -I, --help          Synonym for -?
+18:15:20,843 INFO  JavaRunCommand:26 -   --auto-rehash       Enable automatic rehashing. One doesn't need to use
+18:15:20,843 INFO  JavaRunCommand:26 -                       'rehash' to get table and field completion, but startup
+18:15:20,843 INFO  JavaRunCommand:26 -                       and reconnecting may take a longer time. Disable with
+18:15:20,843 INFO  JavaRunCommand:26 -                       --disable-auto-rehash.
+18:15:20,843 INFO  JavaRunCommand:26 -                       (Defaults to on; use --skip-auto-rehash to disable.)
+18:15:20,843 INFO  JavaRunCommand:26 -   -A, --no-auto-rehash 
+18:15:20,843 INFO  JavaRunCommand:26 -                       No automatic rehashing. One has to use 'rehash' to get
+18:15:20,843 INFO  JavaRunCommand:26 -                       table and field completion. This gives a quicker start of
+18:15:20,859 INFO  JavaRunCommand:26 -                       mysql and disables rehashing on reconnect.
+18:15:20,859 INFO  JavaRunCommand:26 -   --auto-vertical-output 
+18:15:20,859 INFO  JavaRunCommand:26 -                       Automatically switch to vertical output mode if the
+18:15:20,859 INFO  JavaRunCommand:26 -                       result is wider than the terminal width.
+18:15:20,859 INFO  JavaRunCommand:26 -   -B, --batch         Don't use history file. Disable interactive behavior.
+18:15:20,859 INFO  JavaRunCommand:26 -                       (Enables --silent.)
+18:15:20,859 INFO  JavaRunCommand:26 -   --character-sets-dir=name 
+18:15:20,859 INFO  JavaRunCommand:26 -                       Directory for character set files.
+18:15:20,859 INFO  JavaRunCommand:26 -   --column-type-info  Display column type information.
+18:15:20,859 INFO  JavaRunCommand:26 -   -c, --comments      Preserve comments. Send comments to the server. The
+18:15:20,859 INFO  JavaRunCommand:26 -                       default is --skip-comments (discard comments), enable
+18:15:20,859 INFO  JavaRunCommand:26 -                       with --comments.
+18:15:20,859 INFO  JavaRunCommand:26 -   -C, --compress      Use compression in server/client protocol.
+18:15:20,875 INFO  JavaRunCommand:26 -   -#, --debug[=#]     This is a non-debug version. Catch this and exit.
+18:15:20,875 INFO  JavaRunCommand:26 -   --debug-check       Check memory and open file usage at exit.
+18:15:20,875 INFO  JavaRunCommand:26 -   -T, --debug-info    Print some debug info at exit.
+18:15:20,875 INFO  JavaRunCommand:26 -   -D, --database=name Database to use.
+18:15:20,875 INFO  JavaRunCommand:26 -   --default-character-set=name 
+18:15:20,875 INFO  JavaRunCommand:26 -                       Set the default character set.
+18:15:20,875 INFO  JavaRunCommand:26 -   --delimiter=name    Delimiter to be used.
+18:15:20,875 INFO  JavaRunCommand:26 -   --enable-cleartext-plugin 
+18:15:20,875 INFO  JavaRunCommand:26 -                       Enable/disable the clear text authentication plugin.
+18:15:20,875 INFO  JavaRunCommand:26 -   -e, --execute=name  Execute command and quit. (Disables --force and history
+18:15:20,875 INFO  JavaRunCommand:26 -                       file.)
+18:15:20,875 INFO  JavaRunCommand:26 -   -E, --vertical      Print the output of a query (rows) vertically.
+18:15:20,875 INFO  JavaRunCommand:26 -   -f, --force         Continue even if we get an SQL error.
+18:15:20,890 INFO  JavaRunCommand:26 -   -G, --named-commands 
+18:15:20,890 INFO  JavaRunCommand:26 -                       Enable named commands. Named commands mean this program's
+18:15:20,890 INFO  JavaRunCommand:26 -                       internal commands; see mysql> help . When enabled, the
+18:15:20,890 INFO  JavaRunCommand:26 -                       named commands can be used from any line of the query,
+18:15:20,890 INFO  JavaRunCommand:26 -                       otherwise only from the first line, before an enter.
+18:15:20,890 INFO  JavaRunCommand:26 -                       Disable with --disable-named-commands. This option is
+18:15:20,890 INFO  JavaRunCommand:26 -                       disabled by default.
+18:15:20,890 INFO  JavaRunCommand:26 -   -i, --ignore-spaces Ignore space after function names.
+18:15:20,890 INFO  JavaRunCommand:26 -   --init-command=name SQL Command to execute when connecting to MySQL server.
+18:15:20,890 INFO  JavaRunCommand:26 -                       Will automatically be re-executed when reconnecting.
+18:15:20,890 INFO  JavaRunCommand:26 -   --local-infile      Enable/disable LOAD DATA LOCAL INFILE.
+18:15:20,890 INFO  JavaRunCommand:26 -   -b, --no-beep       Turn off beep on error.
+18:15:20,890 INFO  JavaRunCommand:26 -   -h, --host=name     Connect to host.
+18:15:20,906 INFO  JavaRunCommand:26 -   -H, --html          Produce HTML output.
+18:15:20,906 INFO  JavaRunCommand:26 -   -X, --xml           Produce XML output.
+18:15:20,906 INFO  JavaRunCommand:26 -   --line-numbers      Write line numbers for errors.
+18:15:20,906 INFO  JavaRunCommand:26 -                       (Defaults to on; use --skip-line-numbers to disable.)
+18:15:20,906 INFO  JavaRunCommand:26 -   -L, --skip-line-numbers 
+18:15:20,906 INFO  JavaRunCommand:26 -                       Don't write line number for errors.
+18:15:20,906 INFO  JavaRunCommand:26 -   -n, --unbuffered    Flush buffer after each query.
+18:15:20,906 INFO  JavaRunCommand:26 -   --column-names      Write column names in results.
+18:15:20,906 INFO  JavaRunCommand:26 -                       (Defaults to on; use --skip-column-names to disable.)
+18:15:20,906 INFO  JavaRunCommand:26 -   -N, --skip-column-names 
+18:15:20,906 INFO  JavaRunCommand:26 -                       Don't write column names in results.
+18:15:20,906 INFO  JavaRunCommand:26 -   --sigint-ignore     Ignore SIGINT (CTRL-C).
+18:15:20,906 INFO  JavaRunCommand:26 -   -o, --one-database  Ignore statements except those that occur while the
+18:15:20,921 INFO  JavaRunCommand:26 -                       default database is the one named at the command line.
+18:15:20,921 INFO  JavaRunCommand:26 -   -p, --password[=name] 
+18:15:20,921 INFO  JavaRunCommand:26 -                       Password to use when connecting to server. If password is
+18:15:20,921 INFO  JavaRunCommand:26 -                       not given it's asked from the tty.
+18:15:20,921 INFO  JavaRunCommand:26 -   -W, --pipe          Use named pipes to connect to server.
+18:15:20,921 INFO  JavaRunCommand:26 -   -P, --port=#        Port number to use for connection or 0 for default to, in
+18:15:20,921 INFO  JavaRunCommand:26 -                       order of preference, my.cnf, $MYSQL_TCP_PORT,
+18:15:20,921 INFO  JavaRunCommand:26 -                       /etc/services, built-in default (3306).
+18:15:20,921 INFO  JavaRunCommand:26 -   --prompt=name       Set the mysql prompt to this value.
+18:15:20,921 INFO  JavaRunCommand:26 -   --protocol=name     The protocol to use for connection (tcp, socket, pipe,
+18:15:20,921 INFO  JavaRunCommand:26 -                       memory).
+18:15:20,937 INFO  JavaRunCommand:26 -   -q, --quick         Don't cache result, print it row by row. This may slow
+18:15:20,937 INFO  JavaRunCommand:26 -                       down the server if the output is suspended. Doesn't use
+18:15:20,937 INFO  JavaRunCommand:26 -                       history file.
+18:15:20,937 INFO  JavaRunCommand:26 -   -r, --raw           Write fields without conversion. Used with --batch.
+18:15:20,937 INFO  JavaRunCommand:26 -   --reconnect         Reconnect if the connection is lost. Disable with
+18:15:20,937 INFO  JavaRunCommand:26 -                       --disable-reconnect. This option is enabled by default.
+18:15:20,937 INFO  JavaRunCommand:26 -                       (Defaults to on; use --skip-reconnect to disable.)
+18:15:20,937 INFO  JavaRunCommand:26 -   -s, --silent        Be more silent. Print results with a tab as separator,
+18:15:20,937 INFO  JavaRunCommand:26 -                       each row on new line.
+18:15:20,937 INFO  JavaRunCommand:26 -   --shared-memory-base-name=name 
+18:15:20,937 INFO  JavaRunCommand:26 -                       Base name of shared memory.
+18:15:20,937 INFO  JavaRunCommand:26 -   -S, --socket=name   The socket file to use for connection.
+18:15:20,953 INFO  JavaRunCommand:26 -   --ssl               Enable SSL for connection (automatically enabled with
+18:15:20,953 INFO  JavaRunCommand:26 -                       other flags).
+18:15:20,953 INFO  JavaRunCommand:26 -   --ssl-ca=name       CA file in PEM format (check OpenSSL docs, implies
+18:15:20,953 INFO  JavaRunCommand:26 -                       --ssl).
+18:15:20,953 INFO  JavaRunCommand:26 -   --ssl-capath=name   CA directory (check OpenSSL docs, implies --ssl).
+18:15:20,953 INFO  JavaRunCommand:26 -   --ssl-cert=name     X509 cert in PEM format (implies --ssl).
+18:15:20,953 INFO  JavaRunCommand:26 -   --ssl-cipher=name   SSL cipher to use (implies --ssl).
+18:15:20,953 INFO  JavaRunCommand:26 -   --ssl-key=name      X509 key in PEM format (implies --ssl).
+18:15:20,953 INFO  JavaRunCommand:26 -   --ssl-verify-server-cert 
+18:15:20,953 INFO  JavaRunCommand:26 -                       Verify server's "Common Name" in its cert against
+18:15:20,953 INFO  JavaRunCommand:26 -                       hostname used when connecting. This option is disabled by
+18:15:20,953 INFO  JavaRunCommand:26 -                       default.
+18:15:20,968 INFO  JavaRunCommand:26 -   -t, --table         Output in table format.
+18:15:20,968 INFO  JavaRunCommand:26 -   --tee=name          Append everything into outfile. See interactive help (\h)
+18:15:20,968 INFO  JavaRunCommand:26 -                       also. Does not work in batch mode. Disable with
+18:15:20,968 INFO  JavaRunCommand:26 -                       --disable-tee. This option is disabled by default.
+18:15:20,968 INFO  JavaRunCommand:26 -   -u, --user=name     User for login if not current user.
+18:15:20,968 INFO  JavaRunCommand:26 -   -U, --safe-updates  Only allow UPDATE and DELETE that uses keys.
+18:15:20,968 INFO  JavaRunCommand:26 -   -U, --i-am-a-dummy  Synonym for option --safe-updates, -U.
+18:15:20,968 INFO  JavaRunCommand:26 -   -v, --verbose       Write more. (-v -v -v gives the table output format).
+18:15:20,968 INFO  JavaRunCommand:26 -   -V, --version       Output version information and exit.
+18:15:20,968 INFO  JavaRunCommand:26 -   -w, --wait          Wait and retry if connection is down.
+18:15:20,968 INFO  JavaRunCommand:26 -   --connect-timeout=# Number of seconds before connection timeout.
+18:15:20,968 INFO  JavaRunCommand:26 -   --max-allowed-packet=# 
+18:15:20,968 INFO  JavaRunCommand:26 -                       The maximum packet length to send to or receive from
+18:15:20,984 INFO  JavaRunCommand:26 -                       server.
+18:15:20,984 INFO  JavaRunCommand:26 -   --net-buffer-length=# 
+18:15:20,984 INFO  JavaRunCommand:26 -                       The buffer size for TCP/IP and socket communication.
+18:15:20,984 INFO  JavaRunCommand:26 -   --select-limit=#    Automatic limit for SELECT when using --safe-updates.
+18:15:20,984 INFO  JavaRunCommand:26 -   --max-join-size=#   Automatic limit for rows in a join when using
+18:15:20,984 INFO  JavaRunCommand:26 -                       --safe-updates.
+18:15:20,984 INFO  JavaRunCommand:26 -   --secure-auth       Refuse client connecting to server if it uses old
+18:15:20,984 INFO  JavaRunCommand:26 -                       (pre-4.1.1) protocol.
+18:15:20,984 INFO  JavaRunCommand:26 -   --server-arg=name   Send embedded server this as a parameter.
+18:15:20,984 INFO  JavaRunCommand:26 -   --show-warnings     Show warnings after every statement.
+18:15:20,984 INFO  JavaRunCommand:26 -   --plugin-dir=name   Directory for client-side plugins.
+18:15:20,984 INFO  JavaRunCommand:26 -   --default-auth=name Default authentication client-side plugin to use.
+18:15:20,984 INFO  JavaRunCommand:26 - 
+18:15:20,984 INFO  JavaRunCommand:26 - Default options are read from the following files in the given order:
+18:15:21,000 INFO  JavaRunCommand:26 - C:\WINDOWS\my.ini C:\WINDOWS\my.cnf C:\my.ini C:\my.cnf V:\xampp\mysql\my.ini V:\xampp\mysql\my.cnf 
+18:15:21,000 INFO  JavaRunCommand:26 - The following groups are read: mysql client
+18:15:21,000 INFO  JavaRunCommand:26 - The following options may be given as the first argument:
+18:15:21,000 INFO  JavaRunCommand:26 - --print-defaults        Print the program argument list and exit.
+18:15:21,000 INFO  JavaRunCommand:26 - --no-defaults           Don't read default options from any option file.
+18:15:21,000 INFO  JavaRunCommand:26 - --defaults-file=#       Only read default options from the given file #.
+18:15:21,000 INFO  JavaRunCommand:26 - --defaults-extra-file=# Read this file after the global files are read.
+18:15:21,000 INFO  JavaRunCommand:26 - 
+18:15:21,000 INFO  JavaRunCommand:26 - Variables (--variable-name=value)
+18:15:21,000 INFO  JavaRunCommand:26 - and boolean options {FALSE|TRUE}  Value (after reading options)
+18:15:21,000 INFO  JavaRunCommand:26 - --------------------------------- ----------------------------------------
+18:15:21,000 INFO  JavaRunCommand:26 - auto-rehash                       TRUE
+18:15:21,015 INFO  JavaRunCommand:26 - auto-vertical-output              FALSE
+18:15:21,015 INFO  JavaRunCommand:26 - character-sets-dir                (No default value)
+18:15:21,015 INFO  JavaRunCommand:26 - column-type-info                  FALSE
+18:15:21,015 INFO  JavaRunCommand:26 - comments                          FALSE
+18:15:21,015 INFO  JavaRunCommand:26 - compress                          FALSE
+18:15:21,015 INFO  JavaRunCommand:26 - debug-check                       FALSE
+18:15:21,015 INFO  JavaRunCommand:26 - debug-info                        FALSE
+18:15:21,015 INFO  JavaRunCommand:26 - database                          (No default value)
+18:15:21,015 INFO  JavaRunCommand:26 - default-character-set             auto
+18:15:21,015 INFO  JavaRunCommand:26 - delimiter                         ;
+18:15:21,015 INFO  JavaRunCommand:26 - enable-cleartext-plugin           FALSE
+18:15:21,015 INFO  JavaRunCommand:26 - vertical                          FALSE
+18:15:21,031 INFO  JavaRunCommand:26 - force                             FALSE
+18:15:21,031 INFO  JavaRunCommand:26 - named-commands                    FALSE
+18:15:21,031 INFO  JavaRunCommand:26 - ignore-spaces                     FALSE
+18:15:21,031 INFO  JavaRunCommand:26 - init-command                      (No default value)
+18:15:21,031 INFO  JavaRunCommand:26 - local-infile                      FALSE
+18:15:21,031 INFO  JavaRunCommand:26 - no-beep                           FALSE
+18:15:21,031 INFO  JavaRunCommand:26 - host                              (No default value)
+18:15:21,031 INFO  JavaRunCommand:26 - html                              FALSE
+18:15:21,031 INFO  JavaRunCommand:26 - xml                               FALSE
+18:15:21,031 INFO  JavaRunCommand:26 - line-numbers                      TRUE
+18:15:21,031 INFO  JavaRunCommand:26 - unbuffered                        FALSE
+18:15:21,031 INFO  JavaRunCommand:26 - column-names                      TRUE
+18:15:21,031 INFO  JavaRunCommand:26 - sigint-ignore                     FALSE
+18:15:21,031 INFO  JavaRunCommand:26 - port                              0
+18:15:21,046 INFO  JavaRunCommand:26 - prompt                            mysql> 
+18:15:21,046 INFO  JavaRunCommand:26 - quick                             FALSE
+18:15:21,046 INFO  JavaRunCommand:26 - raw                               FALSE
+18:15:21,046 INFO  JavaRunCommand:26 - reconnect                         FALSE
+18:15:21,046 INFO  JavaRunCommand:26 - shared-memory-base-name           (No default value)
+18:15:21,046 INFO  JavaRunCommand:26 - socket                            (No default value)
+18:15:21,046 INFO  JavaRunCommand:26 - ssl                               FALSE
+18:15:21,046 INFO  JavaRunCommand:26 - ssl-ca                            (No default value)
+18:15:21,046 INFO  JavaRunCommand:26 - ssl-capath                        (No default value)
+18:15:21,046 INFO  JavaRunCommand:26 - ssl-cert                          (No default value)
+18:15:21,046 INFO  JavaRunCommand:26 - ssl-cipher                        (No default value)
+18:15:21,046 INFO  JavaRunCommand:26 - ssl-key                           (No default value)
+18:15:21,046 INFO  JavaRunCommand:26 - ssl-verify-server-cert            FALSE
+18:15:21,046 INFO  JavaRunCommand:26 - table                             FALSE
+18:15:21,062 INFO  JavaRunCommand:26 - user                              root
+18:15:21,062 INFO  JavaRunCommand:26 - safe-updates                      FALSE
+18:15:21,062 INFO  JavaRunCommand:26 - i-am-a-dummy                      FALSE
+18:15:21,062 INFO  JavaRunCommand:26 - connect-timeout                   0
+18:15:21,062 INFO  JavaRunCommand:26 - max-allowed-packet                16777216
+18:15:21,062 INFO  JavaRunCommand:26 - net-buffer-length                 16384
+18:15:21,062 INFO  JavaRunCommand:26 - select-limit                      1000
+18:15:21,062 INFO  JavaRunCommand:26 - max-join-size                     1000000
+18:15:21,062 INFO  JavaRunCommand:26 - secure-auth                       FALSE
+18:15:21,062 INFO  JavaRunCommand:26 - show-warnings                     FALSE
+18:15:21,062 INFO  JavaRunCommand:26 - plugin-dir                        (No default value)
+18:15:21,062 INFO  JavaRunCommand:26 - default-auth                      (No default value)
+18:15:21,062 INFO  JavaRunCommand:30 - stderr: 
+18:16:41,421 INFO  JavaRunCommand:9 - ex: cp v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_data.gz v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:16:41,437 INFO  JavaRunCommand:24 - stdout: 
+18:16:41,515 INFO  JavaRunCommand:30 - stderr: 
+18:16:41,515 INFO  JavaRunCommand:32 - cygwin warning:
+18:16:41,515 INFO  JavaRunCommand:32 -   MS-DOS style path detected: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:16:41,515 INFO  JavaRunCommand:32 -   Preferred POSIX equivalent is: /cygdrive/v/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:16:41,515 INFO  JavaRunCommand:32 -   CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+18:16:41,515 INFO  JavaRunCommand:32 -   Consult the user's guide for more details about POSIX paths:
+18:16:41,515 INFO  JavaRunCommand:32 -     http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+18:16:41,515 INFO  JavaRunCommand:9 - ex: rm -f v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw
+18:16:41,531 INFO  JavaRunCommand:24 - stdout: 
+18:16:41,593 INFO  JavaRunCommand:30 - stderr: 
+18:16:41,593 INFO  JavaRunCommand:32 - cygwin warning:
+18:16:41,593 INFO  JavaRunCommand:32 -   MS-DOS style path detected: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw
+18:16:41,593 INFO  JavaRunCommand:32 -   Preferred POSIX equivalent is: /cygdrive/v/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw
+18:16:41,593 INFO  JavaRunCommand:32 -   CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+18:16:41,593 INFO  JavaRunCommand:32 -   Consult the user's guide for more details about POSIX paths:
+18:16:41,593 INFO  JavaRunCommand:32 -     http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+18:16:41,593 INFO  JavaRunCommand:9 - ex: gzip -d v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:16:41,593 INFO  JavaRunCommand:24 - stdout: 
+18:16:44,671 INFO  JavaRunCommand:30 - stderr: 
+18:16:44,671 INFO  JavaRunCommand:32 - cygwin warning:
+18:16:44,671 INFO  JavaRunCommand:32 -   MS-DOS style path detected: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:16:44,671 INFO  JavaRunCommand:32 -   Preferred POSIX equivalent is: /cygdrive/v/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:16:44,671 INFO  JavaRunCommand:32 -   CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+18:16:44,671 INFO  JavaRunCommand:32 -   Consult the user's guide for more details about POSIX paths:
+18:16:44,671 INFO  JavaRunCommand:32 -     http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+18:16:44,671 INFO  JavaRunCommand:9 - ex: mysql --verbose --user=root --password=Ruthdan0 < v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw
+18:16:45,000 INFO  JavaRunCommand:24 - stdout: 
+18:16:45,015 INFO  JavaRunCommand:26 - mysql  Ver 14.14 Distrib 5.5.27, for Win32 (x86)
+18:16:45,015 INFO  JavaRunCommand:26 - Copyright (c) 2000, 2011, Oracle and/or its affiliates. All rights reserved.
+18:16:45,015 INFO  JavaRunCommand:26 - 
+18:16:45,015 INFO  JavaRunCommand:26 - Oracle is a registered trademark of Oracle Corporation and/or its
+18:16:45,015 INFO  JavaRunCommand:26 - affiliates. Other names may be trademarks of their respective
+18:16:45,015 INFO  JavaRunCommand:26 - owners.
+18:16:45,031 INFO  JavaRunCommand:26 - 
+18:16:45,031 INFO  JavaRunCommand:26 - Usage: mysql [OPTIONS] [database]
+18:16:45,031 INFO  JavaRunCommand:26 -   -?, --help          Display this help and exit.
+18:16:45,031 INFO  JavaRunCommand:26 -   -I, --help          Synonym for -?
+18:16:45,031 INFO  JavaRunCommand:26 -   --auto-rehash       Enable automatic rehashing. One doesn't need to use
+18:16:45,031 INFO  JavaRunCommand:26 -                       'rehash' to get table and field completion, but startup
+18:16:45,031 INFO  JavaRunCommand:26 -                       and reconnecting may take a longer time. Disable with
+18:16:45,031 INFO  JavaRunCommand:26 -                       --disable-auto-rehash.
+18:16:45,031 INFO  JavaRunCommand:26 -                       (Defaults to on; use --skip-auto-rehash to disable.)
+18:16:45,031 INFO  JavaRunCommand:26 -   -A, --no-auto-rehash 
+18:16:45,031 INFO  JavaRunCommand:26 -                       No automatic rehashing. One has to use 'rehash' to get
+18:16:45,031 INFO  JavaRunCommand:26 -                       table and field completion. This gives a quicker start of
+18:16:45,031 INFO  JavaRunCommand:26 -                       mysql and disables rehashing on reconnect.
+18:16:45,031 INFO  JavaRunCommand:26 -   --auto-vertical-output 
+18:16:45,031 INFO  JavaRunCommand:26 -                       Automatically switch to vertical output mode if the
+18:16:45,031 INFO  JavaRunCommand:26 -                       result is wider than the terminal width.
+18:16:45,031 INFO  JavaRunCommand:26 -   -B, --batch         Don't use history file. Disable interactive behavior.
+18:16:45,031 INFO  JavaRunCommand:26 -                       (Enables --silent.)
+18:16:45,031 INFO  JavaRunCommand:26 -   --character-sets-dir=name 
+18:16:45,031 INFO  JavaRunCommand:26 -                       Directory for character set files.
+18:16:45,031 INFO  JavaRunCommand:26 -   --column-type-info  Display column type information.
+18:16:45,031 INFO  JavaRunCommand:26 -   -c, --comments      Preserve comments. Send comments to the server. The
+18:16:45,031 INFO  JavaRunCommand:26 -                       default is --skip-comments (discard comments), enable
+18:16:45,031 INFO  JavaRunCommand:26 -                       with --comments.
+18:16:45,031 INFO  JavaRunCommand:26 -   -C, --compress      Use compression in server/client protocol.
+18:16:45,031 INFO  JavaRunCommand:26 -   -#, --debug[=#]     This is a non-debug version. Catch this and exit.
+18:16:45,031 INFO  JavaRunCommand:26 -   --debug-check       Check memory and open file usage at exit.
+18:16:45,031 INFO  JavaRunCommand:26 -   -T, --debug-info    Print some debug info at exit.
+18:16:45,031 INFO  JavaRunCommand:26 -   -D, --database=name Database to use.
+18:16:45,031 INFO  JavaRunCommand:26 -   --default-character-set=name 
+18:16:45,031 INFO  JavaRunCommand:26 -                       Set the default character set.
+18:16:45,031 INFO  JavaRunCommand:26 -   --delimiter=name    Delimiter to be used.
+18:16:45,031 INFO  JavaRunCommand:26 -   --enable-cleartext-plugin 
+18:16:45,031 INFO  JavaRunCommand:26 -                       Enable/disable the clear text authentication plugin.
+18:16:45,031 INFO  JavaRunCommand:26 -   -e, --execute=name  Execute command and quit. (Disables --force and history
+18:16:45,031 INFO  JavaRunCommand:26 -                       file.)
+18:16:45,031 INFO  JavaRunCommand:26 -   -E, --vertical      Print the output of a query (rows) vertically.
+18:16:45,031 INFO  JavaRunCommand:26 -   -f, --force         Continue even if we get an SQL error.
+18:16:45,031 INFO  JavaRunCommand:26 -   -G, --named-commands 
+18:16:45,031 INFO  JavaRunCommand:26 -                       Enable named commands. Named commands mean this program's
+18:16:45,031 INFO  JavaRunCommand:26 -                       internal commands; see mysql> help . When enabled, the
+18:16:45,031 INFO  JavaRunCommand:26 -                       named commands can be used from any line of the query,
+18:16:45,031 INFO  JavaRunCommand:26 -                       otherwise only from the first line, before an enter.
+18:16:45,031 INFO  JavaRunCommand:26 -                       Disable with --disable-named-commands. This option is
+18:16:45,031 INFO  JavaRunCommand:26 -                       disabled by default.
+18:16:45,031 INFO  JavaRunCommand:26 -   -i, --ignore-spaces Ignore space after function names.
+18:16:45,031 INFO  JavaRunCommand:26 -   --init-command=name SQL Command to execute when connecting to MySQL server.
+18:16:45,031 INFO  JavaRunCommand:26 -                       Will automatically be re-executed when reconnecting.
+18:16:45,031 INFO  JavaRunCommand:26 -   --local-infile      Enable/disable LOAD DATA LOCAL INFILE.
+18:16:45,031 INFO  JavaRunCommand:26 -   -b, --no-beep       Turn off beep on error.
+18:16:45,031 INFO  JavaRunCommand:26 -   -h, --host=name     Connect to host.
+18:16:45,031 INFO  JavaRunCommand:26 -   -H, --html          Produce HTML output.
+18:16:45,031 INFO  JavaRunCommand:26 -   -X, --xml           Produce XML output.
+18:16:45,031 INFO  JavaRunCommand:26 -   --line-numbers      Write line numbers for errors.
+18:16:45,031 INFO  JavaRunCommand:26 -                       (Defaults to on; use --skip-line-numbers to disable.)
+18:16:45,031 INFO  JavaRunCommand:26 -   -L, --skip-line-numbers 
+18:16:45,031 INFO  JavaRunCommand:26 -                       Don't write line number for errors.
+18:16:45,031 INFO  JavaRunCommand:26 -   -n, --unbuffered    Flush buffer after each query.
+18:16:45,031 INFO  JavaRunCommand:26 -   --column-names      Write column names in results.
+18:16:45,031 INFO  JavaRunCommand:26 -                       (Defaults to on; use --skip-column-names to disable.)
+18:16:45,031 INFO  JavaRunCommand:26 -   -N, --skip-column-names 
+18:16:45,031 INFO  JavaRunCommand:26 -                       Don't write column names in results.
+18:16:45,031 INFO  JavaRunCommand:26 -   --sigint-ignore     Ignore SIGINT (CTRL-C).
+18:16:45,031 INFO  JavaRunCommand:26 -   -o, --one-database  Ignore statements except those that occur while the
+18:16:45,031 INFO  JavaRunCommand:26 -                       default database is the one named at the command line.
+18:16:45,031 INFO  JavaRunCommand:26 -   -p, --password[=name] 
+18:16:45,031 INFO  JavaRunCommand:26 -                       Password to use when connecting to server. If password is
+18:16:45,031 INFO  JavaRunCommand:26 -                       not given it's asked from the tty.
+18:16:45,031 INFO  JavaRunCommand:26 -   -W, --pipe          Use named pipes to connect to server.
+18:16:45,031 INFO  JavaRunCommand:26 -   -P, --port=#        Port number to use for connection or 0 for default to, in
+18:16:45,031 INFO  JavaRunCommand:26 -                       order of preference, my.cnf, $MYSQL_TCP_PORT,
+18:16:45,031 INFO  JavaRunCommand:26 -                       /etc/services, built-in default (3306).
+18:16:45,031 INFO  JavaRunCommand:26 -   --prompt=name       Set the mysql prompt to this value.
+18:16:45,031 INFO  JavaRunCommand:26 -   --protocol=name     The protocol to use for connection (tcp, socket, pipe,
+18:16:45,031 INFO  JavaRunCommand:26 -                       memory).
+18:16:45,031 INFO  JavaRunCommand:26 -   -q, --quick         Don't cache result, print it row by row. This may slow
+18:16:45,031 INFO  JavaRunCommand:26 -                       down the server if the output is suspended. Doesn't use
+18:16:45,031 INFO  JavaRunCommand:26 -                       history file.
+18:16:45,031 INFO  JavaRunCommand:26 -   -r, --raw           Write fields without conversion. Used with --batch.
+18:16:45,031 INFO  JavaRunCommand:26 -   --reconnect         Reconnect if the connection is lost. Disable with
+18:16:45,031 INFO  JavaRunCommand:26 -                       --disable-reconnect. This option is enabled by default.
+18:16:45,031 INFO  JavaRunCommand:26 -                       (Defaults to on; use --skip-reconnect to disable.)
+18:16:45,031 INFO  JavaRunCommand:26 -   -s, --silent        Be more silent. Print results with a tab as separator,
+18:16:45,031 INFO  JavaRunCommand:26 -                       each row on new line.
+18:16:45,031 INFO  JavaRunCommand:26 -   --shared-memory-base-name=name 
+18:16:45,031 INFO  JavaRunCommand:26 -                       Base name of shared memory.
+18:16:45,031 INFO  JavaRunCommand:26 -   -S, --socket=name   The socket file to use for connection.
+18:16:45,031 INFO  JavaRunCommand:26 -   --ssl               Enable SSL for connection (automatically enabled with
+18:16:45,031 INFO  JavaRunCommand:26 -                       other flags).
+18:16:45,031 INFO  JavaRunCommand:26 -   --ssl-ca=name       CA file in PEM format (check OpenSSL docs, implies
+18:16:45,031 INFO  JavaRunCommand:26 -                       --ssl).
+18:16:45,031 INFO  JavaRunCommand:26 -   --ssl-capath=name   CA directory (check OpenSSL docs, implies --ssl).
+18:16:45,031 INFO  JavaRunCommand:26 -   --ssl-cert=name     X509 cert in PEM format (implies --ssl).
+18:16:45,046 INFO  JavaRunCommand:26 -   --ssl-cipher=name   SSL cipher to use (implies --ssl).
+18:16:45,046 INFO  JavaRunCommand:26 -   --ssl-key=name      X509 key in PEM format (implies --ssl).
+18:16:45,046 INFO  JavaRunCommand:26 -   --ssl-verify-server-cert 
+18:16:45,046 INFO  JavaRunCommand:26 -                       Verify server's "Common Name" in its cert against
+18:16:45,046 INFO  JavaRunCommand:26 -                       hostname used when connecting. This option is disabled by
+18:16:45,046 INFO  JavaRunCommand:26 -                       default.
+18:16:45,046 INFO  JavaRunCommand:26 -   -t, --table         Output in table format.
+18:16:45,046 INFO  JavaRunCommand:26 -   --tee=name          Append everything into outfile. See interactive help (\h)
+18:16:45,046 INFO  JavaRunCommand:26 -                       also. Does not work in batch mode. Disable with
+18:16:45,046 INFO  JavaRunCommand:26 -                       --disable-tee. This option is disabled by default.
+18:16:45,046 INFO  JavaRunCommand:26 -   -u, --user=name     User for login if not current user.
+18:16:45,046 INFO  JavaRunCommand:26 -   -U, --safe-updates  Only allow UPDATE and DELETE that uses keys.
+18:16:45,046 INFO  JavaRunCommand:26 -   -U, --i-am-a-dummy  Synonym for option --safe-updates, -U.
+18:16:45,046 INFO  JavaRunCommand:26 -   -v, --verbose       Write more. (-v -v -v gives the table output format).
+18:16:45,046 INFO  JavaRunCommand:26 -   -V, --version       Output version information and exit.
+18:16:45,046 INFO  JavaRunCommand:26 -   -w, --wait          Wait and retry if connection is down.
+18:16:45,046 INFO  JavaRunCommand:26 -   --connect-timeout=# Number of seconds before connection timeout.
+18:16:45,046 INFO  JavaRunCommand:26 -   --max-allowed-packet=# 
+18:16:45,046 INFO  JavaRunCommand:26 -                       The maximum packet length to send to or receive from
+18:16:45,046 INFO  JavaRunCommand:26 -                       server.
+18:16:45,046 INFO  JavaRunCommand:26 -   --net-buffer-length=# 
+18:16:45,046 INFO  JavaRunCommand:26 -                       The buffer size for TCP/IP and socket communication.
+18:16:45,046 INFO  JavaRunCommand:26 -   --select-limit=#    Automatic limit for SELECT when using --safe-updates.
+18:16:45,046 INFO  JavaRunCommand:26 -   --max-join-size=#   Automatic limit for rows in a join when using
+18:16:45,046 INFO  JavaRunCommand:26 -                       --safe-updates.
+18:16:45,046 INFO  JavaRunCommand:26 -   --secure-auth       Refuse client connecting to server if it uses old
+18:16:45,046 INFO  JavaRunCommand:26 -                       (pre-4.1.1) protocol.
+18:16:45,046 INFO  JavaRunCommand:26 -   --server-arg=name   Send embedded server this as a parameter.
+18:16:45,046 INFO  JavaRunCommand:26 -   --show-warnings     Show warnings after every statement.
+18:16:45,046 INFO  JavaRunCommand:26 -   --plugin-dir=name   Directory for client-side plugins.
+18:16:45,046 INFO  JavaRunCommand:26 -   --default-auth=name Default authentication client-side plugin to use.
+18:16:45,046 INFO  JavaRunCommand:26 - 
+18:16:45,046 INFO  JavaRunCommand:26 - Default options are read from the following files in the given order:
+18:16:45,046 INFO  JavaRunCommand:26 - C:\WINDOWS\my.ini C:\WINDOWS\my.cnf C:\my.ini C:\my.cnf V:\xampp\mysql\my.ini V:\xampp\mysql\my.cnf 
+18:16:45,046 INFO  JavaRunCommand:26 - The following groups are read: mysql client
+18:16:45,046 INFO  JavaRunCommand:26 - The following options may be given as the first argument:
+18:16:45,046 INFO  JavaRunCommand:26 - --print-defaults        Print the program argument list and exit.
+18:16:45,046 INFO  JavaRunCommand:26 - --no-defaults           Don't read default options from any option file.
+18:16:45,046 INFO  JavaRunCommand:26 - --defaults-file=#       Only read default options from the given file #.
+18:16:45,046 INFO  JavaRunCommand:26 - --defaults-extra-file=# Read this file after the global files are read.
+18:16:45,046 INFO  JavaRunCommand:26 - 
+18:16:45,046 INFO  JavaRunCommand:26 - Variables (--variable-name=value)
+18:16:45,046 INFO  JavaRunCommand:26 - and boolean options {FALSE|TRUE}  Value (after reading options)
+18:16:45,046 INFO  JavaRunCommand:26 - --------------------------------- ----------------------------------------
+18:16:45,046 INFO  JavaRunCommand:26 - auto-rehash                       TRUE
+18:16:45,046 INFO  JavaRunCommand:26 - auto-vertical-output              FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - character-sets-dir                (No default value)
+18:16:45,046 INFO  JavaRunCommand:26 - column-type-info                  FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - comments                          FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - compress                          FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - debug-check                       FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - debug-info                        FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - database                          (No default value)
+18:16:45,046 INFO  JavaRunCommand:26 - default-character-set             auto
+18:16:45,046 INFO  JavaRunCommand:26 - delimiter                         ;
+18:16:45,046 INFO  JavaRunCommand:26 - enable-cleartext-plugin           FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - vertical                          FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - force                             FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - named-commands                    FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - ignore-spaces                     FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - init-command                      (No default value)
+18:16:45,046 INFO  JavaRunCommand:26 - local-infile                      FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - no-beep                           FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - host                              (No default value)
+18:16:45,046 INFO  JavaRunCommand:26 - html                              FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - xml                               FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - line-numbers                      TRUE
+18:16:45,046 INFO  JavaRunCommand:26 - unbuffered                        FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - column-names                      TRUE
+18:16:45,046 INFO  JavaRunCommand:26 - sigint-ignore                     FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - port                              0
+18:16:45,046 INFO  JavaRunCommand:26 - prompt                            mysql> 
+18:16:45,046 INFO  JavaRunCommand:26 - quick                             FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - raw                               FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - reconnect                         FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - shared-memory-base-name           (No default value)
+18:16:45,046 INFO  JavaRunCommand:26 - socket                            (No default value)
+18:16:45,046 INFO  JavaRunCommand:26 - ssl                               FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - ssl-ca                            (No default value)
+18:16:45,046 INFO  JavaRunCommand:26 - ssl-capath                        (No default value)
+18:16:45,046 INFO  JavaRunCommand:26 - ssl-cert                          (No default value)
+18:16:45,046 INFO  JavaRunCommand:26 - ssl-cipher                        (No default value)
+18:16:45,046 INFO  JavaRunCommand:26 - ssl-key                           (No default value)
+18:16:45,046 INFO  JavaRunCommand:26 - ssl-verify-server-cert            FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - table                             FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - user                              root
+18:16:45,046 INFO  JavaRunCommand:26 - safe-updates                      FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - i-am-a-dummy                      FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - connect-timeout                   0
+18:16:45,046 INFO  JavaRunCommand:26 - max-allowed-packet                16777216
+18:16:45,046 INFO  JavaRunCommand:26 - net-buffer-length                 16384
+18:16:45,046 INFO  JavaRunCommand:26 - select-limit                      1000
+18:16:45,046 INFO  JavaRunCommand:26 - max-join-size                     1000000
+18:16:45,046 INFO  JavaRunCommand:26 - secure-auth                       FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - show-warnings                     FALSE
+18:16:45,046 INFO  JavaRunCommand:26 - plugin-dir                        (No default value)
+18:16:45,046 INFO  JavaRunCommand:26 - default-auth                      (No default value)
+18:16:45,046 INFO  JavaRunCommand:30 - stderr: 
+18:17:06,000 INFO  JavaRunCommand:9 - ex: cp v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_data.gz v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:17:06,015 INFO  JavaRunCommand:24 - stdout: 
+18:17:06,078 INFO  JavaRunCommand:30 - stderr: 
+18:17:06,078 INFO  JavaRunCommand:32 - cygwin warning:
+18:17:06,078 INFO  JavaRunCommand:32 -   MS-DOS style path detected: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:17:06,078 INFO  JavaRunCommand:32 -   Preferred POSIX equivalent is: /cygdrive/v/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:17:06,078 INFO  JavaRunCommand:32 -   CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+18:17:06,078 INFO  JavaRunCommand:32 -   Consult the user's guide for more details about POSIX paths:
+18:17:06,078 INFO  JavaRunCommand:32 -     http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+18:17:06,078 INFO  JavaRunCommand:9 - ex: rm -f v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw
+18:17:06,093 INFO  JavaRunCommand:24 - stdout: 
+18:17:06,140 INFO  JavaRunCommand:30 - stderr: 
+18:17:06,140 INFO  JavaRunCommand:32 - cygwin warning:
+18:17:06,140 INFO  JavaRunCommand:32 -   MS-DOS style path detected: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw
+18:17:06,140 INFO  JavaRunCommand:32 -   Preferred POSIX equivalent is: /cygdrive/v/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw
+18:17:06,140 INFO  JavaRunCommand:32 -   CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+18:17:06,140 INFO  JavaRunCommand:32 -   Consult the user's guide for more details about POSIX paths:
+18:17:06,140 INFO  JavaRunCommand:32 -     http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+18:17:06,140 INFO  JavaRunCommand:9 - ex: gzip -d v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:17:06,156 INFO  JavaRunCommand:24 - stdout: 
+18:17:08,812 INFO  JavaRunCommand:30 - stderr: 
+18:17:08,812 INFO  JavaRunCommand:32 - cygwin warning:
+18:17:08,812 INFO  JavaRunCommand:32 -   MS-DOS style path detected: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:17:08,812 INFO  JavaRunCommand:32 -   Preferred POSIX equivalent is: /cygdrive/v/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw.gz
+18:17:08,812 INFO  JavaRunCommand:32 -   CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+18:17:08,812 INFO  JavaRunCommand:32 -   Consult the user's guide for more details about POSIX paths:
+18:17:08,812 INFO  JavaRunCommand:32 -     http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+18:17:08,812 INFO  JavaRunCommand:9 - ex: bash mysql --verbose --user=root --password=Ruthdan0 < v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_dataw
+18:17:08,906 INFO  JavaRunCommand:24 - stdout: 
+18:17:09,078 INFO  JavaRunCommand:30 - stderr: 
+18:17:09,078 INFO  JavaRunCommand:32 - /cygdrive/v/xampp/mysql/bin/mysql: /cygdrive/v/xampp/mysql/bin/mysql: cannot execute binary file
+18:28:54,796 ERROR RestoreKissako:48 - non existing file: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it121001_code.gz
+18:29:25,953 ERROR RestoreKissako:48 - non existing file: v:/data/pers_data/web-cont-res/kissako.it/backups/kissako.it_121001_code.gz
+18:30:17,531 ERROR RestoreKissako:48 - non existing file: d700/kissako.it_121001_code.gz
+18:30:30,781 ERROR RestoreKissako:48 - non existing file: v:/data/pers_data/web-cont-res/kissako.it/backups/d700/_121001_code.gz
+18:31:12,265 ERROR RestoreKissako:48 - non existing file: v:/data/pers_data/web-cont-res/kissako.it/backups/d700_121001_code.gz
+18:48:58,656 INFO  JavaRunCommand:9 - ex: tar xvzf  -C v:/xampp/htdocs/v:/data/pers_data/web-cont-res/kissako.it/backups/d700_121001_code.tgz
+18:48:58,703 INFO  JavaRunCommand:24 - stdout: 
+18:48:58,828 INFO  JavaRunCommand:30 - stderr: 
+18:48:58,828 INFO  JavaRunCommand:32 - tar (child): -C: Cannot open: No such file or directory
+18:48:58,828 INFO  JavaRunCommand:32 - tar (child): Error is not recoverable: exiting now
+18:48:58,828 INFO  JavaRunCommand:32 - tar: Child returned status 2
+18:48:58,828 INFO  JavaRunCommand:32 - tar: Error is not recoverable: exiting now
+18:49:37,531 INFO  JavaRunCommand:9 - ex: tar xvzf  -C v:/xampp/htdocs/ v:/data/pers_data/web-cont-res/kissako.it/backups/d700_121001_code.tgz
+18:49:37,546 INFO  JavaRunCommand:24 - stdout: 
+18:49:37,687 INFO  JavaRunCommand:30 - stderr: 
+18:49:37,703 INFO  JavaRunCommand:32 - tar (child): -C: Cannot open: No such file or directory
+18:49:37,703 INFO  JavaRunCommand:32 - tar (child): Error is not recoverable: exiting now
+18:49:37,703 INFO  JavaRunCommand:32 - tar: Child returned status 2
+18:49:37,703 INFO  JavaRunCommand:32 - tar: Error is not recoverable: exiting now
+18:54:08,750 INFO  JavaRunCommand:9 - ex: tar xvzf  -C v:\xampp\htdocs\ v:/data/pers_data/web-cont-res/kissako.it/backups/d700_121001_code.tgz
+18:54:08,781 INFO  JavaRunCommand:24 - stdout: 
+18:54:08,906 INFO  JavaRunCommand:30 - stderr: 
+18:54:08,906 INFO  JavaRunCommand:32 - tar (child): -C: Cannot open: No such file or directory
+18:54:08,906 INFO  JavaRunCommand:32 - tar (child): Error is not recoverable: exiting now
+18:54:08,906 INFO  JavaRunCommand:32 - tar: Child returned status 2
+18:54:08,906 INFO  JavaRunCommand:32 - tar: Error is not recoverable: exiting now
+18:55:12,093 INFO  JavaRunCommand:9 - ex: tar xvzf  -C v:\xampp\htdocs v:/data/pers_data/web-cont-res/kissako.it/backups/d700_121001_code.tgz
+18:55:12,187 INFO  JavaRunCommand:24 - stdout: 
+18:55:12,328 INFO  JavaRunCommand:30 - stderr: 
+18:55:12,343 INFO  JavaRunCommand:32 - tar (child): -C: Cannot open: No such file or directory
+18:55:12,343 INFO  JavaRunCommand:32 - tar (child): Error is not recoverable: exiting now
+18:55:12,343 INFO  JavaRunCommand:32 - tar: Child returned status 2
+18:55:12,343 INFO  JavaRunCommand:32 - tar: Error is not recoverable: exiting now
+18:56:38,921 INFO  JavaRunCommand:9 - ex: tar xvzf  v:/data/pers_data/web-cont-res/kissako.it/backups/d700_121001_code.tgz
+18:56:39,015 INFO  JavaRunCommand:24 - stdout: 
+18:56:41,703 INFO  JavaRunCommand:30 - stderr: 
+18:56:41,703 INFO  JavaRunCommand:32 - tar (child): Cannot connect to v: resolve failed
+18:56:41,703 INFO  JavaRunCommand:32 - 
+18:56:41,703 INFO  JavaRunCommand:32 - gzip: stdin: unexpected end of file
+18:56:41,734 INFO  JavaRunCommand:32 - tar: Child returned status 128
+18:56:41,734 INFO  JavaRunCommand:32 - tar: Error is not recoverable: exiting now
+13:25:17,997 ERROR RestoreKissako:48 - non existing file: v:/data/pers_data/web-cont-res/kissako.it/backups/d700_121001_code.tgz
