@@ -1,0 +1,22 @@
+2017-04-15 15:29:34 INFO  WEBTablesScraperConfig:80 - task: concorsijava.util.LinkedHashMap$Entry value class: class java.util.ArrayList
+2017-04-15 15:29:34 INFO  WEBTablesScraperConfig:82 - java.util.LinkedHashMap
+2017-04-15 15:29:34 INFO  WEBTablesScraperConfig:87 - host : class java.util.LinkedHashMap$Entry
+2017-04-15 15:29:39 INFO  WEBTablesScraperConfig:101 - entry: url->http://concorsi.it
+2017-04-15 15:29:52 INFO  WEBTablesScraperConfig:101 - entry: login->{user=enrico, password=pipppo}
+2017-04-15 15:30:06 INFO  WEBTablesScraperConfig:101 - entry: tables->[{concorsi={table_url=/concorsi, selector=myselector, htmlentryincl=[, ], htmlentryexcl=[, ]}}]
+2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:105 - class java.util.LinkedHashMap$Entry
+2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:82 - java.util.LinkedHashMap
+2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:87 - host : class java.util.LinkedHashMap$Entry
+2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:101 - entry: url->http://concorsi.it
+2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:101 - entry: login->{user=enrico, password=pipppo}
+2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:101 - entry: tables->[{concorsi={table_url=/concorsi, selector=myselector, htmlentryincl=[, ], htmlentryexcl=[, ]}}]
+2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:105 - class java.util.LinkedHashMap$Entry
+2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:80 - task: italianpenpalsjava.util.LinkedHashMap$Entry value class: class java.util.ArrayList
+2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:82 - java.util.LinkedHashMap
+2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:87 - host : class java.util.LinkedHashMap$Entry
+2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:101 - entry: url->http://concorsi.it
+2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:101 - entry: login->{user=enrico, password=pipppo}
+2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:101 - entry: tables->{concorsi={url=/concorsi, selector=myselector}}
+2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:105 - class java.util.LinkedHashMap$Entry
+2017-04-15 15:30:33 ERROR WEBTablesScraperConfig:63 - unexpected entry: l1entry2
+2017-04-15 15:30:33 ERROR WEBTablesScraperConfig:63 - unexpected entry: l1entry3

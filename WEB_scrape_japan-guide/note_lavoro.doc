@@ -1,0 +1,12 @@
+completare memorizzazione entries
+
+meccanismo gestione max numero contatti
+	- limite probabilmente già c'è, anche se NON giornaliero (session limits)
+		- query per contare azioni eseguite nel giorno, che esamina il campo di stato? (vedi sotto)
+
+
+aggiungere al profilo il campo di stato
+	- forse basta data ultimo contatto ?
+
+
+

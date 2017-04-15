@@ -1,0 +1,997 @@
+11:08:25,150 INFO  RDBManagerMicrosoftSQLSrv:53 - in startDBServer for SQL Server
+11:08:26,022 INFO  RDBManagerMicrosoftSQLSrv:54 - I do nothing
+11:08:36,214 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:11:26,638 INFO  RDBManagerMicrosoftSQLSrv:53 - in startDBServer for SQL Server
+11:11:26,639 INFO  RDBManagerMicrosoftSQLSrv:54 - I do nothing
+11:11:26,639 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:11:26,838 ERROR TableFileMgr:203 - Eccezione di IO
+java.lang.UnsupportedOperationException: Java Runtime Environment (JRE) version 1.7 is not supported by this driver. Use the sqljdbc4.jar class library, which provides support for JDBC 4.0.
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.<init>(SQLServerConnection.java:238)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:841)
+	at java.sql.DriverManager.getConnection(DriverManager.java:579)
+	at java.sql.DriverManager.getConnection(DriverManager.java:221)
+	at RDBManager.connectToDBMS(RDBManager.java:73)
+	at RDBManager.open(RDBManager.java:172)
+	at com.enrico200165.utils.rdb_jdbc.test.TableFileMgr.perform(TableFileMgr.java:118)
+	at com.enrico200165.utils.rdb_jdbc.test.Main.main(Main.java:31)
+11:13:11,409 INFO  RDBManagerMicrosoftSQLSrv:53 - in startDBServer for SQL Server
+11:13:11,409 INFO  RDBManagerMicrosoftSQLSrv:54 - I do nothing
+11:13:11,410 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:13:11,884 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:13:11,990 ERROR JDBCEVTable:39 - 
+com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name 'UA_IndivContactHistory'.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:216)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1515)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.doExecuteStatement(SQLServerStatement.java:792)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement$StmtExecCmd.doExecute(SQLServerStatement.java:689)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:5696)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:1715)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:180)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:155)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeQuery(SQLServerStatement.java:616)
+	at JDBCEVTable.readMetadata(JDBCEVTable.java:28)
+	at com.enrico200165.utils.rdb_jdbc.test.TableFileMgr.perform(TableFileMgr.java:121)
+	at com.enrico200165.utils.rdb_jdbc.test.Main.main(Main.java:31)
+11:13:11,996 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:13:12,011 ERROR JDBCEVTable:39 - 
+com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name 'UA_IndivDtlContactHist'.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:216)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1515)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.doExecuteStatement(SQLServerStatement.java:792)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement$StmtExecCmd.doExecute(SQLServerStatement.java:689)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:5696)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:1715)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:180)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:155)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeQuery(SQLServerStatement.java:616)
+	at JDBCEVTable.readMetadata(JDBCEVTable.java:28)
+	at com.enrico200165.utils.rdb_jdbc.test.TableFileMgr.perform(TableFileMgr.java:125)
+	at com.enrico200165.utils.rdb_jdbc.test.Main.main(Main.java:31)
+11:13:12,013 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:13:12,023 ERROR TableFileMgr:203 - Eccezione di IO
+com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name 'UA_IndivContactHistory'.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:216)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1515)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.doExecuteStatement(SQLServerStatement.java:792)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement$StmtExecCmd.doExecute(SQLServerStatement.java:689)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:5696)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:1715)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:180)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:155)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeQuery(SQLServerStatement.java:616)
+	at com.enrico200165.utils.rdb_jdbc.test.TableFileMgr.perform(TableFileMgr.java:135)
+	at com.enrico200165.utils.rdb_jdbc.test.Main.main(Main.java:31)
+11:13:36,623 INFO  RDBManagerMicrosoftSQLSrv:53 - in startDBServer for SQL Server
+11:13:36,623 INFO  RDBManagerMicrosoftSQLSrv:54 - I do nothing
+11:13:36,624 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:13:37,122 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:13:37,133 ERROR JDBCEVTable:39 - 
+com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name 'UA_IndivContactHistory'.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:216)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1515)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.doExecuteStatement(SQLServerStatement.java:792)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement$StmtExecCmd.doExecute(SQLServerStatement.java:689)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:5696)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:1715)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:180)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:155)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeQuery(SQLServerStatement.java:616)
+	at JDBCEVTable.readMetadata(JDBCEVTable.java:28)
+	at com.enrico200165.utils.rdb_jdbc.test.TableFileMgr.perform(TableFileMgr.java:121)
+	at com.enrico200165.utils.rdb_jdbc.test.Main.main(Main.java:31)
+11:13:37,135 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:13:37,146 ERROR JDBCEVTable:39 - 
+com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name 'UA_IndivDtlContactHist'.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:216)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1515)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.doExecuteStatement(SQLServerStatement.java:792)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement$StmtExecCmd.doExecute(SQLServerStatement.java:689)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:5696)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:1715)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:180)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:155)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeQuery(SQLServerStatement.java:616)
+	at JDBCEVTable.readMetadata(JDBCEVTable.java:28)
+	at com.enrico200165.utils.rdb_jdbc.test.TableFileMgr.perform(TableFileMgr.java:125)
+	at com.enrico200165.utils.rdb_jdbc.test.Main.main(Main.java:31)
+11:13:37,148 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:13:37,158 ERROR TableFileMgr:203 - Eccezione di IO
+com.microsoft.sqlserver.jdbc.SQLServerException: Invalid object name 'UA_IndivContactHistory'.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:216)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1515)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.doExecuteStatement(SQLServerStatement.java:792)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement$StmtExecCmd.doExecute(SQLServerStatement.java:689)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:5696)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:1715)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:180)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:155)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeQuery(SQLServerStatement.java:616)
+	at com.enrico200165.utils.rdb_jdbc.test.TableFileMgr.perform(TableFileMgr.java:135)
+	at com.enrico200165.utils.rdb_jdbc.test.Main.main(Main.java:31)
+11:14:01,112 INFO  RDBManagerMicrosoftSQLSrv:53 - in startDBServer for SQL Server
+11:14:01,115 INFO  RDBManagerMicrosoftSQLSrv:54 - I do nothing
+11:14:01,122 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:14:17,918 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:18:02,256 INFO  RDBManagerMicrosoftSQLSrv:53 - in startDBServer for SQL Server
+11:18:02,257 INFO  RDBManagerMicrosoftSQLSrv:54 - I do nothing
+11:18:02,258 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:18:02,723 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:18:02,732 INFO  JDBCEVTable:29 - eseguo: SELECT * FROM UA_IndivContactHistory
+11:23:14,110 INFO  RDBManagerMicrosoftSQLSrv:53 - in startDBServer for SQL Server
+11:23:14,110 INFO  RDBManagerMicrosoftSQLSrv:54 - I do nothing
+11:23:14,111 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:23:14,592 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:23:14,601 INFO  JDBCEVTable:29 - eseguo: SELECT * FROM UA_IndivContactHistory
+11:27:23,247 INFO  RDBManagerMicrosoftSQLSrv:53 - in startDBServer for SQL Server
+11:27:23,248 INFO  RDBManagerMicrosoftSQLSrv:54 - I do nothing
+11:27:23,248 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:27:23,703 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:27:23,711 INFO  JDBCEVTable:29 - eseguo: SELECT * FROM UA_IndivContactHistory
+11:35:09,555 INFO  RDBManagerMicrosoftSQLSrv:53 - in startDBServer for SQL Server
+11:35:09,556 INFO  RDBManagerMicrosoftSQLSrv:54 - I do nothing
+11:35:09,556 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:35:10,213 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:35:10,224 INFO  JDBCEVTable:29 - eseguo: SELECT * FROM UA_IndivContactHistory
+11:38:37,214 INFO  RDBManagerMicrosoftSQLSrv:53 - in startDBServer for SQL Server
+11:38:37,215 INFO  RDBManagerMicrosoftSQLSrv:54 - I do nothing
+11:38:37,215 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:38:37,667 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:38:37,676 INFO  JDBCEVTable:29 - eseguo: SELECT * FROM UA_IndivContactHistory
+11:38:46,254 INFO  RDBManagerMicrosoftSQLSrv:53 - in startDBServer for SQL Server
+11:38:46,254 INFO  RDBManagerMicrosoftSQLSrv:54 - I do nothing
+11:38:46,255 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:38:52,308 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:39:11,405 INFO  RDBManagerMicrosoftSQLSrv:53 - in startDBServer for SQL Server
+11:39:11,406 INFO  RDBManagerMicrosoftSQLSrv:54 - I do nothing
+11:39:11,406 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:39:20,075 INFO  RDBManagerMicrosoftSQLSrv:53 - in startDBServer for SQL Server
+11:39:20,076 INFO  RDBManagerMicrosoftSQLSrv:54 - I do nothing
+11:39:20,076 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:46:02,303 INFO  RDBManagerMicrosoftSQLSrv:53 - in startDBServer for SQL Server
+11:46:02,304 INFO  RDBManagerMicrosoftSQLSrv:54 - I do nothing
+11:46:02,304 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:46:11,990 INFO  RDBManagerMicrosoftSQLSrv:53 - in startDBServer for SQL Server
+11:46:11,991 INFO  RDBManagerMicrosoftSQLSrv:54 - I do nothing
+11:46:11,991 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:46:33,647 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:46:33,683 INFO  JDBCEVTable:29 - eseguo: SELECT * FROM UA_IndivContactHistory
+11:47:57,172 INFO  RDBManagerMicrosoftSQLSrv:53 - in startDBServer for SQL Server
+11:47:57,172 INFO  RDBManagerMicrosoftSQLSrv:54 - I do nothing
+11:47:57,173 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:48:01,839 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:48:13,924 INFO  JDBCEVTable:29 - eseguo: SELECT * FROM UA_IndivContactHistory
+11:48:15,667 INFO  StatementEV:31 - eseguo query: SELECT * FROM UA_IndivContactHistory
+11:48:25,546 ERROR TableFileMgr:203 - Eccezione di IO
+java.lang.NullPointerException
+	at StatementEV.executeQuery(StatementEV.java:33)
+	at JDBCEVTable.readMetadata(JDBCEVTable.java:30)
+	at com.enrico200165.utils.rdb_jdbc.test.TableFileMgr.perform(TableFileMgr.java:121)
+	at com.enrico200165.utils.rdb_jdbc.test.Main.main(Main.java:31)
+11:48:39,717 INFO  RDBManagerMicrosoftSQLSrv:53 - in startDBServer for SQL Server
+11:48:39,717 INFO  RDBManagerMicrosoftSQLSrv:54 - I do nothing
+11:48:39,718 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:48:52,693 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:48:58,296 INFO  JDBCEVTable:29 - eseguo: SELECT * FROM UA_IndivContactHistory
+11:49:09,941 INFO  StatementEV:31 - eseguo query: SELECT * FROM UA_IndivContactHistory
+11:49:57,537 INFO  RDBManagerMicrosoftSQLSrv:53 - in startDBServer for SQL Server
+11:49:57,537 INFO  RDBManagerMicrosoftSQLSrv:54 - I do nothing
+11:49:57,538 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:49:57,966 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:49:57,975 INFO  JDBCEVTable:29 - eseguo: SELECT * FROM UA_IndivContactHistory
+11:49:57,976 INFO  StatementEV:29 - eseguo query: SELECT * FROM UA_IndivContactHistory
+11:49:58,038 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:49:58,047 INFO  JDBCEVTable:29 - eseguo: SELECT * FROM UA_IndivDtlContactHist
+11:49:58,047 INFO  StatementEV:29 - eseguo query: SELECT * FROM UA_IndivDtlContactHist
+11:49:58,049 WARN  RDBManagerMicrosoftSQLSrv:30 - al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal costruttore la costruzione della stringa, in un metodo dedicato
+11:49:58,079 ERROR TableFileMgr:196 - Eccezione di IO
+java.io.FileNotFoundException: C:\Affinium\Campaign\partitions\partition1\invidual_action_table.csv (The system cannot find the path specified)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:212)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:104)
+	at com.enrico200165.utils.rdb_jdbc.test.TableFileMgr.perform(TableFileMgr.java:165)
+	at com.enrico200165.utils.rdb_jdbc.test.Main.main(Main.java:31)
+11:49:58,080 INFO  TableFileMgr:199 - scritto: C:\Affinium\Campaign\partitions\partition1\invidual_action_table.csv scritti: 0
+11:49:58,127 ERROR TableFileMgr:203 - Eccezione di IO
+java.io.IOException: Cannot run program "C:\Program": CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1042)
+	at java.lang.Runtime.exec(Runtime.java:615)
+	at java.lang.Runtime.exec(Runtime.java:448)
+	at java.lang.Runtime.exec(Runtime.java:345)
+	at com.enrico200165.utils.rdb_jdbc.test.TableFileMgr.perform(TableFileMgr.java:201)
+	at com.enrico200165.utils.rdb_jdbc.test.Main.main(Main.java:31)
+Caused by: java.io.IOException: CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:288)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:133)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1023)
+	... 5 more
+13:51:01,984 INFO  aExecutor:73 - Executing:  cmd.exe /C dir
+13:51:02,045 INFO  aExecutor:73 - Executing:  cmd.exe /C ssh enrico@kissako.it -p 7822 'ls' 
+13:52:33,358 INFO  aExecutor:73 - Executing:  cmd.exe /C dir
+13:52:53,972 INFO  aExecutor:73 - Executing:  cmd.exe /C ssh enrico@kissako.it -p 7822 'ls' 
+15:06:41,535 INFO  aExecutor:73 - Executing:  cmd.exe /C dir
+15:56:29,809 FATAL JDBCEVTable:52 - connessione DB � null
+15:57:15,771 FATAL JDBCEVTable:52 - connessione DB � null
+15:59:26,811 FATAL JDBCEVTable:52 - connessione DB � null
+16:02:27,977 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+16:02:29,928 WARN  RDBManager:83 - DB conn. fallita, forse DB non esiste?
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1.435.759.349.928 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2214)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:773)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:352)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at java.sql.DriverManager.getConnection(DriverManager.java:579)
+	at java.sql.DriverManager.getConnection(DriverManager.java:221)
+	at RDBManager.connectToDBMS(RDBManager.java:79)
+	at RDBManager.getConnection(RDBManager.java:158)
+	at JDBCEVTable.getMyDBConn(JDBCEVTable.java:313)
+	at JDBCEVTable.getRowsNumber(JDBCEVTable.java:51)
+	at com.enrico200165.utils.rdb_jdbc.test.Mysql.test(Mysql.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1.435.759.349.928 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2137)
+	... 39 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:69)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:157)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:391)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:290)
+	... 40 more
+16:05:37,612 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+16:16:55,417 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+16:17:24,976 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+16:18:07,335 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+16:18:08,987 WARN  RDBManager:83 - DB conn. fallita, forse DB non esiste?
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1.435.760.288.987 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2214)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:773)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:352)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at java.sql.DriverManager.getConnection(DriverManager.java:579)
+	at java.sql.DriverManager.getConnection(DriverManager.java:221)
+	at RDBManager.connectToDBMS(RDBManager.java:79)
+	at RDBManager.getConnection(RDBManager.java:134)
+	at JDBCEVTable.getMyDBConn(JDBCEVTable.java:313)
+	at JDBCEVTable.getRowsNumber(JDBCEVTable.java:51)
+	at com.enrico200165.utils.rdb_jdbc.test.Mysql.test(Mysql.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1.435.760.288.987 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2137)
+	... 39 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:69)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:157)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:391)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:290)
+	... 40 more
+16:18:08,997 FATAL JDBCEVTable:52 - connessione DB � null
+16:18:09,007 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+16:18:10,448 WARN  RDBManager:83 - DB conn. fallita, forse DB non esiste?
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1.435.760.290.448 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2214)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:773)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:352)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at java.sql.DriverManager.getConnection(DriverManager.java:579)
+	at java.sql.DriverManager.getConnection(DriverManager.java:221)
+	at RDBManager.connectToDBMS(RDBManager.java:79)
+	at RDBManager.getConnection(RDBManager.java:134)
+	at JDBCEVTable.getRowsNumber(JDBCEVTable.java:53)
+	at com.enrico200165.utils.rdb_jdbc.test.Mysql.test(Mysql.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1.435.760.290.448 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2137)
+	... 38 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:69)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:157)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:391)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:290)
+	... 39 more
+16:34:58,488 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+17:50:40,041 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+19:36:15,097 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+20:21:24,568 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+20:21:51,887 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+20:22:07,620 INFO  JDBCEVTable:34 - eseguo: SELECT * FROM users
+20:22:07,621 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+20:22:22,267 ERROR JDBCEVTable:67 - 
+20:24:03,271 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+20:24:07,356 INFO  JDBCEVTable:34 - eseguo: SELECT * FROM users
+20:24:07,357 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+20:24:57,960 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+20:25:04,918 INFO  JDBCEVTable:34 - eseguo: SELECT * FROM users
+20:25:04,919 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+20:25:58,197 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+20:26:00,696 INFO  JDBCEVTable:34 - eseguo: SELECT * FROM users
+20:26:00,697 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+20:26:01,444 INFO  FileHelper:24 - encoding not provided, using default
+20:26:54,696 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+20:26:59,113 INFO  JDBCEVTable:34 - eseguo: SELECT * FROM users
+20:26:59,114 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+20:27:00,197 INFO  FileHelper:24 - encoding not provided, using default
+20:27:46,049 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+20:27:48,117 INFO  JDBCEVTable:34 - eseguo: SELECT * FROM users
+20:27:48,118 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+20:27:48,832 INFO  FileHelper:24 - encoding not provided, using default
+20:29:48,932 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+20:29:51,039 INFO  JDBCEVTable:34 - eseguo: SELECT * FROM users
+20:29:51,040 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+20:29:51,756 INFO  FileHelper:24 - encoding not provided, using default
+20:33:28,503 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+20:33:30,632 INFO  JDBCEVTable:34 - eseguo: SELECT * FROM users
+20:33:30,633 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+20:33:31,322 INFO  FileHelper:24 - encoding not provided, using default
+20:36:42,703 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+20:36:45,188 INFO  JDBCEVTable:36 - eseguo: SELECT * FROM users
+20:36:45,189 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+20:36:45,932 INFO  FileHelper:24 - encoding not provided, using default
+20:36:46,011 INFO  FileHelper:115 - scritto: csv 
+# esaminati: 101 scritti: 100
+20:37:17,107 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+20:37:19,155 INFO  JDBCEVTable:36 - eseguo: SELECT * FROM users
+20:37:19,158 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+20:37:19,864 INFO  FileHelper:24 - encoding not provided, using default
+20:37:19,915 INFO  FileHelper:115 - scritto: csv 
+# esaminati: 101 scritti: 100
+05:51:51,977 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+05:51:54,100 INFO  JDBCEVTable:36 - eseguo: SELECT * FROM users
+05:51:54,100 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+05:51:54,569 INFO  FileHelper:24 - encoding not provided, using default
+05:51:54,631 INFO  FileHelper:115 - scritto: csv 
+# esaminati: 101 scritti: 100
+05:54:02,256 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+05:58:41,608 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+05:59:22,388 INFO  JDBCEVTable:36 - eseguo: SELECT * FROM users
+05:59:24,011 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+05:59:55,446 INFO  FileHelper:24 - encoding not provided, using default
+06:01:34,555 INFO  FileHelper:115 - scritto: csv 
+# esaminati: 101 scritti: 100
+06:01:43,823 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+06:01:45,398 INFO  JDBCEVTable:36 - eseguo: SELECT * FROM users
+06:01:45,398 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+06:01:45,867 INFO  FileHelper:24 - encoding not provided, using default
+06:01:45,914 INFO  FileHelper:115 - scritto: csv 
+# esaminati: 192 scritti: 192
+06:03:48,782 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+06:03:51,497 INFO  JDBCEVTable:36 - eseguo: SELECT * FROM users
+06:03:51,497 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+06:03:51,998 INFO  FileHelper:25 - encoding not provided, using default: UTF8
+06:19:24,693 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+06:19:26,409 INFO  JDBCEVTable:36 - eseguo: SELECT * FROM users
+06:19:26,409 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+06:19:26,878 INFO  FileHelper:26 - encoding not provided, using default: UTF8
+06:19:26,878 ERROR FileHelper:114 - Eccezione di IO
+java.io.FileNotFoundException: pippo.txt\pippo.txtcsv (The system cannot find the path specified)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:212)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:104)
+	at FileHelper.writeList(FileHelper.java:57)
+	at JDBCEVTable.writeToFile(JDBCEVTable.java:94)
+	at com.enrico200165.utils.rdb_jdbc.test.Mysql.test(Mysql.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+06:20:10,933 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+06:20:12,525 INFO  JDBCEVTable:36 - eseguo: SELECT * FROM users
+06:20:12,525 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+06:25:34,665 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+06:25:36,241 INFO  JDBCEVTable:36 - eseguo: SELECT * FROM users
+06:25:36,241 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+06:25:36,710 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+06:25:36,710 ERROR FileHelper:106 - Eccezione di IO
+java.io.FileNotFoundException: null\pippo.txtcsv (The system cannot find the path specified)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:212)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:104)
+	at FileHelper.writeList(FileHelper.java:56)
+	at JDBCEVTable.writeToFile(JDBCEVTable.java:94)
+	at com.enrico200165.utils.rdb_jdbc.test.Mysql.test(Mysql.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+06:26:45,665 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+06:26:47,241 INFO  JDBCEVTable:36 - eseguo: SELECT * FROM users
+06:26:47,241 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+06:26:47,716 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+06:26:47,765 INFO  FileHelper:101 - scritto: pippo.txt 
+# esaminati: 192 scritti: 192
+06:35:36,240 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+06:35:37,925 INFO  JDBCEVTable:36 - eseguo: SELECT * FROM users
+06:35:37,940 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+06:35:38,409 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+06:35:38,456 INFO  FileHelper:101 - in V:\data\pers_dev\repos\git_all\ev_tools\EVUtils scritto: pippo.txt 
+# esaminati: 192 scritti: 192
+06:36:46,073 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+06:36:47,664 INFO  JDBCEVTable:36 - eseguo: SELECT * FROM users
+06:36:47,664 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+06:37:31,324 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+06:52:00,454 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+06:52:02,185 INFO  JDBCEVTable:36 - eseguo: SELECT * FROM users
+06:52:02,185 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+06:52:08,982 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+06:52:21,343 ERROR FileHelper:107 - Eccezione di IO
+java.io.FileNotFoundException: \\pippo.txtcsv (The specified path is invalid)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:212)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:104)
+	at FileHelper.writeList(FileHelper.java:56)
+	at JDBCEVTable.writeToFile(JDBCEVTable.java:94)
+	at com.enrico200165.utils.rdb_jdbc.test.Mysql.test(Mysql.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+06:52:32,436 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+06:52:34,027 INFO  JDBCEVTable:36 - eseguo: SELECT * FROM users
+06:52:34,027 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+06:52:34,512 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+06:57:18,316 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+06:57:19,891 INFO  JDBCEVTable:36 - eseguo: SELECT * FROM users
+06:57:19,891 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+06:57:20,391 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+07:02:32,844 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+07:02:34,529 INFO  JDBCEVTable:36 - eseguo: SELECT * FROM users
+07:02:34,529 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:02:35,013 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+07:03:20,138 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+07:03:21,731 INFO  JDBCEVTable:36 - eseguo: SELECT * FROM users
+07:03:21,731 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:03:22,216 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+07:03:33,544 INFO  FileHelper:101 - in V:\data\pers_dev\repos\git_all\ev_tools\EVUtils scritto: pippo.txt 
+# esaminati: 192 scritti: 192
+07:18:43,793 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+07:18:45,493 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:45,493 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:45,915 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:45,915 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:46,196 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:46,212 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:46,492 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:46,492 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:46,773 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:46,773 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:47,055 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:47,055 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:47,336 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:47,336 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:47,617 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:47,617 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:47,897 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:47,897 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:48,179 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:48,179 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:48,460 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:48,460 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:48,741 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:48,741 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:49,022 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:49,022 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:49,303 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:49,319 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:49,600 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:49,600 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:49,881 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:49,881 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:50,161 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:50,161 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:50,443 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:50,443 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:50,724 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:50,724 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:51,005 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:51,005 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:51,286 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:51,286 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:51,567 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:51,583 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:51,864 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:51,864 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:52,145 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:52,145 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:52,425 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:52,425 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:52,707 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:52,707 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:52,988 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:52,988 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:53,269 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:53,269 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:53,550 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:53,550 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:53,831 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:53,847 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:54,128 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:54,128 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:54,409 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:54,409 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:54,689 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:54,689 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:54,971 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:54,971 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:55,252 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:55,252 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:55,533 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:55,533 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:55,814 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:55,814 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:56,095 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:56,111 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:56,392 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:56,392 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:56,673 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:56,673 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:56,942 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:56,942 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:57,239 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:57,239 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:57,520 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:57,520 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:57,801 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:57,801 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:58,082 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:58,082 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:58,363 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:58,363 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:58,644 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:58,644 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:18:58,925 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:18:58,925 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:23:40,967 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+07:23:42,543 INFO  JDBCEVTable:44 - eseguo: SELECT * FROM users
+07:23:42,558 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:23:43,199 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+07:23:43,246 INFO  FileHelper:101 - in V:\data\pers_dev\repos\git_all\ev_tools\EVUtils scritto: pippo.txt 
+# esaminati: 192 scritti: 192
+07:34:23,860 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+07:34:25,545 INFO  JDBCEVTable:45 - eseguo: SELECT * FROM users
+07:34:25,545 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:34:26,170 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+07:34:54,171 INFO  FileHelper:101 - in V:\data\pers_dev\repos\git_all\ev_tools\EVUtils scritto: pippo.txt 
+# esaminati: 192 scritti: 192
+07:37:51,041 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+07:37:52,629 INFO  JDBCEVTable:45 - eseguo: SELECT * FROM users
+07:37:52,629 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:37:53,285 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+07:38:37,883 ERROR FileHelper:107 - Eccezione di IO
+java.io.FileNotFoundException: pippo.txt.	 (The filename, directory name, or volume label syntax is incorrect)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:212)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:104)
+	at FileHelper.writeList(FileHelper.java:56)
+	at JDBCEVTable.writeToFile(JDBCEVTable.java:124)
+	at com.enrico200165.utils.rdb_jdbc.test.Mysql.test(Mysql.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+07:39:37,275 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+07:39:38,866 INFO  JDBCEVTable:45 - eseguo: SELECT * FROM users
+07:39:38,866 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:39:39,507 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+07:40:06,066 ERROR FileHelper:107 - Eccezione di IO
+java.io.FileNotFoundException: pippo.txt.	 (The filename, directory name, or volume label syntax is incorrect)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:212)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:104)
+	at FileHelper.writeList(FileHelper.java:56)
+	at JDBCEVTable.writeToFile(JDBCEVTable.java:124)
+	at com.enrico200165.utils.rdb_jdbc.test.Mysql.test(Mysql.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+07:40:27,780 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+07:40:29,371 INFO  JDBCEVTable:45 - eseguo: SELECT * FROM users
+07:40:29,371 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:40:29,982 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+07:40:29,982 ERROR FileHelper:107 - Eccezione di IO
+java.io.FileNotFoundException: pippo.txt.	 (The filename, directory name, or volume label syntax is incorrect)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:212)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:104)
+	at FileHelper.writeList(FileHelper.java:56)
+	at JDBCEVTable.writeToFile(JDBCEVTable.java:124)
+	at com.enrico200165.utils.rdb_jdbc.test.Mysql.test(Mysql.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+07:41:27,778 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+07:41:29,354 INFO  JDBCEVTable:45 - eseguo: SELECT * FROM users
+07:41:29,354 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:41:29,979 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+07:42:43,952 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+07:42:45,527 INFO  JDBCEVTable:45 - eseguo: SELECT * FROM users
+07:42:45,543 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:42:46,152 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+07:43:02,239 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+07:43:03,846 INFO  JDBCEVTable:45 - eseguo: SELECT * FROM users
+07:43:03,846 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:43:04,486 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+07:44:34,350 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+07:44:36,051 INFO  JDBCEVTable:45 - eseguo: SELECT * FROM users
+07:44:36,051 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:47:52,019 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+07:47:53,581 INFO  JDBCEVTable:45 - eseguo: SELECT * FROM users
+07:47:53,581 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:47:54,206 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+07:47:54,238 INFO  FileHelper:101 - in V:\data\pers_dev\repos\git_all\ev_tools\EVUtils scritto: pippo.txt 
+# esaminati: 192 scritti: 192
+07:50:06,092 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+07:50:07,683 INFO  JDBCEVTable:45 - eseguo: SELECT * FROM users
+07:50:07,683 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:50:08,308 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+07:50:08,355 INFO  FileHelper:101 - in V:\data\pers_dev\repos\git_all\ev_tools\EVUtils scritto: pippo.txt 
+# esaminati: 192 scritti: 192
+07:53:54,694 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+07:53:56,285 INFO  JDBCEVTable:45 - eseguo: SELECT * FROM users
+07:53:56,285 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:53:56,879 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+07:53:56,926 INFO  FileHelper:101 - in V:\data\pers_dev\repos\git_all\ev_tools\EVUtils scritto: pippo.txt 
+# esaminati: 192 scritti: 192
+07:54:10,555 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+07:54:12,161 INFO  JDBCEVTable:45 - eseguo: SELECT * FROM users
+07:54:12,161 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:54:12,771 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+07:54:12,833 INFO  FileHelper:101 - in V:\data\pers_dev\repos\git_all\ev_tools\EVUtils scritto: pippo.txt 
+# esaminati: 192 scritti: 192
+07:54:52,416 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+07:54:54,118 INFO  JDBCEVTable:45 - eseguo: SELECT * FROM users
+07:54:54,118 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:54:54,759 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+07:54:54,806 INFO  FileHelper:101 - in V:\data\pers_dev\repos\git_all\ev_tools\EVUtils scritto: pippo.csv 
+# esaminati: 192 scritti: 192
+07:55:06,444 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+07:55:08,051 INFO  JDBCEVTable:45 - eseguo: SELECT * FROM users
+07:55:08,051 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+07:55:13,871 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+07:55:19,661 INFO  FileHelper:101 - in V:\data\pers_dev\repos\git_all\ev_tools\EVUtils scritto: pippo.csv 
+# esaminati: 192 scritti: 192
+09:15:30,615 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+09:15:32,476 INFO  JDBCEVTable:41 - eseguo: SELECT * FROM users
+09:15:32,476 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+09:15:33,107 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+09:15:33,157 INFO  FileHelper:101 - in V:\data\pers_dev\repos\git_all\ev_tools\EVUtils scritto: pippo.csv 
+# esaminati: 193 scritti: 193
+09:18:52,404 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+09:18:54,048 INFO  JDBCEVSelectABC:38 - eseguo: SELECT * FROM users
+09:18:54,048 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+09:18:54,689 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+09:18:54,730 INFO  FileHelper:101 - in V:\data\pers_dev\repos\git_all\ev_tools\EVUtils scritto: pippo.csv 
+# esaminati: 193 scritti: 193
+09:21:06,651 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+09:21:08,242 INFO  JDBCEVSelectABC:38 - eseguo: SELECT * FROM users
+09:21:08,242 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+09:21:09,023 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+09:21:09,093 INFO  FileHelper:101 - in V:\data\pers_dev\repos\git_all\ev_tools\EVUtils scritto: pippo.csv 
+# esaminati: 193 scritti: 193
+06:29:35,454 INFO  RDBManagerMySQL:28 - tento di avviare mysql server
+06:29:37,522 INFO  JDBCEVSelectABC:38 - eseguo: SELECT * FROM users
+06:29:37,523 INFO  StatementEV:28 - eseguo query: SELECT * FROM users
+06:29:38,591 INFO  FileHelper:27 - encoding not provided, using default: UTF8
+06:29:38,667 INFO  FileHelper:101 - in V:\data\pers_dev\repos\git_all\ev_tools\EVUtils scritto: pippo.csv 
+# esaminati: 198 scritti: 198
+20:01:39,842 INFO  aExecutor:72 - Executing:  cmd.exe /C dir
+20:01:39,930 INFO  aExecutor:72 - Executing:  cmd.exe /C ssh enrico@kissako.it -p 7822 'ls' 
+12:18:32,177 INFO  UtlTest:29 - 2015-09-17_00-18-32
+12:21:34,015 INFO  UtlTest:29 - 2015-09-17_00-21-34
+12:21:34,019 INFO  UtlTest:31 - 2015-09-17
+12:25:17,841 INFO  UtlTest:29 - 2015-09-17_00-25-17
+12:25:17,846 INFO  UtlTest:31 - 2015-09-17
+07:38:06,145 INFO  UtlTest:29 - 2016-00-15_07-38-06
+07:38:06,147 INFO  UtlTest:31 - 2016-01-15
+07:39:04,506 INFO  UtlTest:29 - 2016-00-15_07-39-04
+07:39:04,509 INFO  UtlTest:31 - 2016-01-15
+07:39:55,175 INFO  UtlTest:29 - 2016-00-15_07-39-55
+07:39:55,177 INFO  UtlTest:31 - 2016-01-15
+07:40:17,594 INFO  UtlTest:29 - 2016-00-15_07-40-17
+07:40:17,597 INFO  UtlTest:31 - 2016-01-15
+07:42:52,934 INFO  UtlTest:38 - valore1
+07:42:52,936 INFO  UtlTest:39 - valore2
+07:51:25,704 INFO  UtlTest:38 - valore1
+07:51:25,705 INFO  UtlTest:39 - valore2
+17:59:25,332 INFO  aExecutor:72 - Executing:  cmd.exe /C dir
+17:59:25,427 INFO  aExecutor:72 - Executing:  cmd.exe /C ssh enrico@kissako.it -p 7822 'ls' 
+15:04:35,676 WARN  FileHelper:173 - footer null for file: testdelete
+15:04:35,683 INFO  FileHelper:180 - in V:\data\pers_dev\sources\intellij\ev_tools\ev_tools\ev_tools\EVUtils scritto: testdelete 
+# esaminati: 1 scritti: 0
+15:06:13,145 WARN  FileHelper:173 - footer null for file: testdelete
+15:06:13,164 INFO  FileHelper:180 - in V:\data\pers_dev\sources\intellij\ev_tools\ev_tools\ev_tools\EVUtils scritto: testdelete 
+# esaminati: 1 scritti: 0
+15:07:20,132 WARN  FileHelper:173 - footer null for file: testdelete
+15:07:20,138 INFO  FileHelper:180 - in V:\data\pers_dev\sources\intellij\ev_tools\ev_tools\ev_tools\EVUtils scritto: testdelete 
+# esaminati: 1 scritti: 0
+15:08:14,995 WARN  FileHelper:173 - footer null for file: testdelete
+15:08:17,994 INFO  FileHelper:180 - in V:\data\pers_dev\sources\intellij\ev_tools\ev_tools\ev_tools\EVUtils scritto: testdelete 
+# esaminati: 1 scritti: 0
+15:10:19,074 WARN  FileHelper:173 - footer null for file: testdelete
+15:10:19,078 INFO  FileHelper:180 - in V:\data\pers_dev\sources\intellij\ev_tools\ev_tools\ev_tools\EVUtils scritto: testdelete 
+# esaminati: 2 scritti: 2
+15:11:38,128 WARN  FileHelper:173 - footer null for file: testdelete
+15:11:53,521 INFO  FileHelper:180 - in V:\data\pers_dev\sources\intellij\ev_tools\ev_tools\ev_tools\EVUtils scritto: testdelete 
+# esaminati: 2 scritti: 2
+15:12:50,825 WARN  FileHelper:173 - footer null for file: testdelete
+15:12:50,828 INFO  FileHelper:180 - in V:\data\pers_dev\sources\intellij\ev_tools\ev_tools\ev_tools\EVUtils scritto: testdelete 
+# esaminati: 2 scritti: 2
+15:16:43,975 WARN  FileHelper:175 - footer null for file: testdelete
+15:16:43,985 INFO  FileHelper:182 - in V:\data\pers_dev\sources\intellij\ev_tools\ev_tools\ev_tools\EVUtils scritto: testdelete 
+# esaminati: 2 scritti: 2

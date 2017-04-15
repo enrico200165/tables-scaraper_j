@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="V:/data/pers_dev/00_libs/java/3rd_party/sqlite/sqlitejdbc-v056.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="V:/data/pers_dev/00_libs/java/3rd_party/sqlite"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="lib/JEE_jars/glassfish_4.1/javaee.jar"/>
+	<classpathentry kind="lib" path="lib/JEE_jars/glassfish_4.1/javax.mail.jar"/>
+	<classpathentry kind="lib" path="V:/data/pers_dev/00_libs/java/3rd_party/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="V:/data/pers_dev/00_libs/java/3rd_party/mysql-connector-java-5.1.31/mysql-connector-java-5.1.31/mysql-connector-java-5.1.31-bin.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

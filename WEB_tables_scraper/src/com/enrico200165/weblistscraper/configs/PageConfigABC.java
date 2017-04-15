@@ -1,0 +1,115 @@
+package com.enrico200165.weblistscraper.configs;
+
+import com.enrico200165.weblistscraper.page.EntryProcessorABC;
+import com.enrico200165.weblistscraper.page.TableScraperABC;
+import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
+import com.enrico200165.weblistscraper.tools.EntryExcludeFilter;
+import com.enrico200165.weblistscraper.tools.EntryIncludeFilter;
+import org.apache.log4j.Logger;
+
+import com.enrico200165.weblistscraper.page.NextTablePageSelectorsABC;
+import com.enrico200165.weblistscraper.tools.EntryCanActOnFilter;
+
+/**
+ * Tage = table/page SEMBREREBBE che fornisce tutto ciò che serve a elaborare una pagina: - indirizzi (host-config) - selettori - oggetti
+ * specifici
+ * 
+ * @author enrico
+ *
+ */
+public abstract class PageConfigABC {
+
+	public PageConfigABC(HostConfigABC hcPar, TableScraperABC ts, EntryCanActOnFilter entryCanActOnPar, ChannelIFC channelInfoPar) {
+		super();
+		this.hc = hcPar;
+		this.tableScraper = ts;
+		this.channelInfo = channelInfoPar;
+		this.entryCanActOn = entryCanActOnPar;
+	}
+
+	public ChannelIFC getChannelInfo() {
+		return this.channelInfo;
+	}
+
+	public HostConfigABC getHostConfig() {
+		return this.hc;
+//		return this.cfg.getHostConfig();
+	}
+
+	public EntryCanActOnFilter getContactProspectFilter() {
+		return entryCanActOn;
+	}
+
+	// -- END Forwarding to gloabl config
+
+	static EntryExcludeFilter entryExcludeFilter = null;
+
+	public EntryExcludeFilter getEntryExcludeFilter(SessionManagerAbstr smPar) {
+		if (entryExcludeFilter == null) {
+			entryExcludeFilter = getEntryExcludeFilterSpecific(smPar);
+		}
+		return entryExcludeFilter;
+	}
+
+	public abstract EntryExcludeFilter getEntryExcludeFilterSpecific(SessionManagerAbstr smPar);
+
+	static EntryIncludeFilter entryIncludeFilter = null;
+
+	public EntryIncludeFilter getEntryIncludeFilter(SessionManagerAbstr smPar) {
+		if (entryIncludeFilter == null) {
+			entryIncludeFilter = getEntryIncludeFilterSpecific(smPar);
+		}
+		return entryIncludeFilter;
+	}
+
+	public abstract EntryIncludeFilter getEntryIncludeFilterSpecific(SessionManagerAbstr smPar);
+
+	// jsoup selector for the table in a page
+	public abstract String TableSelectCSS();
+
+	// jsoup selector for the entries in a table
+	public abstract String EntrySelectCSS();
+
+	// table specific scraper/processor
+	TableScraperABC tablePageScraper = null;
+
+	abstract public TableScraperABC getTableScraperObject();
+
+	public TableScraperABC getTableScraper() {
+		if (tablePageScraper == null) {
+			tablePageScraper = getTableScraperObject();
+		}
+		
+		
+		log.warn("patch per rimediare a una dipendenza circolare dovuta a design assurdo");
+		tablePageScraper.setPageConfig(this);
+		
+		
+		return tablePageScraper;
+	}
+
+	// table&entry specific /processor
+
+	abstract public EntryProcessorABC getEntryProcObject(String configID);
+
+	abstract public EntryProcessorABC getEntryProc(String configID);
+
+	static NextTablePageSelectorsABC nextTablePageSelectorsABC = null;
+
+	public NextTablePageSelectorsABC getNextTablePageSelectors() {
+		if (nextTablePageSelectorsABC == null) {
+			nextTablePageSelectorsABC = getNextTablePageSelectorsSpecific();
+		}
+		return nextTablePageSelectorsABC;
+	}
+
+	protected abstract NextTablePageSelectorsABC getNextTablePageSelectorsSpecific();
+
+	protected HostConfigABC hc;
+	protected TableScraperABC tableScraper;
+	protected ChannelIFC channelInfo;
+
+	protected EntryCanActOnFilter entryCanActOn;
+	
+	private static org.apache.log4j.Logger log = Logger.getLogger(PageConfigABC.class);
+}

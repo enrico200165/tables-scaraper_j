@@ -1,0 +1,33 @@
+POST http://www.japan-guide.com/m/contact.html?998662+894811 HTTP/1.1
+Host: www.japan-guide.com
+Connection: keep-alive
+Content-Length: 97
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Origin: http://www.japan-guide.com
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 OPR/35.0.2066.82
+Content-Type: application/x-www-form-urlencoded
+Referer: http://www.japan-guide.com/m/contact.html?998662+894811
+Accept-Encoding: gzip, deflate, lzma
+Accept-Language: en-US,en;q=0.8
+Cookie: jgid_ip=87.19.196.108; jgid_time=1456566405; geo_c=0; geo_country_c=IT; _gat=1; jg_test=set; jg_session=384385721920972; jg_user=319462; jg_email=enrico_italy2001%40yahoo.it; jg_nick=enrico200165; _ga=GA1.2.1359663675.1456566407
+
+aMESSAGE=Anche+io+sono+Italiano%2C+proviamo+ad+aiutarci+con+lo+studio+del+Giapponese%3F&aMES=send
+
+
+
+HTTP/1.1 200 OK
+Date: Sat, 27 Feb 2016 09:49:20 GMT
+Server: Apache
+Set-Cookie: jg_session=384385721920972; expires=Mon, 28-Mar-2016 09:49:20 GMT; path=/
+Set-Cookie: jg_user=319462; expires=Mon, 28-Mar-2016 09:49:20 GMT; path=/
+Set-Cookie: jg_email=enrico_italy2001%40yahoo.it; expires=Mon, 28-Mar-2016 09:49:20 GMT; path=/
+Set-Cookie: jg_nick=enrico200165; expires=Mon, 28-Mar-2016 09:49:20 GMT; path=/
+X-Powered-By: PleskLin
+MS-Author-Via: DAV
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html;charset=shift-jis
+
+resto messaggio omesso

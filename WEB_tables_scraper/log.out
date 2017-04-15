@@ -1,0 +1,6 @@
+2016-02-27 16:32:30 INFO  WEBUtilsTest:71 - http://example.com/
+2016-02-27 16:32:30 INFO  WEBUtilsTest:75 - http://example.com/
+2016-02-27 16:32:30 INFO  WEBUtilsTest:79 - http://example.com/path
+2016-02-27 16:32:30 INFO  WEBUtilsTest:83 - http://example.com/path
+2016-02-27 16:32:30 INFO  WEBUtilsTest:87 - https://example.com/path
+2016-02-27 16:32:30 ERROR WEBUtils:162 - problem building URI from host: "null" and url: "path"

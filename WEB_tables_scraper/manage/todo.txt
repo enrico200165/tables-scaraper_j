@@ -1,0 +1,42 @@
+
+
+ --- MIGLIORAMENTI CODICE ----
+
+usa filtri per il log
+
+prova proprietà gestione redirects a livello di client
+
+massimizza uso di configurable
+
+prova delay in request filter e secondi come proprietà di configurable
+
+usa Configurable al più alto livello possibile sfruttando l'ereditarietà
+  alcune mie classi config possono sparire, al loro posto gobabl config setta proprietà
+
+
+--- GESTIONE COOKIES ----
+
+usare unit tests dettagliati
+
+provare usare toString() valueOf()
+
+  storage - file
+filename: provare usare encoding base64 per host ed eventuali path, qualcosa tipo:
+cookies/<hostname>/cookie_hostname.....txt
+
+--- storage JPA ----
+se uso DB usare JPA con autoupdate attiva
+
+-- esame cookies da inviare server
+
+- dominio
+- path dominio contro path target (usando uri o più banalmente sottostringa di confronto per 
+equals (sottodominio non fornito), substring (fornito)
+- scadenza data
+
+path potrebbe essere una lista di path ?
+
+controlla attributo Secure
+
+
+ 

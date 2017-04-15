@@ -1,0 +1,44 @@
+package blog.jsonp.moxy;
+
+import java.util.*;
+import javax.xml.bind.annotation.*;
+
+@XmlType(propOrder={"id", "firstName", "lastName", "phoneNumbers"})
+public class Customer {
+
+    private int id;
+    private String firstName;
+    private String lastName;
+    private List<PhoneNumber> phoneNumbers = new ArrayList<PhoneNumber>();
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    @XmlElement(nillable=true)
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    @XmlElement
+    public List<PhoneNumber> getPhoneNumbers() {
+        return phoneNumbers;
+    }
+
+}

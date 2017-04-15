@@ -1,0 +1,13 @@
+@font-face {
+	font-family:'Vodafone Rg Bold';
+	src:url('vodafonerg_bd-webfont.png') format('woff');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'Vodafone Rg';
+	src:url('vodafonerg-webfont.png') format('woff');
+	font-weight:normal;
+	font-style:normal;
+}

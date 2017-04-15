@@ -1,0 +1,4 @@
+2016-07-28 17:32:28 INFO  DBManagerMKT:16 - eclipselink.ddl-generation.output-mode = database
+2016-07-28 17:32:28 INFO  DBManagerMKT:16 - javax.persistence.jdbc.driver = org.sqlite.JDBC
+2016-07-28 17:32:28 INFO  DBManagerMKT:16 - eclipselink.ddl-generation = create-tables
+2016-07-28 17:32:28 INFO  DBManagerMKT:16 - javax.persistence.jdbc.url = jdbc:sqlite:V:/data/pers_dev/data_dbs/marketing.db

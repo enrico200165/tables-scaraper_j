@@ -1,0 +1,121 @@
+--- XML per login, copia e incolla nel tool ---------
+<Envelope><Body>
+<Login>
+<USERNAME>enrico.viali@it.ibm.com</USERNAME>
+<PASSWORD>Ocir!?00si</PASSWORD>
+</Login>
+</Body></Envelope>
+
+
+
+-------- Login POST capture ----------------------------
+POST http://api0.silverpop.com/XMLAPI HTTP/1.1
+Accept: text/html, application/xhtml+xml, */*
+Accept-Language: en-US
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+Connection: Keep-Alive
+Content-Length: 224
+Host: api0.silverpop.com
+Pragma: no-cache
+
+jsessionid=&xml=%3CEnvelope%3E%3CBody%3E%0D%0A%3CLogin%3E%0D%0A%3CUSERNAME%3Eenrico.viali@it.ibm.com%3C%2FUSERNAME%3E%0D%0A%3CPASSWORD%3EOcir%21%3F00si%3C%2FPASSWORD%3E%0D%0A%3C%2FLogin%3E%0D%0A%3C%2FBody%3E%3C%2FEnvelope%3E
+
+------------- risposta -------------
+HTTP/1.1 200 OK
+Date: Sat, 02 Jan 2016 17:58:57 GMT
+Server: Apache-Coyote/1.1
+Content-Type: text/xml;charset=utf-8
+Keep-Alive: timeout=15, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+
+134
+<Envelope>
+<Body>
+<RESULT>
+<SUCCESS>true</SUCCESS>
+<SESSIONID>769150772D637BA0E2219B4E7DE2CCB9</SESSIONID>
+<ORGANIZATION_ID>5f2814f5-1463f45ca88-8b9e04a3322ef09b72546765721138ee</ORGANIZATION_ID>
+<SESSION_ENCODING>;jsessionid=769150772D637BA0E2219B4E7DE2CCB9</SESSION_ENCODING>
+</RESULT>
+</Body>
+</Envelope>
+
+0
+
+
+--- Logout fiddler capture ------
+
+POST http://api0.silverpop.com/XMLAPI HTTP/1.1
+Accept: text/html, application/xhtml+xml, */*
+Accept-Language: it-IT
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+Connection: Keep-Alive
+Content-Length: 224
+Host: api0.silverpop.com
+Pragma: no-cache
+
+jsessionid=&xml=%3CEnvelope%3E%3CBody%3E%0D%0A%3CLogin%3E%0D%0A%3CUSERNAME%3Eenrico.viali@it.ibm.com%3C%2FUSERNAME%3E%0D%0A%3CPASSWORD%3EOcir%21%3F00si%3C%2FPASSWORD%3E%0D%0A%3C%2FLogin%3E%0D%0A%3C%2FBody%3E%3C%2FEnvelope%3E
+
+
+-- Response
+
+HTTP/1.1 200 OK
+Date: Thu, 07 Jan 2016 10:49:11 GMT
+Server: Apache-Coyote/1.1
+Content-Type: text/xml;charset=utf-8
+Transfer-Encoding: chunked
+Connection: Keep-Alive
+
+134
+<Envelope>
+<Body>
+<RESULT>
+<SUCCESS>true</SUCCESS>
+<SESSIONID>62E9AFC47E8273F38CED3545A9F912A6</SESSIONID>
+<ORGANIZATION_ID>5f2814f5-1463f45ca88-8b9e04a3322ef09b72546765721138ee</ORGANIZATION_ID>
+<SESSION_ENCODING>;jsessionid=62E9AFC47E8273F38CED3545A9F912A6</SESSION_ENCODING>
+</RESULT>
+</Body>
+</Envelope>
+
+0
+
+
+######################  Scrap notes ###########################
+
+
+
+POST http://api0.silverpop.com/XMLAPI HTTP/1.1
+POST http://api0.silverpop.com/XMLAPI;jsessionid=20CB2F323185E6BC31B02EBCC4F82ECD HTTP/1.1
+
+
+Accept: text/html, application/xhtml+xml, */*
+Accept-Language: it-IT
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+Connection: Keep-Alive
+Content-Length: 224
+Host: api0.silverpop.com
+Pragma: no-cache
+
+jsessionid=&xml=%3CEnvelope%3E%3CBody%3E%0D%0A%3CLogin%3E%0D%0A%3CUSERNAME%3Eenrico.viali@it.ibm.com%3C%2FUSERNAME%3E%0D%0A%3CPASSWORD%3EOcir%21%3F00si%3C%2FPASSWORD%3E%0D%0A%3C%2FLogin%3E%0D%0A%3C%2FBody%3E%3C%2FEnvelope%3E
+
+
+
+
+Accept: text/html,application/xhtml+xml,*/*
+Accept-Language: en-US
+Content-Type: application/x-www-form-urlencoded
+Cookie: DRUPALCHAT_NEWLOGIN=1;SESS32419b31a49889972b5003a632e09ddb=ZQlJ-a0coIH4WI-3Z1yEfuP3sIOwA4heffSqZp8ORsE;
+User-Agent: Jersey/2.19 (HttpUrlConnection 1.8.0_20)
+Host: api0.silverpop.com
+Connection: keep-alive
+Content-Length: 131
+
+jsessionid=&xml=%253CEnvelope%253E%253CBody%253E%250D%250A%253CLogout%252F%253E%250D%250A%253C%252FBody%253E%253C%252FEnvelope%253E

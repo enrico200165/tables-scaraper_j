@@ -1,0 +1,65 @@
+
+
+============================ RIDISEGNO =========================================
+
+Conoscenza reciproca fra oggetto mater/contenitore e slave
+- non gestibile usando costruzione bottom up
+- costruzione topdown implica che si sapia tutto a priori, e si usi una configurazione centralizzata, 
+  come facevo inizialmente 
+La soluzione sembra essere: 
+conoscenza top-down: tramite parametric costruttore
+conoscenza bottom up: metodo setTopObject, chiamato dall'oggetto top che passa se' stesso all'oggetto contenuto
+il metodo init di un oggetto chiama il metodo setTopObject dei sottostanti, così si avvia una catena di inzializzazione
+
+
+LIVELLI gestiti in modo uniforme
+	- possibilemente  stesso pattern
+	lista:  Session, Page, Table, Entry (host gestito in modo trasversale)
+
+	DIFFERENZE FRA LIVELLI
+	di parametri (ex. linnk a prossima pagina tabella): con oggetti configurazione
+	di comportamento: ereditarietà, con interfaccia, codice generale in classe astrattta, classe specifica
+	quindi per livello XYZ avrò:
+	XYZProcessorIfc (interface) in core code 
+		XYZProcessor (Common code), XYZYouSpecificEntity
+    XYZConfigIfc, XYZConfigYourSpecificEntity
+
+
+
+================================================================================
+
+
+
+---------------- PAGINA -----------------------------
+  
+  
+  
+  PageProcDescr
+    contiene le informazioni sul come elaborare la pagina corrispondente all'URL contenuta
+        
+	## PageLoadAbstr  
+    sembra responsabile dell'elaborazione di una pagina, 
+    attiva le operazioni  che trova nel PageProcDescr passatogli
+    in particolare:
+    - eventualmente seleziona lo scraper per la tabella contenuta nella pagina
+      (inzialmente assumiamo che non tutte le pagine contengano tabelle, che non si debba
+      fare solo scraping
+      - forse lo scraper dovrebbe essere nel  PageProcDescr
+
+
+	## TableOrPageConfig
+	SEMBRA entità di pura configurazione,
+	probabilmente da eliminare, complicatissimo eliminarla
+	fornisce filtri e altre informazioni
+	
+------------ Tabella --------------------
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,857 @@
+07:56:40,561 ERROR Utl:148 - in env: =U:=U:\
+ nonexisting dir: 'U:\'
+07:56:40,573 ERROR Utl:171 - variable: =U:
+07:56:40,573 ERROR Utl:148 - in env: =Q:=Q:\
+ nonexisting dir: 'Q:\'
+07:56:40,573 ERROR Utl:171 - variable: =Q:
+07:56:40,573 ERROR Utl:148 - in env: =M:=M:\
+ nonexisting dir: 'M:\'
+07:56:40,574 ERROR Utl:171 - variable: =M:
+07:56:40,574 ERROR Utl:148 - in env: =I:=I:\
+ nonexisting dir: 'I:\'
+07:56:40,574 ERROR Utl:171 - variable: =I:
+07:56:40,575 ERROR Utl:148 - in env: =A:=A:\
+ nonexisting dir: 'A:\'
+07:56:40,575 ERROR Utl:171 - variable: =A:
+07:56:40,575 ERROR Utl:148 - in env: =Z:=Z:\
+ nonexisting dir: 'Z:\'
+07:56:40,575 ERROR Utl:171 - variable: =Z:
+07:56:40,575 ERROR Utl:148 - in env: =R:=R:\
+ nonexisting dir: 'R:\'
+07:56:40,576 ERROR Utl:171 - variable: =R:
+07:56:40,576 ERROR Utl:148 - in env: =N:=N:\
+ nonexisting dir: 'N:\'
+07:56:40,576 ERROR Utl:171 - variable: =N:
+07:56:40,576 ERROR Utl:148 - in env: =J:=J:\
+ nonexisting dir: 'J:\'
+07:56:40,576 ERROR Utl:171 - variable: =J:
+07:56:40,577 ERROR Utl:148 - in env: =F:=F:\
+ nonexisting dir: 'F:\'
+07:56:40,577 ERROR Utl:171 - variable: =F:
+07:56:40,577 ERROR Utl:148 - in env: =B:=B:\
+ nonexisting dir: 'B:\'
+07:56:40,577 ERROR Utl:171 - variable: =B:
+07:56:40,578 ERROR Utl:148 - in env: =W:=W:\
+ nonexisting dir: 'W:\'
+07:56:40,578 ERROR Utl:171 - variable: =W:
+07:56:40,578 ERROR Utl:148 - in env: =S:=S:\
+ nonexisting dir: 'S:\'
+07:56:40,578 ERROR Utl:171 - variable: =S:
+07:56:40,578 ERROR Utl:148 - in env: =O:=O:\
+ nonexisting dir: 'O:\'
+07:56:40,578 ERROR Utl:171 - variable: =O:
+07:56:40,579 ERROR Utl:148 - in env: =K:=K:\
+ nonexisting dir: 'K:\'
+07:56:40,579 ERROR Utl:171 - variable: =K:
+07:56:40,579 ERROR Utl:148 - in env: =G:=G:\
+ nonexisting dir: 'G:\'
+07:56:40,579 ERROR Utl:171 - variable: =G:
+07:56:40,579 ERROR Utl:148 - in env: =X:=X:\
+ nonexisting dir: 'X:\'
+07:56:40,580 ERROR Utl:171 - variable: =X:
+07:56:40,581 ERROR Utl:148 - in env: =T:=T:\
+ nonexisting dir: 'T:\'
+07:56:40,581 ERROR Utl:171 - variable: =T:
+07:56:40,581 ERROR Utl:148 - in env: =P:=P:\
+ nonexisting dir: 'P:\'
+07:56:40,581 ERROR Utl:171 - variable: =P:
+07:56:40,582 ERROR Utl:148 - in env: =L:=L:\
+ nonexisting dir: 'L:\'
+07:56:40,582 ERROR Utl:171 - variable: =L:
+07:56:40,582 ERROR Utl:148 - in env: =H:=H:\
+ nonexisting dir: 'H:\'
+07:56:40,582 ERROR Utl:171 - variable: =H:
+07:56:40,582 ERROR Utl:148 - in env: easyplussdk="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+07:56:40,583 ERROR Utl:171 - variable: easyplussdk
+07:56:40,583 ERROR Utl:148 - in env: =Y:=Y:\
+ nonexisting dir: 'Y:\'
+07:56:40,583 ERROR Utl:171 - variable: =Y:
+07:56:45,650 WARN  SessionManager:48 - normally a derivd class should override this method
+07:56:45,653 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+07:56:51,913 ERROR PageLoad:29 - should not pass here or make class abstract
+07:56:52,027 INFO  TableScraperABC:47 - scraping table: #pagine_interne > ul
+07:56:52,036 INFO  PageLoad:41 - Page: http://concorsi.it:80/regione/lazio
+07:56:57,567 ERROR PageLoad:29 - should not pass here or make class abstract
+07:56:57,749 INFO  TableScraperABC:47 - scraping table: #datagrid > table
+07:56:57,752 WARN  SessionManager:53 - normally a derivd class should override this method
+07:56:57,752 ERROR SessionManagerAbstr:56 - seesione fallita, esco
+07:56:57,752 ERROR SessionManagerAbstr:75 - spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage
+07:57:40,061 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+07:57:40,065 ERROR Utl:171 - variable: EASYPLUSSDK
+07:57:41,747 WARN  SessionManager:48 - normally a derivd class should override this method
+07:57:41,748 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+07:57:47,045 ERROR PageLoad:29 - should not pass here or make class abstract
+07:57:47,260 INFO  TableScraperABC:47 - scraping table: #pagine_interne > ul
+07:57:47,269 INFO  PageLoad:41 - Page: http://concorsi.it:80/regione/lazio
+07:57:52,106 ERROR PageLoad:29 - should not pass here or make class abstract
+07:57:52,333 INFO  TableScraperABC:47 - scraping table: #datagrid > table
+08:00:42,301 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+08:00:42,305 ERROR Utl:171 - variable: EASYPLUSSDK
+08:00:43,962 WARN  SessionManager:48 - normally a derivd class should override this method
+08:00:43,964 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+08:00:49,871 ERROR PageLoad:29 - should not pass here or make class abstract
+08:00:50,158 INFO  TableScraperABC:47 - scraping table: #pagine_interne > ul
+08:00:50,168 INFO  PageLoad:41 - Page: http://concorsi.it:80/regione/lazio
+08:00:54,620 ERROR PageLoad:29 - should not pass here or make class abstract
+08:00:55,473 INFO  TableScraperABC:47 - scraping table: #datagrid > table
+08:09:08,369 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+08:09:08,373 ERROR Utl:171 - variable: EASYPLUSSDK
+08:09:15,730 WARN  SessionManager:48 - normally a derivd class should override this method
+08:09:15,734 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+08:09:20,948 ERROR PageLoad:29 - should not pass here or make class abstract
+08:09:21,141 INFO  TableScraperABC:47 - scraping table: #pagine_interne > ul
+08:09:21,151 INFO  PageLoad:41 - Page: http://concorsi.it:80/regione/lazio
+08:09:25,287 ERROR PageLoad:29 - should not pass here or make class abstract
+08:09:25,513 INFO  TableScraperABC:47 - scraping table: #datagrid > table
+08:09:25,517 WARN  SessionManager:53 - normally a derivd class should override this method
+08:09:25,517 ERROR SessionManagerAbstr:73 - seesione fallita, esco
+08:09:25,517 ERROR SessionManagerAbstr:92 - spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage
+08:09:38,249 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+08:09:38,253 ERROR Utl:171 - variable: EASYPLUSSDK
+08:09:39,950 WARN  SessionManager:48 - normally a derivd class should override this method
+08:09:39,952 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+08:09:45,041 ERROR PageLoad:29 - should not pass here or make class abstract
+08:09:45,233 INFO  TableScraperABC:47 - scraping table: #pagine_interne > ul
+08:09:45,242 INFO  PageLoad:41 - Page: http://concorsi.it:80/regione/lazio
+08:09:49,898 ERROR PageLoad:29 - should not pass here or make class abstract
+08:09:50,394 INFO  TableScraperABC:47 - scraping table: #datagrid > table
+08:51:50,227 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+08:51:50,233 ERROR Utl:171 - variable: EASYPLUSSDK
+08:51:51,913 WARN  SessionManager:48 - normally a derivd class should override this method
+08:51:51,915 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+08:51:57,014 ERROR PageLoad:29 - should not pass here or make class abstract
+08:51:57,226 INFO  TableScraperABC:47 - scraping table: #pagine_interne > ul
+08:51:57,236 INFO  PageLoad:41 - Page: http://concorsi.it:80/regione/lazio
+08:52:01,497 ERROR PageLoad:29 - should not pass here or make class abstract
+08:52:01,800 INFO  TableScraperABC:47 - scraping table: #datagrid > table
+09:02:21,824 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+09:02:21,828 ERROR Utl:171 - variable: EASYPLUSSDK
+09:02:23,500 WARN  SessionManager:48 - normally a derivd class should override this method
+09:02:23,504 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+09:02:28,701 ERROR PageLoad:29 - should not pass here or make class abstract
+09:02:28,916 INFO  TableScraperABC:48 - scraping table: #pagine_interne > ul
+09:02:28,926 INFO  PageLoad:41 - Page: http://concorsi.it:80/regione/lazio
+09:02:33,446 ERROR PageLoad:29 - should not pass here or make class abstract
+09:02:34,026 INFO  TableScraperABC:48 - scraping table: #datagrid > table
+09:03:18,938 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+09:03:18,942 ERROR Utl:171 - variable: EASYPLUSSDK
+09:03:20,626 WARN  SessionManager:48 - normally a derivd class should override this method
+09:03:20,628 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+09:05:45,727 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+09:05:45,732 ERROR Utl:171 - variable: EASYPLUSSDK
+09:05:47,395 WARN  SessionManager:48 - normally a derivd class should override this method
+09:05:47,397 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+09:10:26,439 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+09:10:26,443 ERROR Utl:171 - variable: EASYPLUSSDK
+09:10:28,161 WARN  SessionManager:48 - normally a derivd class should override this method
+09:10:28,163 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+09:12:27,835 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+09:12:27,839 ERROR Utl:171 - variable: EASYPLUSSDK
+09:12:29,520 WARN  SessionManager:48 - normally a derivd class should override this method
+09:12:29,522 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+09:13:40,365 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+09:13:40,369 ERROR Utl:171 - variable: EASYPLUSSDK
+09:13:42,055 WARN  SessionManager:48 - normally a derivd class should override this method
+09:13:42,057 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+09:15:36,939 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+09:15:36,943 ERROR Utl:171 - variable: EASYPLUSSDK
+09:15:38,625 WARN  SessionManager:48 - normally a derivd class should override this method
+09:15:38,627 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+09:16:39,411 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+09:16:39,416 ERROR Utl:171 - variable: EASYPLUSSDK
+09:16:41,091 WARN  SessionManager:48 - normally a derivd class should override this method
+09:16:41,093 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+09:18:53,543 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+09:18:53,548 ERROR Utl:171 - variable: EASYPLUSSDK
+09:18:55,230 WARN  SessionManager:48 - normally a derivd class should override this method
+09:18:55,232 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+09:19:41,890 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+09:19:41,894 ERROR Utl:171 - variable: EASYPLUSSDK
+09:19:43,563 WARN  SessionManager:48 - normally a derivd class should override this method
+09:19:43,565 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+09:28:35,065 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+09:28:35,069 ERROR Utl:171 - variable: EASYPLUSSDK
+09:28:36,814 WARN  SessionManager:48 - normally a derivd class should override this method
+09:28:36,816 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+09:28:57,669 ERROR PageLoad:29 - should not pass here or make class abstract
+09:28:57,791 INFO  TableScraperABC:48 - scraping table: #pagine_interne > ul
+09:28:57,800 INFO  PageLoad:41 - Page: http://concorsi.it:80/regione/lazio
+09:29:01,916 ERROR PageLoad:29 - should not pass here or make class abstract
+09:29:02,212 INFO  TableScraperABC:48 - scraping table: #datagrid > table
+09:30:01,086 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+09:30:01,090 ERROR Utl:171 - variable: EASYPLUSSDK
+09:30:02,773 WARN  SessionManager:48 - normally a derivd class should override this method
+09:30:02,775 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+09:30:14,792 ERROR PageLoad:29 - should not pass here or make class abstract
+09:30:14,905 INFO  TableScraperABC:50 - scraping table: #pagine_interne > ul
+09:30:14,914 INFO  PageLoad:41 - Page: http://concorsi.it:80/regione/lazio
+09:30:55,630 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+09:30:55,634 ERROR Utl:171 - variable: EASYPLUSSDK
+09:30:57,357 WARN  SessionManager:48 - normally a derivd class should override this method
+09:30:57,358 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+09:31:02,447 ERROR PageLoad:29 - should not pass here or make class abstract
+09:31:02,641 INFO  TableScraperABC:50 - scraping table: #pagine_interne > ul
+09:31:02,651 INFO  PageLoad:41 - Page: http://concorsi.it:80/regione/lazio
+09:31:07,609 ERROR PageLoad:29 - should not pass here or make class abstract
+09:31:07,913 INFO  TableScraperABC:50 - scraping table: #datagrid > table
+09:31:20,830 WARN  SessionManager:53 - normally a derivd class should override this method
+09:31:20,831 ERROR SessionManagerAbstr:73 - seesione fallita, esco
+09:31:20,831 ERROR SessionManagerAbstr:92 - spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage
+09:31:31,441 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+09:31:31,445 ERROR Utl:171 - variable: EASYPLUSSDK
+09:31:33,119 WARN  SessionManager:48 - normally a derivd class should override this method
+09:31:33,121 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+09:31:38,231 ERROR PageLoad:29 - should not pass here or make class abstract
+09:31:38,472 INFO  TableScraperABC:50 - scraping table: #pagine_interne > ul
+09:31:38,481 INFO  PageLoad:41 - Page: http://concorsi.it:80/regione/lazio
+09:31:43,491 ERROR PageLoad:29 - should not pass here or make class abstract
+09:31:43,811 INFO  TableScraperABC:50 - scraping table: #datagrid > table
+09:32:14,715 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+09:32:14,719 ERROR Utl:171 - variable: EASYPLUSSDK
+09:32:16,436 WARN  SessionManager:48 - normally a derivd class should override this method
+09:32:16,438 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+09:34:07,469 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+09:34:07,473 ERROR Utl:171 - variable: EASYPLUSSDK
+09:34:09,134 WARN  SessionManager:48 - normally a derivd class should override this method
+09:34:09,136 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+09:40:26,374 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+09:40:26,379 ERROR Utl:171 - variable: EASYPLUSSDK
+09:40:28,069 WARN  SessionManager:48 - normally a derivd class should override this method
+09:40:28,071 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+09:45:07,235 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+09:45:07,239 ERROR Utl:171 - variable: EASYPLUSSDK
+09:45:08,930 WARN  SessionManager:48 - normally a derivd class should override this method
+09:45:08,931 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+10:21:15,815 ERROR Utl:148 - in env: EASYPLUSSDK="C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"
+ nonexisting dir: '"C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin"'
+10:21:15,819 ERROR Utl:171 - variable: EASYPLUSSDK
+10:21:17,833 WARN  SessionManager:48 - normally a derivd class should override this method
+10:21:17,835 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+07:46:05,959 ERROR Utl:148 - in env: PATH=V:\programs\Java\jdk1.8.0_20\jre\bin;V:/programs/Java/jdk1.8.0_20/bin/../jre/bin/server;V:/programs/Java/jdk1.8.0_20/bin/../jre/bin;V:/programs/Java/jdk1.8.0_20/bin/../jre/lib/amd64;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\IBM\Infoprint Select;C:\Program Files\ThinkPad\Bluetooth Software\;C:\Program Files\ThinkPad\Bluetooth Software\syswow64;C:\Program Files (x86)\IBM\Mobility Client\;C:\Program Files (x86)\IBM\Personal Communications\;C:\Program Files (x86)\IBM\Trace Facility\;V:\programs\cygwin64\install;V:\programs\cygwin64\install\bin;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\13.0\DLLShared\;C:\Program Files (x86)\Skype\Phone\;V:\programs\Java\sqlite;C:\Program Files (x86)\QuickTime\QTSystem\;V:\programs\Java\jdk1.8.0_20\bin;;V:\programs\Java\eclipse-jee-mars-1-win32-x86_64\eclipse;
+ nonexisting dir: ''
+07:46:05,983 ERROR Utl:171 - variable: PATH
+07:46:15,870 WARN  SessionManager:48 - normally a derivd class should override this method
+07:46:15,900 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+07:49:16,057 ERROR Utl:148 - in env: PATH=V:\programs\Java\jdk1.8.0_20\jre\bin;V:/programs/Java/jdk1.8.0_20/bin/../jre/bin/server;V:/programs/Java/jdk1.8.0_20/bin/../jre/bin;V:/programs/Java/jdk1.8.0_20/bin/../jre/lib/amd64;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\IBM\Infoprint Select;C:\Program Files\ThinkPad\Bluetooth Software\;C:\Program Files\ThinkPad\Bluetooth Software\syswow64;C:\Program Files (x86)\IBM\Mobility Client\;C:\Program Files (x86)\IBM\Personal Communications\;C:\Program Files (x86)\IBM\Trace Facility\;V:\programs\cygwin64\install;V:\programs\cygwin64\install\bin;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\13.0\DLLShared\;C:\Program Files (x86)\Skype\Phone\;V:\programs\Java\sqlite;C:\Program Files (x86)\QuickTime\QTSystem\;V:\programs\Java\jdk1.8.0_20\bin;;V:\programs\Java\eclipse-jee-mars-1-win32-x86_64\eclipse;
+ nonexisting dir: ''
+07:49:16,074 ERROR Utl:171 - variable: PATH
+07:49:20,138 WARN  SessionManager:48 - normally a derivd class should override this method
+07:49:20,143 INFO  PageLoad:41 - Page: http://concorsi.it:80/nc/top
+09:08:24,292 WARN  SessionManager:48 - normally a derivd class should override this method
+09:08:24,317 INFO  PageProcessor:41 - Page: http://concorsi.it:80/nc/top
+09:08:30,166 ERROR PageProcessor:29 - should not pass here or make class abstract
+09:08:30,430 WARN  SessionManager:53 - normally a derivd class should override this method
+09:08:30,430 ERROR SessionManagerAbstr:73 - seesione fallita, esco
+09:08:30,430 ERROR SessionManagerAbstr:92 - spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage
+09:08:53,242 WARN  SessionManager:48 - normally a derivd class should override this method
+09:08:53,248 INFO  PageProcessor:41 - Page: http://concorsi.it:80/nc/top
+09:08:58,705 ERROR PageProcessor:29 - should not pass here or make class abstract
+09:12:13,276 WARN  SessionManager:48 - normally a derivd class should override this method
+09:12:13,283 INFO  PageProcessor:41 - Page: http://concorsi.it:80/nc/top
+09:12:18,793 ERROR PageProcessor:29 - should not pass here or make class abstract
+09:12:29,208 INFO  TableScraperABC:54 - scraping table: #datagrid > table
+09:12:35,227 ERROR WEBUtils:85 - no match per: h3 > b > a
+09:12:35,230 ERROR StringUtils:24 - setting null or wrong length string
+09:12:56,976 WARN  SessionManager:48 - normally a derivd class should override this method
+09:12:56,981 INFO  PageProcessor:41 - Page: http://concorsi.it:80/nc/top
+09:13:02,557 ERROR PageProcessor:29 - should not pass here or make class abstract
+09:13:02,797 INFO  TableScraperABC:54 - scraping table: #datagrid > table
+09:13:02,868 ERROR WEBUtils:85 - no match per: h3 > b > a
+09:13:02,870 ERROR StringUtils:24 - setting null or wrong length string
+09:22:15,071 WARN  SessionManager:48 - normally a derivd class should override this method
+09:22:15,081 INFO  PageProcessor:41 - Page: http://concorsi.it:80/nc/top
+09:22:20,093 ERROR PageProcessor:29 - should not pass here or make class abstract
+09:22:20,364 INFO  TableScraperABC:54 - scraping table: #datagrid > table
+09:22:20,456 ERROR WEBUtils:85 - no match per: h3 > b > a
+09:22:20,457 ERROR StringUtils:24 - setting null or wrong length string
+09:23:38,702 WARN  SessionManager:48 - normally a derivd class should override this method
+09:23:38,709 INFO  PageProcessor:41 - Page: http://concorsi.it:80/nc/top
+09:23:44,179 ERROR PageProcessor:29 - should not pass here or make class abstract
+09:23:44,454 INFO  TableScraperABC:54 - scraping table: #datagrid > table
+09:23:44,537 ERROR WEBUtils:85 - no match per: h3 > b > a
+09:36:31,103 WARN  SessionManager:48 - normally a derivd class should override this method
+09:36:31,109 INFO  PageProcessor:41 - Page: http://concorsi.it:80/nc/top
+09:36:36,369 ERROR PageProcessor:29 - should not pass here or make class abstract
+09:36:36,603 INFO  TableScraperABC:54 - scraping table: #datagrid > table
+09:36:36,676 ERROR WEBUtils:85 - no match per: h3 > b > a
+09:36:36,677 ERROR StringUtils:24 - setting null or wrong length string, ESCO
+09:38:00,986 WARN  SessionManager:48 - normally a derivd class should override this method
+09:38:01,011 INFO  PageProcessor:41 - Page: http://concorsi.it:80/nc/top
+09:38:07,009 ERROR PageProcessor:29 - should not pass here or make class abstract
+09:38:07,262 INFO  TableScraperABC:54 - scraping table: #datagrid > table
+09:38:07,345 ERROR WEBUtils:85 - no match per: h3 > b > a
+09:57:46,560 WARN  SessionManager:48 - normally a derivd class should override this method
+09:57:46,566 INFO  PageProcessor:42 - Page: http://concorsi.it:80/nc/top
+09:57:53,020 ERROR PageProcessor:30 - should not pass here or make class abstract
+09:57:53,309 INFO  TableScraperABC:54 - scraping table: #datagrid > table
+09:57:53,395 ERROR WEBUtils:85 - no match per: h3 > b > a
+10:05:33,360 WARN  SessionManager:48 - normally a derivd class should override this method
+10:05:33,414 INFO  PageProcessor:42 - Page: http://concorsi.it:80/nc/top
+10:05:38,619 ERROR PageProcessor:30 - should not pass here or make class abstract
+10:05:38,869 INFO  TableScraperABC:54 - scraping table: #datagrid > table
+10:05:38,940 ERROR WEBUtils:85 - no match per: h3 > b > a
+10:05:38,941 ERROR StringUtils:24 - setting null or wrong length string, ESCO
+10:28:12,825 WARN  SessionManager:48 - normally a derivd class should override this method
+10:28:12,830 INFO  PageProcessor:42 - Page: http://concorsi.it:80/nc/top
+10:28:17,887 ERROR PageProcessor:30 - should not pass here or make class abstract
+10:28:18,142 INFO  TableScraperABC:54 - scraping table: #datagrid > table
+10:28:18,229 ERROR WEBUtils:85 - no match per: h3 > b > a
+10:38:58,286 WARN  SessionManager:48 - normally a derivd class should override this method
+10:38:58,291 INFO  PageProcessor:42 - Page: http://concorsi.it:80/nc/top
+10:39:04,025 ERROR PageProcessor:30 - should not pass here or make class abstract
+10:39:04,269 INFO  TableScraperABC:54 - scraping table: #pagine_interne > ul
+10:39:04,297 INFO  SessionManager:42 - ------------------------ OK FINITO  ---------------------------
+10:39:04,298 WARN  SessionManager:53 - normally a derivd class should override this method
+10:39:04,298 ERROR SessionManagerAbstr:73 - seesione fallita, esco
+10:39:04,298 ERROR SessionManagerAbstr:92 - spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage
+10:55:10,542 WARN  SessionManager:48 - normally a derivd class should override this method
+10:55:10,546 INFO  PageProcessor:42 - Page: http://concorsi.it:80/nc/top
+10:55:15,855 ERROR PageProcessor:30 - should not pass here or make class abstract
+10:55:16,102 INFO  TableScraperABC:54 - scraping table: #pagine_interne > ul
+10:55:16,115 WARN  SessionManager:53 - normally a derivd class should override this method
+10:55:16,115 ERROR SessionManagerAbstr:73 - seesione fallita, esco
+10:55:16,115 ERROR SessionManagerAbstr:92 - spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage
+10:55:45,362 WARN  SessionManager:48 - normally a derivd class should override this method
+10:55:45,369 INFO  PageProcessor:42 - Page: http://concorsi.it:80/nc/top
+10:55:50,326 ERROR PageProcessor:30 - should not pass here or make class abstract
+10:55:50,587 INFO  TableScraperABC:54 - scraping table: #pagine_interne > ul
+10:57:28,779 WARN  SessionManager:48 - normally a derivd class should override this method
+10:57:28,787 INFO  PageProcessor:42 - Page: http://concorsi.it:80/nc/top
+10:57:35,062 ERROR PageProcessor:30 - should not pass here or make class abstract
+10:57:35,335 INFO  TableScraperABC:54 - scraping table: #pagine_interne > ul
+11:03:11,952 WARN  SessionManager:48 - normally a derivd class should override this method
+11:03:11,972 INFO  PageProcessor:42 - Page: http://concorsi.it:80/nc/top
+11:03:17,567 ERROR PageProcessor:30 - should not pass here or make class abstract
+11:03:17,847 INFO  TableScraperABC:54 - scraping table: #pagine_interne > ul
+11:03:26,379 INFO  SessionManager:42 - ------------------------ OK FINITO  ---------------------------
+11:03:26,380 WARN  SessionManager:53 - normally a derivd class should override this method
+11:03:26,380 ERROR SessionManagerAbstr:73 - seesione fallita, esco
+11:03:26,380 ERROR SessionManagerAbstr:92 - spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage
+15:39:27,603 WARN  SessionManager:48 - normally a derivd class should override this method
+15:39:27,606 INFO  PageProcessor:42 - Page: http://concorsi.it:80/nc/top
+15:39:32,750 ERROR PageProcessor:30 - should not pass here or make class abstract
+15:39:33,003 INFO  TableScraperABC:54 - scraping table: #pagine_interne > ul
+15:39:33,053 INFO  SessionManager:42 - ------------------------ OK FINITO  ---------------------------
+15:39:33,054 WARN  SessionManager:53 - normally a derivd class should override this method
+15:39:33,054 ERROR SessionManagerAbstr:73 - seesione fallita, esco
+15:39:33,054 ERROR SessionManagerAbstr:92 - spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage
+17:48:05,487 INFO  TableScraperABC:21 - break
+17:48:05,519 WARN  SessionManager:48 - normally a derivd class should override this method
+17:48:05,523 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+17:57:28,895 INFO  TableScraperABC:24 - break
+17:57:30,013 INFO  TableScraperABC:27 - break
+17:59:18,162 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+17:59:18,166 ERROR PageProcessor:31 - should not pass here or make class abstract
+17:59:41,853 INFO  TableScraperABC:65 - scraping table: #pagine_interne > ul
+18:19:12,517 INFO  SessionManager:42 - ------------------------ OK FINITO  ---------------------------
+18:19:12,518 WARN  SessionManager:53 - normally a derivd class should override this method
+18:19:12,518 ERROR SessionManagerAbstr:73 - seesione fallita, esco
+18:19:12,518 ERROR SessionManagerAbstr:92 - spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage
+07:38:23,741 INFO  TableScraperABC:21 - break
+07:38:23,745 WARN  SessionManager:48 - normally a derivd class should override this method
+07:38:23,747 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+07:38:29,696 INFO  TableScraperABC:24 - break
+07:38:29,696 INFO  TableScraperABC:27 - break
+07:38:29,696 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+07:38:29,696 ERROR PageProcessor:31 - should not pass here or make class abstract
+07:38:29,980 INFO  TableScraperABC:65 - scraping table: #pagine_interne > ul
+07:38:29,992 INFO  SessionManager:42 - ------------------------ OK FINITO  ---------------------------
+07:38:29,993 WARN  SessionManager:53 - normally a derivd class should override this method
+07:38:29,993 ERROR SessionManagerAbstr:73 - seesione fallita, esco
+07:38:29,993 ERROR SessionManagerAbstr:92 - spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage
+07:43:47,123 INFO  TableScraperABC:21 - break
+07:43:47,152 WARN  SessionManager:48 - normally a derivd class should override this method
+07:43:47,156 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+07:45:32,102 INFO  TableScraperABC:24 - break
+07:45:32,103 INFO  TableScraperABC:27 - break
+07:45:32,104 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+07:45:32,104 ERROR PageProcessor:31 - should not pass here or make class abstract
+07:45:32,469 WARN  SessionManager:53 - normally a derivd class should override this method
+07:45:32,470 ERROR SessionManagerAbstr:73 - seesione fallita, esco
+07:45:32,470 ERROR SessionManagerAbstr:92 - spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage
+07:47:19,384 INFO  TableScraperABC:21 - break
+07:47:19,402 WARN  SessionManager:48 - normally a derivd class should override this method
+07:47:19,407 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+07:47:41,719 INFO  TableScraperABC:24 - break
+07:47:41,722 INFO  TableScraperABC:27 - break
+07:47:42,414 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+07:47:42,415 ERROR PageProcessor:31 - should not pass here or make class abstract
+07:47:43,021 INFO  TableScraperABC:65 - scraping table: #pagine_interne > ul
+07:48:30,510 INFO  SessionManager:42 - ------------------------ OK FINITO  ---------------------------
+07:48:36,310 WARN  SessionManager:53 - normally a derivd class should override this method
+07:48:38,110 ERROR SessionManagerAbstr:73 - seesione fallita, esco
+07:48:39,182 ERROR SessionManagerAbstr:92 - spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage
+07:50:22,121 INFO  TableScraperABC:21 - break
+07:50:22,137 WARN  SessionManager:48 - normally a derivd class should override this method
+07:50:22,141 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+07:50:32,588 INFO  TableScraperABC:24 - break
+07:50:32,589 INFO  TableScraperABC:27 - break
+07:50:32,590 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+07:50:32,590 ERROR PageProcessor:31 - should not pass here or make class abstract
+07:50:32,838 INFO  TableScraperABC:65 - scraping table: #pagine_interne > ul
+07:56:50,114 INFO  TableScraperABC:21 - break
+07:56:50,120 WARN  SessionManager:48 - normally a derivd class should override this method
+07:56:50,122 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+07:56:55,857 INFO  TableScraperABC:24 - break
+07:56:55,858 INFO  TableScraperABC:27 - break
+07:56:55,858 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+07:56:55,858 ERROR PageProcessor:31 - should not pass here or make class abstract
+07:56:56,150 INFO  TableScraperABC:65 - scraping table: #pagine_interne > ul
+08:18:51,431 INFO  TableScraperABC:21 - break
+08:18:51,436 WARN  SessionManager:48 - normally a derivd class should override this method
+08:18:51,438 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+08:18:56,069 INFO  TableScraperABC:24 - break
+08:18:56,069 INFO  TableScraperABC:27 - break
+08:18:56,069 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+08:18:56,070 ERROR PageProcessor:31 - should not pass here or make class abstract
+08:18:56,365 INFO  TableScraperABC:65 - scraping table: #pagine_interne > ul
+08:22:00,266 WARN  SessionManager:48 - normally a derivd class should override this method
+08:22:00,266 INFO  SessionManager:42 - ------------------------ OK FINITO  ---------------------------
+08:22:00,266 WARN  SessionManager:53 - normally a derivd class should override this method
+08:22:00,266 ERROR SessionManagerAbstr:73 - seesione fallita, esco
+08:22:00,266 ERROR SessionManagerAbstr:92 - spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage
+08:46:47,020 INFO  TableScraperABC:21 - break
+08:46:47,025 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+08:46:47,026 WARN  SessionManager:48 - normally a derivd class should override this method
+08:46:47,027 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+08:46:52,645 INFO  TableScraperABC:24 - break
+08:46:52,646 INFO  TableScraperABC:27 - break
+08:46:52,646 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+08:46:52,646 ERROR PageProcessor:31 - should not pass here or make class abstract
+08:46:52,838 INFO  TableScraperABC:65 - scraping table: #pagine_interne > ul
+08:49:42,436 INFO  TableScraperABC:21 - break
+08:49:42,440 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+08:49:42,440 WARN  SessionManager:48 - normally a derivd class should override this method
+08:49:42,442 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+08:49:48,201 INFO  TableScraperABC:24 - break
+08:49:48,201 INFO  TableScraperABC:27 - break
+08:49:48,202 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+08:49:48,202 ERROR PageProcessor:31 - should not pass here or make class abstract
+08:49:48,914 INFO  TableScraperABC:65 - scraping table: #datagrid > table
+08:49:48,927 ERROR TableScraperABC:82 - not fount entries: "li > div" in html: <tbody> 
+ <tr class="alt1"> 
+  <td><a title="Ente: REGIONE EMILIA ROMAGNA
+Titolo: AVVISO PUBBLICO PER LA COSTITUZIONE DI UN ELENCO DI ESPERTI IN �GESTIONE E RENDICONTAZIONE PROGETTI EUROPEI ED INTERNAZIONALI� PER IL CONFERIMENTO DI INCARICHI PROFESSIONALI DI LAVORO AUTONOMO
+Posti: " href="/ente/21172-regione-emilia-romagna.html">REGIONE EMILIA ROMAGNA</a></td> 
+  <td>BOLOGNA</td> 
+  <td><a title="Ente: REGIONE EMILIA ROMAGNA
+Titolo: AVVISO PUBBLICO PER LA COSTITUZIONE DI UN ELENCO DI ESPERTI IN �GESTIONE E RENDICONTAZIONE PROGETTI EUROPEI ED INTERNAZIONALI� PER IL CONFERIMENTO DI INCARICHI PROFESSIONALI DI LAVORO AUTONOMO
+Posti: " href="/scheda/139028-avviso-pubblico-per-la-costituzione-di-un-elenco-di-esperti-in-gestione-e-rendicontazione-progetti-europei-ed-internazionali-per-il-conferimento-di-incarichi-professionali-di-lavoro-autonomo.html">AVVISO PUBBLICO PER LA COSTITUZIONE DI UN ELENCO DI ESPERTI IN �GESTIONE E RENDICONTAZIONE PROGETTI EUROPEI ED INTERNAZIONALI� PER IL CONFERIMENTO DI INCARICHI PROFESSIONALI DI LAVORO AUTONOMO</a></td> 
+  <td align="right">27653</td> 
+ </tr> 
+ <tr class="alt2"> 
+  <td><a title="Ente: MINISTERO PER I BENI E LE ATTIVITA' CULTURALI
+Titolo: Avviso pubblico, per titoli e colloquio finale, per l'assunzione con contratto a tempo determinato della durata di 9 mesi di area III, posizione economica F1 di 60 unita' al fine di fare fronte a esigenze temporanee per il miglioramento e potenziamento degli interventi di tutela, vigilanza e ispezione, protezione e conservazione nonche' valorizzazione dei beni culturali in istituti e luoghi della cultura statali.
+Posti: " href="/ente/21488-ministero-per-i-beni-e-le-attivita-culturali.html">MINISTERO PER I BENI E LE ATTIVITA' CULTURALI</a></td> 
+  <td>ROMA</td> 
+  <td><a title="Ente: MINISTERO PER I BENI E LE ATTIVITA' CULTURALI
+Titolo: Avviso pubblico, per titoli e colloquio finale, per l'assunzione con contratto a tempo determinato della durata di 9 mesi di area III, posizione economica F1 di 60 unita' al fine di fare fronte a esigenze temporanee per il miglioramento e potenziamento degli interventi di tutela, vigilanza e ispezione, protezione e conservazione nonche' valorizzazione dei beni culturali in istituti e luoghi della cultura statali.
+Posti: " href="/scheda/154346-avviso-pubblico--per-titoli-e-colloquio-finale--per-lassunzione-con-contratto-a-tempo-determinato-della-durata-di-9-mesi-di-area-iii--posizione-economica-f1-di-60-unita-al-fine-di-fare-fronte-a-esigenze-temporanee-per-il-miglioramento-e-potenziamento-degli-interventi-di-tutela--vigilanza-e-ispezione--protezione-e-conservazione-nonche-valorizzazione-dei-beni-culturali-in-istituti-e-luoghi-della-cultura-statali.html">Avviso pubblico, per titoli e colloquio finale, per l'assunzione con contratto a tempo determinato della durata di 9 mesi di area III, posizione economica F1 di 60 unita' al fine di fare fronte a esigenze temporanee per il miglioramento e potenziamento degli interventi di tutela, vigilanza e ispezione, protezione e conservazione nonche' valorizzazione dei beni culturali in istituti e luoghi della cultura statali.</a></td> 
+  <td align="right">20936</td> 
+ </tr> 
+ <tr class="alt1"> 
+  <td><a title="Ente: AZIENDA OSPEDALIERA DELLA PROVINCIA DI PAVIA
+Titolo: Concorsi pubblici, per titoli ed esami, per la copertura di un posto di collaboratore professionale sanitario - Tecnico sanitario di laboratorio biomedico - categoria D, un posto di collaboratore professionale sanitario - Tecnico di neurofisiopatologia - categoria D, cinque posti di operatore socio sanitario - O.S.S., categoria B - livello economico BS e tre posti di operatore tecnico specializzato - autista soccorritore (per mezzi di soccorso), categoria B - livello economico BS.
+Posti: " href="/ente/22419-azienda-ospedaliera-della-provincia-di-pavia.html">AZIENDA OSPEDALIERA DELLA PROVINCIA DI PAVIA</a></td> 
+  <td>PAVIA</td> 
+  <td><a title="Ente: AZIENDA OSPEDALIERA DELLA PROVINCIA DI PAVIA
+Titolo: Concorsi pubblici, per titoli ed esami, per la copertura di un posto di collaboratore professionale sanitario - Tecnico sanitario di laboratorio biomedico - categoria D, un posto di collaboratore professionale sanitario - Tecnico di neurofisiopatologia - categoria D, cinque posti di operatore socio sanitario - O.S.S., categoria B - livello economico BS e tre posti di operatore tecnico specializzato - autista soccorritore (per mezzi di soccorso), categoria B - livello economico BS.
+Posti: " href="/scheda/154705-concorsi-pubblici--per-titoli-ed-esami--per-la-copertura-di-un-posto-di-collaboratore-professionale-sanitario-tecnico-sanitario-di-laboratorio-biomedico-categoria-d--un-posto-di-collaboratore-professionale-sanitario-tecnico-di-neurofisiopatologia-categoria-d--cinque-posti-di-operatore-socio-sanitario-oss--categoria-b-livello-economico-bs-e-tre-posti-di-operatore-tecnico-specializzato-autista-soccorritore-per-mezzi-di-soccorso--categoria-b-livello-economico-bs.html">Concorsi pubblici, per titoli ed esami, per la copertura di un posto di collaboratore professionale sanitario - Tecnico sanitario di laboratorio biomedico - categoria D, un posto di collaboratore professionale sanitario - Tecnico di neurofisiopatologia - categoria D, cinque posti di operatore socio sanitario - O.S.S., categoria B - livello economico BS e tre posti di operatore tecnico specializzato - autista soccorritore (per mezzi di soccorso), categoria B - livello economico BS.</a></td> 
+  <td align="right">8245</td> 
+ </tr> 
+ <tr class="alt2"> 
+  <td><a title="Ente: COMANDO GENERALE DELLA GUARDIA DI FINANZA
+Titolo: Concorso pubblico, per titoli ed esami, per l'ammissione di 55 allievi ufficiali del ruolo normale al primo anno del 116� corso dell'Accademia della Guardia di finanza, per l'anno accademico 2016/2017.
+Posti: " href="/ente/22117-comando-generale-della-guardia-di-finanza.html">COMANDO GENERALE DELLA GUARDIA DI FINANZA</a></td> 
+  <td>ROMA</td> 
+  <td><a title="Ente: COMANDO GENERALE DELLA GUARDIA DI FINANZA
+Titolo: Concorso pubblico, per titoli ed esami, per l'ammissione di 55 allievi ufficiali del ruolo normale al primo anno del 116� corso dell'Accademia della Guardia di finanza, per l'anno accademico 2016/2017.
+Posti: " href="/scheda/154777-concorso-pubblico--per-titoli-ed-esami--per-lammissione-di-55-allievi-ufficiali-del-ruolo-normale-al-primo-anno-del-116-corso-dellaccademia-della-guardia-di-finanza--per-lanno-accademico-2016-2017.html">Concorso pubblico, per titoli ed esami, per l'ammissione di 55 allievi ufficiali del ruolo normale al primo anno del 116� corso dell'Accademia della Guardia di finanza, per l'anno accademico 2016/2017.</a></td> 
+  <td align="right">8076</td> 
+ </tr> 
+ <tr class="alt1"> 
+  <td><a title="Ente: LIBERA UNIVERSITA' INTERNAZIONALE DEGLI STUDI SOCIALI GUIDO CARLI DI ROMA
+Titolo: Avviso di istituzione bando Political Theory, Political Science and Political History - XXX ciclo
+Posti: " href="/ente/21572-libera-universita-internazionale-degli-studi-sociali-guido-carli-di-roma.html">LIBERA UNIVERSITA' INTERNAZIONALE DEGLI STUDI SOCIALI GUIDO CARLI DI ROMA</a></td> 
+  <td>ROMA</td> 
+  <td><a title="Ente: LIBERA UNIVERSITA' INTERNAZIONALE DEGLI STUDI SOCIALI GUIDO CARLI DI ROMA
+Titolo: Avviso di istituzione bando Political Theory, Political Science and Political History - XXX ciclo
+Posti: " href="/scheda/139733-avviso-di-istituzione-bando-political-theory--political-science-and-political-history-xxx-ciclo.html">Avviso di istituzione bando Political Theory, Political Science and Political History - XXX ciclo</a></td> 
+  <td align="right">7902</td> 
+ </tr> 
+ <tr class="alt2"> 
+  <td><a title="Ente: AZIENDA SANITARIA PROVINCIALE 'MAGNA GRECIA' DI CROTONE
+Titolo: Concorso pubblico, per titoli ed esami, per la copertura a tempo indeterminato di sessantaquattro posti di operatore socio sanitario - categoria BS, con riserva del 50 % dei posti al personale interno.
+Posti: " href="/ente/33978-azienda-sanitaria-provinciale-magna-grecia-di-crotone.html">AZIENDA SANITARIA PROVINCIALE 'MAGNA GRECIA' DI CROTONE</a></td> 
+  <td>CROTONE</td> 
+  <td><a title="Ente: AZIENDA SANITARIA PROVINCIALE 'MAGNA GRECIA' DI CROTONE
+Titolo: Concorso pubblico, per titoli ed esami, per la copertura a tempo indeterminato di sessantaquattro posti di operatore socio sanitario - categoria BS, con riserva del 50 % dei posti al personale interno.
+Posti: " href="/scheda/154657-concorso-pubblico--per-titoli-ed-esami--per-la-copertura-a-tempo-indeterminato-di-sessantaquattro-posti-di-operatore-socio-sanitario-categoria-bs--con-riserva-del-50--dei-posti-al-personale-interno.html">Concorso pubblico, per titoli ed esami, per la copertura a tempo indeterminato di sessantaquattro posti di operatore socio sanitario - categoria BS, con riserva del 50 % dei posti al personale interno.</a></td> 
+  <td align="right">6962</td> 
+ </tr> 
+ <tr class="alt1"> 
+  <td><a title="Ente: AZIENDA PUBBLICA DI SERVIZI ALLA PERSONA DEI COMUNI MODENESI AREA NORD
+Titolo: Selezione pubblica, per titoli ed esami, per l'assunzione a tempo indeterminato di 35 unita' con profilo professionale di operatore socio sanitario - OSS - categoria professionale B - posizione giuridico economica B3, da assegnare al servizio presso le diverse sedi, con riserva per 13 posti ai militari congedati ai sensi del comma 3 dell'art. 1014 del d.lgs. 66/2010.
+Posti: " href="/ente/35151-azienda-pubblica-di-servizi-alla-persona-dei-comuni-modenesi-area-nord.html">AZIENDA PUBBLICA DI SERVIZI ALLA PERSONA DEI COMUNI MODENESI AREA NORD</a></td> 
+  <td>MIRANDOLA</td> 
+  <td><a title="Ente: AZIENDA PUBBLICA DI SERVIZI ALLA PERSONA DEI COMUNI MODENESI AREA NORD
+Titolo: Selezione pubblica, per titoli ed esami, per l'assunzione a tempo indeterminato di 35 unita' con profilo professionale di operatore socio sanitario - OSS - categoria professionale B - posizione giuridico economica B3, da assegnare al servizio presso le diverse sedi, con riserva per 13 posti ai militari congedati ai sensi del comma 3 dell'art. 1014 del d.lgs. 66/2010.
+Posti: " href="/scheda/154595-selezione-pubblica--per-titoli-ed-esami--per-lassunzione-a-tempo-indeterminato-di-35-unita-con-profilo-professionale-di-operatore-socio-sanitario-oss-categoria-professionale-b-posizione-giuridico-economica-b3--da-assegnare-al-servizio-presso-le-diverse-sedi--con-riserva-per-13-posti-ai-militari-congedati-ai-sensi-del-comma-3-dellart-1014-del-dlgs-66-2010.html">Selezione pubblica, per titoli ed esami, per l'assunzione a tempo indeterminato di 35 unita' con profilo professionale di operatore socio sanitario - OSS - categoria professionale B - posizione giuridico economica B3, da assegnare al servizio presso le diverse sedi, con riserva per 13 posti ai militari congedati ai sensi del comma 3 dell'art. 1014 del d.lgs. 66/2010.</a></td> 
+  <td align="right">6772</td> 
+ </tr> 
+ <tr class="alt2"> 
+  <td><a title="Ente: AZIENDA UNITA' SANITARIA LOCALE DELLA ROMAGNA
+Titolo: Concorso pubblico, per titoli ed esami, riservato alle categorie protette di cui all'articolo 18, comma 2, della legge 12 marzo 1999, n. 68 o alle categorie a esse equiparate per legge per la copertura di complessivi undici posti di personale di varie qualifiche.
+Posti: " href="/ente/34937-azienda-unita-sanitaria-locale-della-romagna.html">AZIENDA UNITA' SANITARIA LOCALE DELLA ROMAGNA</a></td> 
+  <td>RAVENNA</td> 
+  <td><a title="Ente: AZIENDA UNITA' SANITARIA LOCALE DELLA ROMAGNA
+Titolo: Concorso pubblico, per titoli ed esami, riservato alle categorie protette di cui all'articolo 18, comma 2, della legge 12 marzo 1999, n. 68 o alle categorie a esse equiparate per legge per la copertura di complessivi undici posti di personale di varie qualifiche.
+Posti: " href="/scheda/154928-concorso-pubblico--per-titoli-ed-esami--riservato-alle-categorie-protette-di-cui-allarticolo-18--comma-2--della-legge-12-marzo-1999--n-68-o-alle-categorie-a-esse-equiparate-per-legge-per-la-copertura-di-complessivi-undici-posti-di-personale-di-varie-qualifiche.html">Concorso pubblico, per titoli ed esami, riservato alle categorie protette di cui all'articolo 18, comma 2, della legge 12 marzo 1999, n. 68 o alle categorie a esse equiparate per legge per la copertura di complessivi undici posti di personale di varie qualifiche.</a></td> 
+  <td align="right">6543</td> 
+ </tr> 
+ <tr class="alt1"> 
+  <td><a title="Ente: AZIENDA OSPEDALIERA 'S. CROCE E CARLE' DI CUNEO
+Titolo: Concorsi pubblici, per titoli ed esami, riservati esclusivamente ai soggetti appartenenti alle categorie protette di cui all'articolo 1, della legge 12 marzo 1999, n. 68, vari profili professionali.
+Posti: " href="/ente/22452-azienda-ospedaliera-s-croce-e-carle-di-cuneo.html">AZIENDA OSPEDALIERA 'S. CROCE E CARLE' DI CUNEO</a></td> 
+  <td>CUNEO</td> 
+  <td><a title="Ente: AZIENDA OSPEDALIERA 'S. CROCE E CARLE' DI CUNEO
+Titolo: Concorsi pubblici, per titoli ed esami, riservati esclusivamente ai soggetti appartenenti alle categorie protette di cui all'articolo 1, della legge 12 marzo 1999, n. 68, vari profili professionali.
+Posti: " href="/scheda/154652-concorsi-pubblici--per-titoli-ed-esami--riservati-esclusivamente-ai-soggetti-appartenenti-alle-categorie-protette-di-cui-allarticolo-1--della-legge-12-marzo-1999--n-68--vari-profili-professionali.html">Concorsi pubblici, per titoli ed esami, riservati esclusivamente ai soggetti appartenenti alle categorie protette di cui all'articolo 1, della legge 12 marzo 1999, n. 68, vari profili professionali.</a></td> 
+  <td align="right">5993</td> 
+ </tr> 
+ <tr class="alt2"> 
+  <td><a title="Ente: MINISTERO DEGLI AFFARI ESTERI
+Titolo: Concorso, per titoli ed esami, a trentacinque posti di Segretario di Legazione in prova
+Posti: " href="/ente/21565-ministero-degli-affari-esteri.html">MINISTERO DEGLI AFFARI ESTERI</a></td> 
+  <td>ROMA</td> 
+  <td><a title="Ente: MINISTERO DEGLI AFFARI ESTERI
+Titolo: Concorso, per titoli ed esami, a trentacinque posti di Segretario di Legazione in prova
+Posti: " href="/scheda/154778-concorso--per-titoli-ed-esami--a-trentacinque-posti-di-segretario-di-legazione-in-prova.html">Concorso, per titoli ed esami, a trentacinque posti di Segretario di Legazione in prova</a></td> 
+  <td align="right">5734</td> 
+ </tr> 
+ <tr class="alt1"> 
+  <td><a title="Ente: AVVOCATURA GENERALE DELLO STATO
+Titolo: Concorso per esame teorico-pratico a dieci posti di Avvocato dello Stato - indetto con DAG 22 dicembre 2015.
+Posti: " href="/ente/22521-avvocatura-generale-dello-stato.html">AVVOCATURA GENERALE DELLO STATO</a></td> 
+  <td>ROMA</td> 
+  <td><a title="Ente: AVVOCATURA GENERALE DELLO STATO
+Titolo: Concorso per esame teorico-pratico a dieci posti di Avvocato dello Stato - indetto con DAG 22 dicembre 2015.
+Posti: " href="/scheda/154670-concorso-per-esame-teorico-pratico-a-dieci-posti-di-avvocato-dello-stato-indetto-con-dag-22-dicembre-2015.html">Concorso per esame teorico-pratico a dieci posti di Avvocato dello Stato - indetto con DAG 22 dicembre 2015.</a></td> 
+  <td align="right">4983</td> 
+ </tr> 
+ <tr class="alt2"> 
+  <td><a title="Ente: AZIENDA OSPEDALIERA 'SANTOBONO PAUSILIPON ' DI NAPOLI
+Titolo: Concorso pubblico, per titoli ed esami, per la copertura di sei posti di CPS Infermiere pediatrico - categoria D.
+Posti: " href="/ente/22439-azienda-ospedaliera-santobono-pausilipon--di-napoli.html">AZIENDA OSPEDALIERA 'SANTOBONO PAUSILIPON ' DI NAPOLI</a></td> 
+  <td>NAPOLI</td> 
+  <td><a title="Ente: AZIENDA OSPEDALIERA 'SANTOBONO PAUSILIPON ' DI NAPOLI
+Titolo: Concorso pubblico, per titoli ed esami, per la copertura di sei posti di CPS Infermiere pediatrico - categoria D.
+Posti: " href="/scheda/154816-concorso-pubblico--per-titoli-ed-esami--per-la-copertura-di-sei-posti-di-cps-infermiere-pediatrico-categoria-d.html">Concorso pubblico, per titoli ed esami, per la copertura di sei posti di CPS Infermiere pediatrico - categoria D.</a></td> 
+  <td align="right">4477</td> 
+ </tr> 
+ <tr class="alt1"> 
+  <td><a title="Ente: ISTITUTO NAZIONALE PER L'ASSICURAZIONE CONTRO GLI INFORTUNI SUL LAVORO
+Titolo: Concorso pubblico, per titoli ed esami, per la copertura, a tempo pieno ed indeterminato, di cinque unita' di personalenel profilo professionale di impiegato tecnico - ingegnere - 7� categoria del sistema di classificazione INAIL, corrispondente alla 6� categoria del contratto collettivo nazionale per i lavoratori addetti all'industria metalmeccanica privata e alla installazione di impianti (CP06).
+Posti: " href="/ente/21678-istituto-nazionale-per-lassicurazione-contro-gli-infortuni-sul-lavoro.html">ISTITUTO NAZIONALE PER L'ASSICURAZIONE CONTRO GLI INFORTUNI SUL LAVORO</a></td> 
+  <td>ROMA</td> 
+  <td><a title="Ente: ISTITUTO NAZIONALE PER L'ASSICURAZIONE CONTRO GLI INFORTUNI SUL LAVORO
+Titolo: Concorso pubblico, per titoli ed esami, per la copertura, a tempo pieno ed indeterminato, di cinque unita' di personalenel profilo professionale di impiegato tecnico - ingegnere - 7� categoria del sistema di classificazione INAIL, corrispondente alla 6� categoria del contratto collettivo nazionale per i lavoratori addetti all'industria metalmeccanica privata e alla installazione di impianti (CP06).
+Posti: " href="/scheda/154536-concorso-pubblico--per-titoli-ed-esami--per-la-copertura--a-tempo-pieno-ed-indeterminato--di-cinque-unita-di-personalenel-profilo-professionale-di-impiegato-tecnico-ingegnere-7-categoria-del-sistema-di-classificazione-inail--corrispondente-alla-6-categoria-del-contratto-collettivo-nazionale-per-i-lavoratori-addetti-allindustria-metalmeccanica-privata-e-alla-installazione-di-impianti-cp06.html">Concorso pubblico, per titoli ed esami, per la copertura, a tempo pieno ed indeterminato, di cinque unita' di personalenel profilo professionale di impiegato tecnico - ingegnere - 7� categoria del sistema di classificazione INAIL, corrispondente alla 6� categoria del contratto collettivo nazionale per i lavoratori addetti all'industria metalmeccanica privata e alla installazione di impianti (CP06).</a></td> 
+  <td align="right">4164</td> 
+ </tr> 
+ <tr class="alt2"> 
+  <td><a title="Ente: UNIVERSITA' DI CATANIA
+Titolo: Selezioni pubbliche per l'assunzione di complessivi sette posti di personale tecnico-amministrativo, con rapporto di lavoro subordinato a tempo determinato.
+Posti: " href="/ente/20812-universita-di-catania.html">UNIVERSITA' DI CATANIA</a></td> 
+  <td>CATANIA</td> 
+  <td><a title="Ente: UNIVERSITA' DI CATANIA
+Titolo: Selezioni pubbliche per l'assunzione di complessivi sette posti di personale tecnico-amministrativo, con rapporto di lavoro subordinato a tempo determinato.
+Posti: " href="/scheda/154687-selezioni-pubbliche-per-lassunzione-di-complessivi-sette-posti-di-personale-tecnico-amministrativo--con-rapporto-di-lavoro-subordinato-a-tempo-determinato.html">Selezioni pubbliche per l'assunzione di complessivi sette posti di personale tecnico-amministrativo, con rapporto di lavoro subordinato a tempo determinato.</a></td> 
+  <td align="right">3918</td> 
+ </tr> 
+ <tr class="alt1"> 
+  <td><a title="Ente: APSP - AZIENDA PUBBLICA DI SERVIZI ALLA PERSONA DI BRENTONICO
+Titolo: Concorso pubblico per esami per la copertura di due psoti vacanti della figura professionale di infermiere e un posto della figura professionale di fisioterapista.
+Posti: " href="/ente/34881-apsp-azienda-pubblica-di-servizi-alla-persona-di-brentonico.html">APSP - AZIENDA PUBBLICA DI SERVIZI ALLA PERSONA DI BRENTONICO</a></td> 
+  <td>BRENTONICO</td> 
+  <td><a title="Ente: APSP - AZIENDA PUBBLICA DI SERVIZI ALLA PERSONA DI BRENTONICO
+Titolo: Concorso pubblico per esami per la copertura di due psoti vacanti della figura professionale di infermiere e un posto della figura professionale di fisioterapista.
+Posti: " href="/scheda/154751-concorso-pubblico-per-esami-per-la-copertura-di-due-psoti-vacanti-della-figura-professionale-di-infermiere-e-un-posto-della-figura-professionale-di-fisioterapista.html">Concorso pubblico per esami per la copertura di due psoti vacanti della figura professionale di infermiere e un posto della figura professionale di fisioterapista.</a></td> 
+  <td align="right">3542</td> 
+ </tr> 
+ <tr class="alt2"> 
+  <td><a title="Ente: COMANDO GENERALE DELL'ARMA DEI CARABINIERI
+Titolo: Concorso, per esami e titoli, per il reclutamento di 1.050 allievi carabinieri in ferma quadriennale riservato, ai sensi dell'articolo 2199 del decreto legislativo n. 66 del 2010, ai volontari delle Forze armate in ferma prefissata di un anno o quadriennale ovvero in rafferma annuale, in servizio o in congedo
+Posti: " href="/ente/22118-comando-generale-dellarma-dei-carabinieri.html">COMANDO GENERALE DELL'ARMA DEI CARABINIERI</a></td> 
+  <td>ROMA</td> 
+  <td><a title="Ente: COMANDO GENERALE DELL'ARMA DEI CARABINIERI
+Titolo: Concorso, per esami e titoli, per il reclutamento di 1.050 allievi carabinieri in ferma quadriennale riservato, ai sensi dell'articolo 2199 del decreto legislativo n. 66 del 2010, ai volontari delle Forze armate in ferma prefissata di un anno o quadriennale ovvero in rafferma annuale, in servizio o in congedo
+Posti: " href="/scheda/154945-concorso--per-esami-e-titoli--per-il-reclutamento-di-1050-allievi-carabinieri-in-ferma-quadriennale-riservato--ai-sensi-dellarticolo-2199-del-decreto-legislativo-n-66-del-2010--ai-volontari-delle-forze-armate-in-ferma-prefissata-di-un-anno-o-quadriennale-ovvero-in-rafferma-annuale--in-servizio-o-in-congedo.html">Concorso, per esami e titoli, per il reclutamento di 1.050 allievi carabinieri in ferma quadriennale riservato, ai sensi dell'articolo 2199 del decreto legislativo n. 66 del 2010, ai volontari delle Forze armate in ferma prefissata di un anno o quadriennale ovvero in rafferma annuale, in servizio o in congedo</a></td> 
+  <td align="right">3369</td> 
+ </tr> 
+ <tr class="alt1"> 
+  <td><a title="Ente: COMUNE DI TORELLA DEL SANNIO
+Titolo: Concorso pubblico, per titoli ed esami, per la copertura a tempo parziale (part-time 50%) ed indeterminato, di un posto di istruttore amministrativo ufficio anagrafe-stato civile - categoria C - posizione economica C1.
+Posti: " href="/ente/20156-comune-di-torella-del-sannio.html">COMUNE DI TORELLA DEL SANNIO</a></td> 
+  <td>TORELLA DEL SANNIO</td> 
+  <td><a title="Ente: COMUNE DI TORELLA DEL SANNIO
+Titolo: Concorso pubblico, per titoli ed esami, per la copertura a tempo parziale (part-time 50%) ed indeterminato, di un posto di istruttore amministrativo ufficio anagrafe-stato civile - categoria C - posizione economica C1.
+Posti: " href="/scheda/154581-concorso-pubblico--per-titoli-ed-esami--per-la-copertura-a-tempo-parziale-part-time-50-ed-indeterminato--di-un-posto-di-istruttore-amministrativo-ufficio-anagrafe-stato-civile-categoria-c-posizione-economica-c1.html">Concorso pubblico, per titoli ed esami, per la copertura a tempo parziale (part-time 50%) ed indeterminato, di un posto di istruttore amministrativo ufficio anagrafe-stato civile - categoria C - posizione economica C1.</a></td> 
+  <td align="right">3050</td> 
+ </tr> 
+ <tr class="alt2"> 
+  <td><a title="Ente: AZIENDA OSPEDALIERA OSPEDALE DI LECCO
+Titolo: Concorso pubblico, per titoli ed esami, per il conferimento di un incarico a tempo indeterminato in qualita' di Collaboratore Professionale Sanitario - Infermiere - categoria D.
+Posti: " href="/ente/22391-azienda-ospedaliera-ospedale-di-lecco.html">AZIENDA OSPEDALIERA OSPEDALE DI LECCO</a></td> 
+  <td>LECCO</td> 
+  <td><a title="Ente: AZIENDA OSPEDALIERA OSPEDALE DI LECCO
+Titolo: Concorso pubblico, per titoli ed esami, per il conferimento di un incarico a tempo indeterminato in qualita' di Collaboratore Professionale Sanitario - Infermiere - categoria D.
+Posti: " href="/scheda/154926-concorso-pubblico--per-titoli-ed-esami--per-il-conferimento-di-un-incarico-a-tempo-indeterminato-in-qualita-di-collaboratore-professionale-sanitario-infermiere-categoria-d.html">Concorso pubblico, per titoli ed esami, per il conferimento di un incarico a tempo indeterminato in qualita' di Collaboratore Professionale Sanitario - Infermiere - categoria D.</a></td> 
+  <td align="right">2912</td> 
+ </tr> 
+ <tr class="alt1"> 
+  <td><a title="Ente: UNIVERSITA' DI MILANO
+Titolo: Concorso pubblico, per titoli ed esami, a un posto di categoria D, posizione economica D1 - area amministrativa-gestionale, con rapporto di lavoro subordinato a tempo indeterminato, presso la divisione segreterie studenti - ufficio segreteria dottorati, master e studenti internazionali - sezione studenti internazionali. (codice 17999).
+Posti: " href="/ente/20801-universita-di-milano.html">UNIVERSITA' DI MILANO</a></td> 
+  <td>MILANO</td> 
+  <td><a title="Ente: UNIVERSITA' DI MILANO
+Titolo: Concorso pubblico, per titoli ed esami, a un posto di categoria D, posizione economica D1 - area amministrativa-gestionale, con rapporto di lavoro subordinato a tempo indeterminato, presso la divisione segreterie studenti - ufficio segreteria dottorati, master e studenti internazionali - sezione studenti internazionali. (codice 17999).
+Posti: " href="/scheda/154549-concorso-pubblico--per-titoli-ed-esami--a-un-posto-di-categoria-d--posizione-economica-d1-area-amministrativa-gestionale--con-rapporto-di-lavoro-subordinato-a-tempo-indeterminato--presso-la-divisione-segreterie-studenti-ufficio-segreteria-dottorati--master-e-studenti-internazionali-sezione-studenti-internazionali-codice-17999.html">Concorso pubblico, per titoli ed esami, a un posto di categoria D, posizione economica D1 - area amministrativa-gestionale, con rapporto di lavoro subordinato a tempo indeterminato, presso la divisione segreterie studenti - ufficio segreteria dottorati, master e studenti internazionali - sezione studenti internazionali. (codice 17999).</a></td> 
+  <td align="right">2880</td> 
+ </tr> 
+ <tr class="alt2"> 
+  <td><a title="Ente: AZIENDA PUBBLICA DI SERVIZI ALLA PERSONA IRIDES
+Titolo: Selezione pubblica, per titoli ed esami, per la copertura a tempo indeterminato di sei posti di istruttore amministrativo - categoria C - posizione economica C1 - Area contabile, tecnica e amministrativa e per la copertura di tre posti di istruttore tecnico - categoria C - posizione economica C1 - Settore patrimonio, con riserva di posti al volontari delle FF.AA.
+Posti: " href="/ente/34998-azienda-pubblica-di-servizi-alla-persona-irides.html">AZIENDA PUBBLICA DI SERVIZI ALLA PERSONA IRIDES</a></td> 
+  <td>BOLOGNA</td> 
+  <td><a title="Ente: AZIENDA PUBBLICA DI SERVIZI ALLA PERSONA IRIDES
+Titolo: Selezione pubblica, per titoli ed esami, per la copertura a tempo indeterminato di sei posti di istruttore amministrativo - categoria C - posizione economica C1 - Area contabile, tecnica e amministrativa e per la copertura di tre posti di istruttore tecnico - categoria C - posizione economica C1 - Settore patrimonio, con riserva di posti al volontari delle FF.AA.
+Posti: " href="/scheda/154805-selezione-pubblica--per-titoli-ed-esami--per-la-copertura-a-tempo-indeterminato-di-sei-posti-di-istruttore-amministrativo-categoria-c-posizione-economica-c1-area-contabile--tecnica-e-amministrativa-e-per-la-copertura-di-tre-posti-di-istruttore-tecnico-categoria-c-posizione-economica-c1-settore-patrimonio--con-riserva-di-posti-al-volontari-delle-ffaa.html">Selezione pubblica, per titoli ed esami, per la copertura a tempo indeterminato di sei posti di istruttore amministrativo - categoria C - posizione economica C1 - Area contabile, tecnica e amministrativa e per la copertura di tre posti di istruttore tecnico - categoria C - posizione economica C1 - Settore patrimonio, con riserva di posti al volontari delle FF.AA.</a></td> 
+  <td align="right">2796</td> 
+ </tr> 
+</tbody>
+08:49:48,936 ERROR PageProcessor:99 - errore
+08:49:48,937 ERROR SessionManager:37 - errore elaborando pDescr: 
+08:49:48,937 WARN  SessionManager:53 - normally a derivd class should override this method
+08:49:48,937 ERROR SessionManagerAbstr:73 - seesione fallita, esco
+08:49:48,937 ERROR SessionManagerAbstr:92 - spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage
+08:52:25,132 INFO  TableScraperABC:21 - break
+08:52:25,137 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+08:52:25,137 WARN  SessionManager:48 - normally a derivd class should override this method
+08:52:25,139 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+08:52:29,962 INFO  TableScraperABC:24 - break
+08:52:29,962 INFO  TableScraperABC:27 - break
+08:52:29,962 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+08:52:29,962 ERROR PageProcessor:31 - should not pass here or make class abstract
+08:52:30,266 INFO  TableScraperABC:65 - scraping table: #datagrid > table
+08:55:10,258 INFO  TableScraperABC:21 - break
+08:55:10,264 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+08:55:10,264 WARN  SessionManager:48 - normally a derivd class should override this method
+08:55:10,266 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+08:55:14,543 INFO  TableScraperABC:24 - break
+08:55:14,543 INFO  TableScraperABC:27 - break
+08:55:14,543 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+08:55:14,544 ERROR PageProcessor:31 - should not pass here or make class abstract
+08:55:14,836 INFO  TableScraperABC:65 - scraping table: #datagrid > table
+08:56:42,647 WARN  SessionManager:53 - normally a derivd class should override this method
+08:56:42,647 ERROR SessionManagerAbstr:73 - seesione fallita, esco
+08:56:42,648 ERROR SessionManagerAbstr:92 - spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage
+08:56:57,425 INFO  TableScraperABC:21 - break
+08:56:57,431 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+08:56:57,431 WARN  SessionManager:48 - normally a derivd class should override this method
+08:56:57,433 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+08:57:01,676 INFO  TableScraperABC:24 - break
+08:57:01,676 INFO  TableScraperABC:27 - break
+08:57:01,676 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+08:57:01,677 ERROR PageProcessor:31 - should not pass here or make class abstract
+08:57:02,242 INFO  TableScraperABC:65 - scraping table: #datagrid > table
+08:58:17,294 INFO  TableScraperABC:21 - break
+08:58:29,430 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+08:58:31,508 WARN  SessionManager:48 - normally a derivd class should override this method
+08:58:31,515 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+09:01:37,051 INFO  TableScraperABC:24 - break
+09:01:37,052 INFO  TableScraperABC:27 - break
+09:01:37,053 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+09:01:37,053 ERROR PageProcessor:31 - should not pass here or make class abstract
+09:01:37,080 WARN  SessionManager:53 - normally a derivd class should override this method
+09:01:37,081 ERROR SessionManagerAbstr:73 - seesione fallita, esco
+09:01:37,081 ERROR SessionManagerAbstr:92 - spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage
+09:02:03,027 INFO  TableScraperABC:21 - break
+09:02:03,046 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+09:02:03,047 WARN  SessionManager:48 - normally a derivd class should override this method
+09:02:03,052 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+09:02:10,963 INFO  TableScraperABC:24 - break
+09:02:10,964 INFO  TableScraperABC:27 - break
+09:02:10,964 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+09:02:10,965 ERROR PageProcessor:31 - should not pass here or make class abstract
+09:02:11,082 INFO  TableScraperABC:65 - scraping table: #datagrid > table
+09:03:23,314 INFO  TableScraperABC:21 - break
+09:03:23,333 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+09:03:23,333 WARN  SessionManager:48 - normally a derivd class should override this method
+09:03:23,340 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+09:03:29,379 INFO  TableScraperABC:24 - break
+09:04:43,207 INFO  TableScraperABC:21 - break
+09:04:43,212 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+09:04:43,213 WARN  SessionManager:48 - normally a derivd class should override this method
+09:04:43,214 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+09:04:49,200 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+09:04:49,200 ERROR PageProcessor:31 - should not pass here or make class abstract
+09:04:49,504 INFO  TableScraperABC:65 - scraping table: #datagrid > table
+09:05:04,276 ERROR WEBUtils:85 - no match per: h3 > b > a
+09:38:22,971 INFO  TableScraperABC:21 - break
+09:38:22,976 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+09:38:22,977 WARN  SessionManager:48 - normally a derivd class should override this method
+09:38:22,979 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+09:38:29,281 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+09:38:29,281 ERROR PageProcessor:31 - should not pass here or make class abstract
+09:38:29,583 INFO  TableScraperABC:65 - scraping table: #datagrid > table
+09:38:29,619 ERROR WEBUtils:85 - no match per: h3 > b > a
+09:39:31,937 INFO  TableScraperABC:21 - break
+09:39:31,942 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+09:39:31,943 WARN  SessionManager:48 - normally a derivd class should override this method
+09:39:31,944 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+09:39:37,719 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+09:39:37,719 ERROR PageProcessor:31 - should not pass here or make class abstract
+09:39:38,036 INFO  TableScraperABC:65 - scraping table: #datagrid > table
+09:39:38,094 ERROR WEBUtils:85 - no match per: tr>td>a:eq(0)
+09:43:54,657 INFO  TableScraperABC:21 - break
+09:43:54,663 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+09:43:54,663 WARN  SessionManager:48 - normally a derivd class should override this method
+09:43:54,665 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+09:44:00,383 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+09:44:00,384 ERROR PageProcessor:31 - should not pass here or make class abstract
+09:44:00,656 INFO  TableScraperABC:65 - scraping table: #datagrid > table
+09:46:36,981 INFO  TableScraperABC:21 - break
+09:46:36,987 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+09:46:36,987 WARN  SessionManager:48 - normally a derivd class should override this method
+09:46:36,989 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+09:46:41,201 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+09:46:41,201 ERROR PageProcessor:31 - should not pass here or make class abstract
+09:46:41,524 INFO  TableScraperABC:65 - scraping table: #datagrid > table
+09:46:51,956 ERROR WEBUtils:96 - unable to find attribute href in <tr class="alt1"> 
+ <td><a title="Ente: REGIONE EMILIA ROMAGNA
+Titolo: AVVISO PUBBLICO PER LA COSTITUZIONE DI UN ELENCO DI ESPERTI IN �GESTIONE E RENDICONTAZIONE PROGETTI EUROPEI ED INTERNAZIONALI� PER IL CONFERIMENTO DI INCARICHI PROFESSIONALI DI LAVORO AUTONOMO
+Posti: " href="/ente/21172-regione-emilia-romagna.html">REGIONE EMILIA ROMAGNA</a></td> 
+ <td>BOLOGNA</td> 
+ <td><a title="Ente: REGIONE EMILIA ROMAGNA
+Titolo: AVVISO PUBBLICO PER LA COSTITUZIONE DI UN ELENCO DI ESPERTI IN �GESTIONE E RENDICONTAZIONE PROGETTI EUROPEI ED INTERNAZIONALI� PER IL CONFERIMENTO DI INCARICHI PROFESSIONALI DI LAVORO AUTONOMO
+Posti: " href="/scheda/139028-avviso-pubblico-per-la-costituzione-di-un-elenco-di-esperti-in-gestione-e-rendicontazione-progetti-europei-ed-internazionali-per-il-conferimento-di-incarichi-professionali-di-lavoro-autonomo.html">AVVISO PUBBLICO PER LA COSTITUZIONE DI UN ELENCO DI ESPERTI IN �GESTIONE E RENDICONTAZIONE PROGETTI EUROPEI ED INTERNAZIONALI� PER IL CONFERIMENTO DI INCARICHI PROFESSIONALI DI LAVORO AUTONOMO</a></td> 
+ <td align="right">27653</td> 
+</tr>
+09:46:51,958 WARN  EntryProcessorConcorsiItSpecInf:56 - unable to read internal URL
+09:46:51,960 WARN  SessionManager:53 - normally a derivd class should override this method
+09:46:51,961 ERROR SessionManagerAbstr:73 - seesione fallita, esco
+09:46:51,961 ERROR SessionManagerAbstr:92 - spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage
+09:47:15,570 INFO  TableScraperABC:21 - break
+09:47:15,599 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+09:47:15,599 WARN  SessionManager:48 - normally a derivd class should override this method
+09:47:15,601 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+09:47:28,180 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+09:47:28,180 ERROR PageProcessor:31 - should not pass here or make class abstract
+09:47:28,485 INFO  TableScraperABC:65 - scraping table: #datagrid > table
+09:48:05,345 ERROR WEBUtils:96 - unable to find attribute href in <tr class="alt1"> 
+ <td><a title="Ente: REGIONE EMILIA ROMAGNA
+Titolo: AVVISO PUBBLICO PER LA COSTITUZIONE DI UN ELENCO DI ESPERTI IN �GESTIONE E RENDICONTAZIONE PROGETTI EUROPEI ED INTERNAZIONALI� PER IL CONFERIMENTO DI INCARICHI PROFESSIONALI DI LAVORO AUTONOMO
+Posti: " href="/ente/21172-regione-emilia-romagna.html">REGIONE EMILIA ROMAGNA</a></td> 
+ <td>BOLOGNA</td> 
+ <td><a title="Ente: REGIONE EMILIA ROMAGNA
+Titolo: AVVISO PUBBLICO PER LA COSTITUZIONE DI UN ELENCO DI ESPERTI IN �GESTIONE E RENDICONTAZIONE PROGETTI EUROPEI ED INTERNAZIONALI� PER IL CONFERIMENTO DI INCARICHI PROFESSIONALI DI LAVORO AUTONOMO
+Posti: " href="/scheda/139028-avviso-pubblico-per-la-costituzione-di-un-elenco-di-esperti-in-gestione-e-rendicontazione-progetti-europei-ed-internazionali-per-il-conferimento-di-incarichi-professionali-di-lavoro-autonomo.html">AVVISO PUBBLICO PER LA COSTITUZIONE DI UN ELENCO DI ESPERTI IN �GESTIONE E RENDICONTAZIONE PROGETTI EUROPEI ED INTERNAZIONALI� PER IL CONFERIMENTO DI INCARICHI PROFESSIONALI DI LAVORO AUTONOMO</a></td> 
+ <td align="right">27653</td> 
+</tr>
+09:48:53,854 INFO  TableScraperABC:21 - break
+09:48:53,859 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+09:48:53,859 WARN  SessionManager:48 - normally a derivd class should override this method
+09:48:53,861 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+09:49:13,051 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+09:49:13,052 ERROR PageProcessor:31 - should not pass here or make class abstract
+09:49:13,375 INFO  TableScraperABC:65 - scraping table: #datagrid > table
+09:49:20,529 ERROR WEBUtils:96 - unable to find attribute href in <tr class="alt1"> 
+ <td><a title="Ente: REGIONE EMILIA ROMAGNA
+Titolo: AVVISO PUBBLICO PER LA COSTITUZIONE DI UN ELENCO DI ESPERTI IN �GESTIONE E RENDICONTAZIONE PROGETTI EUROPEI ED INTERNAZIONALI� PER IL CONFERIMENTO DI INCARICHI PROFESSIONALI DI LAVORO AUTONOMO
+Posti: " href="/ente/21172-regione-emilia-romagna.html">REGIONE EMILIA ROMAGNA</a></td> 
+ <td>BOLOGNA</td> 
+ <td><a title="Ente: REGIONE EMILIA ROMAGNA
+Titolo: AVVISO PUBBLICO PER LA COSTITUZIONE DI UN ELENCO DI ESPERTI IN �GESTIONE E RENDICONTAZIONE PROGETTI EUROPEI ED INTERNAZIONALI� PER IL CONFERIMENTO DI INCARICHI PROFESSIONALI DI LAVORO AUTONOMO
+Posti: " href="/scheda/139028-avviso-pubblico-per-la-costituzione-di-un-elenco-di-esperti-in-gestione-e-rendicontazione-progetti-europei-ed-internazionali-per-il-conferimento-di-incarichi-professionali-di-lavoro-autonomo.html">AVVISO PUBBLICO PER LA COSTITUZIONE DI UN ELENCO DI ESPERTI IN �GESTIONE E RENDICONTAZIONE PROGETTI EUROPEI ED INTERNAZIONALI� PER IL CONFERIMENTO DI INCARICHI PROFESSIONALI DI LAVORO AUTONOMO</a></td> 
+ <td align="right">27653</td> 
+</tr>
+09:51:25,412 INFO  TableScraperABC:21 - break
+09:51:25,417 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+09:51:25,418 WARN  SessionManager:48 - normally a derivd class should override this method
+09:51:25,419 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+09:51:30,171 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+09:51:30,171 ERROR PageProcessor:31 - should not pass here or make class abstract
+09:51:30,456 INFO  TableScraperABC:65 - scraping table: #datagrid > table
+09:52:15,175 WARN  SessionManager:53 - normally a derivd class should override this method
+09:52:15,176 ERROR SessionManagerAbstr:73 - seesione fallita, esco
+09:52:15,176 ERROR SessionManagerAbstr:92 - spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage
+09:52:31,337 INFO  TableScraperABC:21 - break
+09:52:31,343 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+09:52:31,344 WARN  SessionManager:48 - normally a derivd class should override this method
+09:52:31,345 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+09:52:35,990 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+09:52:35,990 ERROR PageProcessor:31 - should not pass here or make class abstract
+09:52:36,283 INFO  TableScraperABC:65 - scraping table: #datagrid > table
+09:53:51,357 INFO  TableScraperABC:21 - break
+09:53:51,362 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+09:53:51,363 WARN  SessionManager:48 - normally a derivd class should override this method
+09:53:51,365 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+09:53:57,240 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+09:53:57,240 ERROR PageProcessor:31 - should not pass here or make class abstract
+09:53:57,512 INFO  TableScraperABC:65 - scraping table: #datagrid > table
+10:00:45,646 INFO  TableScraperABC:21 - break
+10:00:45,651 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+10:00:45,749 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+10:00:50,320 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+10:00:50,321 ERROR PageProcessor:31 - should not pass here or make class abstract
+10:00:50,623 INFO  TableScraperABC:65 - scraping table: #datagrid > table
+10:01:32,604 ERROR ConcorsiDB:99 - codice sotto va riscritto, forse JPA1 da riscrivere in JPA2
+10:05:07,326 INFO  TableScraperABC:21 - break
+10:05:07,330 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+10:05:07,385 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+10:05:11,977 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+10:05:11,977 ERROR PageProcessor:31 - should not pass here or make class abstract
+10:05:12,287 INFO  TableScraperABC:65 - scraping table: #datagrid > table
+10:05:35,674 ERROR ConcorsiDB:99 - codice sotto va riscritto, forse JPA1 da riscrivere in JPA2
+17:56:04,448 INFO  TableScraperABC:21 - break
+17:56:04,456 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+17:56:04,571 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+17:56:14,548 INFO  TableScraperABC:21 - break
+17:56:14,559 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+17:56:14,736 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+17:56:21,357 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+17:56:21,358 ERROR PageProcessor:31 - should not pass here or make class abstract
+17:56:21,605 INFO  TableScraperABC:65 - scraping table: #datagrid > table
+17:56:45,094 ERROR ConcorsiDB:99 - codice sotto va riscritto, forse JPA1 da riscrivere in JPA2
+11:22:48,040 INFO  TableScraperABC:21 - break
+11:22:48,044 WARN  EntryProcessorABC:40 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+11:22:48,107 INFO  PageProcessor:43 - Page: http://concorsi.it:80/nc/top
+11:22:52,671 WARN  TableScraperABC:36 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+11:22:52,671 ERROR PageProcessor:31 - should not pass here or make class abstract
+11:22:52,991 INFO  TableScraperABC:65 - scraping table: #datagrid > table
+11:23:18,155 ERROR ConcorsiDB:99 - codice sotto va riscritto, forse JPA1 da riscrivere in JPA2

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/json" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ssh_jsch_examples" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="log4j" level="application" />
+    <orderEntry type="library" name="jsch" level="application" />
+    <orderEntry type="library" name="jsoup" level="application" />
+    <orderEntry type="library" name="jax-rs" level="application" />
+    <orderEntry type="library" name="sqlite" level="application" />
+    <orderEntry type="library" name="jaxrs-ri-maven" level="application" />
+    <orderEntry type="library" name="eclipselink-maven" level="application" />
+    <orderEntry type="library" name="javax.mail-maven" level="application" />
+  </component>
+</module>
