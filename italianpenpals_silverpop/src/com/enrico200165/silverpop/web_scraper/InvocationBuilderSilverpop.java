@@ -7,6 +7,7 @@ import javax.ws.rs.core.MediaType;
 import com.enrico200165.weblistscraper.tools.InvocationBuilderWrapper;
 import org.apache.log4j.Logger;
 
+
 /*
  * 
  *  FORSE SULLA GESTIONE DEGLI HEADERS C'E' GROSSO CASINO

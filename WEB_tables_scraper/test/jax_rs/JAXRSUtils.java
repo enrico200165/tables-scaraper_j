@@ -1,5 +1,6 @@
 package jax_rs;
 
+import com.enrico200165.utils.net.http.Utils;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
@@ -11,16 +12,16 @@ public class JAXRSUtils {
 
 	@Test
 	public void testIsRelative() {
-		assertEquals(true,WEBUtils.isRelativeURL("/a"));
-		assertEquals(true,WEBUtils.isRelativeURL("a/a/"));
-		assertEquals(true,WEBUtils.isRelativeURL("a/a?par1=val1&par2=val2"));
-		assertEquals(true,WEBUtils.isRelativeURL("a/a?par1=val1&par2=val2#a"));
+		assertEquals(true,Utils.isRelativeURL("/a"));
+		assertEquals(true,Utils.isRelativeURL("a/a/"));
+		assertEquals(true,Utils.isRelativeURL("a/a?par1=val1&par2=val2"));
+		assertEquals(true,Utils.isRelativeURL("a/a?par1=val1&par2=val2#a"));
 
 		
-		assertEquals(false,WEBUtils.isRelativeURL("http://a"));
-		assertEquals(false,WEBUtils.isRelativeURL("https://a/"));
-		assertEquals(false,WEBUtils.isRelativeURL("oracle.com/a/"));
-		assertEquals(false,WEBUtils.isRelativeURL("host1/pippo.do"));
+		assertEquals(false,Utils.isRelativeURL("http://a"));
+		assertEquals(false,Utils.isRelativeURL("https://a/"));
+		assertEquals(false,Utils.isRelativeURL("oracle.com/a/"));
+		assertEquals(false, Utils.isRelativeURL("host1/pippo.do"));
 		
 		// assertEquals(true,WEBUtils.isRelative("//"));		
 	}

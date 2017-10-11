@@ -5,7 +5,7 @@ import java.util.List;
 import com.enrico200165.utils.str_regex.NameValuePairString;
 import org.apache.log4j.Logger;
 
-import com.enrico200165.weblistscraper.configs.HostConfigABC;
+import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.tools.FormManagerABC;
 
 /**
@@ -17,7 +17,7 @@ public class LoginFormManagerJapanguide extends FormManagerABC {
 
 	
 	
-	public LoginFormManagerJapanguide(HostConfigABC hcfgPar) {
+	public LoginFormManagerJapanguide(HostConfig hcfgPar) {
 		super(hcfgPar);
 	}
 

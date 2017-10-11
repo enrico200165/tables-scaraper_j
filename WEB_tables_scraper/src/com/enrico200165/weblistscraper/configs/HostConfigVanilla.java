@@ -1,21 +1,22 @@
 package com.enrico200165.weblistscraper.configs;
 
-public class HostConfigDrupalLocalTCPMonitorProxy extends HostConfig {
+public class HostConfigVanilla extends HostConfig {
 
-	HostConfigDrupalLocalTCPMonitorProxy(String loginPropertyFile) {
-		super(loginPropertyFile);
+	public HostConfigVanilla() {
 	}
 
+	public HostConfigVanilla(String loginPropertiesFile) {
+		super(loginPropertiesFile);
+	}
+	
 	@Override
 	public String getHostNoport() {
-		return "http://drupaldev.local:9080";
+		return baseHostURI.getHost();
 	}
-
+	
 	@Override
 	public String getLoginFormAction() {
-		//	
-		return "node?destination=node";
-		//	return  "user";
+		return  "/user";
 	}
 
 	@Override
@@ -25,12 +26,12 @@ public class HostConfigDrupalLocalTCPMonitorProxy extends HostConfig {
 
 	@Override
 	public String getJsoupLoginFormSelector() {
-		return "user";
+		return "#user-login";
+		// return "#user-login-form";
 	}
 
 	@Override
 	public String getHost() {
-		return null;
+		return baseHostURI.getHost();
 	}
-
 }

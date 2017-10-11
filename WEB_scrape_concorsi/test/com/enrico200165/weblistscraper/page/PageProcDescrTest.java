@@ -6,10 +6,6 @@ import com.enrico200165.weblistscraper.tools.*;
 import org.apache.log4j.*;
 import org.junit.*;
 
-import javax.validation.constraints.*;
-
-import static org.junit.Assert.*;
-
 /**
  * Created by enrico on 2/14/2016.
  */
@@ -28,7 +24,7 @@ public class PageProcDescrTest {
     @Test
     public void testGetRelUri() throws Exception {
 
-        HostConfigABC hc = new HostConfigConcorsiIt();
+        HostConfig hc = new HostConfig("V:\\data\\pers_dev\\data_dbs\\web_scraper\\host_conncorsi_it.properties");
 
         PageProcDescr ppd = new PageProcDescr(hc,null,null,"http://google.com", WebPageAction.GET);
 
@@ -38,7 +34,7 @@ public class PageProcDescrTest {
 
     @Test
     public void testGetUri() throws Exception {
-        HostConfigABC hc = new HostConfigConcorsiIt();
+        HostConfig hc = new HostConfig("V:\\data\\pers_dev\\data_dbs\\web_scraper\\host_conncorsi_it.properties");
 
         PageProcDescr ppd = new PageProcDescr(hc,null,null,"http://google.com/pippo?nome=enrico", WebPageAction.GET);
         ppd.getUri();

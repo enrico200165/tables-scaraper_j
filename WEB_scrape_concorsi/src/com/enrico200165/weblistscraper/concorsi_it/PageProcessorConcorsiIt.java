@@ -5,13 +5,13 @@ import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import org.apache.log4j.Logger;
 
 import com.enrico200165.weblistscraper.concorsi_it.entities.ConcorsiDB;
-import com.enrico200165.weblistscraper.configs.HostConfigABC;
+import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.page.PageProcessor;
 
 public class PageProcessorConcorsiIt extends PageProcessor {
 
-	public PageProcessorConcorsiIt(HostConfigABC hcPar, SessionManagerAbstr sess, PageConfigABC tcfgPar) {
+	public PageProcessorConcorsiIt(HostConfig hcPar, SessionManagerAbstr sess, PageConfigABC tcfgPar) {
 		super( hcPar, sess, tcfgPar);
 	}
 

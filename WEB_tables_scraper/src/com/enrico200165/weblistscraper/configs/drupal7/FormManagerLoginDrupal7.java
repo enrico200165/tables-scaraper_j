@@ -1,6 +1,6 @@
 package com.enrico200165.weblistscraper.configs.drupal7;
 
-import com.enrico200165.weblistscraper.configs.HostConfigABC;
+import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.tools.FormManagerABC;
 import com.enrico200165.utils.str_regex.NameValuePairString;
 import org.apache.log4j.Logger;
@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class FormManagerLoginDrupal7 extends FormManagerABC {
 
-	public FormManagerLoginDrupal7(HostConfigABC hPar) {
+	public FormManagerLoginDrupal7(HostConfig hPar) {
 		super(hPar);
 	}
 

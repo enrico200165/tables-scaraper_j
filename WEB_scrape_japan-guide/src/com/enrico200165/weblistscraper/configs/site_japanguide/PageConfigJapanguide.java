@@ -1,7 +1,7 @@
 package com.enrico200165.weblistscraper.configs.site_japanguide;
 
 import com.enrico200165.weblistscraper.configs.ChannelIFC;
-import com.enrico200165.weblistscraper.configs.HostConfigABC;
+import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.tools.EntryCanActOnFilter;
 import com.enrico200165.weblistscraper.page.EntryProcessorABC;
@@ -14,7 +14,7 @@ import org.apache.log4j.Logger;
 
 public class PageConfigJapanguide extends PageConfigABC {
 
-	public PageConfigJapanguide(HostConfigABC hcPar, TableScraperABC ts, EntryCanActOnFilter entryCanActOnPar, ChannelIFC channelInfoPar) {
+	public PageConfigJapanguide(HostConfig hcPar, TableScraperABC ts, EntryCanActOnFilter entryCanActOnPar, ChannelIFC channelInfoPar) {
 		super( hcPar,  ts,  entryCanActOnPar,  channelInfoPar);
 	}
 

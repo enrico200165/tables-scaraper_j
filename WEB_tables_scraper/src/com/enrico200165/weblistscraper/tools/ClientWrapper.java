@@ -3,7 +3,7 @@ package com.enrico200165.weblistscraper.tools;
 
 import com.enrico200165.utils.str_regex.*;
 import com.enrico200165.weblistscraper.common.*;
-import com.enrico200165.weblistscraper.configs.HostConfigABC;
+import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.page.PageProcDescr;
 import org.apache.log4j.Logger;
 import org.glassfish.jersey.client.ClientProperties;
@@ -19,10 +19,13 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.enrico200165.utils.net.http.Utils;
+
+
 public class ClientWrapper {
 
     public ClientWrapper(Client clientPar, InvocationBuilderWrapper ibwPar,
-                         HostConfigABC hostCfgPar, int pageLoadDelayPar, FormManagerABC fmPar) {
+                         HostConfig hostCfgPar, int pageLoadDelayPar, FormManagerABC fmPar) {
         super();
         pageLoadDelay = pageLoadDelayPar;
         hostCfg = hostCfgPar;
@@ -104,7 +107,12 @@ public class ClientWrapper {
 
 
     public ResponseWrapper simpleGET(URI uri, int delay) {
-        log.debug("loading page, delay: " + delay + " URL: " + WEBUtils.URLFromURI(uri));
+        log.info("loading page, delay: " + delay + " URL: " + Utils.URLFromURI(uri));
+
+        if (!Utils.isUsableURI(uri)) {
+            log.error("URI not usable: " + uri);
+            System.exit(1);
+        }
         ResponseWrapper rw = new ResponseWrapper();
 
         baseTarget = this.client.target(uri);
@@ -129,7 +137,7 @@ public class ClientWrapper {
 
     public ResponseWrapper simplePOST(String uriString, List<NameValuePairString> formFields,
                                       InvocationBuilderWrapper ibw, int delaySecs) {
-        URI uri = WEBUtils.URIFromURLString(uriString,this.getHost());
+        URI uri = Utils.URIFromURLString(uriString,this.getHost());
         if (uri == null) {
             log.error("ESCO: failed to create URI from string: " + uriString);
             System.exit(1);
@@ -173,7 +181,7 @@ public class ClientWrapper {
         return rw;
     }
 
-    public boolean authenticate(HostConfigABC hcfg) {
+    public boolean authenticate(HostConfig hcfg) {
         List<NameValuePairString> formFields = new ArrayList<NameValuePairString>();
 
         final String loginPageURL = hcfg.getLoginPageURL();
@@ -182,7 +190,7 @@ public class ClientWrapper {
             log.warn("some problem, maybe not blocking, getting page with login form: " + rw.it().getStatus());
             return false;
         }
-        WEBUtils.getFormFields(rw, formFields, hcfg.getLFormSelector());
+        WEBUtils.getFormFields(rw, formFields, hcfg.getJsoupLoginFormSelector());
         List<NameValuePairString> replaceVals = new ArrayList<NameValuePairString>();
 
         fm.setFormFields(formFields, replaceVals, /* removeList */null, /* addList */null);
@@ -201,7 +209,7 @@ public class ClientWrapper {
         // return rw;
     }
 
-    public ResponseWrapper getPage(HostConfigABC hcfg, PageProcDescr ppd, int delay, ArrayList<NameValuePairString> expected) {
+    public ResponseWrapper getPage(HostConfig hcfg, PageProcDescr ppd, int delay, ArrayList<NameValuePairString> expected) {
         //String forDebugFullURL = fullURL(ppd.getRelUri());
         //log.debug("load page: " + delay + " URL: " + forDebugFullURL);
         if (ppd.isAuthenticate()) {
@@ -230,12 +238,12 @@ public class ClientWrapper {
     }
 
 
-    public HostConfigABC getHostCfg() {
+    public HostConfig getHostCfg() {
         return hostCfg;
     }
 
 
-    public void setHostCfg(HostConfigABC hostCfg) {
+    public void setHostCfg(HostConfig hostCfg) {
         this.hostCfg = hostCfg;
     }
 
@@ -342,7 +350,7 @@ public class ClientWrapper {
     }
 
 
-    HostConfigABC hostCfg;
+    HostConfig hostCfg;
     URI baseHostURI;
     WebTarget baseTarget;
     InvocationBuilderWrapper ibw;

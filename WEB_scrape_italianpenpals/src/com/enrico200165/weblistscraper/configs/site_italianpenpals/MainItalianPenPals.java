@@ -5,7 +5,7 @@ import com.enrico200165.utils.net.http.Utils;
 import com.enrico200165.utils.various.Utl;
 import com.enrico200165.weblistscraper.common.*;
 import com.enrico200165.weblistscraper.configs.ChannelIFC;
-import com.enrico200165.weblistscraper.configs.HostConfigABC;
+import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.configs.drupal7.FormManagerLoginDrupal7;
 import com.enrico200165.weblistscraper.page.EntryProcessorABC;
@@ -30,13 +30,14 @@ public class MainItalianPenPals {
 
 		// ############## PARTE GENERICA ################
 		// -- parte di interfacciamento
-		HostConfigABC hostConfigIPP = new  HostConfigItalianPenPals("V:\\data\\pers_dev\\data_dbs\\italianpenpals_login_enrico.properties");
+		HostConfig hostConfig = new  HostConfig("V:\\data\\pers_dev\\data_dbs\\web_scraper\\host_italianpenpals.properties");
+
 		CookieStoreEV cs = new CookieStoreEV();
 		ClientRequestFilter crqf= new ClReqFilterCookies(cs);
 		ClientRespFilterEV cref = new ClientRespFilterEV(cs);
 		Client cl = WEBUtils.createClient(crqf, cref, false);
-		ClientWrapper cw = new ClientWrapper(cl,new InvocationBuilderWrapperIExplore(),hostConfigIPP,
-				1, new FormManagerLoginDrupal7(hostConfigIPP));
+		ClientWrapper cw = new ClientWrapper(cl,new InvocationBuilderWrapperIExplore(),hostConfig,
+				1, new FormManagerLoginDrupal7(hostConfig));
 		
 
 		// ############## configurazione specifica ##############
@@ -47,21 +48,21 @@ public class MainItalianPenPals {
 		
 		EntryProcessorABC entryProcessorIPP = new EntryProcessorItalianPenPals(sm,cw,null);
 		TableScraperABC tableScraperIPP = new  TableScraperItalianPenPals(sm,null,entryProcessorIPP);
-		PageConfigABC pageConfig = new PageConfigItalianPenPals(hostConfigIPP,tableScraperIPP,entryCanActOn ,channelInfoIPP);
+		PageConfigABC pageConfig = new PageConfigItalianPenPals(hostConfig,tableScraperIPP,entryCanActOn ,channelInfoIPP);
 
 		entryProcessorIPP.setPageConfig(pageConfig);
 		
-		PageProcessor pageProcessor = new PageProcessor(hostConfigIPP, sm, pageConfig);
+		PageProcessor pageProcessor = new PageProcessor(hostConfig, sm, pageConfig);
 
 
-		PageProcDescr homePage = new PageProcDescr(hostConfigIPP, pageConfig, pageProcessor,"http://italianpenpals.org",WebPageAction.GET);
+		PageProcDescr homePage = new PageProcDescr(hostConfig, pageConfig, pageProcessor,"http://italianpenpals.org",WebPageAction.GET);
 		homePage.setAuthenticate(false);
 		// sm.addMap(homePage);
 
 
 		
 		
-		PageProcDescr tablePage = new PageProcDescr( hostConfigIPP,pageConfig, pageProcessor,"http://italianpenpals.org/content/pen-pals-global-list",WebPageAction.GET_SCRAPE);
+		PageProcDescr tablePage = new PageProcDescr( hostConfig,pageConfig, pageProcessor,"http://italianpenpals.org/content/pen-pals-global-list",WebPageAction.GET_SCRAPE);
 		
 		
 		tablePage.setAuthenticate(true);

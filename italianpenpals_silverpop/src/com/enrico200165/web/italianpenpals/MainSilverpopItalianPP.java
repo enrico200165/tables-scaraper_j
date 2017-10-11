@@ -3,7 +3,7 @@ package com.enrico200165.web.italianpenpals;
 import com.enrico200165.silverpop.xmlapi.XMLMessages;
 import com.enrico200165.utils.net.SftpHelper;
 import com.enrico200165.utils.net.http.Utils;
-import com.enrico200165.utils.various.PropertiesEV;
+import com.enrico200165.utils.various.PropertiesYAMLEV;
 import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -24,7 +24,7 @@ public class MainSilverpopItalianPP {
 
         Utils.setFiddler(true);
 
-        PropertiesEV p = new PropertiesEV("V:/data/pers_data/00_importantissimi/keys/programming/silverpop.properties");
+        PropertiesYAMLEV p = new PropertiesYAMLEV("V:\\data\\pers_data\\01_high\\keys\\programming\\silverpop.properties");
 
         Silverpop sp = new Silverpop(p);
 

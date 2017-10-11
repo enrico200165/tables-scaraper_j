@@ -2,8 +2,8 @@ package com.enrico200165.web.italianpenpals;
 
 import com.enrico200165.cookies.CookieStoreEV;
 import com.enrico200165.weblistscraper.common.*;
+import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.configs.drupal7.FormManagerLoginDrupal7;
-import com.enrico200165.weblistscraper.configs.site_italianpenpals.HostConfigItalianPenPals;
 import com.enrico200165.weblistscraper.tools.*;
 import org.apache.log4j.Logger;
 
@@ -23,7 +23,7 @@ public class ItalianPenPalsSite {
 
     public ItalianPenPalsSite() {
 
-        hostConfigIPP = new HostConfigItalianPenPals("V:\\data\\pers_dev\\data_dbs\\italianpenpals_login_enrico.properties");
+        hostConfigIPP = new HostConfig("V:\\data\\pers_dev\\data_dbs\\italianpenpals_login_enrico.properties");
 
          CookieStoreEV cs = new CookieStoreEV();
         ClientRequestFilter crqf = new ClReqFilterCookies(cs);
@@ -76,7 +76,7 @@ public class ItalianPenPalsSite {
     }
 
 
-    HostConfigItalianPenPals hostConfigIPP;
+    HostConfig hostConfigIPP;
     String drupalUsersFName;
     final static String listURL = "http://italianpenpals.org/users_export";
 

@@ -5,11 +5,11 @@ import java.util.List;
 import com.enrico200165.utils.str_regex.*;
 import org.apache.log4j.Logger;
 
-import com.enrico200165.weblistscraper.configs.HostConfigABC;
+import com.enrico200165.weblistscraper.configs.HostConfig;
 
 public class FormManagerDummy extends FormManagerABC{
 
-	public FormManagerDummy(HostConfigABC hcfgPar) {
+	public FormManagerDummy(HostConfig hcfgPar) {
 		super(hcfgPar);
 	}
 
@@ -22,7 +22,7 @@ public class FormManagerDummy extends FormManagerABC{
 	}
 	
 	
-	protected HostConfigABC hcfg;
+	protected HostConfig hcfg;
 	
 	private static org.apache.log4j.Logger log = Logger.getLogger(FormManagerDummy.class);
 }

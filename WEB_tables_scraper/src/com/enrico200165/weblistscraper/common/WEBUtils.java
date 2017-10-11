@@ -47,25 +47,8 @@ public class WEBUtils {
     public static final String subDomainOneLeftRegex = domainWordRegex + "\\.";
     public static final String subDomainLeftRegex = "(" + subDomainOneLeftRegex + ")" + "+";
 
-    public static boolean isRelativeURL(String url) {
-        boolean ret = false;
 
-        if (!WEBUtils.isCorrectURL(url)) {
-            if (!WEBUtils.isCorrectURL("http://google.com" + url)) {
-                // rifiuta URL relative come /a
-                log.error("esco, not a correct URL: " + url);
-                System.exit(1);
-            }
-        }
 
-        if (url.contains("http:") || url.contains("https:")) {
-            return false;
-        }
-
-        // probably wrong
-        // check if it contains an hostname
-        return !url.matches("[\\w]+\\.?[\\w]+/[^/].*");
-    }
 
     public static String evSelTxt(Element entry, String sel) {
 
@@ -89,161 +72,6 @@ public class WEBUtils {
     }
 
 
-    public static String URLFromURI(URI uri) {
-        String ret = "";
-
-        if (uri == null) {
-            log.error("");
-        }
-
-        ret += uri.getScheme() + "://" + uri.getHost() + uri.getPath();
-
-        if (uri.getQuery() != null && uri.getQuery().length() > 0)
-            ret += "?" + uri.getQuery();
-
-        return ret;
-    }
-
-
-    /*
-    * Sintassi s://<rel URI> per URL relative che richiedono httpS
-    *
-    *
-    * */
-    public static URI URIFromURLString(String url, String host) {
-        String myHTTPSMarker = "s://";
-        boolean https = false;
-        URI uri = null;
-
-        if (url == null) {
-            return null;
-        }
-        if (url.startsWith(myHTTPSMarker)) {
-            url = url.replace(myHTTPSMarker, "");
-            https = true;
-        }
-
-
-        try {
-            if (host == null) {
-                if (url == null) { //entrambi nulli
-                    log.error("entrambi nulli");
-                    uri = null;
-                } else {
-                    // host null quindi assoluta
-                    if (url.startsWith("http")) {
-                        // ok è completa
-                        uri = new URI(url);
-                    } else {
-                        uri = null;
-                    }
-                }
-            } else { // host not null
-                if (url == null) {   // url null
-                    uri = new URI("http://"+host+"/");
-                } else { // entrambi non nulli
-                    if (url.contains(host)) {
-                        uri = new URI(url);
-                    } else {
-                        if (url.startsWith("http")) {
-                            // situazione anomala
-                            uri = null;
-                        } else {  //situazione normale
-                            if (!url.startsWith("/"))
-                                url = "/" + url;
-                            if (https) {
-                                uri = new URI("https://" + host + url);
-                            } else {
-                                uri = new URI("http://" + host + url);
-                            }
-                        }
-                    }
-                }
-            }
-            if (uri == null)
-                log.error("problem building URI from host: \"" + host + "\" and url: \"" + url + "\"");
-            return uri;
-        } catch (Exception e) {
-            log.error("", e);
-        }
-
-
-        return uri;
-    }
-
-
-    /**
-     * Semplicistica, probabilmente fallisce in molti casi pensarci bene prima di stravolgerla dato che le URL sono difficilissime e forse
-     * impossibile da parsare ex. host1/index e /host1/idex se non si impone che comincino con / s'è ambiguita irrisolvibile
-     *
-     * @param url
-     * @return
-     */
-    public static String makeUrlRelative(String url) {
-        String ret = url;
-        int pos;
-
-        try {
-            // deve stare prima di http altrimenti toglie tutto tranne la s
-            if ((pos = ret.indexOf("https://")) != -1) {
-                ret = ret.substring(pos + "https://".length());
-            }
-            if ((pos = ret.indexOf("http://")) != -1) {
-                ret = ret.substring(pos + "http://".length());
-            }
-
-            // deve stare dopo l'esame di http:// per evitare che becchi i //
-            pos = ret.indexOf("/");
-            if (pos != -1) {
-                ret = ret.substring(pos);
-                return ret;
-            }
-
-            if (ret.matches(".*\\..*")) {
-                // alta probabilità di errore qui
-                ret = "/";
-                return ret;
-            }
-        } finally {
-            log.debug(url + " became " + ret);
-            return ret;
-        }
-    }
-
-    public static boolean isCorrectURL(String url) {
-        try {
-            java.net.URL u = new URL(url);
-        } catch (MalformedURLException e) {
-            return false;
-        }
-        return true;
-    }
-
-    public static boolean isUsableURI(URI uri) {
-        try {
-            java.net.URL u = new URL(uri.toString());
-        } catch (MalformedURLException e) {
-            return false;
-        }
-        return !(uri.getPath() == null || uri.getPath().length() == 0);
-    }
-
-    public static String cookieToString(NewCookie cookie, String fieldDelim) {
-        String s = "";
-        // s += cookie.toString(); // per ora prendiamo il default
-        s += "name=" + cookie.getName();
-        s += fieldDelim + "path=" + cookie.getPath();
-        s += fieldDelim + "domain=" + cookie.getDomain();
-        s += fieldDelim + "comment=" + cookie.getComment();
-        s += fieldDelim + "max age=" + cookie.getMaxAge();
-        s += fieldDelim + "expiry date=" + cookie.getExpiry();
-
-        s += fieldDelim + "version=" + cookie.getVersion();
-        s += fieldDelim + "value=" + cookie.getValue();
-
-        return s;
-    }
-
 
     public static HttpCookie fromNewCookie(NewCookie c) {
 
@@ -261,6 +89,22 @@ public class WEBUtils {
         cookie.setHttpOnly(c.isHttpOnly());
 
         return cookie;
+    }
+
+    public static String cookieToString(NewCookie cookie, String fieldDelim) {
+        String s = "";
+        // s += cookie.toString(); // per ora prendiamo il default
+        s += "name=" + cookie.getName();
+        s += fieldDelim + "path=" + cookie.getPath();
+        s += fieldDelim + "domain=" + cookie.getDomain();
+        s += fieldDelim + "comment=" + cookie.getComment();
+        s += fieldDelim + "max age=" + cookie.getMaxAge();
+        s += fieldDelim + "expiry date=" + cookie.getExpiry();
+
+        s += fieldDelim + "version=" + cookie.getVersion();
+        s += fieldDelim + "value=" + cookie.getValue();
+
+        return s;
     }
 
 

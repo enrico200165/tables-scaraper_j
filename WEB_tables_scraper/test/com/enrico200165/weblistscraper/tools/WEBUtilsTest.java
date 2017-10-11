@@ -1,5 +1,6 @@
 package com.enrico200165.weblistscraper.tools;
 
+import com.enrico200165.utils.net.http.Utils;
 import com.enrico200165.utils.str_regex.*;
 import com.enrico200165.weblistscraper.common.*;
 import org.apache.log4j.Logger;
@@ -58,8 +59,8 @@ public class WEBUtilsTest {
 
 		String urlOrig = "https://www.japan-guide.com/login/?aACTION=url&aURL=/index.html";
 		URI uri = new URI(urlOrig);
-		assertEquals(WEBUtils.URLFromURI(uri),urlOrig);
-		//log.info(WEBUtils.URLFromURI(uri));
+		assertEquals(Utils.URLFromURI(uri),urlOrig);
+		//log.info(Utils.URLFromURI(uri));
 	}
 
 	@Test
@@ -69,39 +70,39 @@ public class WEBUtilsTest {
 		String http = "http://";
 		String https = "https://";
 
-		ret = WEBUtils.URIFromURLString("/",hostname).toString();
+		ret = Utils.URIFromURLString("/",hostname).toString();
 		log.info(ret);
 		assertEquals(ret,http+hostname+"/");
 
-		ret = WEBUtils.URIFromURLString("",hostname).toString();
+		ret = Utils.URIFromURLString("",hostname).toString();
 		log.info(ret);
 		assertEquals(ret,http+hostname+"/");
 
-		ret = WEBUtils.URIFromURLString("path",hostname).toString();
+		ret = Utils.URIFromURLString("path",hostname).toString();
 		log.info(ret);
 		assertEquals(ret,http+hostname+"/path");
 
-		ret = WEBUtils.URIFromURLString("/path",hostname).toString();
+		ret = Utils.URIFromURLString("/path",hostname).toString();
 		log.info(ret);
 		assertEquals(ret,http+hostname+"/path");
 
-		ret = WEBUtils.URIFromURLString("s://path",hostname).toString();
+		ret = Utils.URIFromURLString("s://path",hostname).toString();
 		log.info(ret);
 		assertEquals(ret,https+hostname+"/path");
 
 
 		// hostname substring di url
 		String url = "http://"+hostname+"/pippo";
-		ret = WEBUtils.URIFromURLString(url,hostname).toString();
+		ret = Utils.URIFromURLString(url,hostname).toString();
 		assertEquals(url,ret);
 
 		// hostname null
 		hostname = null;
-		URI u = WEBUtils.URIFromURLString("s://path",hostname);
+		URI u = Utils.URIFromURLString("s://path",hostname);
 		assertNull(u);
 
 		// l'url dovrebbe gestire l'hostname null
-		ret = WEBUtils.URIFromURLString(url,null).toString();
+		ret = Utils.URIFromURLString(url,null).toString();
 		assertEquals(url,ret);
 
 

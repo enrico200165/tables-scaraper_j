@@ -995,3 +995,5 @@ java.io.FileNotFoundException: pippo.txt.	 (The filename, directory name, or vol
 15:16:43,975 WARN  FileHelper:175 - footer null for file: testdelete
 15:16:43,985 INFO  FileHelper:182 - in V:\data\pers_dev\sources\intellij\ev_tools\ev_tools\ev_tools\EVUtils scritto: testdelete 
 # esaminati: 2 scritti: 2
+11:54:45,796 ERROR Utils:101 - problem building URI from host: "http://host.com" and url: "/user"
+11:57:07,405 ERROR Utils:101 - problem building URI from host: "http://host.com" and url: "/user"

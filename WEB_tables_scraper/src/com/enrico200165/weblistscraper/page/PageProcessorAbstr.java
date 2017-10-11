@@ -4,7 +4,7 @@ import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import org.apache.log4j.Logger;
 
-import com.enrico200165.weblistscraper.configs.HostConfigABC;
+import com.enrico200165.weblistscraper.configs.HostConfig;
 
 /**
  * @author enrico
@@ -15,7 +15,7 @@ import com.enrico200165.weblistscraper.configs.HostConfigABC;
  */
 public abstract class PageProcessorAbstr {
 
-	public PageProcessorAbstr(HostConfigABC hostConfigPar, SessionManagerAbstr sesMgrPar) {
+	public PageProcessorAbstr(HostConfig hostConfigPar, SessionManagerAbstr sesMgrPar) {
 		super();
 		sesMgr = sesMgrPar;
 		hostConfig = hostConfigPar;
@@ -41,7 +41,7 @@ public abstract class PageProcessorAbstr {
 	protected PageConfigABC tableOrPageConfig;
 	protected SessionManagerAbstr sesMgr;
 
-	HostConfigABC hostConfig;
+	HostConfig hostConfig;
 
 	private static org.apache.log4j.Logger log = Logger.getLogger(PageProcessorAbstr.class);
 }

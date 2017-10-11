@@ -13,9 +13,9 @@ import com.enrico200165.weblistscraper.tools.EntryCanActOnFilter;
 import com.enrico200165.weblistscraper.tools.EntryExcludeFilter;
 import com.enrico200165.weblistscraper.tools.EntryIncludeFilter;
 
-public class PageConfigConcorsiitSpecInf extends com.enrico200165.weblistscraper.configs.PageConfigConcorsi {
+public class PageConfigConcorsiitSpecInf extends com.enrico200165.weblistscraper.concorsi_it.configs.PageConfigConcorsi {
 
-	public PageConfigConcorsiitSpecInf(HostConfigABC hcPar, TableScraperABC ts, EntryCanActOnFilter entryCanActOnPar, ChannelIFC chann) {
+	public PageConfigConcorsiitSpecInf(HostConfig hcPar, TableScraperABC ts, EntryCanActOnFilter entryCanActOnPar, ChannelIFC chann) {
 		super(hcPar, ts,entryCanActOnPar,chann);
 	}
 

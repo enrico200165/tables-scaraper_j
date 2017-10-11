@@ -4,11 +4,10 @@ import com.enrico200165.cookies.CookieStoreEV;
 import com.enrico200165.silverpop.web_scraper.InvocationBuilderSilverpop;
 import com.enrico200165.silverpop.xmlapi.XMLMessages;
 import com.enrico200165.utils.str_regex.*;
-import com.enrico200165.utils.various.PropertiesEV;
+import com.enrico200165.utils.various.PropertiesYAMLEV;
 import com.enrico200165.weblistscraper.common.*;
-import com.enrico200165.weblistscraper.configs.HostConfigABC;
+import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.configs.drupal7.FormManagerLoginDrupal7;
-import com.enrico200165.weblistscraper.configs.site_italianpenpals.HostConfigItalianPenPals;
 import com.enrico200165.weblistscraper.tools.*;
 import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
@@ -22,18 +21,19 @@ import java.util.List;
 
 public class Silverpop {
 
-	public Silverpop(PropertiesEV props) {
+	public Silverpop(PropertiesYAMLEV props) {
 
 		properties = props;
 
-		ippHostConfig = new HostConfigItalianPenPals("V:\\data\\pers_dev\\data_dbs\\italianpenpals_login_enrico.properties");
-
+		String fname = "V:\\data\\pers_dev\\data_dbs\\web_scraper\\host_italianpenpals.properties";
 		CookieStoreEV cookieStore = new CookieStoreEV("cookiesGlobalStore");
+		HostConfig hc = new HostConfig(fname);
 
 		LAST_ACCESS_TOKEN.restore();
 		ibw = new InvocationBuilderSilverpop(LAST_ACCESS_TOKEN.it());
 		client = WEBUtils.createClient(new ClReqFilterCookies(cookieStore), new RespFilterNull(), false);
-		cw = new ClientWrapper(client, ibw, ippHostConfig, 0, new FormManagerLoginDrupal7(ippHostConfig));
+		cw = new ClientWrapper(client, ibw, hc, 0
+				, new FormManagerLoginDrupal7(hc));
 
 		ResponseWrapper rw = null;
 		jsessionID = null;
@@ -164,14 +164,13 @@ public class Silverpop {
 	}
 
 	final static String APIURL = "http://api0.silverpop.com/XMLAPI";
-	PropertiesEV properties;
+	PropertiesYAMLEV properties;
 	Client client;
 	ClientWrapper cw;
 	ResponseWrapper rw;
 	InvocationBuilderWrapper ibw;
 	List<NameValuePairString> formFields;
 
-	HostConfigABC ippHostConfig;
 
 	String jsessionID;
 

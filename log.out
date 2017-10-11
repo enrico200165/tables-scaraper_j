@@ -1,22 +1,61 @@
-2017-04-15 15:29:34 INFO  WEBTablesScraperConfig:80 - task: concorsijava.util.LinkedHashMap$Entry value class: class java.util.ArrayList
-2017-04-15 15:29:34 INFO  WEBTablesScraperConfig:82 - java.util.LinkedHashMap
-2017-04-15 15:29:34 INFO  WEBTablesScraperConfig:87 - host : class java.util.LinkedHashMap$Entry
-2017-04-15 15:29:39 INFO  WEBTablesScraperConfig:101 - entry: url->http://concorsi.it
-2017-04-15 15:29:52 INFO  WEBTablesScraperConfig:101 - entry: login->{user=enrico, password=pipppo}
-2017-04-15 15:30:06 INFO  WEBTablesScraperConfig:101 - entry: tables->[{concorsi={table_url=/concorsi, selector=myselector, htmlentryincl=[, ], htmlentryexcl=[, ]}}]
-2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:105 - class java.util.LinkedHashMap$Entry
-2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:82 - java.util.LinkedHashMap
-2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:87 - host : class java.util.LinkedHashMap$Entry
-2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:101 - entry: url->http://concorsi.it
-2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:101 - entry: login->{user=enrico, password=pipppo}
-2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:101 - entry: tables->[{concorsi={table_url=/concorsi, selector=myselector, htmlentryincl=[, ], htmlentryexcl=[, ]}}]
-2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:105 - class java.util.LinkedHashMap$Entry
-2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:80 - task: italianpenpalsjava.util.LinkedHashMap$Entry value class: class java.util.ArrayList
-2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:82 - java.util.LinkedHashMap
-2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:87 - host : class java.util.LinkedHashMap$Entry
-2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:101 - entry: url->http://concorsi.it
-2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:101 - entry: login->{user=enrico, password=pipppo}
-2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:101 - entry: tables->{concorsi={url=/concorsi, selector=myselector}}
-2017-04-15 15:30:33 INFO  WEBTablesScraperConfig:105 - class java.util.LinkedHashMap$Entry
-2017-04-15 15:30:33 ERROR WEBTablesScraperConfig:63 - unexpected entry: l1entry2
-2017-04-15 15:30:33 ERROR WEBTablesScraperConfig:63 - unexpected entry: l1entry3
+2017-10-11 09:57:23 INFO  TableScraperABC:20 - breakpoint page config is null
+2017-10-11 09:57:23 WARN  EntryProcessorABC:38 - this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter
+2017-10-11 09:57:24 INFO  ClientWrapper:107 - loading page, delay: 0 URL: http://concorsi.it/nc/2017-10-11 10:53:46 WARN  TableScraperABC:37 - esiste come patch al fatto che in alcuni casi quando viene creato  un session manager non è disponibile, va ridisegnato tutto
+2017-10-11 10:53:46 ERROR PageProcessor:29 - should not pass here or make class abstract
+2017-10-11 10:53:46 INFO  TableScraperABC:84 - scraping table: #datagrid > table
+ke class abstract
+2017-10-11 09:57:31 INFO  TableScraperABC:84 - scraping table: #datagrid > table
+2017-10-11 09:57:34 INFO  ClientWrapper:107 - loading page, delay: 1 URL: http://concorsi.it/s2017-10-11 10:53:44 ERROR ClReqFilterCookies:48 - URI not usable: null://null/scheda/173580-concorso-pubbl2017-10-11 10:53:47 ERROR ClientWrapper:110 - URI not usable: null://null/scheda/173580-concorso-pubblico--per-titoli-ed-esami--ad-un-posto-di-operatore-socio-sanitario-categoria-bs.html
+o-categoria-bs.html
+2017-10-11 09:57:41 INFO  ClientWrapper:107 - loading page, delay: 1 URL: http://concorsi.it/scheda/174104-procedure-selettive-pubbliche--per-titoli-ed-esami--per-lassunzione-a-tempo-indeterminato-di-cinquanta-insegnanti-della-scuola-dellinfanzia-categoria-c--posizione-economica-c1-famiglia-educativa-e-sociale-e-cinquanta-educatori-asilo-nido-categoria-c--posizione-economica-c1-famiglia-educativa-e-sociale.html
+2017-10-11 09:57:45 INFO  ClReqFilterCookies:40 - log da filter: GET http://concorsi.it/scheda/174104-procedure-selettive-pubbliche--per-titoli-ed-esami--per-lassunzione-a-tempo-indeterminato-di-cinquanta-insegnanti-della-scuola-dellinfanzia-categoria-c--posizione-economica-c1-famiglia-educativa-e-sociale-e-cinquanta-educatori-asilo-nido-categoria-c--posizione-economica-c1-famiglia-educativa-e-sociale.html
+2017-10-11 09:57:47 INFO  EntryExcludeFilterConcorsiIt:43 - matched: di mobilit
+2017-10-11 09:57:47 INFO  TableScraperABC:129 - Excluded HTML entry
+<br />nmatched: <b>di mobilit</b>
+2017-10-11 09:57:47 INFO  ClientWrapper:107 - loading page, delay: 1 URL: http://concorsi.it/scheda/173529-concorso-pubblico--per-esami--finalizzato-allassunzione-a-tempo-pieno-ed-indeterminato-di-un-funzionario-servizi-socio-educativo-culturali-categoria-d--posizione-economica-d1.html
+2017-10-11 09:57:51 INFO  ClReqFilterCookies:40 - log da filter: GET http://concorsi.it/scheda/173529-concorso-pubblico--per-esami--finalizzato-allassunzione-a-tempo-pieno-ed-indeterminato-di-un-funzionario-servizi-socio-educativo-culturali-categoria-d--posizione-economica-d1.html
+2017-10-11 09:57:53 INFO  ClientWrapper:107 - loading page, delay: 1 URL: http://concorsi.it/scheda/173669-concorso-pubblico--per-titoli-ed-esami--a-cinque-posti-di-dirigente-psicologo--ruolo-sanitario--profilo-professionale-psicologo-area-di-psicologia-disciplina-di-psicoterapia.html
+2017-10-11 09:57:56 INFO  ClReqFilterCookies:40 - log da filter: GET http://concorsi.it/scheda/173669-concorso-pubblico--per-titoli-ed-esami--a-cinque-posti-di-dirigente-psicologo--ruolo-sanitario--profilo-professionale-psicologo-area-di-psicologia-disciplina-di-psicoterapia.html
+2017-10-11 09:57:58 INFO  ClientWrapper:107 - loading page, delay: 1 URL: http://concorsi.it/scheda/174032-concorso-pubblico--per-esami--a-cinque-posti-di-ruolo-della-sesta-qualifica-funzionale--profilo-professionale-di-consigliere.html
+2017-10-11 09:58:03 INFO  ClReqFilterCookies:40 - log da filter: GET http://concorsi.it/scheda/174032-concorso-pubblico--per-esami--a-cinque-posti-di-ruolo-della-sesta-qualifica-funzionale--profilo-professionale-di-consigliere.html
+2017-10-11 09:58:05 INFO  ClientWrapper:107 - loading page, delay: 1 URL: http://concorsi.it/scheda/173658-concorso-pubblico--per-titoli-ed-esami--per-la-copertura-di-un-posto-a-tempo-pieno-e-indeterminato-di-vigile-comunale-categoria-c.html
+2017-10-11 09:58:09 INFO  ClReqFilterCookies:40 - log da filter: GET http://concorsi.it/scheda/173658-concorso-pubblico--per-titoli-ed-esami--per-la-copertura-di-un-posto-a-tempo-pieno-e-indeterminato-di-vigile-comunale-categoria-c.html
+2017-10-11 09:58:11 INFO  ClientWrapper:107 - loading page, delay: 1 URL: http://concorsi.it/scheda/173545-avvisi-pubblici-per-la-copertura--attraverso-la-mobilita-tra-enti--di-vari-posti-in-varie-qualifiche.html
+2017-10-11 09:58:15 INFO  ClReqFilterCookies:40 - log da filter: GET http://concorsi.it/scheda/173545-avvisi-pubblici-per-la-copertura--attraverso-la-mobilita-tra-enti--di-vari-posti-in-varie-qualifiche.html
+2017-10-11 09:58:17 INFO  ClientWrapper:107 - loading page, delay: 1 URL: http://concorsi.it/scheda/173646-concorso-pubblico--per-esami--per-la-copertura-di-un-posto-a-tempo-pieno-e-indeterminato-di-funzionario-direttore-biblioteca--categoria-d--posizione-di-accesso-3.html
+2017-10-11 09:58:21 INFO  ClReqFilterCookies:40 - log da filter: GET http://concorsi.it/scheda/173646-concorso-pubblico--per-esami--per-la-copertura-di-un-posto-a-tempo-pieno-e-indeterminato-di-funzionario-direttore-biblioteca--categoria-d--posizione-di-accesso-3.html
+2017-10-11 09:58:24 INFO  ClientWrapper:107 - loading page, delay: 1 URL: http://concorsi.it/scheda/173802-concorso-pubblico--per-esami--per-la-copertura-a-tempo-indeterminato-e-pieno-di-due-posti-di-istruttore-amministrativo-categoria-c.html
+2017-10-11 09:58:29 INFO  ClReqFilterCookies:40 - log da filter: GET http://concorsi.it/scheda/173802-concorso-pubblico--per-esami--per-la-copertura-a-tempo-indeterminato-e-pieno-di-due-posti-di-istruttore-amministrativo-categoria-c.html
+2017-10-11 09:58:31 INFO  EntryExcludeFilterConcorsiIt:43 - matched: tempo determinato
+2017-10-11 09:58:31 INFO  TableScraperABC:129 - Excluded HTML entry
+<br />nmatched: <b>tempo determinato</b>
+2017-10-11 09:58:31 INFO  ClientWrapper:107 - loading page, delay: 1 URL: http://concorsi.it/scheda/173839-concorso-pubblico--per-titoli-ed-esami--a-quattro-posti-di-collaboratore-amministrativo-professionale-settore-amministrativo--di-cui-un-posto-riservato-al-personale-interno.html
+2017-10-11 09:58:36 INFO  ClReqFilterCookies:40 - log da filter: GET http://concorsi.it/scheda/173839-concorso-pubblico--per-titoli-ed-esami--a-quattro-posti-di-collaboratore-amministrativo-professionale-settore-amministrativo--di-cui-un-posto-riservato-al-personale-interno.html
+2017-10-11 09:58:38 INFO  ClientWrapper:107 - loading page, delay: 1 URL: http://concorsi.it/scheda/173656-concorso-pubblico--per-titoli-ed-esami--per-il-conferimento-di-un-posto-di-educatore-asilo-nido-comunale-a-tempo-indeterminato-full-time-categoria-c-1-c-1-c-5-istruttore-area-amministrativa-servizi-alla-persona.html
+2017-10-11 09:58:42 INFO  ClReqFilterCookies:40 - log da filter: GET http://concorsi.it/scheda/173656-concorso-pubblico--per-titoli-ed-esami--per-il-conferimento-di-un-posto-di-educatore-asilo-nido-comunale-a-tempo-indeterminato-full-time-categoria-c-1-c-1-c-5-istruttore-area-amministrativa-servizi-alla-persona.html
+2017-10-11 09:58:45 INFO  ClientWrapper:107 - loading page, delay: 1 URL: http://concorsi.it/scheda/173712-concorso-pubblico--per-titoli-ed-esami--per-la-copertura-di-sei-posti-di-collaboratore-professionale-sanitario-infermiere-categoria-d--da-assegnare-alle-strutture-sanitarie.html
+2017-10-11 09:58:48 INFO  ClReqFilterCookies:40 - log da filter: GET http://concorsi.it/scheda/173712-concorso-pubblico--per-titoli-ed-esami--per-la-copertura-di-sei-posti-di-collaboratore-professionale-sanitario-infermiere-categoria-d--da-assegnare-alle-strutture-sanitarie.html
+2017-10-11 09:58:50 INFO  EntryExcludeFilterConcorsiIt:43 - matched: di mobilit
+2017-10-11 09:58:50 INFO  TableScraperABC:129 - Excluded HTML entry
+<br />nmatched: <b>di mobilit</b>
+2017-10-11 09:58:50 INFO  EntryExcludeFilterConcorsiIt:43 - matched: tempo determinato
+2017-10-11 09:58:50 INFO  TableScraperABC:129 - Excluded HTML entry
+<br />nmatched: <b>tempo determinato</b>
+2017-10-11 09:58:50 INFO  ClientWrapper:107 - loading page, delay: 1 URL: http://concorsi.it/scheda/173586-concorso-pubblico--per-titoli-ed-esami--per-la-copertura-a-tempo-indeterminato-di-un-posto-di-collaboratore-professionale-sanitario-infermiere-categoria-d.html
+2017-10-11 09:58:53 INFO  ClReqFilterCookies:40 - log da filter: GET http://concorsi.it/scheda/173586-concorso-pubblico--per-titoli-ed-esami--per-la-copertura-a-tempo-indeterminato-di-un-posto-di-collaboratore-professionale-sanitario-infermiere-categoria-d.html
+2017-10-11 09:58:55 INFO  EntryExcludeFilterConcorsiIt:43 - matched: diario delle prove
+2017-10-11 09:58:55 INFO  TableScraperABC:129 - Excluded HTML entry
+<br />nmatched: <b>diario delle prove</b>
+2017-10-11 09:58:55 INFO  ClientWrapper:107 - loading page, delay: 1 URL: http://concorsi.it/scheda/173934-concorso-pubblico--per-titoli-ed-esami--per-lassunzione-a-tempo-indeterminato-pieno-di-quattro-unita--categoria-giuridica-d1-profilo-istruttore-direttivo-polizia-municipale-istruttore-di-vigilanza-comparto-regioni-autonomie-locali.html
+2017-10-11 09:58:59 INFO  ClReqFilterCookies:40 - log da filter: GET http://concorsi.it/scheda/173934-concorso-pubblico--per-titoli-ed-esami--per-lassunzione-a-tempo-indeterminato-pieno-di-quattro-unita--categoria-giuridica-d1-profilo-istruttore-direttivo-polizia-municipale-istruttore-di-vigilanza-comparto-regioni-autonomie-locali.html
+2017-10-11 09:59:01 INFO  ClientWrapper:107 - loading page, delay: 1 URL: http://concorsi.it/scheda/173009-aumento-di-posti-del-concorso--per-esami--per-lammissione-al-primo-anno-del-199-corso-dellaccademia-militare-per-la-formazione-di-base-degli-ufficiali-dellarma-dei-carabinieri-per-lanno-accademico-2017-2018--indetto--tra-gli-altri--con-decreto-interdirigenziale-n-271-1d-del-28-dicembre-2016.html
+2017-10-11 09:59:05 INFO  ClReqFilterCookies:40 - log da filter: GET http://concorsi.it/scheda/173009-aumento-di-posti-del-concorso--per-esami--per-lammissione-al-primo-anno-del-199-corso-dellaccademia-militare-per-la-formazione-di-base-degli-ufficiali-dellarma-dei-carabinieri-per-lanno-accademico-2017-2018--indetto--tra-gli-altri--con-decreto-interdirigenziale-n-271-1d-del-28-dicembre-2016.html
+2017-10-11 09:59:07 INFO  SessionManager:37 - ------------------------ OK FINITO  ---------------------------
+2017-10-11 09:59:07 WARN  ConcorsiDB:37 - codice temporaneo da correggere
+2017-10-11 09:59:07 ERROR ConcorsiDB:39 - codice sotto va riscritto, forse JPA1 da riscrivere in JPA2
+2017-10-11 09:59:07 INFO  ConcorsiDB:54 - query, n concorsi: 4
+2017-10-11 09:59:07 INFO  ConcorsiDB:127 - nr reported: 4
+2017-10-11 09:59:07 ERROR ConcorsiDB:113 - codice sotto va riscritto, forse JPA1 da riscrivere in JPA2
+2017-10-11 09:59:07 INFO  SessionManagerConcorsi:68 - esaminate raw: 20
+2017-10-11 09:59:07 INFO  HTMLDisplayInBrowser:108 - in V:\data\pers_dev\sources\intellij\ev_tools written: v:/concorsi2017-10-11.html
+2017-10-11 09:59:08 ERROR SessionManagerAbstr:67 - spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage

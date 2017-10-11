@@ -1,6 +1,7 @@
 package com.enrico200165.weblistscraper.tools;
 
 import com.enrico200165.cookies.CookieStoreEV;
+import com.enrico200165.utils.net.http.Utils;
 import com.enrico200165.weblistscraper.common.*;
 import org.apache.log4j.Logger;
 
@@ -44,7 +45,7 @@ public class ClReqFilterCookies implements ClientRequestFilter {
 			requestContext.setUri(UriBuilder.fromUri(uri).path("/").build());
 			uri = requestContext.getUri();
 		}
-		if (!WEBUtils.isUsableURI(uri)) {
+		if (!Utils.isUsableURI(uri)) {
 			log.error("URI not usable: " + uri);
 			System.exit(1);
 		}

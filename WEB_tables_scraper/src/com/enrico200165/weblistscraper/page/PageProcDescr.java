@@ -1,8 +1,9 @@
 package com.enrico200165.weblistscraper.page;
 
+import com.enrico200165.utils.net.http.Utils;
 import com.enrico200165.utils.str_regex.*;
 import com.enrico200165.weblistscraper.common.*;
-import com.enrico200165.weblistscraper.configs.HostConfigABC;
+import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.tools.*;
 import org.apache.log4j.Logger;
@@ -20,8 +21,8 @@ import java.util.*;
  */
 public class PageProcDescr {
 
-	public PageProcDescr(HostConfigABC hostConfigPar, PageConfigABC tPar, PageProcessorAbstr processor, String url,
-						 WebPageAction actionPar) {
+	public PageProcDescr(HostConfig hostConfigPar, PageConfigABC tPar, PageProcessorAbstr processor, String url,
+                         WebPageAction actionPar) {
 		super();
 
 		this.hostConfig = hostConfigPar;
@@ -66,7 +67,7 @@ public class PageProcDescr {
 	}
 
 	public String getURL() {
-		String ret = WEBUtils.URLFromURI(this.uri);
+		String ret = Utils.URLFromURI(this.uri);
 		return ret;
 	}
 
@@ -118,8 +119,8 @@ public class PageProcDescr {
 
 		// tutto questo che segue va eliminato
 
-		if (!WEBUtils.isRelativeURL(relUrl)) {
-			relUrl = WEBUtils.makeUrlRelative(relUrl);
+		if (!Utils.isRelativeURL(relUrl)) {
+			relUrl = Utils.makeUrlRelative(relUrl);
 		}
 		this.relUri = relUrl;
 	}
@@ -144,7 +145,7 @@ public class PageProcDescr {
 	}
 
 	PageConfigABC pageConfig;
-	HostConfigABC hostConfig;
+	HostConfig hostConfig;
 
 
 	public URI getUri() {

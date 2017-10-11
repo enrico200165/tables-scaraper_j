@@ -7,7 +7,7 @@ import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import com.enrico200165.weblistscraper.tools.*;
 import org.apache.log4j.Logger;
 
-import com.enrico200165.weblistscraper.configs.HostConfigABC;
+import com.enrico200165.weblistscraper.configs.HostConfig;
 
 import javax.ws.rs.core.*;
 import java.util.*;
@@ -15,7 +15,7 @@ import java.util.*;
 
 public class PageProcessor extends PageProcessorAbstr {
 
-    public PageProcessor(HostConfigABC hostCOnfigPar, SessionManagerAbstr sess, PageConfigABC tcfgPar) {
+    public PageProcessor(HostConfig hostCOnfigPar, SessionManagerAbstr sess, PageConfigABC tcfgPar) {
         super(hostCOnfigPar, sess);
         this.cw = sess.getClientWrapper();
         tcfg = tcfgPar;

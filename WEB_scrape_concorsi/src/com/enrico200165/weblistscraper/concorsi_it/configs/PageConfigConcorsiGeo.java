@@ -6,7 +6,7 @@ import com.enrico200165.weblistscraper.concorsi_it.EntryProcessorConcorsiItGEO;
 import com.enrico200165.weblistscraper.concorsi_it.NextTablePageSelectorsConcorsiIt;
 import com.enrico200165.weblistscraper.concorsi_it.TableScraperConcorsiItGeoTable;
 import com.enrico200165.weblistscraper.configs.ChannelIFC;
-import com.enrico200165.weblistscraper.configs.HostConfigABC;
+import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.page.NextTablePageSelectorsABC;
 import com.enrico200165.weblistscraper.page.EntryProcessorABC;
 import com.enrico200165.weblistscraper.page.TableScraperABC;
@@ -15,9 +15,9 @@ import com.enrico200165.weblistscraper.tools.EntryCanActOnFilter;
 import com.enrico200165.weblistscraper.tools.EntryExcludeFilter;
 import com.enrico200165.weblistscraper.tools.EntryIncludeFilter;
 
-public class PageConfigConcorsiGeo extends com.enrico200165.weblistscraper.configs.PageConfigConcorsi {
+public class PageConfigConcorsiGeo extends com.enrico200165.weblistscraper.concorsi_it.configs.PageConfigConcorsi {
 
-	public PageConfigConcorsiGeo(HostConfigABC hcPar, EntryCanActOnFilter entryCanActOnPar, TableScraperABC ts, ChannelIFC chann) {
+	public PageConfigConcorsiGeo(HostConfig hcPar, EntryCanActOnFilter entryCanActOnPar, TableScraperABC ts, ChannelIFC chann) {
 		super(hcPar,ts, entryCanActOnPar,chann);
 	}
 

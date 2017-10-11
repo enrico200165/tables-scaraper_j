@@ -6,7 +6,7 @@ import com.enrico200165.weblistscraper.concorsi_it.EntryProcessorConcorsiItSearc
 import com.enrico200165.weblistscraper.concorsi_it.NextTablePageSelectorsConcorsiIt;
 import com.enrico200165.weblistscraper.concorsi_it.TableScraperConcorsiItSearch;
 import com.enrico200165.weblistscraper.configs.ChannelIFC;
-import com.enrico200165.weblistscraper.configs.HostConfigABC;
+import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.page.NextTablePageSelectorsABC;
 import com.enrico200165.weblistscraper.page.EntryProcessorABC;
 import com.enrico200165.weblistscraper.page.TableScraperABC;
@@ -15,9 +15,9 @@ import com.enrico200165.weblistscraper.tools.EntryCanActOnFilter;
 import com.enrico200165.weblistscraper.tools.EntryExcludeFilter;
 import com.enrico200165.weblistscraper.tools.EntryIncludeFilter;
 
-public class PageConfigConcorsiSearch extends com.enrico200165.weblistscraper.configs.PageConfigConcorsi {
+public class PageConfigConcorsiSearch extends com.enrico200165.weblistscraper.concorsi_it.configs.PageConfigConcorsi {
 
-	public PageConfigConcorsiSearch(HostConfigABC hcPar, TableScraperABC ts, EntryCanActOnFilter entryCanActOnPar, ChannelIFC chann) {
+	public PageConfigConcorsiSearch(HostConfig hcPar, TableScraperABC ts, EntryCanActOnFilter entryCanActOnPar, ChannelIFC chann) {
 		super(hcPar, ts, entryCanActOnPar,chann);
 	}
 

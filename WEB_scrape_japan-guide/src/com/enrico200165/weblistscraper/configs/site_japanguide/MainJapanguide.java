@@ -6,7 +6,7 @@ import com.enrico200165.utils.str_regex.*;
 import com.enrico200165.utils.various.Utl;
 import com.enrico200165.weblistscraper.common.*;
 import com.enrico200165.weblistscraper.configs.ChannelIFC;
-import com.enrico200165.weblistscraper.configs.HostConfigABC;
+import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.configs.drupal7.FormManagerLoginDrupal7;
 import com.enrico200165.weblistscraper.marketingDB.DBManagerMKT;
@@ -40,7 +40,7 @@ public class MainJapanguide {
 
     public static void perform() {
         // -- parte di interfacciamento
-        HostConfigABC hostConfig = new HostConfigJapanguide("V:\\data\\pers_dev\\data_dbs\\japanguide_login_armandoitaly1990.properties");
+        HostConfig hostConfig = new HostConfigJapanguide("V:\\data\\pers_dev\\data_dbs\\japanguide_login_armandoitaly1990.properties");
         CookieStoreEV cs = new CookieStoreEV();
         ClientRequestFilter crqf = new ClReqFilterCookies(cs);
         ClientRespFilterEV cref = new ClientRespFilterEV(cs);

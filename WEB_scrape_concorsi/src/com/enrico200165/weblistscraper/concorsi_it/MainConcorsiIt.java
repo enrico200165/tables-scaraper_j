@@ -5,11 +5,10 @@ import com.enrico200165.utils.net.http.Utils;
 import com.enrico200165.utils.various.Utl;
 import com.enrico200165.weblistscraper.common.WEBUtils;
 import com.enrico200165.weblistscraper.concorsi_it.configs.ChannelConfigConcorsiItUsersTable;
-import com.enrico200165.weblistscraper.concorsi_it.configs.HostConfigConcorsiIt;
 import com.enrico200165.weblistscraper.concorsi_it.configs.PageConfigConcorsiitSpecInf;
 import com.enrico200165.weblistscraper.concorsi_it.configs.SessionLimitsConcorsiIt;
 import com.enrico200165.weblistscraper.configs.ChannelIFC;
-import com.enrico200165.weblistscraper.configs.HostConfigABC;
+import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.configs.SessionLimitsBase;
 import com.enrico200165.weblistscraper.page.EntryProcessorABC;
@@ -36,7 +35,8 @@ public class MainConcorsiIt {
 		// --- Cliente e connettività  ----------------------------
 		CookieStoreEV cs = new CookieStoreEV();
 
-		HostConfigABC hostConfigConcorsi = new HostConfigConcorsiIt();
+		HostConfig hostConfigConcorsi = new HostConfig(
+				"V:\\data\\pers_dev\\data_dbs\\web_scraper\\host_conncorsi_it.properties");
 
 		ClientRequestFilter crqf = new ClReqFilterCookies(cs);
 		ClientRespFilterEV cref = new ClientRespFilterEV(cs);
@@ -49,17 +49,11 @@ public class MainConcorsiIt {
 
 
 		// --- business  -----------------------
-		//SessionManagerAbstr sm = new SessionManagerConcorsi(null,null);
-		//		String tageSearch = "concorsi.it.search";
-		//		String tageInformatico = "concorsi.it.spec-informatico";
 
 		boolean piuvisti = true;
 		boolean geografia = false;
 		boolean specialista = true;
 		boolean ricerche = false;
-
-		//		PageConfigABC tcfg = null;
-		HostConfigABC hostConfigConcorsiIt = new HostConfigConcorsiIt();
 
 		if (piuvisti) {
 			//http://concorsi.it/nc/top
@@ -69,17 +63,17 @@ public class MainConcorsiIt {
 
 			EntryProcessorABC entryProcSpecInf = new EntryProcessorConcorsiItSpecInf(sm, null);
 			TableScraperABC tableSCraperSpecInf = new TableScraperConcorsiItSpecInf(sm, null, entryProcSpecInf);
-			PageConfigABC pageCfgPiuVisti = new PageConfigConcorsiitSpecInf(hostConfigConcorsiIt, tableSCraperSpecInf, entryCanActOn,
+			PageConfigABC pageCfgPiuVisti = new PageConfigConcorsiitSpecInf(hostConfigConcorsi, tableSCraperSpecInf, entryCanActOn,
 					channConfig);
-			PageProcessor pageProcessorPiuVisti = new PageProcessor(hostConfigConcorsiIt, sm, pageCfgPiuVisti);
-			PageProcDescr tablePage = new PageProcDescr(hostConfigConcorsiIt, pageCfgPiuVisti, pageProcessorPiuVisti,
+			PageProcessor pageProcessorPiuVisti = new PageProcessor(hostConfigConcorsi, sm, pageCfgPiuVisti);
+			PageProcDescr tablePage = new PageProcDescr(hostConfigConcorsi, pageCfgPiuVisti, pageProcessorPiuVisti,
 					"http://www.concorsi.it/regione/lazio", WebPageAction.GET_SCRAPE);
 
 			// --- settaggi per rimediare a dipendenze circolari ---
 			entryProcSpecInf.setPageConfig(pageCfgPiuVisti);
 			tableSCraperSpecInf.setPageConfig(pageCfgPiuVisti);
 			
-			tablePage = new PageProcDescr(hostConfigConcorsiIt, pageCfgPiuVisti, pageProcessorPiuVisti, "http://concorsi.it/nc/top",
+			tablePage = new PageProcDescr(hostConfigConcorsi, pageCfgPiuVisti, pageProcessorPiuVisti, "http://concorsi.it/nc/top",
 					WebPageAction.GET_SCRAPE);
 			tablePage.setAuthenticate(false);
 			sm.add(tablePage);

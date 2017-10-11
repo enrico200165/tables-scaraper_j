@@ -1,7 +1,7 @@
 package com.enrico200165.weblistscraper.configs.site_italianpenpals;
 
 import com.enrico200165.weblistscraper.configs.ChannelIFC;
-import com.enrico200165.weblistscraper.configs.HostConfigABC;
+import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.page.EntryProcessorABC;
 import com.enrico200165.weblistscraper.page.NextTablePageSelectorsABC;
@@ -14,7 +14,7 @@ import org.apache.log4j.Logger;
 
 public class PageConfigItalianPenPals extends PageConfigABC {
 
-	public PageConfigItalianPenPals(HostConfigABC hcPar, TableScraperABC ts, EntryCanActOnFilter entryCanActOnPar, ChannelIFC channPar) {
+	public PageConfigItalianPenPals(HostConfig hcPar, TableScraperABC ts, EntryCanActOnFilter entryCanActOnPar, ChannelIFC channPar) {
 		super(hcPar,ts,entryCanActOnPar,channPar);
 		if (ts == null)
 			log.info("ts == null");

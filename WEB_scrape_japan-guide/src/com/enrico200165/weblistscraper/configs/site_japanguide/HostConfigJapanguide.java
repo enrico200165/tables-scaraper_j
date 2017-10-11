@@ -1,11 +1,11 @@
 package com.enrico200165.weblistscraper.configs.site_japanguide;
 
-import com.enrico200165.weblistscraper.configs.HostConfigABC;
+import com.enrico200165.weblistscraper.configs.HostConfig;
 
 import java.net.URI;
 import java.net.URISyntaxException;
 
-public class HostConfigJapanguide extends HostConfigABC {
+public class HostConfigJapanguide extends HostConfig {
 
 	public HostConfigJapanguide(String loginPropertyFile) {
 		super(loginPropertyFile);
@@ -53,7 +53,7 @@ public class HostConfigJapanguide extends HostConfigABC {
 	}
 
 	@Override
-	public String getLFormSelector() {
+	public String getJsoupLoginFormSelector() {
 
 		//return "form[action=login.html]";
 		return "form[action=https://www.japan-guide.com/login/]";

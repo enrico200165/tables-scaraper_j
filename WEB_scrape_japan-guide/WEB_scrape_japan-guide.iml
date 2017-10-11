@@ -8,12 +8,15 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="WEB_scrape_concorsi" />
+    <orderEntry type="library" name="log4j-1.2.15" level="application" />
+    <orderEntry type="library" name="javax.mail" level="application" />
+    <orderEntry type="library" name="jaxrs-ri" level="application" />
+    <orderEntry type="library" name="jsoup" level="application" />
+    <orderEntry type="library" name="eclipselink" level="application" />
+    <orderEntry type="library" name="junit4" level="application" />
     <orderEntry type="module" module-name="EVUtils" />
     <orderEntry type="module" module-name="WEB_tables_scraper" />
-    <orderEntry type="library" name="log4j" level="application" />
-    <orderEntry type="library" name="jsoup" level="application" />
-    <orderEntry type="library" name="jax-rs" level="application" />
-    <orderEntry type="library" scope="TEST" name="junit4-maven" level="application" />
+    <orderEntry type="module" module-name="WEB_scrape_concorsi" />
+    <orderEntry type="library" name="sqlite" level="application" />
   </component>
 </module>

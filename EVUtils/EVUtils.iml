@@ -6,12 +6,16 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="log4j" level="application" />
-    <orderEntry type="library" name="javax.mail-maven" level="application" />
     <orderEntry type="library" name="jsoup" level="application" />
-    <orderEntry type="library" name="jsch" level="application" />
-    <orderEntry type="library" name="junit4-maven" level="application" />
+    <orderEntry type="library" name="log4j-1.2.15" level="application" />
+    <orderEntry type="library" name="javax.mail" level="application" />
+    <orderEntry type="library" name="jaxrs-ri" level="application" />
+    <orderEntry type="library" name="jsch-0.1" level="application" />
+    <orderEntry type="library" name="junit4" level="application" />
+    <orderEntry type="library" name="com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.4.3" level="application" />
+    <orderEntry type="library" name="org.apache.commons:commons-lang3:3.3" level="application" />
+    <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-databind:2.0.2" level="application" />
   </component>
 </module>
