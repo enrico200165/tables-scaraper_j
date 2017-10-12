@@ -14,8 +14,6 @@
     <orderEntry type="library" name="jaxrs-ri" level="application" />
     <orderEntry type="library" name="jsch-0.1" level="application" />
     <orderEntry type="library" name="junit4" level="application" />
-    <orderEntry type="library" name="com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.4.3" level="application" />
-    <orderEntry type="library" name="org.apache.commons:commons-lang3:3.3" level="application" />
-    <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-databind:2.0.2" level="application" />
+    <orderEntry type="library" name="org.yaml:snakeyaml:1.18" level="application" />
   </component>
 </module>

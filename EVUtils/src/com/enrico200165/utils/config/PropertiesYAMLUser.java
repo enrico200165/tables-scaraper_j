@@ -1,4 +1,4 @@
-package com.enrico200165.utils.various;
+package com.enrico200165.utils.config;
 
 import java.util.Map;
 
