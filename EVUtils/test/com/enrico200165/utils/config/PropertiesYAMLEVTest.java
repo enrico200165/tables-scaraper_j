@@ -11,137 +11,139 @@ import org.yaml.snakeyaml.Yaml;
 import java.io.*;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-import java.util.List;
+import java.util.Map;
 
 
 public class PropertiesYAMLEVTest {
 
-	String testFName = "test.yaml";
 
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
+    @AfterClass
+    public static void tearDownAfterClass() {
+    }
 
-	@Before
-	public void setUp() throws Exception {
-		String fcontent = "";
-		fcontent += 
-		"tasks:" +"\n"+
-		"    - concorsi:"+"\n"+
-		"        - host:"+"\n"+
-		"            baseHostURI: http://concorsi.it"+"\n"+
-		"            loginFName: filenane"+"\n"+
-		"            loginFormURL: /loginFormURL/hghgh"+"\n"+
-		"            tables:"+"\n"+
-		"                 - concorsi:"+"\n"+
-		"                     tableUrl: \"/concorsi\""+"\n"+
-		"                     selector: \"myselector\""+"\n"+
-		"                     htmlEntryIncl: [\"\",\"\"]"+"\n"+
-		"                     htmlEntryExcl: [\"\",\"\"]"+"\n"+
-		"        - host:"+"\n"+
-		"            url: http://concorsi.it"+"\n"+
-		"            loginFName: filenane"+"\n"+
-		"            tables:"+"\n"+
-		"               - concorsi:"+"\n"+
-		"                   tableUrl: \"/concorsi\""+"\n"+
-		"                   selector: \"myselector\""+"\n"+
-		"                   htmlEntryLIncl: [\"hinclude1\",\"hinclude2\"]"+"\n"+
-		"                   htmlEntryLIncl: \"hincludeSingle\""+"\n"+
-		"                   htmlEntryLExcl: [\"excl1\",\"excl2\"]"+"\n"+
-		"                   htmlEntryExcl: \"exclude\""+"\n"+
-		"                   entryIncl: \"hincl\""+"\n"+
-		"                   entryIncl: [\"hincl1\",\"hincl2\"]"+"\n"+
-		"    - italianpenpals:"+"\n"+
-		"        - host:"+"\n"+
-		"            url: http://concorsi.it"+"\n"+
-		"            login:"+"\n"+
-		"                user: enrico"+"\n"+
-		"                password: pipppo"+"\n"+
-		"            tables:"+"\n"+
-		"               concorsi:"+"\n"+
-		"                   url: \"/concorsi\""+"\n"+
-		"                   selector: \"myselector\""+"\n"+
-		""+"\n"+
-		""+"\n"+
-		""+"\n"+
-		"  "+"\n"+
-		"l1entry2: ciao"+"\n"+
-		" "+"\n"+
-		"l1entry3:"+"\n"+
-		"    - l2entry: saluti";
 
-		PrintWriter pw = new PrintWriter(testFName);
-		pw.println(fcontent);
-		pw.flush();
-		pw.close();
-		return ;
-	}
+    @Before
+    public void setUp() throws Exception {
+        fcontent +=
+        "tasks:\n"+
+        "    type:"+" task_list\n"+
+        "    concorsi:\n"+
+        "        type:"+" task\n"+
+        "        host:\n"+
+        "            baseHostURI: http://concorsi.it"+"\n"+
+        "            login:\n"+
+        "                type: login"+"\n"+
+        "                loginFormName: filenane"+"\n"+
+        "                loginFormURL: /loginFormURL/hghgh"+"\n"+
+        "                userFieldName: filenane"+"\n"+
+        "                userNameValue: filenane"+"\n"+
+        "                passwordFieldName: filenane"+"\n"+
+        "                passwordValue: filenane"+"\n"+
+        "            tables:\n"+
+        "                type: tables\n"+
+        "                pippo: tables\n"+
+//        "                - concorsi:\n"+
+//        "                    type: table"+"\n"+
+//        "                    tableUrl: concorsi\n"+
+//        "                    selector: myselector\n"+
+//        "                    htmlEntryIncl: [\"\",\"\"]\n"+
+//        "                    htmlEntryExcl: [\"\",\"\"]\n"+
+//        "                - concorsi:\n"+
+//        "                    type: table"+"\n"+
+//        "                    tableUrl: \"/concorsi\""+"\n"+
+//        "                    selector: \"myselector\""+"\n"+
+//        "                    htmlEntryIncl: [\"\",\"\"]"+"\n"+
+//        "                    htmlEntryExcl: [\"\",\"\"]"+"\n"+
+          "";
 
-	@After
-	public void tearDown() throws Exception {
-	}
+        log.info("writing test config file: "+fpath+ " in: "+System.getProperty("user.dir"));
+        PrintWriter pw = new PrintWriter(fpath);
+        pw.println(fcontent);
+        pw.flush();
+        pw.close();
+        return;
+    }
 
-	@Test public void learnIt() {
+    @After
+    public void tearDown() {
+    }
 
-		InputStream input = null;
-		try {
-			input = new FileInputStream(new File(testFName));
-		} catch (FileNotFoundException e) {
-			log.error(e);
-		}
+    @Test public void learnIt() {
 
-		Yaml yaml = new Yaml();
+        InputStream input = null;
+        try {
+            input = new FileInputStream(new File(fpath));
+        } catch (FileNotFoundException e) {
+            log.error(e);
+        }
 
-		Object data = yaml.load(input);
+        Yaml yaml = new Yaml();
 
-		Type tt = data.getClass();
+        Object data = yaml.load(input);
 
-		System.out.println(data.getClass().getTypeName());
-		System.out.println(data.getClass().getTypeName());
+        Type tt = data.getClass();
 
-		for (Type t: data.getClass().getTypeParameters()) {
-			System.out.println(t.getTypeName());
-			if (t instanceof ParameterizedType) {
-				Type elementType = ((ParameterizedType) t).getActualTypeArguments()[0];
-			}
-		}
+        System.out.println(data.getClass().getTypeName());
+        System.out.println(data.getClass().getTypeName());
 
-		System.out.println(data);
-		System.out.println(data.getClass());
-		System.out.println(data.getClass().getName());
+        for (Type t: data.getClass().getTypeParameters()) {
+            System.out.println(t.getTypeName());
+            if (t instanceof ParameterizedType) {
+                Type elementType = ((ParameterizedType) t).getActualTypeArguments()[0];
+            }
+        }
 
-	}
+        System.out.println(data);
+        System.out.println(data.getClass());
+        System.out.println(data.getClass().getName());
+
+    }
 
 
 
-	// @Test
-	public void test() {
-		String t = Utl.tStamp();
-		log.info(t);
-		t = Utl.todayDateStamp();
-		log.info(t);		
-	}
-	
-	@Test public void testPropertiesEV() {
-
-		String fpath = "V:/data/pers_dev/data_dbs/web_scraper/config_test.yaml";
-		PropertiesYAMLEV p = new PropertiesYAMLEV("dummy");
-		log.info(p.get("proprieta1"));
-		log.info(p.get("proprieta2"));
-	}
+    // @Test
+    public void test() {
+        String t = Utl.tStamp();
+        log.info(t);
+        t = Utl.todayDateStamp();
+        log.info(t);
+    }
 
 
-	@Test public void testJacksonYAML() {
+
+    @Test public void testPropertiesEV() {
+
+
+        InputStream input = null;
+        try {
+            input = new FileInputStream(new File(fpath));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        Yaml yaml = new Yaml();
+        // log.info(yaml.load(input));
+        Map<String,Object> prop = (Map<String,Object>) yaml.load(fcontent);
+        for (String k : prop.keySet()) {
+            log.info(k);
+        }
+
+        log.info("Completed yaml file parsing");
+    }
+
+
+    @Test public void testJacksonYAML() {
 
         System.out.println("Working Directory = " + System.getProperty("user.dir"));
         System.out.flush();
         PropertiesYAMLEV p = new PropertiesYAMLEV("user.yaml");
         p.readProperties();
 
-	}
+    }
 
-	
-	
-	private static org.apache.log4j.Logger log = Logger.getLogger(PropertiesYAMLEVTest.class);
+
+    static String fcontent = "";
+    static  String fpath = "test.yaml";;
+
+    private static org.apache.log4j.Logger log = Logger.getLogger(PropertiesYAMLEVTest.class);
 
 }
