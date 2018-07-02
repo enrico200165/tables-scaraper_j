@@ -18,5 +18,7 @@
     <orderEntry type="module" module-name="WEB_tables_scraper" />
     <orderEntry type="module" module-name="WEB_scrape_concorsi" />
     <orderEntry type="library" name="sqlite" level="application" />
+    <orderEntry type="library" name="R User Library" level="project" />
+    <orderEntry type="library" name="R Skeletons" level="application" />
   </component>
 </module>

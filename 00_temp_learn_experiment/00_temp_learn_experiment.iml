@@ -16,5 +16,7 @@
     <orderEntry type="library" name="jaxrs-ri-maven" level="application" />
     <orderEntry type="library" name="eclipselink-maven" level="application" />
     <orderEntry type="library" name="javax.mail-maven" level="application" />
+    <orderEntry type="library" name="R User Library" level="project" />
+    <orderEntry type="library" name="R Skeletons" level="application" />
   </component>
 </module>

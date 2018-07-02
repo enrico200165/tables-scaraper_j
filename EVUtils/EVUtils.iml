@@ -15,5 +15,7 @@
     <orderEntry type="library" name="jsch-0.1" level="application" />
     <orderEntry type="library" name="junit4" level="application" />
     <orderEntry type="library" name="org.yaml:snakeyaml:1.18" level="application" />
+    <orderEntry type="library" name="R User Library" level="project" />
+    <orderEntry type="library" name="R Skeletons" level="application" />
   </component>
 </module>

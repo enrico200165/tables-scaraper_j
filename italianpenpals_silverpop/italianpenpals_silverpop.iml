@@ -15,5 +15,7 @@
     <orderEntry type="library" scope="TEST" name="junit4" level="application" />
     <orderEntry type="library" name="jsoup" level="application" />
     <orderEntry type="library" name="sqlite" level="application" />
+    <orderEntry type="library" name="R User Library" level="project" />
+    <orderEntry type="library" name="R Skeletons" level="application" />
   </component>
 </module>
