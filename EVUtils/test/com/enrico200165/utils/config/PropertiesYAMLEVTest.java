@@ -40,21 +40,21 @@ public class PropertiesYAMLEVTest {
         "                passwordFieldName: filenane"+"\n"+
         "                passwordValue: filenane"+"\n"+
         "            tables:\n"+
-        "                type: tables\n"+
-        "                pippo: tables\n"+
-//        "                - concorsi:\n"+
-//        "                    type: table"+"\n"+
-//        "                    tableUrl: concorsi\n"+
-//        "                    selector: myselector\n"+
-//        "                    htmlEntryIncl: [\"\",\"\"]\n"+
-//        "                    htmlEntryExcl: [\"\",\"\"]\n"+
-//        "                - concorsi:\n"+
-//        "                    type: table"+"\n"+
-//        "                    tableUrl: \"/concorsi\""+"\n"+
-//        "                    selector: \"myselector\""+"\n"+
-//        "                    htmlEntryIncl: [\"\",\"\"]"+"\n"+
-//        "                    htmlEntryExcl: [\"\",\"\"]"+"\n"+
-          "";
+        "               type: tables\n"+
+        "               list_values:\n"+
+        "                   concorsi:\n"+
+        "                       type: table"+"\n"+
+        "                       tableUrl: concorsi\n"+
+        "                       selector: myselector\n"+
+        "                       htmlEntryIncl: [\"\",\"\"]\n"+
+        "                       htmlEntryExcl: [\"\",\"\"]\n"+
+        "                   concorsi2:\n"+
+        "                       type2: table"+"\n"+
+        "                       tableUrl: /concorsi\n"+
+        "                       selector: myselector\n"+
+        "                       htmlEntryIncl: [\"\",\"\"]"+"\n"+
+        "                       htmlEntryExcl: [\"\",\"\"]"+"\n"+
+        "";
 
         log.info("writing test config file: "+fpath+ " in: "+System.getProperty("user.dir"));
         PrintWriter pw = new PrintWriter(fpath);
@@ -113,7 +113,7 @@ public class PropertiesYAMLEVTest {
 
     @Test public void testPropertiesEV() {
 
-
+        log.info("yaml text:\n"+fcontent);
         InputStream input = null;
         try {
             input = new FileInputStream(new File(fpath));
