@@ -8,9 +8,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.yaml.snakeyaml.Yaml;
 
-import java.io.*;
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Map;
 
 
@@ -27,6 +28,7 @@ public class PropertiesYAMLEVTest {
         fcontent +=
         "tasks:\n"+
         "    type:"+" task_list\n"+
+        "    dummy_test:"+" dummy_val\n"+
         "    concorsi:\n"+
         "        type:"+" task\n"+
         "        host:\n"+
@@ -68,67 +70,59 @@ public class PropertiesYAMLEVTest {
     public void tearDown() {
     }
 
+
+
+
+
+
+
     @Test public void learnIt() {
 
-        InputStream input = null;
+        log.info(Utl.tStamp()+"start basic reading");
+
+        String content = null;
+        try  {
+            content = new String(Files.readAllBytes(Paths.get(fpath)));
+            //log.info(content);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+
+        Yaml yaml = new Yaml();
+        Map<String,Object> prop = (Map<String,Object>) yaml.load(fcontent);
+
+        // just studying types inside it
+//        for (Type t: data.getClass().getTypeParameters()) {
+//            System.out.println(t.getTypeName());
+//            if (t instanceof ParameterizedType) {
+//                Type elementType = ((ParameterizedType) t).getActualTypeArguments()[0];
+//            }
+//        }
+
         try {
-            input = new FileInputStream(new File(fpath));
-        } catch (FileNotFoundException e) {
+            //log.info(PropertiesYAMLEV.getStr(prop,"dummy_test"));
+            for (String k : prop.keySet()) {
+                Map<String,Object> entry = (Map<String,Object>) prop.get(k);
+                log.info(PropertiesYAMLEV.getStr(entry,"dummy_test"));
+                if (PropertiesYAMLEV.getType(entry) == "tasks") {
+                } else if (PropertiesYAMLEV.getType(entry) == "tasks") {
+
+                }
+            }
+        } catch (Exception_YAMLCfg_WrongType e) {
             log.error(e);
         }
 
-        Yaml yaml = new Yaml();
-
-        Object data = yaml.load(input);
-
-        Type tt = data.getClass();
-
-        System.out.println(data.getClass().getTypeName());
-        System.out.println(data.getClass().getTypeName());
-
-        for (Type t: data.getClass().getTypeParameters()) {
-            System.out.println(t.getTypeName());
-            if (t instanceof ParameterizedType) {
-                Type elementType = ((ParameterizedType) t).getActualTypeArguments()[0];
-            }
-        }
-
-        System.out.println(data);
-        System.out.println(data.getClass());
-        System.out.println(data.getClass().getName());
-
-    }
-
-
-
-    // @Test
-    public void test() {
-        String t = Utl.tStamp();
-        log.info(t);
-        t = Utl.todayDateStamp();
-        log.info(t);
-    }
-
-
-
-    @Test public void testPropertiesEV() {
-
-        log.info("yaml text:\n"+fcontent);
-        InputStream input = null;
-        try {
-            input = new FileInputStream(new File(fpath));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        Yaml yaml = new Yaml();
-        // log.info(yaml.load(input));
-        Map<String,Object> prop = (Map<String,Object>) yaml.load(fcontent);
-        for (String k : prop.keySet()) {
-            log.info(k);
-        }
-
         log.info("Completed yaml file parsing");
+
+
+
+
     }
+
 
 
     @Test public void testJacksonYAML() {
@@ -136,7 +130,7 @@ public class PropertiesYAMLEVTest {
         System.out.println("Working Directory = " + System.getProperty("user.dir"));
         System.out.flush();
         PropertiesYAMLEV p = new PropertiesYAMLEV("user.yaml");
-        p.readProperties();
+        //p.properties();
 
     }
 
