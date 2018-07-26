@@ -1,12 +1,12 @@
 package com.enrico200165.utils.config;
 
 import org.apache.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
@@ -32,16 +32,16 @@ public class PropertiesYAMLEV {
 
     public static final String TYPE_NOT_FOUND = "type_not_found";
     public static final String TYPE_KEY = "type";
+    private static Map.Entry<String, Object> tasksList;
+    private static String fatherKeyP;
 
     public PropertiesYAMLEV(String pathPar) {
         path = pathPar;
     }
 
 
-    static String getType( Map< String , Object> entry)
+    static String getType( Map< String , Object> entry) {
     // type is the value of child element "type"
-    {
-        // get child element
         Object val = entry.get(TYPE_KEY);
         if (val == null || !(val instanceof java.lang.String ))
             return TYPE_NOT_FOUND;
@@ -49,10 +49,8 @@ public class PropertiesYAMLEV {
     }
 
 
-    static String getStr( Map< String , Object> entry, String key) throws Exception_YAMLCfg_WrongType
-    // type is the value of child element "type"
-    {
-        // get child element
+    static String getStr( Map< String , Object> entry, String key)
+            throws Exception_YAMLCfg_WrongType {
         Object val = entry.get(key);
         if (val == null) throw new Exception_YAMLCfg_WrongType("String", "null",key);
         if (!(val instanceof java.lang.String )) {
@@ -60,9 +58,19 @@ public class PropertiesYAMLEV {
         }
         return val.toString();
     }
-    static int getInt( Map< String , Object> entry, String key) throws Exception_YAMLCfg_WrongType
-    // type is the value of child element "type"
-    {
+    static String getStr( Map.Entry< String , Object> entry, String key)
+            throws Exception_YAMLCfg_WrongType {
+        Object val = entry.getValue();
+        if (val == null) throw new Exception_YAMLCfg_WrongType("String", "null",key);
+        if (!(val instanceof java.lang.String )) {
+            throw new Exception_YAMLCfg_WrongType("String", val.getClass().toString(), key);
+        }
+        return val.toString();
+    }
+
+
+
+    static int getInt( Map< String , Object> entry, String key) throws Exception_YAMLCfg_WrongType {
         // get child element
         String str = PropertiesYAMLEV.getStr(entry ,key);
         int result = Integer.parseInt(str);
@@ -76,74 +84,82 @@ public class PropertiesYAMLEV {
     }
 
 
-    static Map<String, Object> unpack(Map.Entry<String , Object> e) {
-        Map<String, Object> m = new HashMap<String, Object>();
-        m.put(e.getKey(), e.getValue());
-        return m;
+    private static void parseTask(@NotNull Map.Entry<String, Object> task, String fatherKeyP) throws Exception_YAMLCfg_WrongType {
+        PropertiesYAMLEV.tasksList = task;
+        PropertiesYAMLEV.fatherKeyP = fatherKeyP;
+
+        Map<String , Object> taskListChildren = (Map<String , Object> ) task.getValue();
+        for (Map.Entry<String , Object> e : taskListChildren.entrySet()) {
+
+            String k = e.getKey(); String fatherKey = fatherKeyP+"."+e.getKey();
+            Object value_o = (Object) e.getValue();
+            log.info("analyzing key: "+fatherKey);
+
+            if (value_o instanceof Map<?, ?>) {
+                Map<String , Object> values = (Map<String , Object>) e.getValue();
+
+                continue;
+            } else { // non-structured values
+                if (k.equals("type")) { // redundant, just to practise
+                    if (PropertiesYAMLEV.getStr(e, "type").equals("task")) {
+                    }
+                }
+                log.error("unmanaged key: "+fatherKey);
+            }
+        }
+
     }
 
-    public static void parseTaskList(Map.Entry<String, Object> tasksList, String fatherKeyP) throws Exception_YAMLCfg_WrongType {
+
+    private static void parseTaskList(@NotNull Map.Entry<String, Object> tasksList, String fatherKeyP) throws Exception_YAMLCfg_WrongType {
+        PropertiesYAMLEV.tasksList = tasksList;
+        PropertiesYAMLEV.fatherKeyP = fatherKeyP;
 
         Map<String , Object> taskListChildren = (Map<String , Object> ) tasksList.getValue();
         for (Map.Entry<String , Object> e : taskListChildren.entrySet()) {
 
-            String k = e.getKey(); String fatherKey = fatherKeyP+" > "+e.getKey();
+            String k = e.getKey(); String fatherKey = fatherKeyP+"."+e.getKey();
             Object value_o = (Object) e.getValue();
             log.info("analyzing key: "+fatherKey);
 
             if (value_o instanceof Map<?, ?>) {
                 Map<String , Object> value = (Map<String , Object>) e.getValue();
                 if (PropertiesYAMLEV.getType(value).equals("task")) {
-                    log.info("OK task");
+                    parseTask(e,fatherKey);
                 }
             } else {
                 log.error("unmanaged key: "+fatherKey);
             }
         }
-
-
-        log.info("");
-        //log.info(PropertiesYAMLEV.getStr(entry,"dummy_test"));
     }
+
 
 
     public static void main(String[] argv) {
 
         String fpath = "./EVUtils/test.yaml";
         String content = null;
+
         try  {  content = new String(Files.readAllBytes(Paths.get(fpath))); }
-        catch (IOException e) {
-            log.info("working dir"+System.getProperty("user.dir"));
-            e.printStackTrace(); System.exit(99);
-        }
+        catch (IOException e) { log.error("working dir"+System.getProperty("user.dir"),e);  }
 
-        Yaml yaml = new Yaml();
-        // root element, tasks
-        Map<String, Object> prop = (Map<String, Object>) yaml.load(content);
-
-        // just studying types inside it
-//        for (Type t: data.getClass().getTypeParameters()) {
-//            System.out.println(t.getTypeName());
-//            if (t instanceof ParameterizedType) {
-//                Type elementType = ((ParameterizedType) t).getActualTypeArguments()[0];
-//            }
-//        }
+        Map<String, Object> prop = (Map<String, Object>) (new Yaml()).load(content);
 
         try {
             for (Map.Entry<String, Object> entry : prop.entrySet()) {
 
-                String k = entry.getKey();
-                Object value = entry.getValue();
+                String k = entry.getKey(); Object value = entry.getValue();
+
                 if (value instanceof Map<?, ?>) {
                     Map<String, Object> values = (Map<String, Object>) entry.getValue();
                     if (PropertiesYAMLEV.getType(values).equals("task_list")) {
-                        log.info("");
-                        parseTaskList(entry ,k);
+                        parseTaskList(entry ,k); continue;
                     }
-
                 } else {
-                    log.info(k + " is simple type");
+                    // process simple values? listsother
+                    continue;
                 }
+                log.error("unmanaged key: "+k);
             }
         } catch (Exception_YAMLCfg_WrongType e) {
             log.error(e);

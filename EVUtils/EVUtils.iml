@@ -18,5 +18,14 @@
     <orderEntry type="library" name="org.eclipse.persistence:eclipselink:2.5.2" level="application" />
     <orderEntry type="library" name="javax.mail:javax.mail-api:1.6.1" level="application" />
     <orderEntry type="library" name="R User Library" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../../00_libs/java/3rd_party/maven/annotations-16.0.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
