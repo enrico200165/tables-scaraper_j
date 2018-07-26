@@ -29,6 +29,8 @@ public class PropertiesYAMLEVTest {
         "tasks:\n"+
         "    type:"+" task_list\n"+
         "    dummy_test:"+" dummy_val\n"+
+        "    just_testing:\n"+
+        "        int_value:"+" 99\n"+
         "    concorsi:\n"+
         "        type:"+" task\n"+
         "        host:\n"+
@@ -92,6 +94,7 @@ public class PropertiesYAMLEVTest {
 
 
         Yaml yaml = new Yaml();
+        // root element, tasks
         Map<String,Object> prop = (Map<String,Object>) yaml.load(fcontent);
 
         // just studying types inside it
@@ -103,11 +106,14 @@ public class PropertiesYAMLEVTest {
 //        }
 
         try {
-            //log.info(PropertiesYAMLEV.getStr(prop,"dummy_test"));
+            log.info(PropertiesYAMLEV.getStr(prop,"dummy_test"));
             for (String k : prop.keySet()) {
+
                 Map<String,Object> entry = (Map<String,Object>) prop.get(k);
-                log.info(PropertiesYAMLEV.getStr(entry,"dummy_test"));
-                if (PropertiesYAMLEV.getType(entry) == "tasks") {
+                log.info("analyzing key"+k);
+                if (PropertiesYAMLEV.getType(entry) == "task_list") {
+                    // todo EV# implement
+                    log.info("found task list object, should implement parsing it");
                 } else if (PropertiesYAMLEV.getType(entry) == "tasks") {
 
                 }
@@ -136,7 +142,7 @@ public class PropertiesYAMLEVTest {
 
 
     static String fcontent = "";
-    static  String fpath = "test.yaml";;
+    static  String fpath = "test.yaml";
 
     private static org.apache.log4j.Logger log = Logger.getLogger(PropertiesYAMLEVTest.class);
 
