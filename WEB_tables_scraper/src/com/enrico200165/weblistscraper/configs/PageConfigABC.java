@@ -22,7 +22,7 @@ import java.util.Map;
 /**
  * Tage = table/page SEMBREREBBE che fornisce tutto ciò che serve a elaborare una pagina: - indirizzi (host-config) - selettori - oggetti
  * specifici
- * 
+ *
  * @author enrico
  *
  */
@@ -200,8 +200,8 @@ public abstract class PageConfigABC {
 
 
 	public static void main(String[] v) {
-	    // System.out.println(System.getProperty("user.dir"));
-        PageConfigABC cfg = new PageConfigVanilla(null,null,null,null,null);
+		// System.out.println(System.getProperty("user.dir"));
+		PageConfigABC cfg = new PageConfigVanilla(null,null,null,null,null);
 		cfg.read(null);
 		// System.out.println(y.toString());
 	}

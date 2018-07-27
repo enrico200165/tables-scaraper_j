@@ -4,7 +4,9 @@ import org.apache.log4j.Logger;
 
 import javax.persistence.*;
 import javax.persistence.criteria.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class DBManagerMKT {
 
@@ -12,9 +14,9 @@ public class DBManagerMKT {
         super();
         EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistUnit);
         em = factory.createEntityManager();
-        for (String key : em.getProperties().keySet()) {
-            log.info(key + " = " + em.getProperties().get(key));
-        }
+        //for (String key : em.getProperties().keySet()) {
+        //   log.info(key + " = " + em.getProperties().get(key));
+        //}
     }
 
 
@@ -360,6 +362,6 @@ public class DBManagerMKT {
         tx.commit();
     }
 
-    javax.persistence.EntityManager em;
+    private EntityManager em;
     private static org.apache.log4j.Logger log = Logger.getLogger(DBManagerMKT.class);
 }

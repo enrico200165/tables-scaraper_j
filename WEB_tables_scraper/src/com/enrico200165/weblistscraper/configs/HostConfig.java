@@ -12,13 +12,13 @@ import java.util.Properties;
 
 public class HostConfig {
 
-    protected String fname;
-    protected String user;
-    protected String password;
-    protected String loginFormURL;
-    protected String loginFormAction;
-    protected String jsoupLoginFormSelector;
-    protected URI baseHostURI;
+    public String fname;
+    public String user;
+    public String password;
+    public String loginFormURL;
+    public String loginFormAction;
+    public String jsoupLoginFormSelector;
+    public URI     baseHostURI;
 
 
     public HostConfig(String hostCfgFileName) {

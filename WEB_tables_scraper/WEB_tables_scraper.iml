@@ -19,12 +19,13 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="log4j-1.2.15" level="application" />
-    <orderEntry type="library" name="javax.mail" level="application" />
-    <orderEntry type="library" name="jaxrs-ri" level="application" />
-    <orderEntry type="library" name="eclipselink" level="application" />
-    <orderEntry type="library" name="junit4" level="application" />
+    <orderEntry type="library" name="jaxrs-ri-maven" level="application" />
+    <orderEntry type="library" name="log4j" level="application" />
+    <orderEntry type="library" scope="TEST" name="junit4-maven" level="application" />
+    <orderEntry type="library" exported="" name="org.eclipse.persistence:eclipselink:2.5.2" level="application" />
+    <orderEntry type="library" name="javax.mail:javax.mail-api:1.6.1" level="application" />
     <orderEntry type="library" name="R User Library" level="project" />
     <orderEntry type="library" name="R Skeletons" level="application" />
+    <orderEntry type="library" name="jackson" level="application" />
   </component>
 </module>

@@ -1,15 +1,19 @@
 package com.enrico200165.cookies;
 
-import java.io.Serializable;
-import javax.persistence.Entity;
 import org.apache.log4j.Logger;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 
 @Entity
 public class HttpCookieJPAKey implements Serializable {
 
 	// copiato tale e quale
 	private static final long serialVersionUID = 343L;
+	@Id
 	String name;
+	@Id
 	String domain;
 
 	public HttpCookieJPAKey(String n, String d) {

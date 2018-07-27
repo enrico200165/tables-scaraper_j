@@ -4,10 +4,7 @@ import com.enrico200165.utils.str_regex.StringUtils;
 import com.enrico200165.weblistscraper.common.WEBUtils;
 import org.apache.log4j.Logger;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.IdClass;
-import javax.persistence.Transient;
+import javax.persistence.*;
 import javax.ws.rs.core.Cookie;
 import javax.ws.rs.core.NewCookie;
 import java.net.HttpCookie;
@@ -22,6 +19,8 @@ import java.util.Date;
  *
  * @author enrico
  */
+
+
 @Entity
 @IdClass(HttpCookieJPAKey.class)
 public class HttpCookieJPA {
@@ -69,11 +68,8 @@ public class HttpCookieJPA {
 
 
     public boolean isIdentical(HttpCookieJPA other) {
-        boolean ret = true;
-
-        // name, domain, path
+        boolean ret = true; // name, domain, path// name, domain, path
         ret = ret && isIdentical(other.httpCookie);
-
         return ret;
     }
 
@@ -101,7 +97,6 @@ public class HttpCookieJPA {
     }
 
 
-    @Id
     public String getName() {
         return httpCookie.getName();
     }
@@ -176,15 +171,9 @@ public class HttpCookieJPA {
         return s;
     }
 
-	/* public boolean isPersistent() { if (getMaxAge() != -1) { return true; } else { if (getExpiry() != null) { return true; } }
-     *
-	 * // Set the cookie's expiry-time to the latest representable date.
-	 * 
-	 * 
-	 * return false; } */
 
     @Transient
-    public HttpCookie getHttpCookie() {
+    HttpCookie getHttpCookie() {
         return httpCookie;
     }
 
@@ -196,16 +185,11 @@ public class HttpCookieJPA {
 
     // -------- ordinary Get/Set ------------
 
-    @Id
     public String getDomain() {
         return httpCookie.getDomain();
     }
 
-    public HttpCookieJPA setDomain(String s) {
-        httpCookie.setDomain(s);
-        return this;
-    }
-
+    public HttpCookieJPA setDomain(String s) { httpCookie.setDomain(s); return this; }
 
     public String getComment() {
         return httpCookie.getComment();
@@ -304,10 +288,7 @@ public class HttpCookieJPA {
         return httpCookie.getPath();
     }
 
-    public HttpCookieJPA setPath(String s) {
-        httpCookie.setPath(s);
-        return this;
-    }
+    public HttpCookieJPA setPath(String s) { httpCookie.setPath(s) ; return this; }
 
     public String getPortlist() {
         return httpCookie.getPortlist();
@@ -329,10 +310,7 @@ public class HttpCookieJPA {
         return httpCookie.getValue();
     }
 
-    public HttpCookieJPA setValue(String v) {
-        httpCookie.setValue(v);
-        return this;
-    }
+    public HttpCookieJPA setValue(String v) { httpCookie.setValue(v); return this; }
 
     public int getVersion() {
         return httpCookie.getVersion();
@@ -352,10 +330,12 @@ public class HttpCookieJPA {
         return httpCookie.hashCode();
     }
 
+    @Transient
     public boolean isHttpOnly() {
         return httpCookie.isHttpOnly();
     }
 
+    @Transient
     public void setHttpOnly(boolean v) {
         httpCookie.setHttpOnly(v);
     }
@@ -371,6 +351,7 @@ public class HttpCookieJPA {
     public void setSetterPageURL(String setterPageURL) {
         this.setterPageURL = setterPageURL;
     }
+
 
     public Date getUpdatedDate() {
         return lastUpdatedDate;
@@ -388,8 +369,13 @@ public class HttpCookieJPA {
         this.originalCookie = originalCookie;
     }
 
-    HttpCookie httpCookie;
+    @Transient
+    transient HttpCookie httpCookie;
+
+    @Temporal(TemporalType.TIMESTAMP)
     Date expiryDate;
+
+    @Temporal(TemporalType.TIMESTAMP)
     Date lastUpdatedDate;
 
 
@@ -398,6 +384,11 @@ public class HttpCookieJPA {
 
     String setterPageURL;
 
+
+    @Id
+    String name;
+    @Id
+    String domain;
 
     private static org.apache.log4j.Logger log = Logger.getLogger(HttpCookieJPA.class);
 
