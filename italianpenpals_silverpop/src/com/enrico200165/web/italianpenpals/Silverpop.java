@@ -3,9 +3,9 @@ package com.enrico200165.web.italianpenpals;
 import com.enrico200165.cookies.CookieStoreEV;
 import com.enrico200165.silverpop.web_scraper.InvocationBuilderSilverpop;
 import com.enrico200165.silverpop.xmlapi.XMLMessages;
-import com.enrico200165.utils.str_regex.*;
-import com.enrico200165.utils.various.PropertiesYAMLEV;
-import com.enrico200165.weblistscraper.common.*;
+import com.enrico200165.utils.str_regex.NameValuePairString;
+import com.enrico200165.utils.str_regex.StringPersistent;
+import com.enrico200165.weblistscraper.common.WEBUtils;
 import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.configs.drupal7.FormManagerLoginDrupal7;
 import com.enrico200165.weblistscraper.tools.*;
@@ -21,7 +21,7 @@ import java.util.List;
 
 public class Silverpop {
 
-	public Silverpop(PropertiesYAMLEV props) {
+	public Silverpop(java.util.Properties props) {
 
 		properties = props;
 
@@ -49,9 +49,9 @@ public class Silverpop {
 			ibw.setOauthToken(null); // evitiamo old token che causa errore
 			List<NameValuePairString> formFields = new ArrayList<NameValuePairString>();
 			formFields.add(new NameValuePairString("grant_type", "refresh_token"));
-			formFields.add(new NameValuePairString("client_id", properties.get("client_id")));
-			formFields.add(new NameValuePairString("client_secret", properties.get("client_secret")));
-			formFields.add(new NameValuePairString("refresh_token", properties.get("user_account_refresh_token")));
+			formFields.add(new NameValuePairString("client_id", properties.get("client_id").toString()));
+			formFields.add(new NameValuePairString("client_secret", properties.get("client_secret").toString()));
+			formFields.add(new NameValuePairString("refresh_token", properties.get("user_account_refresh_token").toString()));
 
 			rw = cw.simplePOST("https://api0.silverpop.com/oauth/token", formFields, ibw, 0);
 			response = rw.getResponseHTML();
@@ -64,6 +64,8 @@ public class Silverpop {
 		this.LAST_ACCESS_TOKEN.setToken(temp);
 		ibw.setOauthToken(LAST_ACCESS_TOKEN.it());
 		log.debug(response);
+
+
 		return response;
 	}
 
@@ -164,7 +166,7 @@ public class Silverpop {
 	}
 
 	final static String APIURL = "http://api0.silverpop.com/XMLAPI";
-	PropertiesYAMLEV properties;
+	java.util.Properties properties;
 	Client client;
 	ClientWrapper cw;
 	ResponseWrapper rw;
