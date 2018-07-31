@@ -1,15 +1,17 @@
 package com.enrico200165.weblistscraper.page;
 
 import com.enrico200165.utils.net.http.Utils;
-import com.enrico200165.utils.str_regex.*;
-import com.enrico200165.weblistscraper.common.*;
+import com.enrico200165.utils.str_regex.NameValuePairString;
 import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.configs.PageConfigABC;
-import com.enrico200165.weblistscraper.tools.*;
+import com.enrico200165.weblistscraper.tools.FormManagerABC;
+import com.enrico200165.weblistscraper.tools.InvocationBuilderWrapper;
+import com.enrico200165.weblistscraper.tools.WebPageAction;
 import org.apache.log4j.Logger;
 
-import java.net.*;
-import java.util.*;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.List;
 
 /**
  * Lavora usando PageProcessor e PageConfig, forse dovrebbero essere fuse (risulterebbe entità complessa?)
@@ -105,24 +107,22 @@ public class PageProcDescr {
 		return c;
 	}
 
-	public void setUri(String relUrl) {
+	public void setUri(String fullUrl) {
 		if (uri != null) {
-			log.error("attempt to set URI");
+			log.error("attempt to set to "+fullUrl+" URI already set to "+uri);
+			System.exit(1);
+		}
+
+		if (!fullUrl.toLowerCase().contains(hostConfig.baseHostURI.toString())) {
+			log.error("provided URI "+fullUrl+" does not match hostname: "+hostConfig.baseHostURI);
 			System.exit(1);
 		}
 
 		try {
-			uri = new URI(relUrl);
+			uri = new URI(fullUrl);
 		} catch (URISyntaxException e) {
 			e.printStackTrace();
 		}
-
-		// tutto questo che segue va eliminato
-
-		if (!Utils.isRelativeURL(relUrl)) {
-			relUrl = Utils.makeUrlRelative(relUrl);
-		}
-		this.relUri = relUrl;
 	}
 
 

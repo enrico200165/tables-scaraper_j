@@ -30,7 +30,7 @@ public class ConfigReader  extends PageConfigABC {
     public ConfigReader(String cfgFName, HostConfig hcPar, TableScraperABC ts, EntryCanActOnFilter entryCanActOnPar, ChannelIFC channelInfoPar) {
         super(null,null,null,null);
 
-        this.hc = hcPar;
+        this.hConfig = hcPar;
         this.tableScraper = ts;
         this.channelInfo = channelInfoPar;
         this.entryCanActOn = entryCanActOnPar;
@@ -51,6 +51,8 @@ public class ConfigReader  extends PageConfigABC {
                 ,null,null,null);
 	}
 
+
+	// logging methods to easily build composite key for printou
     static String fullKey(String father, String key) {
 	    return father+"."+key;
     }
@@ -58,6 +60,11 @@ public class ConfigReader  extends PageConfigABC {
         return fullKey(father,key)+"["+id+"]";
     }
 
+
+    // ------- DIRTY MIGRATION METHODS, TO BE REMOVED ------------
+
+
+    // ------- end DIRTY MIGRATION METHODS, TO BE REMOVED ---------
 
     private static LoginConfig parseLogin(Map.Entry<String, Object> task, String fatherKeyP) throws Exception_YAMLCfg_WrongType {
 
@@ -111,7 +118,7 @@ public class ConfigReader  extends PageConfigABC {
             if (k.equals(ID_KEY)) {
             } else if (k.equals(HOST_URI)) {
                 try { hc.baseHostURI = new URI(e.getValue().toString()); }
-                catch(Exception exc) { log.error(exc);}
+                catch(Exception exc) { log.error(exc); }
             } else if (k.equals(LOGIN_KEY)) {
                 lc = parseLogin(e,fullKey(fatherKeyP,k,id));
                 hc.loginFormURL = lc.loginFormURL;
@@ -130,7 +137,7 @@ public class ConfigReader  extends PageConfigABC {
 
 
 
-    private static void parseTask(@NotNull Map.Entry<String, Object> task, String fatherKeyP) throws Exception_YAMLCfg_WrongType {
+    private void parseTask(@NotNull Map.Entry<String, Object> task, String fatherKeyP) throws Exception_YAMLCfg_WrongType {
 
 	    String id = PropertiesYAMLEV.getNameChild(task);
 	    assert(id.length() > 0);
@@ -149,7 +156,8 @@ public class ConfigReader  extends PageConfigABC {
 
             if (k.equals(ID_KEY)) {}
             else if (k.equals(HOST_KEY)) {
-                parseHost(e,fullKey(fatherKeyP,k,id));
+                log.warn("temporary dirt workaround while restructuring, remove ASAP");
+                this.hConfig = parseHost(e,fullKey(fatherKeyP,k,id));
             } else { // non-structured values
                 log.error("unmanaged key: "+fullKey(fatherKeyP,k,id));
                 System.exit(1);
@@ -159,7 +167,7 @@ public class ConfigReader  extends PageConfigABC {
     }
 
 
-    public static void parseTaskList(@NotNull Map.Entry<String, Object> tasksList, String fatherKeyP) throws Exception_YAMLCfg_WrongType {
+    public  void parseTaskList(@NotNull Map.Entry<String, Object> tasksList, String fatherKeyP) throws Exception_YAMLCfg_WrongType {
 
         Map<String , Object> taskListChildren = (Map<String , Object> ) tasksList.getValue();
         for (Map.Entry<String , Object> e : taskListChildren.entrySet()) {
@@ -181,7 +189,7 @@ public class ConfigReader  extends PageConfigABC {
 
 
 
-    public static void parseYAMLConfig(String fpath) {
+    public void parseYAMLConfig(String fpath) {
 
         String content = null;
 
@@ -219,9 +227,6 @@ public class ConfigReader  extends PageConfigABC {
 		return this.channelInfo;
 	}
 
-	public HostConfig getHostConfig() {
-		return this.hc;
-	}
 
 	public EntryCanActOnFilter getContactProspectFilter() {
 		return entryCanActOn;
@@ -311,7 +316,6 @@ public class ConfigReader  extends PageConfigABC {
 		return null;
 	}
 
-	protected HostConfig hc;
 	protected TableScraperABC tableScraper;
 	protected ChannelIFC channelInfo;
 

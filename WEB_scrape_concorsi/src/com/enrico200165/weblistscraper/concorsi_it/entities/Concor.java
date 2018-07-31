@@ -9,9 +9,7 @@ import com.enrico200165.utils.str_regex.StringUtils;
 import com.enrico200165.weblistscraper.entities.EntityBase;
 import org.apache.log4j.Logger;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -238,6 +236,8 @@ public class Concor extends EntityBase {
 	// --- Indirizzo ---
 	String site;
 	String tableUrl;
+
+	@Temporal(TemporalType.TIMESTAMP)
 	Date dateRecorded;
 
 	// --- Contenuti ---
@@ -293,6 +293,7 @@ public class Concor extends EntityBase {
 
 	String otherInfo;
 
+	@Temporal(TemporalType.TIMESTAMP)
 	Date dateReported; // a report HTML, null se non esportato
 
 	// --- scheda di sintesi
@@ -304,6 +305,8 @@ public class Concor extends EntityBase {
 	String regione;
 	String provincia;
 	String comune;
+
+	@Temporal(TemporalType.TIMESTAMP)
 	Date scadenza;
 
 	@Column(length = 4096)
