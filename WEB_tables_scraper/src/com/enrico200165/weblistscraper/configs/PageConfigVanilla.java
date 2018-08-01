@@ -21,14 +21,11 @@ public class PageConfigVanilla extends PageConfigABC {
 	public PageConfigVanilla(String cfgFName, HostConfig hcPar, TableScraperABC ts, EntryCanActOnFilter entryCanActOnPar, ChannelIFC channelInfoPar) {
 		super(null,null,null,null);
 		this.hc = hcPar;
-		this.tableScraper = ts;
 		this.channelInfo = channelInfoPar;
-		this.entryCanActOn = entryCanActOnPar;
-	}
 
-	static void  dummy() {
-		PageConfigVanilla x = new PageConfigVanilla(null,null
-                ,null,null,null);
+
+		this.tableScraper = ts;
+		this.entryCanActOn = entryCanActOnPar;
 	}
 
 	public ChannelIFC getChannelInfo() {
@@ -113,6 +110,7 @@ public class PageConfigVanilla extends PageConfigABC {
 
 	static NextTablePageSelectorsABC nextTablePageSelectorsABC = null;
 
+
 	public NextTablePageSelectorsABC getNextTablePageSelectors() {
 		if (nextTablePageSelectorsABC == null) {
 			nextTablePageSelectorsABC = getNextTablePageSelectorsSpecific();
@@ -120,18 +118,37 @@ public class PageConfigVanilla extends PageConfigABC {
 		return nextTablePageSelectorsABC;
 	}
 
+	public void setNextTablePageSelectors(NextTablePageSelectorsABC sel) {
+		this.nextTablePageSelectorsABC = sel;
+	}
 
+
+	public String getTableURl() {
+		return tableURl;
+	}
+
+	public void setTableURl(String tableURl) {
+		this.tableURl = tableURl;
+	}
+
+
+
+	// functionoids
+	protected TableScraperABC tableScraper;
+	protected EntryCanActOnFilter entryCanActOn;
+
+	// already in YAML
+	protected ChannelIFC channelInfo;
+	protected HostConfig hc;
 
 
 	protected  NextTablePageSelectorsABC getNextTablePageSelectorsSpecific(){
 		return null;
 	}
 
-	protected HostConfig hc;
-	protected TableScraperABC tableScraper;
-	protected ChannelIFC channelInfo;
 
-	protected EntryCanActOnFilter entryCanActOn;
+	String tableURl;
+
 
 
 	private static Logger log = Logger.getLogger(PageConfigVanilla.class);

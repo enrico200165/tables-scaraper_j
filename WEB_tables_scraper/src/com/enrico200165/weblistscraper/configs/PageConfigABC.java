@@ -30,9 +30,11 @@ public abstract class PageConfigABC {
 
 	public PageConfigABC(HostConfig hcPar, TableScraperABC ts, EntryCanActOnFilter entryCanActOnPar, ChannelIFC channelInfoPar) {
 		super();
-		this.hConfig = hcPar;
+
+		this.hConfig = hcPar;  // in YAML
+		this.channelInfo = channelInfoPar; // in YAML
+
 		this.tableScraper = ts;
-		this.channelInfo = channelInfoPar;
 		this.entryCanActOn = entryCanActOnPar;
 	}
 

@@ -25,7 +25,9 @@ import java.util.Map;
  * @author enrico
  *
  */
+
 public class ConfigReader  extends PageConfigABC {
+
 
     public ConfigReader(String cfgFName, HostConfig hcPar, TableScraperABC ts, EntryCanActOnFilter entryCanActOnPar, ChannelIFC channelInfoPar) {
         super(null,null,null,null);
@@ -39,12 +41,14 @@ public class ConfigReader  extends PageConfigABC {
 
     // Constants
     static final String TYPE_NOT_FOUND = "type_not_found";
-    static final String TYPE_KEY = "type";
-    static final String TASK_KEY = "task";
-    static final String ID_KEY = "ID";
-    static final String HOST_KEY = "host";
-    static final String HOST_URI = "baseHostURI";
-    static final String LOGIN_KEY = "login";
+    static final String TYPE_KEY       = "type";
+    static final String TASK_KEY       = "task";
+    static final String ID_KEY         = "ID";
+    static final String HOST_KEY       = "host";
+    static final String HOST_URI       = "baseHostURI";
+    static final String LOGIN_KEY      ="login";
+    static final String CHANNEL_KEY    = "channel";
+    static final String TABLE_KEY      = "table";
 
 	static void  dummy() {
 		ConfigReader x = new ConfigReader(null,null
@@ -136,8 +140,101 @@ public class ConfigReader  extends PageConfigABC {
     }
 
 
+    private static ChannelIFC parseChannel(Map.Entry<String, Object> entryPar, String fatherKeyP)
+            throws Exception_YAMLCfg_WrongType {
 
-    private void parseTask(@NotNull Map.Entry<String, Object> task, String fatherKeyP) throws Exception_YAMLCfg_WrongType {
+        String id = PropertiesYAMLEV.getNameChild(entryPar); assert (id.length() > 0);
+
+        ChannelIFC chann = new ChannelConfigVanilla();
+
+        Map<String, Object> taskListChildren = (Map<String, Object>) entryPar.getValue();
+        for (Map.Entry<String, Object> e : taskListChildren.entrySet()) {
+
+            String k = e.getKey();
+            Object value_o = (Object) e.getValue();
+            log.info("analyzing key: " + fullKey(fatherKeyP, k));
+
+            if (k.equals(ID_KEY)) {
+            } else if (k.equals("name"))   { chann.setName(e.getValue().toString());
+            } else if (k.equals("type"))   { chann.setType(e.getValue().toString());
+            } else if (k.equals("vendor")) { chann.setVendor(e.getValue().toString());
+            } else if (k.equals("item"))   { chann.setItem(e.getValue().toString());
+            } else {
+                log.error("unmanaged key: " + fullKey(fatherKeyP, k, id));
+                System.exit(1);
+            }
+        }
+
+        return chann;
+    }
+
+
+    private static NextTablePageSelectorsABC parseNextPageSel(Map.Entry<String, Object> entryPar, String fatherKeyP)
+            throws Exception_YAMLCfg_WrongType {
+
+        String id = PropertiesYAMLEV.getNameChild(entryPar); assert (id.length() > 0);
+
+        NextTablePageSelectorsABC nextPageSel = new NextTablePageSelectorsABC();
+
+        Map<String, Object> taskListChildren = (Map<String, Object>) entryPar.getValue();
+        for (Map.Entry<String, Object> e : taskListChildren.entrySet()) {
+
+            String k = e.getKey();
+            Object value_o = (Object) e.getValue();
+            log.info("analyzing key: " + fullKey(fatherKeyP, k));
+
+            if (k.equals(ID_KEY)) {
+            } else if (k.equals("title_regex"))  { nextPageSel.setTitleRegex(e.getValue().toString());
+            } else if (k.equals("url_regex"))    { nextPageSel.setUrlRegex(e.getValue().toString());
+            } else if (k.equals("id_regex"))     { nextPageSel.setIdRegex(e.getValue().toString());
+            } else if (k.equals("class_regex"))  { nextPageSel.setClasseRegex(e.getValue().toString());
+            } else if (k.equals("testo_regex"))  { nextPageSel.setTestoRegex(e.getValue().toString());
+            } else {
+                log.error("unmanaged key: " + fullKey(fatherKeyP, k, id));
+                System.exit(1);
+            }
+        }
+
+        return nextPageSel;
+    }
+
+
+
+    private PageConfigVanilla parseTable(Map.Entry<String, Object> entryPar, String fatherKeyP)
+            throws Exception_YAMLCfg_WrongType {
+
+        String id = PropertiesYAMLEV.getNameChild(entryPar); assert (id.length() > 0);
+
+        PageConfigVanilla pg_cfg = new PageConfigVanilla("temporary" , null
+        ,  null, null , null);
+
+        Map<String, Object> taskListChildren = (Map<String, Object>) entryPar.getValue();
+        for (Map.Entry<String, Object> e : taskListChildren.entrySet()) {
+
+            String k = e.getKey();
+            Object value_o = (Object) e.getValue();
+            log.info("analyzing key: " + fullKey(fatherKeyP, k));
+
+            if (k.equals(ID_KEY)) {
+            } else if (k.equals("next_table_page_selector"))   {
+                NextTablePageSelectorsABC sel = parseNextPageSel(e, fullKey(fatherKeyP,k));
+                pg_cfg.setNextTablePageSelectors(sel);
+            } else if (k.equals("table_url"))   {
+                pg_cfg.setTableURl(e.getValue().toString());
+
+            } else {
+                log.error("unmanaged key: " + fullKey(fatherKeyP, k, id));
+                System.exit(1);
+            }
+        }
+
+        return pg_cfg;
+    }
+
+
+
+
+    private void parseTask(Map.Entry<String, Object> task, String fatherKeyP) throws Exception_YAMLCfg_WrongType {
 
 	    String id = PropertiesYAMLEV.getNameChild(task);
 	    assert(id.length() > 0);
@@ -153,11 +250,16 @@ public class ConfigReader  extends PageConfigABC {
             if (value_o instanceof Map<?, ?>) {
                 values = (Map<String , Object>) e.getValue();
             }
-
             if (k.equals(ID_KEY)) {}
             else if (k.equals(HOST_KEY)) {
                 log.warn("temporary dirt workaround while restructuring, remove ASAP");
-                this.hConfig = parseHost(e,fullKey(fatherKeyP,k,id));
+                this.hConfig = parseHost(e, fullKey(fatherKeyP, k, id));
+            } else if (k.equals(CHANNEL_KEY)) {
+                    log.warn("temporary dirt workaround while restructuring, remove ASAP");
+                    this.channelInfo = parseChannel(e,fullKey(fatherKeyP,k,id));
+            } else if (k.equals(TABLE_KEY)) {
+                log.warn("temporary dirt workaround while restructuring, remove ASAP");
+                parseTable(e,fullKey(fatherKeyP,k));
             } else { // non-structured values
                 log.error("unmanaged key: "+fullKey(fatherKeyP,k,id));
                 System.exit(1);

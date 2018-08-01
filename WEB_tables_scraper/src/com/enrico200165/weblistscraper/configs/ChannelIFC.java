@@ -7,12 +7,16 @@ package com.enrico200165.weblistscraper.configs;
  */
 public interface ChannelIFC {
 
-	String getChannelType();
+	String getType();
+	void   setType(String v);
 
-	String getChannelVendor();
+	String getVendor();
+	void   setVendor(String v);
 
-	String getChannelName();
+	String getName();
+	void   setName(String v);
 
-	String getChannelItem();
+	String getItem();
+	void   setItem(String v);
 
 }

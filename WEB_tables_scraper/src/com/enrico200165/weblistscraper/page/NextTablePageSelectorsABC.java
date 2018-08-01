@@ -4,29 +4,36 @@ public class NextTablePageSelectorsABC {
 
 	
 	
-	public NextTablePageSelectorsABC() {
-		super();
+
+	public String getTitleRegex() {
+		return titleRegex;
+	}
+	public void setTitleRegex(String v) {
+		this.titleRegex = v;
 	}
 
-	
+
 	public String getUrlRegex() {
 		return urlRegex;
 	}
 	public void setUrlRegex(String urlRegex) {
 		this.urlRegex = urlRegex;
 	}
+
 	public String getIdRegex() {
 		return idRegex;
 	}
 	public void setIdRegex(String idRegex) {
 		this.idRegex = idRegex;
 	}
+
 	public String getClasseRegex() {
 		return classeRegex;
 	}
 	public void setClasseRegex(String classeRegex) {
 		this.classeRegex = classeRegex;
 	}
+
 	public String getTestoRegex() {
 		return testoRegex;
 	}
@@ -38,7 +45,6 @@ public class NextTablePageSelectorsABC {
 	public String getaElementSelector() {
 		return aElementSelector;
 	}
-
 	public void setaElementSelector(String aElementSelector) {
 		this.aElementSelector = aElementSelector;
 	}
@@ -49,14 +55,8 @@ public class NextTablePageSelectorsABC {
 	protected String classeRegex; 
 	protected String testoRegex;
 	protected String titleRegex;
-	public String getTitleRegex() {
-		return titleRegex;
-	}
 
 
-	public void setTitleRegex(String titleRegex) {
-		this.titleRegex = titleRegex;
-	}
-	
+
 	
 }

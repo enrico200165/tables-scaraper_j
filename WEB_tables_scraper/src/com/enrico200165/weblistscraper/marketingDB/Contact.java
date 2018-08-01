@@ -39,10 +39,10 @@ public class Contact {
 
 	public Contact setChannelFields(ChannelIFC ch) {
 
-		this.channelType = ch.getChannelType();
-		this.channelVendor = ch.getChannelVendor();
-		this.channelID = ch.getChannelName();
-		this.channelItem = ch.getChannelItem();
+		this.channelType = ch.getType();
+		this.channelVendor = ch.getVendor();
+		this.channelID = ch.getName();
+		this.channelItem = ch.getItem();
 
 		return this;
 	}
