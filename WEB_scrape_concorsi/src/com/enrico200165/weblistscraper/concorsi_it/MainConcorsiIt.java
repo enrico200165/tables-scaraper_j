@@ -33,9 +33,6 @@ public class MainConcorsiIt {
 
 
         // --- Configurazione ---
-		// below the old config system
-		//HostConfig hostConfigConcorsi = null;
-		//hostConfigConcorsi = new HostConfig("../../../data_dev/web_scraper/host_concorsi_it.properties");
 
 		// here the new configuration
 		ConfigReader cfg_reader = null;
