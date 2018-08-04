@@ -4,10 +4,9 @@ import com.enrico200165.cookies.CookieStoreEV;
 import com.enrico200165.utils.net.http.Utils;
 import com.enrico200165.utils.various.Utl;
 import com.enrico200165.weblistscraper.common.WEBUtils;
-import com.enrico200165.weblistscraper.concorsi_it.configs.ChannelConfigConcorsiItUsersTable;
 import com.enrico200165.weblistscraper.concorsi_it.configs.PageConfigConcorsiitSpecInf;
-import com.enrico200165.weblistscraper.concorsi_it.configs.SessionLimitsConcorsiIt;
-import com.enrico200165.weblistscraper.configs.*;
+import com.enrico200165.weblistscraper.configs.ConfigReader;
+import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.page.EntryProcessorABC;
 import com.enrico200165.weblistscraper.page.PageProcDescr;
 import com.enrico200165.weblistscraper.page.PageProcessor;
@@ -50,7 +49,7 @@ public class MainConcorsiIt {
 		Client cl = WEBUtils.createClient(cReqFilt, cResFilt, false);
 		ClientWrapper cw = new ClientWrapper(cl, new InvocationBuilderWrapperIExplore(), cfg_reader.getHostConfig(), 1,
 				new FormManagerDummy(cfg_reader.getHostConfig()));
-		SessionManagerAbstr sm = new SessionManagerConcorsi(cw);
+		SessionManagerAbstr sm = new SessionManagerConcorsi(cw , cfg_reader.getSessionLimits());
 
 
 
@@ -65,7 +64,7 @@ public class MainConcorsiIt {
 		if (piuvisti) {
 			//http://concorsi.it/nc/top
 
-			ChannelIFC channConfig = new ChannelConfigConcorsiItUsersTable();
+			//ChannelIFC channConfig = new ChannelConfigConcorsiItUsersTable();
 
 			EntryCanActOnFilter entryCanActOn = new EntryCanActOnFilterConcorsiIt();
 
@@ -73,7 +72,7 @@ public class MainConcorsiIt {
 			TableScraperABC tableSCraperSpecInf = new TableScraperConcorsiItSpecInf(sm, null, entryProcSpecInf);
 			PageConfigABC pageCfgPiuVisti = new PageConfigConcorsiitSpecInf(cfg_reader.getHostConfig()
                     ,tableSCraperSpecInf, entryCanActOn,
-					channConfig);
+					cfg_reader.getChannelInfo());
 			PageProcessor pageProcessorPiuVisti = new PageProcessor(cfg_reader.getHostConfig(), sm, pageCfgPiuVisti);
 			PageProcDescr tablePage = new PageProcDescr(cfg_reader.getHostConfig(), pageCfgPiuVisti, pageProcessorPiuVisti,
 					"https://concorsi.it/regione/lazio", WebPageAction.GET_SCRAPE);
@@ -149,9 +148,7 @@ public class MainConcorsiIt {
 		 * 
 		 * ------------------------------------------------------------------------------- */
 
-		SessionLimitsBase sessLim = new SessionLimitsConcorsiIt();
-
-		sm.performSession(sessLim);
+		sm.performSession(cfg_reader.getSessionLimits());
 
 	}
 

@@ -1,14 +1,13 @@
 package com.enrico200165.weblistscraper.concorsi_it;
 
-import java.net.URI;
-
+import com.enrico200165.weblistscraper.common.WEBUtils;
+import com.enrico200165.weblistscraper.concorsi_it.entities.Concor;
 import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
-import com.enrico200165.weblistscraper.common.WEBUtils;
 import org.apache.log4j.Logger;
 import org.jsoup.nodes.Element;
 
-import com.enrico200165.weblistscraper.concorsi_it.entities.Concor;
+import java.net.URI;
 
 public class EntryProcessorConcorsiItSpecInf extends EntryProcessorConcorsiBase {
 
@@ -39,7 +38,7 @@ public class EntryProcessorConcorsiItSpecInf extends EntryProcessorConcorsiBase 
 		conc.setTableUrl(fullURL);
 
 		// internal URL
-		String relURL = WEBUtils.evSelAttrTxt(entryRawHTML, "tr > td:eq(2) > a", "href");
+		String relURL = WEBUtils.evSelAttrTxt(entryRawHTML, "tr > td:eq(1) > a", "href");
 		if (relURL != null) {
 			URI uri = pageConfig.getHostConfig().getBaseHostURI();
 			String intUrl = uri.getScheme() + "://" + uri.getAuthority();

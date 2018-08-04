@@ -1,7 +1,7 @@
 package com.enrico200165.weblistscraper.concorsi_it.configs.test;
 
-import com.enrico200165.weblistscraper.concorsi_it.EntryExcludeFilterConcorsiIt;
 import com.enrico200165.weblistscraper.tools.EntryExcludeFilter;
+import com.enrico200165.weblistscraper.tools.EntryExcludeFilterVanilla;
 import org.apache.log4j.Logger;
 import org.jsoup.nodes.Element;
 import org.jsoup.parser.Tag;
@@ -24,7 +24,7 @@ public class EntryExcludeFilterConcorsiItTest {
 
 	@Before
 	public void setUp() throws Exception {
-		filter = new EntryExcludeFilterConcorsiIt(null);
+		filter = new EntryExcludeFilterVanilla(null);
 	}
 
 	@After

@@ -4,9 +4,9 @@ import com.enrico200165.utils.html.DIV;
 import com.enrico200165.utils.html.H;
 import com.enrico200165.utils.html.HTMLDisplayInBrowser;
 import com.enrico200165.utils.various.Utl;
-import com.enrico200165.weblistscraper.concorsi_it.configs.SessionLimitsConcorsiIt;
 import com.enrico200165.weblistscraper.concorsi_it.entities.Concor;
 import com.enrico200165.weblistscraper.concorsi_it.entities.ConcorsiDB;
+import com.enrico200165.weblistscraper.configs.SessionLimitsBase;
 import com.enrico200165.weblistscraper.session.SessionManager;
 import com.enrico200165.weblistscraper.tools.ClientWrapper;
 import org.apache.log4j.Logger;
@@ -16,8 +16,8 @@ import java.util.List;
 
 public class SessionManagerConcorsi extends SessionManager {
 
-	public SessionManagerConcorsi(ClientWrapper cwPar) {
-		super(new SessionLimitsConcorsiIt(), cwPar);
+	public SessionManagerConcorsi(ClientWrapper cwPar , SessionLimitsBase sessionLimits) {
+		super(sessionLimits, cwPar);
 		concEsclusi = new ArrayList<Concor>();
 		included = 0;
 		excluded = 0;
