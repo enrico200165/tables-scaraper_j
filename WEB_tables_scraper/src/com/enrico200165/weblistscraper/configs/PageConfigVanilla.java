@@ -18,7 +18,9 @@ import org.apache.log4j.Logger;
  */
 public class PageConfigVanilla extends PageConfigABC {
 
-	public PageConfigVanilla(String cfgFName, HostConfig hcPar, TableScraperABC ts, EntryCanActOnFilter entryCanActOnPar, ChannelIFC channelInfoPar) {
+	public PageConfigVanilla(String cfgFName, HostConfig hcPar, TableScraperABC ts
+			,EntryCanActOnFilter entryCanActOnPar, ChannelIFC channelInfoPar,
+							 ConfigReader cfgRdrP) {
 		super(null,null,null,null);
 		this.hc = hcPar;
 		this.channelInfo = channelInfoPar;
@@ -26,62 +28,59 @@ public class PageConfigVanilla extends PageConfigABC {
 
 		this.tableScraper = ts;
 		this.entryCanActOn = entryCanActOnPar;
+
+		this.cfgRdr = cfgRdrP;
 	}
 
-	public ChannelIFC getChannelInfo() {
-		return this.channelInfo;
-	}
-
+	public ChannelIFC getChannelInfo() { return cfgRdr.getChannelInfo(); }
 	public HostConfig getHostConfig() {
-		return this.hc;
+		return cfgRdr.getHostConfig();
 	}
-
-	public EntryCanActOnFilter getContactProspectFilter() {
-		return entryCanActOn;
-	}
-
-	// -- END Forwarding to gloabl config
-
-	static EntryExcludeFilter entryExcludeFilter = null;
-
 	public EntryExcludeFilter getEntryExcludeFilter(SessionManagerAbstr smPar) {
-		if (entryExcludeFilter == null) {
-			entryExcludeFilter = getEntryExcludeFilterSpecific(smPar);
-		}
-		return entryExcludeFilter;
+		return cfgRdr.getEntryExcludeFilter(smPar);
+	}
+	public EntryIncludeFilter getEntryIncludeFilter(SessionManagerAbstr smPar) {
+		return cfgRdr.getEntryIncludeFilter(smPar);
 	}
 
 	public  EntryExcludeFilter getEntryExcludeFilterSpecific(SessionManagerAbstr smPar) {
 		return null;
 	}
-
-	static EntryIncludeFilter entryIncludeFilter = null;
-
-	public EntryIncludeFilter getEntryIncludeFilter(SessionManagerAbstr smPar) {
-		if (entryIncludeFilter == null) {
-			entryIncludeFilter = getEntryIncludeFilterSpecific(smPar);
-		}
-		return entryIncludeFilter;
-	}
-
 	public  EntryIncludeFilter getEntryIncludeFilterSpecific(SessionManagerAbstr smPar){
 		return null;
 	}
+	public NextTablePageSelectorsABC getNextTablePageSelectors() {
+		return cfgRdr.getNextTablePageSelectors();
+	}
+
+
+
 
 	// jsoup selector for the table in a page
 	public  String TableSelectCSS() {
 		return null;
 	}
-
 	// jsoup selector for the entries in a table
 	public  String EntrySelectCSS() {
 		return null;
 	}
 
+
+	// -- Until here adjusted
+
+	public EntryCanActOnFilter getContactProspectFilter() {
+		return entryCanActOn;
+	}
+
+
+
+
+
+
 	// table specific scraper/processor
 	TableScraperABC tablePageScraper = null;
 
-	 public TableScraperABC getTableScraperObject(){
+	public TableScraperABC getTableScraperObject(){
 		 return null;
 	 }
 
@@ -90,10 +89,8 @@ public class PageConfigVanilla extends PageConfigABC {
 			tablePageScraper = getTableScraperObject();
 		}
 
-
 		log.warn("patch per rimediare a una dipendenza circolare dovuta a design assurdo");
 		tablePageScraper.setPageConfig(this);
-
 
 		return tablePageScraper;
 	}
@@ -103,20 +100,10 @@ public class PageConfigVanilla extends PageConfigABC {
 	 public EntryProcessorABC getEntryProcObject(String configID){
 		 return null;
 	 }
-
 	 public EntryProcessorABC getEntryProc(String configID){
 		 return null;
 	 }
 
-	static NextTablePageSelectorsABC nextTablePageSelectorsABC = null;
-
-
-	public NextTablePageSelectorsABC getNextTablePageSelectors() {
-		if (nextTablePageSelectorsABC == null) {
-			nextTablePageSelectorsABC = getNextTablePageSelectorsSpecific();
-		}
-		return nextTablePageSelectorsABC;
-	}
 
 	public void setNextTablePageSelectors(NextTablePageSelectorsABC sel) {
 		this.nextTablePageSelectorsABC = sel;
@@ -150,6 +137,7 @@ public class PageConfigVanilla extends PageConfigABC {
 	String tableURl;
 
 
+	ConfigReader cfgRdr;
 
 	private static Logger log = Logger.getLogger(PageConfigVanilla.class);
 }

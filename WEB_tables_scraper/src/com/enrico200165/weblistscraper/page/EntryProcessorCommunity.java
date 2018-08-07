@@ -64,7 +64,7 @@ public abstract class EntryProcessorCommunity extends EntryProcessorABC {
             // the long prospect ID is set by the automatic synch, deactivated just after
         } else {
             log.warn("cannot save prospect " + " max exceeded: " + smgr.getSessionLimits().getSaves() + "/"
-                    + smgr.getSessionLimits().maxNewProspectsSaves() + " no actions seem possible, EXITING, prospect=\n"
+                    + smgr.getSessionLimits().getMaxNewProspectsSaves() + " no actions seem possible, EXITING, prospect=\n"
                     + entryW.IDsToString());
             return res.setContinua(false).setRc(RC.MUST_EXIT).setErrorMessage("max store contacts exceeded");
         }

@@ -6,9 +6,7 @@ import com.enrico200165.weblistscraper.page.EntryProcessorABC;
 import com.enrico200165.weblistscraper.page.NextTablePageSelectorsABC;
 import com.enrico200165.weblistscraper.page.TableScraperABC;
 import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
-import com.enrico200165.weblistscraper.tools.EntryCanActOnFilter;
-import com.enrico200165.weblistscraper.tools.EntryExcludeFilter;
-import com.enrico200165.weblistscraper.tools.EntryIncludeFilter;
+import com.enrico200165.weblistscraper.tools.*;
 import org.apache.log4j.Logger;
 import org.yaml.snakeyaml.Yaml;
 
@@ -29,12 +27,11 @@ import java.util.Map;
 public class ConfigReader  extends PageConfigABC {
 
 
-    public ConfigReader(String cfgFName, HostConfig hcPar, TableScraperABC ts, EntryCanActOnFilter entryCanActOnPar, ChannelIFC channelInfoPar) {
+    public ConfigReader(String cfgFName, HostConfig hcPar, TableScraperABC ts
+            , EntryCanActOnFilter entryCanActOnPar, ChannelIFC channelInfoPar) {
         super(null,null,null,null);
 
-        this.hConfig = hcPar;
         this.tableScraper = ts;
-        this.channelInfo = channelInfoPar;
         this.entryCanActOn = entryCanActOnPar;
     }
 
@@ -50,10 +47,6 @@ public class ConfigReader  extends PageConfigABC {
     static final String CHANNEL_KEY    = "channel";
     static final String TABLE_KEY      = "table";
 
-	static void  dummy() {
-		ConfigReader x = new ConfigReader(null,null
-                ,null,null,null);
-	}
 
 
 	// logging methods to easily build composite key for printou
@@ -63,6 +56,25 @@ public class ConfigReader  extends PageConfigABC {
     static String fullKey(String father, String key, String id) {
         return fullKey(father,key)+"["+id+"]";
     }
+
+
+    // --- now necessary,  in the future to be removed as these will build the full config
+
+    // jsoup selector for the table in a page
+    public  String TableSelectCSS() {
+        return null;
+    }
+
+    // jsoup selector for the entries in a table
+    public  String EntrySelectCSS() {
+        return null;
+    }
+
+    public EntryIncludeFilter getInclFilter() { return inclFilter; }
+
+    public EntryExcludeFilter getExclFilter() { return exclFilter; }
+
+
 
 
     // ------- DIRTY MIGRATION METHODS, TO BE REMOVED ------------
@@ -199,6 +211,90 @@ public class ConfigReader  extends PageConfigABC {
     }
 
 
+    private static SessionLimitsBase parseSessionLimits(Map.Entry<String, Object> entryPar, String fatherKeyP)
+            throws Exception_YAMLCfg_WrongType {
+
+        String id = PropertiesYAMLEV.getNameChild(entryPar); assert (id.length() > 0);
+
+        SessionLimitsBase limits = new SessionLimitsBase();
+
+        Map<String, Object> taskListChildren = (Map<String, Object>) entryPar.getValue();
+        for (Map.Entry<String, Object> e : taskListChildren.entrySet()) {
+
+            String k = e.getKey();
+            Object value_o = (Object) e.getValue();
+            log.info("analyzing key: " + fullKey(fatherKeyP, k));
+
+            if (k.equals(ID_KEY)) {
+            } else if (k.equals("max_entries_read"))  {
+                limits.setMaxEntriesRead(Integer.parseInt(e.getValue().toString()));
+            } else if (k.equals("max_new_prospects_saves"))    {
+                limits.setMaxNewProspectsSaves(Integer.parseInt(e.getValue().toString()));
+            } else if (k.equals("max_contacts_exec"))     {
+                limits.setMaxContactsExec(Integer.parseInt(e.getValue().toString()));
+            } else if (k.equals("max_process"))  {
+                limits.setMaxProcess(Integer.parseInt(e.getValue().toString()));
+            } else if (k.equals("max_HTTP_calls"))  {
+                limits.setMaxHTTPCalls(Integer.parseInt(e.getValue().toString()));
+            } else {
+                log.error("unmanaged key: " + fullKey(fatherKeyP, k, id));
+                System.exit(1);
+            }
+        }
+
+        return limits;
+    }
+
+
+    private EntryIncludeFilter parseEntryIncludeFilter(Map.Entry<String, Object> entryPar, String fatherKeyP)
+            throws Exception_YAMLCfg_WrongType {
+
+        String id = PropertiesYAMLEV.getNameChild(entryPar); assert (id.length() > 0);
+
+        EntryIncludeFilter inclFilter = new EntryIncludeFilterVanilla(null);
+
+        Map<String, Object> taskListChildren = (Map<String, Object>) entryPar.getValue();
+        for (Map.Entry<String, Object> e : taskListChildren.entrySet()) {
+
+            String k = e.getKey(); Object value_o = (Object) e.getValue();
+            log.info("analyzing key: " + fullKey(fatherKeyP, k));
+
+            if (k.equals(ID_KEY)) {
+            } else {
+                log.error("unmanaged key: " + fullKey(fatherKeyP, k, id));
+                System.exit(1);
+            }
+        }
+
+        return inclFilter;
+    }
+
+
+    private EntryExcludeFilter parseEntryExcludeFilter(Map.Entry<String, Object> entryPar, String fatherKeyP)
+            throws Exception_YAMLCfg_WrongType {
+
+        String id = PropertiesYAMLEV.getNameChild(entryPar); assert (id.length() > 0);
+
+        EntryExcludeFilter  filter = new EntryExcludeFilterVanilla(null);
+
+        Map<String, Object> taskListChildren = (Map<String, Object>) entryPar.getValue();
+        for (Map.Entry<String, Object> e : taskListChildren.entrySet()) {
+
+            String k = e.getKey(); Object value_o = (Object) e.getValue();
+            log.info("analyzing key: " + fullKey(fatherKeyP, k));
+
+            if (k.equals(ID_KEY)) {
+            } else {
+                log.error("unmanaged key: " + fullKey(fatherKeyP, k, id));
+                System.exit(1);
+            }
+        }
+
+        return filter;
+    }
+
+
+
 
     private PageConfigVanilla parseTable(Map.Entry<String, Object> entryPar, String fatherKeyP)
             throws Exception_YAMLCfg_WrongType {
@@ -206,7 +302,7 @@ public class ConfigReader  extends PageConfigABC {
         String id = PropertiesYAMLEV.getNameChild(entryPar); assert (id.length() > 0);
 
         PageConfigVanilla pg_cfg = new PageConfigVanilla("temporary" , null
-        ,  null, null , null);
+        ,  null, null , null, this);
 
         Map<String, Object> taskListChildren = (Map<String, Object>) entryPar.getValue();
         for (Map.Entry<String, Object> e : taskListChildren.entrySet()) {
@@ -221,8 +317,13 @@ public class ConfigReader  extends PageConfigABC {
                 pg_cfg.setNextTablePageSelectors(sel);
             } else if (k.equals("table_url"))   {
                 pg_cfg.setTableURl(e.getValue().toString());
-
-            } else {
+            } else if (k.equals("session_limits"))   {
+                SessionLimitsBase sessLim = parseSessionLimits(e, fullKey(fatherKeyP,k));
+            } else if (k.equals("entry_cont_include_filter"))   {
+                this.inclFilter = parseEntryIncludeFilter(e,fullKey(fatherKeyP, k));
+            } else if (k.equals("entry_cont_exclude_filter"))   {
+                this.exclFilter = parseEntryExcludeFilter(e,fullKey(fatherKeyP, k));
+            }  else {
                 log.error("unmanaged key: " + fullKey(fatherKeyP, k, id));
                 System.exit(1);
             }
@@ -322,9 +423,6 @@ public class ConfigReader  extends PageConfigABC {
 
     }
 
-
-
-
 	public ChannelIFC getChannelInfo() {
 		return this.channelInfo;
 	}
@@ -337,7 +435,6 @@ public class ConfigReader  extends PageConfigABC {
 	// -- END Forwarding to gloabl config
 
 	static EntryExcludeFilter entryExcludeFilter = null;
-
 	public EntryExcludeFilter getEntryExcludeFilter(SessionManagerAbstr smPar) {
 		if (entryExcludeFilter == null) {
 			entryExcludeFilter = getEntryExcludeFilterSpecific(smPar);
@@ -348,9 +445,7 @@ public class ConfigReader  extends PageConfigABC {
 	public  EntryExcludeFilter getEntryExcludeFilterSpecific(SessionManagerAbstr smPar) {
 		return null;
 	}
-
 	static EntryIncludeFilter entryIncludeFilter = null;
-
 	public EntryIncludeFilter getEntryIncludeFilter(SessionManagerAbstr smPar) {
 		if (entryIncludeFilter == null) {
 			entryIncludeFilter = getEntryIncludeFilterSpecific(smPar);
@@ -362,20 +457,8 @@ public class ConfigReader  extends PageConfigABC {
 		return null;
 	}
 
-	// jsoup selector for the table in a page
-	public  String TableSelectCSS() {
-		return null;
-	}
 
-	// jsoup selector for the entries in a table
-	public  String EntrySelectCSS() {
-		return null;
-	}
-
-	// table specific scraper/processor
-	TableScraperABC tablePageScraper = null;
-
-	 public TableScraperABC getTableScraperObject(){
+    public TableScraperABC getTableScraperObject(){
 		 return null;
 	 }
 
@@ -383,12 +466,8 @@ public class ConfigReader  extends PageConfigABC {
 		if (tablePageScraper == null) {
 			tablePageScraper = getTableScraperObject();
 		}
-
-
 		log.warn("patch per rimediare a una dipendenza circolare dovuta a design assurdo");
 		tablePageScraper.setPageConfig(this);
-
-
 		return tablePageScraper;
 	}
 
@@ -412,16 +491,28 @@ public class ConfigReader  extends PageConfigABC {
 	}
 
 
+    public SessionLimitsBase getSessionLimits() { return sessionLimits;  }
+    public void setSessionLimits(SessionLimitsBase sessionLimits) { this.sessionLimits = sessionLimits;  }
 
 
-	protected  NextTablePageSelectorsABC getNextTablePageSelectorsSpecific(){
+
+    protected  NextTablePageSelectorsABC getNextTablePageSelectorsSpecific(){
 		return null;
 	}
 
-	protected TableScraperABC tableScraper;
+
+
+	// ----- functionoids non facilmente sostituiti da configurazione -----
+    EntryIncludeFilter inclFilter;
+    EntryExcludeFilter exclFilter;
+
+    // ------ dati sostituibili o sostituiti da configurazione yaml ------
+
 	protected ChannelIFC channelInfo;
 
-	protected EntryCanActOnFilter entryCanActOn;
+    SessionLimitsBase sessionLimits;
+
+
 
 
 	private static Logger log = Logger.getLogger(ConfigReader.class);
