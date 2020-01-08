@@ -2,12 +2,10 @@ package com.enrico200165.weblistscraper.marketingDB;
 
 
 import com.enrico200165.weblistscraper.entities.EntityBase;
-import org.eclipse.persistence.annotations.Index;
 
 import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Timestamp;
-
 
 /**
  * Models the basic common fields of a project that will be stored on DB
@@ -21,6 +19,7 @@ import java.sql.Timestamp;
  * @author enrico
  */
 @Entity
+@Table(indexes = {@Index(name = "USER_ID",  columnList="userID", unique = true) })
 public class ProspectCoreData extends EntityBase  {
 
     public ProspectCoreData() {
@@ -334,7 +333,6 @@ public class ProspectCoreData extends EntityBase  {
     java.sql.Timestamp prospectRecordedByMe;
 
     // --- ID canale (il sito Web o l'app dove lo abbiamo trovato
-    @Index
     String homeID;
     String channelType; // web, altro, manual
 
@@ -353,7 +351,6 @@ public class ProspectCoreData extends EntityBase  {
     String mainEmail; // this is also account/channel info
 
     // --- parte specifica WEB ---
-    @Index
     String userID;
     String adOrProfileEntryUrl; // day they posted their ad or profile
     String privateMessageURL;

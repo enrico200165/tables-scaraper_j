@@ -8,9 +8,9 @@ import com.enrico200165.weblistscraper.page.TableScraperABC;
 import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import com.enrico200165.weblistscraper.tools.*;
 import org.apache.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
 import org.yaml.snakeyaml.Yaml;
 
-import javax.validation.constraints.NotNull;
 import java.io.IOException;
 import java.net.URI;
 import java.nio.file.Files;

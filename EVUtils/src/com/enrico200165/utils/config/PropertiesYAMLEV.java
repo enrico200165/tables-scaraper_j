@@ -1,7 +1,6 @@
 package com.enrico200165.utils.config;
 
 import org.apache.log4j.Logger;
-import org.jetbrains.annotations.NotNull;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.IOException;
@@ -10,21 +9,8 @@ import java.nio.file.Paths;
 import java.util.Map;
 import java.util.Properties;
 
+// import org.yaml.snakeyaml.Yaml;
 
-class Exception_YAMLCfg_WrongType extends Exception {
-
-    public Exception_YAMLCfg_WrongType(String ex_type, String foundType ,String k) {
-        this.key = k;
-        this.expected_type = ex_type;
-        this.found_type = foundType;
-    }
-
-    public String toString() { return "wrong type in YAMLfor key: "+key+" expected: "+expected_type+" found: "+found_type; }
-
-    public String expected_type;
-    public String found_type;
-    public String key;
-}
 
 
 public class PropertiesYAMLEV {
@@ -78,13 +64,19 @@ public class PropertiesYAMLEV {
         return result;
     }
 
+    public static String getNameChild(Map.Entry<String, Object> task) {
+        log.error("metodo da implementare");
+        System.exit(99);
+        return "";
+    }
+
 
     public String get(String key) {
         return properties.get(key);
     }
 
 
-    private static void parseTask(@NotNull Map.Entry<String, Object> task, String fatherKeyP) throws Exception_YAMLCfg_WrongType {
+    private static void parseTask(Map.Entry<String, Object> task, String fatherKeyP) throws Exception_YAMLCfg_WrongType {
         PropertiesYAMLEV.tasksList = task;
         PropertiesYAMLEV.fatherKeyP = fatherKeyP;
 
@@ -111,7 +103,7 @@ public class PropertiesYAMLEV {
     }
 
 
-    private static void parseTaskList(@NotNull Map.Entry<String, Object> tasksList, String fatherKeyP) throws Exception_YAMLCfg_WrongType {
+    private static void parseTaskList(Map.Entry<String, Object> tasksList, String fatherKeyP) throws Exception_YAMLCfg_WrongType {
         PropertiesYAMLEV.tasksList = tasksList;
         PropertiesYAMLEV.fatherKeyP = fatherKeyP;
 

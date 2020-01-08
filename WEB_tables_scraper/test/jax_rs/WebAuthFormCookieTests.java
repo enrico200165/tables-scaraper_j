@@ -1,7 +1,7 @@
 package jax_rs;
 
-import org.junit.Test;
 
+import org.junit.Test;
 
 public class WebAuthFormCookieTests {
 

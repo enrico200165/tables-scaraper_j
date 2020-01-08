@@ -1,8 +1,9 @@
 package com.enrico200165.weblistscraper.tools;
 
 
-import com.enrico200165.utils.str_regex.*;
-import com.enrico200165.weblistscraper.common.*;
+import com.enrico200165.utils.net.http.Utils;
+import com.enrico200165.utils.str_regex.NameValuePairString;
+import com.enrico200165.weblistscraper.common.WEBUtils;
 import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.page.PageProcDescr;
 import org.apache.log4j.Logger;
@@ -18,8 +19,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.enrico200165.utils.net.http.Utils;
 
 
 public class ClientWrapper {

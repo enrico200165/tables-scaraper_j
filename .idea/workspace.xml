@@ -5,46 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb5cd886-e6b4-44fc-bef3-a7e83aff0dcf" name="Default" comment="sembra si era perso tutto">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/00_temp_learn_experiment/00_temp_learn_experiment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/00_temp_learn_experiment/00_temp_learn_experiment.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EVUtils/EVUtils.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EVUtils/EVUtils.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EVUtils/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EVUtils/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_scrape_concorsi/WEB_scrape_concorsi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_concorsi/WEB_scrape_concorsi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_scrape_italianpenpals/WEB_scrape_italianpenpals.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_italianpenpals/WEB_scrape_italianpenpals.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_scrape_japan-guide/WEB_scrape_japan-guide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_japan-guide/WEB_scrape_japan-guide.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/config/PropertiesYAMLEV.java" beforeDir="false" afterPath="$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/config/PropertiesYAMLEV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/str_regex/StringPersistent.java" beforeDir="false" afterPath="$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/str_regex/StringPersistent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/WEB_tables_scraper.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_tables_scraper/WEB_tables_scraper.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/italianpenpals_silverpop/italianpenpals_silverpop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/italianpenpals_silverpop/italianpenpals_silverpop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/ConfigReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/ConfigReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/marketingDB/ProspectCoreData.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/marketingDB/ProspectCoreData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/ClientWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/ClientWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/test/com/enrico200165/cookies/CookieStoreEVTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_tables_scraper/test/com/enrico200165/cookies/CookieStoreEVTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/test/com/enrico200165/cookies/HTTPCookieJPATest.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_tables_scraper/test/com/enrico200165/cookies/HTTPCookieJPATest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/test/jax_rs/WebAuthFormCookieTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_tables_scraper/test/jax_rs/WebAuthFormCookieTests.java" afterDir="false" />
     </list>
-    <ignored path="ev_tools.iws" />
-    <ignored path=".idea/workspace.xml" />
-    <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="ev_tools" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PropertiesYAMLEVTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/EVUtils/test/com/enrico200165/utils/config/PropertiesYAMLEVTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="126" column="24" selection-start-line="126" selection-start-column="24" selection-end-line="126" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -79,287 +71,24 @@
       <GitPushTagMode />
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/WEB_scrape_japan-guide/test/com/enrico200165/utils/html/HTMLDisplayInBrowserTest.java" />
-        <option value="$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/html/HTMLDisplayInBrowser.java" />
-        <option value="$PROJECT_DIR$/EVUtils/test/com/enrico200165/utils/html/HTMLDisplayInBrowserTest.java" />
-        <option value="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/SessionManagerConcorsi.java" />
-        <option value="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/config/WEBTablesScraperConfig.java" />
-        <option value="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/Tasks.java" />
-        <option value="$PROJECT_DIR$/config.yaml" />
-        <option value="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/WEBTablesScraperConfig.java" />
-        <option value="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/PageConfigVanilla.java" />
-        <option value="$PROJECT_DIR$/../../../data_dbs/web_scraper/italianpenpals.org.yaml" />
-        <option value="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/HostConfigVanills.java" />
-        <option value="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/HostConfigVanilla.java" />
-        <option value="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/entities/Concor.java" />
-        <option value="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/configs/test/EntryExcludeFilterConcorsiItTest.java" />
-        <option value="$PROJECT_DIR$/italianpenpals_silverpop/src/com/enrico200165/silverpop/web_scraper/InvocationBuilderSilverpop.java" />
-        <option value="$PROJECT_DIR$/italianpenpals_silverpop/src/com/enrico200165/web/italianpenpals/MainSilverpopItalianPP.java" />
-        <option value="$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/various/PropertiesEV.java" />
-        <option value="$PROJECT_DIR$/EVUtils/test/com/enrico200165/utils/various/PropertiesEVTest.java" />
-        <option value="$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/various/PropertiesYAMLUser.java" />
-        <option value="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/ScrapeTable.java" />
-        <option value="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/ScrapeTask.java" />
-        <option value="$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/various/PropertiesYAMLEV.java" />
-        <option value="$PROJECT_DIR$/EVUtils/test/com/enrico200165/utils/various/PropertiesYAMLEVTest.java" />
-        <option value="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/configs/PageConfigConcorsi.java" />
-        <option value="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/configs/PageConfigConcorsiitSpecInf.java" />
-        <option value="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/configs/PageConfigConcorsiGeo.java" />
-        <option value="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/configs/PageConfigConcorsiSearch.java" />
-        <option value="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/PageConfigABC.java" />
-        <option value="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/configs/HostConfigConcorsiIt.java" />
-        <option value="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/HostConfigABC.java" />
-        <option value="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/MainConcorsiIt.java" />
-        <option value="$PROJECT_DIR$/WEB_scrape_concorsi/test/com/enrico200165/weblistscraper/page/PageProcDescrTest.java" />
-        <option value="$PROJECT_DIR$/WEB_scrape_italianpenpals/src/com/enrico200165/weblistscraper/configs/site_italianpenpals/HostConfigItalianPenPals.java" />
-        <option value="$PROJECT_DIR$/WEB_scrape_italianpenpals/src/com/enrico200165/weblistscraper/configs/site_italianpenpals/MainItalianPenPals.java" />
-        <option value="$PROJECT_DIR$/italianpenpals_silverpop/src/com/enrico200165/web/italianpenpals/ItalianPenPalsSite.java" />
-        <option value="$PROJECT_DIR$/italianpenpals_silverpop/src/com/enrico200165/web/italianpenpals/Silverpop.java" />
-        <option value="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/HostConfig.java" />
-        <option value="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/common/WEBUtils.java" />
-        <option value="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/ClReqFilterCookies.java" />
-        <option value="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/page/PageProcDescr.java" />
-        <option value="$PROJECT_DIR$/WEB_tables_scraper/test/jax_rs/JAXRSUtils.java" />
-        <option value="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/ClientWrapper.java" />
-        <option value="$PROJECT_DIR$/WEB_tables_scraper/test/com/enrico200165/weblistscraper/tools/WEBUtilsTest.java" />
-        <option value="$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/net/http/Utils.java" />
-        <option value="$PROJECT_DIR$/EVUtils/test/com/enrico200165/utils/net/http/UtilsTest.java" />
-        <option value="$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/config/PropertiesYAMLUser.java" />
-        <option value="$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/config/PropertiesYAMLEVTest.java" />
-        <option value="$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/config/PropertiesYAMLEV.java" />
-        <option value="$PROJECT_DIR$/EVUtils/testdelete.txt" />
-        <option value="$PROJECT_DIR$/EVUtils/test.yaml" />
-        <option value="$PROJECT_DIR$/EVUtils/test/com/enrico200165/utils/config/PropertiesYAMLEVTest.java" />
-      </list>
-    </option>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="35" />
-    <option name="y" value="5" />
-    <option name="width" value="1282" />
-    <option name="height" value="725" />
-  </component>
+  <component name="ProjectId" id="1W6OVGMffog3qxh2uKRXL5EJceB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
-      <showMembers Scope="false" PackagesPane="true" ProjectPane="false" />
-      <showLibraryContents PackagesPane="false" />
-      <autoscrollToSource PackagesPane="true" />
-      <autoscrollFromSource Scope="true" PackagesPane="true" ProjectPane="true" />
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ev_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EVUtils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ev_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EVUtils" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ev_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EVUtils" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ev_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EVUtils" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ev_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EVUtils" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="PropertiesYAMLEVTest" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="ev_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WEB_tables_scraper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ev_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WEB_tables_scraper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ev_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WEB_tables_scraper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="enrico200165" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ev_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WEB_tables_scraper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="enrico200165" type="462c0819:PsiDirectoryNode" />
-              <item name="weblistscraper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ev_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WEB_tables_scraper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="enrico200165" type="462c0819:PsiDirectoryNode" />
-              <item name="weblistscraper" type="462c0819:PsiDirectoryNode" />
-              <item name="configs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ev_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="ev_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="junit4-maven" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="ev_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="junit4-maven" type="70bed36:NamedLibraryElementNode" />
-              <item name="junit-4.12.jar" type="b5f07198:RTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ev_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="junit4-maven" type="70bed36:NamedLibraryElementNode" />
-              <item name="junit-4.12.jar" type="b5f07198:RTreeStructureProvider$1" />
-              <item name="junit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ev_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="junit4-maven" type="70bed36:NamedLibraryElementNode" />
-              <item name="junit-4.12.jar" type="b5f07198:RTreeStructureProvider$1" />
-              <item name="junit" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ev_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="junit4-maven" type="70bed36:NamedLibraryElementNode" />
-              <item name="junit-4.12.jar" type="b5f07198:RTreeStructureProvider$1" />
-              <item name="junit" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="runners" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ev_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="junit4-maven" type="70bed36:NamedLibraryElementNode" />
-              <item name="junit-4.12.jar" type="b5f07198:RTreeStructureProvider$1" />
-              <item name="junit" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="runners" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ev_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="junit4-maven" type="70bed36:NamedLibraryElementNode" />
-              <item name="junit-4.12.jar" type="b5f07198:RTreeStructureProvider$1" />
-              <item name="junit" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="runners" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="ReflectiveCallable" type="1a9f42e2:ClassTreeNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ev_tools" type="58d84e3e:PackageViewProjectNode" />
-              <item name="EVUtils" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope">
-        <subPane subId="Problems">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="EVUtils" type="cbb8eebc:String" user="EVUtils" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="EVUtils" type="cbb8eebc:String" user="EVUtils" />
-              <item name="EVUtils" type="cbb8eebc:String" user="EVUtils" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="EVUtils" type="cbb8eebc:String" user="EVUtils" />
-              <item name="EVUtils" type="cbb8eebc:String" user="EVUtils" />
-              <item name="src" type="cbb8eebc:String" user="src" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="EVUtils" type="cbb8eebc:String" user="EVUtils" />
-              <item name="EVUtils" type="cbb8eebc:String" user="EVUtils" />
-              <item name="src" type="cbb8eebc:String" user="src" />
-              <item name="com/enrico200165/utils/net/http" type="cbb8eebc:String" user="com/enrico200165/utils/net/http" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="EVUtils" type="cbb8eebc:String" user="EVUtils" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="EVUtils" type="cbb8eebc:String" user="EVUtils" />
-              <item name="EVUtils" type="cbb8eebc:String" user="EVUtils" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="EVUtils" type="cbb8eebc:String" user="EVUtils" />
-              <item name="EVUtils" type="cbb8eebc:String" user="EVUtils" />
-              <item name="src" type="cbb8eebc:String" user="src" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="EVUtils" type="cbb8eebc:String" user="EVUtils" />
-              <item name="EVUtils" type="cbb8eebc:String" user="EVUtils" />
-              <item name="src" type="cbb8eebc:String" user="src" />
-              <item name="com" type="cbb8eebc:String" user="com" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path" value="V:\data\pers_dev\00_libs\java\3rd_party\maven\snakeYAML" />
+    <property name="Downloaded.Files.Path" value="C:\Users\vialien\Documents\00_ev_data\08_dev\dev_sources\Pers_Tools\maven_libs" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="InvocationBuilderWrapper&#9;PSI&#9;JAVA://com.enrico200165.weblistscraper.tools.InvocationBuilderWrapper" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/EVUtils/test/com/enrico200165/utils" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../00_libs/java/3rd_party/snakeYAML/1.18/snakeyaml-1.18.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.27297795" />
@@ -398,16 +127,25 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.PropertiesYAMLEVTest">
-    <configuration default="true" type="Applet" factoryName="Applet">
+    <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="MainItalianPenPals" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.enrico200165.weblistscraper.configs.site_italianpenpals.MainItalianPenPals" />
       <module name="WEB_scrape_italianpenpals" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="PropertiesYAMLEVTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="EVUtils" />
@@ -417,87 +155,53 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.enrico200165.utils.config" />
       <option name="MAIN_CLASS_NAME" value="com.enrico200165.utils.config.PropertiesYAMLEVTest" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="PropertiesYAMLEVTest.learnIt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="EVUtils" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.enrico200165.utils.config" />
       <option name="MAIN_CLASS_NAME" value="com.enrico200165.utils.config.PropertiesYAMLEVTest" />
       <option name="METHOD_NAME" value="learnIt" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="PropertiesYAMLEVTest.testJacksonYAML" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="EVUtils" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.enrico200165.utils.config" />
       <option name="MAIN_CLASS_NAME" value="com.enrico200165.utils.config.PropertiesYAMLEVTest" />
       <option name="METHOD_NAME" value="testJacksonYAML" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="UtilsTest.URIFromURLString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="EVUtils" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.enrico200165.utils.net.http" />
       <option name="MAIN_CLASS_NAME" value="com.enrico200165.utils.net.http.UtilsTest" />
       <option name="METHOD_NAME" value="URIFromURLString" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
       <module name="00_temp_learn_experiment" />
@@ -508,10 +212,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" />
       <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.PropertiesYAMLEVTest.testJacksonYAML" />
       <item itemvalue="Application.MainItalianPenPals" />
+      <item itemvalue="JUnit.PropertiesYAMLEVTest.testJacksonYAML" />
       <item itemvalue="JUnit.UtilsTest.URIFromURLString" />
       <item itemvalue="JUnit.PropertiesYAMLEVTest.learnIt" />
       <item itemvalue="JUnit.PropertiesYAMLEVTest" />
@@ -568,38 +275,6 @@
     <option name="localTasksCounter" value="5" />
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="PropertiesYAMLEVTest - 2018.07.02 at 19h 24m 27s.xml">
-      <configuration name="PropertiesYAMLEVTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PropertiesYAMLEVTest - 2018.07.02 at 19h 27m 06s.xml">
-      <configuration name="PropertiesYAMLEVTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PropertiesYAMLEVTest - 2018.07.02 at 19h 28m 21s.xml">
-      <configuration name="PropertiesYAMLEVTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PropertiesYAMLEVTest - 2018.07.02 at 19h 30m 55s.xml">
-      <configuration name="PropertiesYAMLEVTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PropertiesYAMLEVTest - 2018.07.02 at 19h 32m 06s.xml">
-      <configuration name="PropertiesYAMLEVTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PropertiesYAMLEVTest - 2018.07.02 at 19h 32m 16s.xml">
-      <configuration name="PropertiesYAMLEVTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PropertiesYAMLEVTest - 2018.07.02 at 19h 32m 50s.xml">
-      <configuration name="PropertiesYAMLEVTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PropertiesYAMLEVTest - 2018.07.02 at 19h 33m 51s.xml">
-      <configuration name="PropertiesYAMLEVTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PropertiesYAMLEVTest - 2018.07.02 at 19h 36m 07s.xml">
-      <configuration name="PropertiesYAMLEVTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PropertiesYAMLEVTest - 2018.07.02 at 19h 44m 31s.xml">
-      <configuration name="PropertiesYAMLEVTest" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -609,42 +284,16 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <layout>
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="bottom" id="TODO" order="5" weight="0.3282572" />
-      <window_info anchor="bottom" id="Messages" order="6" sideWeight="0.48564398" weight="0.27492878" />
-      <window_info id="Palette&#9;" order="2" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5080537" side_tool="true" visible="true" weight="0.41880342" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49571276" weight="0.3974359" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3282572" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3282572" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info anchor="right" id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.47880298" visible="true" weight="0.19060403" />
-      <window_info anchor="right" id="R Packages" />
-      <window_info anchor="right" id="R Graphics" />
-      <window_info id="Structure" order="1" sideWeight="0.49513382" side_tool="true" weight="0.25716442" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="bottom" id="Debug" order="11" sideWeight="0.4919463" weight="0.41880342" />
-      <window_info id="Favorites" order="2" sideWeight="0.521197" side_tool="true" weight="0.2907268" />
-      <window_info anchor="bottom" id="Inspection" order="4" weight="0.3988355" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Analyze Dataflow to" order="10" weight="0.44250363" />
-      <window_info id="Nl-Palette" order="2" />
-      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
-      <window_info anchor="right" id="Properties" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.13451232" />
-      <window_info anchor="right" id="Data View" order="6" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3264192" />
-    </layout>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -653,9 +302,6 @@
     <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
       <collection />
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="sembra si era perso tutto" />
@@ -670,493 +316,58 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$PROJECT_DIR$/../../../00_libs/java/3rd_party/jsoup/jsoup-1.8.2-sources.jar!/org/jsoup/helper/Validate.java</url>
           <line>15</line>
-          <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/html/HTMLDisplayInBrowser.java</url>
           <line>27</line>
-          <properties />
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/html/HTMLDisplayInBrowser.java</url>
           <line>24</line>
-          <properties />
           <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/PageConfigABC.java</url>
-          <line>183</line>
-          <properties />
-          <option name="timeStamp" value="94" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/HostConfig.java</url>
           <line>114</line>
-          <properties />
           <option name="timeStamp" value="115" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/ClReqFilterCookies.java</url>
           <line>48</line>
-          <properties />
           <option name="timeStamp" value="118" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/HostConfig.java</url>
           <line>94</line>
-          <properties />
           <option name="timeStamp" value="119" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/HostConfig.java</url>
           <line>71</line>
-          <properties />
           <option name="timeStamp" value="128" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/config/PropertiesYAMLEV.java</url>
-          <line>24</line>
-          <properties />
+          <line>27</line>
           <option name="timeStamp" value="145" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/EVUtils/test/com/enrico200165/utils/config/PropertiesYAMLEVTest.java</url>
           <line>130</line>
-          <properties />
           <option name="timeStamp" value="148" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/EVUtils/test/com/enrico200165/utils/config/PropertiesYAMLEVTest.java</url>
           <line>124</line>
-          <properties />
           <option name="timeStamp" value="149" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="151" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/configs/PageConfigConcorsiSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="17" column="101" selection-start-line="17" selection-start-column="101" selection-end-line="17" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/configs/PageConfigConcorsi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/MainConcorsiIt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/configs/HostConfigConcorsiIt.java" />
-    <entry file="file://$PROJECT_DIR$/WEB_scrape_concorsi/test/com/enrico200165/weblistscraper/page/PageProcDescrTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="39" column="21" lean-forward="true" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/page/PageProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="152" selection-start-line="152" selection-end-line="152" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/InvocationBuilderWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../00_libs/java/3rd_party/jaxrs-ri-2.22.1/jaxrs-ri/lib/jersey-client.jar!/org/glassfish/jersey/client/JerseyInvocation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="167" column="87" selection-start-line="167" selection-start-column="87" selection-end-line="167" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/EntryProcessorConcorsiBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/EntryProcessorConcorsiItSpecInf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/drupal7/HostConfigDrupalLocal.java" />
-    <entry file="file://$PROJECT_DIR$/WEB_scrape_italianpenpals/src/com/enrico200165/weblistscraper/configs/site_italianpenpals/HostConfigItalianPenPals.java" />
-    <entry file="file://$PROJECT_DIR$/italianpenpals_silverpop/src/com/enrico200165/web/italianpenpals/ItalianPenPalsSite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="78" column="14" lean-forward="true" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/italianpenpals_silverpop/src/com/enrico200165/web/italianpenpals/Silverpop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/FormManagerABC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/drupal7/FormManagerLoginDrupal7.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/HostConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="98" selection-start-line="98" selection-end-line="98" />
-          <folding>
-            <element signature="e#2709#2710#0" expanded="true" />
-            <element signature="e#3149#3150#0" expanded="true" />
-            <element signature="e#3199#3200#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/ClReqFilterCookies.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="52" column="38" lean-forward="true" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_scrape_japan-guide/src/com/enrico200165/weblistscraper/configs/site_japanguide/HostConfigJapanguide.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/common/WEBUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="64" column="41" lean-forward="true" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/ClientWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="133" column="11" selection-start-line="133" selection-start-column="11" selection-end-line="133" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/page/PageProcDescr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="122" column="38" selection-start-line="122" selection-start-column="38" selection-end-line="122" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_tables_scraper/test/jax_rs/JAXRSUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_tables_scraper/test/com/enrico200165/weblistscraper/tools/WEBUtilsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-717">
-          <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/various/Utl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1608">
-          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../00_libs/java/3rd_party/junit4/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EVUtils/testdelete.txt" />
-    <entry file="file://$PROJECT_DIR$/EVUtils/temp2" />
-    <entry file="file://$PROJECT_DIR$/EVUtils/temp" />
-    <entry file="jar://V:/programs/08_dev/jdk1.8.0_20/src.zip!/java/util/LinkedHashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="165" column="1" selection-start-line="165" selection-end-line="165" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EVUtils/test/com/enrico200165/utils/net/http/UtilsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EVUtils/log.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EVUtils/build.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EVUtils/test/com/enrico200165/utils/files/FileHashGeneratorExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/config/PropertiesYAMLUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/00_temp_learn_experiment/jdbc.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/net/http/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/page/TableScraperABC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/ResponseWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/marketingDB/ProspectCoreData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/entities/Concor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_scrape_italianpenpals/src/com/enrico200165/weblistscraper/configs/site_italianpenpals/MainItalianPenPals.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="73" column="48" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/rdb_jdbc/JDBCEVSelectABC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/net/mail/SendMailTLS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_scrape_italianpenpals/src/com/enrico200165/weblistscraper/configs/site_italianpenpals/EntryExcludeFilterItalianPenpals.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/net/SftpHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/PageConfigABC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding>
-            <element signature="e#1364#1365#0" expanded="true" />
-            <element signature="e#1390#1391#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EVUtils/test.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="29" lean-forward="true" selection-end-line="16" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/config/PropertiesYAMLEV.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../00_libs/java/3rd_party/maven/junit4-maven/current/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EVUtils/test/com/enrico200165/utils/config/PropertiesYAMLEVTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="126" column="24" selection-start-line="126" selection-start-column="24" selection-end-line="126" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.27297795" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.27297795" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>org.codehaus.modello:modello-plugin-snakeyaml:1.9.1</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.27297795" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.27297795" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>EVUtils</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.27297795" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>R User Library</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.27297795" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
