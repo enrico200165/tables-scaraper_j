@@ -18,7 +18,8 @@ import org.apache.log4j.Logger;
  */
 public abstract class PageConfigABC {
 
-	public PageConfigABC(HostConfig hcPar, TableScraperABC ts, EntryCanActOnFilter entryCanActOnPar, ChannelIFC channelInfoPar) {
+	public PageConfigABC(HostConfig hcPar, TableScraperABC ts, EntryCanActOnFilter entryCanActOnPar
+			, ChannelIFC channelInfoPar) {
 		super();
 
 		this.hConfig = hcPar;  // in YAML

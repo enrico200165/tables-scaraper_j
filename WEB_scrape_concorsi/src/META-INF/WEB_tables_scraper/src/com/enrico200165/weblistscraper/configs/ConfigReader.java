@@ -1,21 +1,23 @@
 package com.enrico200165.weblistscraper.configs;
 
 import com.enrico200165.utils.config.Exception_YAMLCfg_WrongType;
-import com.enrico200165.utils.config.PropertiesYAMLEV;
-import com.enrico200165.weblistscraper.page.EntryProcessorABC;
+import com.enrico200165.utils.config.YAML2Map;
 import com.enrico200165.weblistscraper.page.NextTablePageSelectorsABC;
-import com.enrico200165.weblistscraper.page.TableScraperABC;
-import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
-import com.enrico200165.weblistscraper.tools.*;
+import com.enrico200165.weblistscraper.tools.EntryExcludeFilter;
+import com.enrico200165.weblistscraper.tools.EntryExcludeFilterVanilla;
+import com.enrico200165.weblistscraper.tools.EntryIncludeFilter;
+import com.enrico200165.weblistscraper.tools.EntryIncludeFilterVanilla;
 import org.apache.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
-import org.yaml.snakeyaml.Yaml;
 
-import java.io.IOException;
 import java.net.URI;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Map;
+
+//import com.enrico200165.utils.config.PropertiesYAMLEV;
+
+
+
+
 
 /**
  * Read config from YAML
@@ -24,15 +26,10 @@ import java.util.Map;
  *
  */
 
-public class ConfigReader  extends PageConfigABC {
+public class ConfigReader   {
 
 
-    public ConfigReader(String cfgFName, HostConfig hcPar, TableScraperABC ts
-            , EntryCanActOnFilter entryCanActOnPar, ChannelIFC channelInfoPar) {
-        super(null,null,null,null);
-
-        this.tableScraper = ts;
-        this.entryCanActOn = entryCanActOnPar;
+    public ConfigReader() {
     }
 
 
@@ -65,26 +62,9 @@ public class ConfigReader  extends PageConfigABC {
         return null;
     }
 
-    // jsoup selector for the entries in a table
-    public  String EntrySelectCSS() {
-        return null;
-    }
-
-    public EntryIncludeFilter getInclFilter() { return inclFilter; }
-
-    public EntryExcludeFilter getExclFilter() { return exclFilter; }
-
-
-
-
-    // ------- DIRTY MIGRATION METHODS, TO BE REMOVED ------------
-
-
-    // ------- end DIRTY MIGRATION METHODS, TO BE REMOVED ---------
-
     private static LoginConfig parseLogin(Map.Entry<String, Object> task, String fatherKeyP) throws Exception_YAMLCfg_WrongType {
 
-        String id = PropertiesYAMLEV.getNameChild(task); assert (id.length() > 0);
+        String id = YAML2Map.getNameFromChild(task); assert (id.length() > 0);
 
         LoginConfig lc = new LoginConfig();
 
@@ -120,7 +100,7 @@ public class ConfigReader  extends PageConfigABC {
     private static HostConfig parseHost(Map.Entry<String, Object> task, String fatherKeyP)
             throws Exception_YAMLCfg_WrongType {
 
-        String id = PropertiesYAMLEV.getNameChild(task); assert (id.length() > 0);
+        String id = YAML2Map.getNameFromChild(task); assert (id.length() > 0);
 
         HostConfig hc = new HostConfig();
         LoginConfig lc = null;
@@ -155,7 +135,7 @@ public class ConfigReader  extends PageConfigABC {
     private static ChannelIFC parseChannel(Map.Entry<String, Object> entryPar, String fatherKeyP)
             throws Exception_YAMLCfg_WrongType {
 
-        String id = PropertiesYAMLEV.getNameChild(entryPar); assert (id.length() > 0);
+        String id = YAML2Map.getNameFromChild(entryPar); assert (id.length() > 0);
 
         ChannelIFC chann = new ChannelConfigVanilla();
 
@@ -184,7 +164,7 @@ public class ConfigReader  extends PageConfigABC {
     private static NextTablePageSelectorsABC parseNextPageSel(Map.Entry<String, Object> entryPar, String fatherKeyP)
             throws Exception_YAMLCfg_WrongType {
 
-        String id = PropertiesYAMLEV.getNameChild(entryPar); assert (id.length() > 0);
+        String id = YAML2Map.getNameFromChild(entryPar); assert (id.length() > 0);
 
         NextTablePageSelectorsABC nextPageSel = new NextTablePageSelectorsABC();
 
@@ -214,7 +194,7 @@ public class ConfigReader  extends PageConfigABC {
     private static SessionLimitsBase parseSessionLimits(Map.Entry<String, Object> entryPar, String fatherKeyP)
             throws Exception_YAMLCfg_WrongType {
 
-        String id = PropertiesYAMLEV.getNameChild(entryPar); assert (id.length() > 0);
+        String id = YAML2Map.getNameFromChild(entryPar); assert (id.length() > 0);
 
         SessionLimitsBase limits = new SessionLimitsBase();
 
@@ -249,7 +229,7 @@ public class ConfigReader  extends PageConfigABC {
     private EntryIncludeFilter parseEntryIncludeFilter(Map.Entry<String, Object> entryPar, String fatherKeyP)
             throws Exception_YAMLCfg_WrongType {
 
-        String id = PropertiesYAMLEV.getNameChild(entryPar); assert (id.length() > 0);
+        String id = YAML2Map.getNameFromChild(entryPar); assert (id.length() > 0);
 
         EntryIncludeFilter inclFilter = new EntryIncludeFilterVanilla(null);
 
@@ -273,7 +253,7 @@ public class ConfigReader  extends PageConfigABC {
     private EntryExcludeFilter parseEntryExcludeFilter(Map.Entry<String, Object> entryPar, String fatherKeyP)
             throws Exception_YAMLCfg_WrongType {
 
-        String id = PropertiesYAMLEV.getNameChild(entryPar); assert (id.length() > 0);
+        String id = YAML2Map.getNameFromChild(entryPar); assert (id.length() > 0);
 
         EntryExcludeFilter  filter = new EntryExcludeFilterVanilla(null);
 
@@ -299,10 +279,10 @@ public class ConfigReader  extends PageConfigABC {
     private PageConfigVanilla parseTable(Map.Entry<String, Object> entryPar, String fatherKeyP)
             throws Exception_YAMLCfg_WrongType {
 
-        String id = PropertiesYAMLEV.getNameChild(entryPar); assert (id.length() > 0);
+        String id = YAML2Map.getNameFromChild(entryPar); assert (id.length() > 0);
 
-        PageConfigVanilla pg_cfg = new PageConfigVanilla("temporary" , null
-        ,  null, null , null, this);
+        PageConfigVanilla pg_cfg = new PageConfigVanilla("temporary" , null,
+                null, null , null, this.gCfg);
 
         Map<String, Object> taskListChildren = (Map<String, Object>) entryPar.getValue();
         for (Map.Entry<String, Object> e : taskListChildren.entrySet()) {
@@ -320,9 +300,9 @@ public class ConfigReader  extends PageConfigABC {
             } else if (k.equals("session_limits"))   {
                 SessionLimitsBase sessLim = parseSessionLimits(e, fullKey(fatherKeyP,k));
             } else if (k.equals("entry_cont_include_filter"))   {
-                this.inclFilter = parseEntryIncludeFilter(e,fullKey(fatherKeyP, k));
+                gCfg.inclFilter = parseEntryIncludeFilter(e,fullKey(fatherKeyP, k));
             } else if (k.equals("entry_cont_exclude_filter"))   {
-                this.exclFilter = parseEntryExcludeFilter(e,fullKey(fatherKeyP, k));
+                gCfg.exclFilter = parseEntryExcludeFilter(e,fullKey(fatherKeyP, k));
             }  else {
                 log.error("unmanaged key: " + fullKey(fatherKeyP, k, id));
                 System.exit(1);
@@ -337,7 +317,7 @@ public class ConfigReader  extends PageConfigABC {
 
     private void parseTask(Map.Entry<String, Object> task, String fatherKeyP) throws Exception_YAMLCfg_WrongType {
 
-	    String id = PropertiesYAMLEV.getNameChild(task);
+	    String id = YAML2Map.getNameFromChild(task);
 	    assert(id.length() > 0);
 
         Map<String , Object> taskListChildren = (Map<String , Object> ) task.getValue();
@@ -354,10 +334,10 @@ public class ConfigReader  extends PageConfigABC {
             if (k.equals(ID_KEY)) {}
             else if (k.equals(HOST_KEY)) {
                 log.warn("temporary dirt workaround while restructuring, remove ASAP");
-                this.hConfig = parseHost(e, fullKey(fatherKeyP, k, id));
+                gCfg.hConfig = parseHost(e, fullKey(fatherKeyP, k, id));
             } else if (k.equals(CHANNEL_KEY)) {
                     log.warn("temporary dirt workaround while restructuring, remove ASAP");
-                    this.channelInfo = parseChannel(e,fullKey(fatherKeyP,k,id));
+                gCfg.channelInfo = parseChannel(e,fullKey(fatherKeyP,k,id));
             } else if (k.equals(TABLE_KEY)) {
                 log.warn("temporary dirt workaround while restructuring, remove ASAP");
                 parseTable(e,fullKey(fatherKeyP,k));
@@ -389,27 +369,25 @@ public class ConfigReader  extends PageConfigABC {
     }
 
 
+    /**
+     *
+     * @param fpath
+     */
+    public ScrapeGLobConfig parseYAMLConfig(String fpath) {
 
-
-
-    public void parseYAMLConfig(String fpath) {
-
-        String content = null;
-
-        try  {  content = new String(Files.readAllBytes(Paths.get(fpath))); }
-        catch (IOException e) { log.error("working dir"+System.getProperty("user.dir"),e);  }
-
-        Map<String, Object> prop = (Map<String, Object>) (new Yaml()).load(content);
+        this.gCfg = new ScrapeGLobConfig("dummyName", null, null, null, null);;
+        Map<String, Object> prop = YAML2Map.YAML2Map(fpath);
 
         try {
             for (Map.Entry<String, Object> entry : prop.entrySet()) {
 
-                String k = entry.getKey(); Object value_o = entry.getValue();
+                String entry_type = entry.getKey();
 
-                if (k.equals("task_list")) { parseTaskList(entry ,k); continue; }
-                if (k.equals("ID")) { log.info("ID:"+PropertiesYAMLEV.getNameChild(entry)); continue; }
-
-                log.error("unmanaged key: "+k+" exiting");
+                if (entry_type.equals("task_list")) {
+                    parseTaskList(entry ,entry_type);
+                    continue;
+                }
+                log.error("unmanaged entry type/key: "+entry_type+" exiting");
                 System.exit(1);
             }
         } catch (Exception_YAMLCfg_WrongType e) {
@@ -420,100 +398,12 @@ public class ConfigReader  extends PageConfigABC {
 
         log.info("Completed yaml file parsing");
 
-
+        return gCfg;
     }
 
-	public ChannelIFC getChannelInfo() {
-		return this.channelInfo;
-	}
 
+    // todo qui solo per semplificare, dovrebbe essere locale
+    ScrapeGLobConfig gCfg = null; // new ScrapeGLobConfig();
 
-	public EntryCanActOnFilter getContactProspectFilter() {
-		return entryCanActOn;
-	}
-
-	// -- END Forwarding to gloabl config
-
-	static EntryExcludeFilter entryExcludeFilter = null;
-	public EntryExcludeFilter getEntryExcludeFilter(SessionManagerAbstr smPar) {
-		if (entryExcludeFilter == null) {
-			entryExcludeFilter = getEntryExcludeFilterSpecific(smPar);
-		}
-		return entryExcludeFilter;
-	}
-
-	public  EntryExcludeFilter getEntryExcludeFilterSpecific(SessionManagerAbstr smPar) {
-		return null;
-	}
-	static EntryIncludeFilter entryIncludeFilter = null;
-	public EntryIncludeFilter getEntryIncludeFilter(SessionManagerAbstr smPar) {
-		if (entryIncludeFilter == null) {
-			entryIncludeFilter = getEntryIncludeFilterSpecific(smPar);
-		}
-		return entryIncludeFilter;
-	}
-
-	public  EntryIncludeFilter getEntryIncludeFilterSpecific(SessionManagerAbstr smPar){
-		return null;
-	}
-
-
-    public TableScraperABC getTableScraperObject(){
-		 return null;
-	 }
-
-	public TableScraperABC getTableScraper() {
-		if (tablePageScraper == null) {
-			tablePageScraper = getTableScraperObject();
-		}
-		log.warn("patch per rimediare a una dipendenza circolare dovuta a design assurdo");
-		tablePageScraper.setPageConfig(this);
-		return tablePageScraper;
-	}
-
-	// table&entry specific /processor
-
-	 public EntryProcessorABC getEntryProcObject(String configID){
-		 return null;
-	 }
-
-	 public EntryProcessorABC getEntryProc(String configID){
-		 return null;
-	 }
-
-	static NextTablePageSelectorsABC nextTablePageSelectorsABC = null;
-
-	public NextTablePageSelectorsABC getNextTablePageSelectors() {
-		if (nextTablePageSelectorsABC == null) {
-			nextTablePageSelectorsABC = getNextTablePageSelectorsSpecific();
-		}
-		return nextTablePageSelectorsABC;
-	}
-
-
-    public SessionLimitsBase getSessionLimits() { return sessionLimits;  }
-    public void setSessionLimits(SessionLimitsBase sessionLimits) { this.sessionLimits = sessionLimits;  }
-
-
-
-    protected  NextTablePageSelectorsABC getNextTablePageSelectorsSpecific(){
-		return null;
-	}
-
-
-
-	// ----- functionoids non facilmente sostituiti da configurazione -----
-    EntryIncludeFilter inclFilter;
-    EntryExcludeFilter exclFilter;
-
-    // ------ dati sostituibili o sostituiti da configurazione yaml ------
-
-	protected ChannelIFC channelInfo;
-
-    SessionLimitsBase sessionLimits;
-
-
-
-
-	private static Logger log = Logger.getLogger(ConfigReader.class);
+    private static Logger log = Logger.getLogger(ConfigReader.class);
 }

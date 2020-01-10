@@ -20,7 +20,7 @@ public class PageConfigVanilla extends PageConfigABC {
 
 	public PageConfigVanilla(String cfgFName, HostConfig hcPar, TableScraperABC ts
 			,EntryCanActOnFilter entryCanActOnPar, ChannelIFC channelInfoPar,
-							 ConfigReader cfgRdrP) {
+							 ScrapeGLobConfig cfgRdrP) {
 		super(null,null,null,null);
 		this.hc = hcPar;
 		this.channelInfo = channelInfoPar;
@@ -29,18 +29,18 @@ public class PageConfigVanilla extends PageConfigABC {
 		this.tableScraper = ts;
 		this.entryCanActOn = entryCanActOnPar;
 
-		this.cfgRdr = cfgRdrP;
+		this.gCfg = cfgRdrP;
 	}
 
-	public ChannelIFC getChannelInfo() { return cfgRdr.getChannelInfo(); }
+	public ChannelIFC getChannelInfo() { return gCfg.getChannelInfo(); }
 	public HostConfig getHostConfig() {
-		return cfgRdr.getHostConfig();
+		return gCfg.getHostConfig();
 	}
 	public EntryExcludeFilter getEntryExcludeFilter(SessionManagerAbstr smPar) {
-		return cfgRdr.getEntryExcludeFilter(smPar);
+		return gCfg.getEntryExcludeFilter(smPar);
 	}
 	public EntryIncludeFilter getEntryIncludeFilter(SessionManagerAbstr smPar) {
-		return cfgRdr.getEntryIncludeFilter(smPar);
+		return gCfg.getEntryIncludeFilter(smPar);
 	}
 
 	public  EntryExcludeFilter getEntryExcludeFilterSpecific(SessionManagerAbstr smPar) {
@@ -50,7 +50,7 @@ public class PageConfigVanilla extends PageConfigABC {
 		return null;
 	}
 	public NextTablePageSelectorsABC getNextTablePageSelectors() {
-		return cfgRdr.getNextTablePageSelectors();
+		return gCfg.getNextTablePageSelectors();
 	}
 
 
@@ -119,25 +119,19 @@ public class PageConfigVanilla extends PageConfigABC {
 	}
 
 
-
-	// functionoids
-	protected TableScraperABC tableScraper;
-	protected EntryCanActOnFilter entryCanActOn;
-
-	// already in YAML
-	protected ChannelIFC channelInfo;
-	protected HostConfig hc;
-
-
 	protected  NextTablePageSelectorsABC getNextTablePageSelectorsSpecific(){
 		return null;
 	}
 
 
+	// functionoids
+	protected TableScraperABC tableScraper;
+	protected EntryCanActOnFilter entryCanActOn;
+	// already in YAML
+	protected ChannelIFC channelInfo;
+	protected HostConfig hc;
 	String tableURl;
-
-
-	ConfigReader cfgRdr;
+	ScrapeGLobConfig gCfg;
 
 	private static Logger log = Logger.getLogger(PageConfigVanilla.class);
 }
