@@ -1,16 +1,13 @@
 package com.enrico200165.weblistscraper.configs.site_japanguide;
 
-import com.enrico200165.weblistscraper.marketingDB.*;
-import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
+import com.enrico200165.weblistscraper.marketingDB.ProspectCoreData;
 import com.enrico200165.weblistscraper.tools.EntryIncludeFilter;
-import org.apache.log4j.*;
+import org.apache.log4j.Logger;
 import org.jsoup.nodes.Element;
 
 public class EntryIncludeFilterJapanguide extends EntryIncludeFilter {
 
-	EntryIncludeFilterJapanguide(SessionManagerAbstr smpar) {
-		super(smpar);
-		// TODO Auto-generated constructor stub
+	EntryIncludeFilterJapanguide() {
 	}
 
 	@Override

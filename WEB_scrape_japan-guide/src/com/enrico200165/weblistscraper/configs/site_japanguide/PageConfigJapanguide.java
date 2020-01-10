@@ -7,7 +7,6 @@ import com.enrico200165.weblistscraper.tools.EntryCanActOnFilter;
 import com.enrico200165.weblistscraper.page.EntryProcessorABC;
 import com.enrico200165.weblistscraper.page.NextTablePageSelectorsABC;
 import com.enrico200165.weblistscraper.page.TableScraperABC;
-import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import com.enrico200165.weblistscraper.tools.EntryExcludeFilter;
 import com.enrico200165.weblistscraper.tools.EntryIncludeFilter;
 import org.apache.log4j.Logger;
@@ -19,13 +18,13 @@ public class PageConfigJapanguide extends PageConfigABC {
 	}
 
 	@Override
-	public EntryExcludeFilter getEntryExcludeFilterSpecific(SessionManagerAbstr smPar) {
-		return new EntryExcludeFilterJapanguide(smPar);
+	public EntryExcludeFilter getEntryExcludeFilterSpecific() {
+		return new EntryExcludeFilterJapanguide();
 	}
 
 	@Override
-	public EntryIncludeFilter getEntryIncludeFilterSpecific(SessionManagerAbstr smPar) {
-		return new EntryIncludeFilterJapanguide(smPar);
+	public EntryIncludeFilter getEntryIncludeFilterSpecific() {
+		return new EntryIncludeFilterJapanguide();
 	}
 
 	@Override
@@ -66,5 +65,4 @@ public class PageConfigJapanguide extends PageConfigABC {
 	}
 
 	private static org.apache.log4j.Logger log = Logger.getLogger(PageConfigJapanguide.class);
-
 }

@@ -80,7 +80,7 @@ public abstract class EntryProcessorConcorsiBase extends EntryProcessorABC {
 		fillEntry(conc, entryRawHTML, fullURL, otherParams, excludeIt);
 
 		if (!excludeIt) {
-			excludeIt = pageConfig.getEntryExcludeFilter(smgr).excludeTypedEntry(conc);
+			excludeIt = pageConfig.getEntryExcludeFilter().excludeTypedEntry(conc);
 			if (excludeIt) {
 				log.debug("");
 			}

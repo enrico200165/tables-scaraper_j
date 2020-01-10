@@ -1,16 +1,12 @@
 package com.enrico200165.weblistscraper.tools;
 
 
-import com.enrico200165.weblistscraper.marketingDB.*;
+import com.enrico200165.weblistscraper.marketingDB.ProspectCoreData;
 import org.jsoup.nodes.Element;
-
-import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 
 public abstract class EntryIncludeFilter extends FilterBase {
 
-    public EntryIncludeFilter(SessionManagerAbstr smpar) {
-        super(smpar);
-        // TODO Auto-generated constructor stub
+    public EntryIncludeFilter() {
     }
 
     abstract public boolean includeEntrySpecific(Element entry);

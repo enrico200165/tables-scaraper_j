@@ -1,15 +1,12 @@
 package com.enrico200165.weblistscraper.configs.site_italianpenpals;
 
-import com.enrico200165.weblistscraper.marketingDB.*;
-import org.jsoup.nodes.Element;
-
-import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
+import com.enrico200165.weblistscraper.marketingDB.ProspectCoreData;
 import com.enrico200165.weblistscraper.tools.EntryIncludeFilter;
+import org.jsoup.nodes.Element;
 
 public class EntryIncludeFilterItalianPenpals extends EntryIncludeFilter {
 
-	EntryIncludeFilterItalianPenpals(SessionManagerAbstr smpar) {
-		super(smpar);
+	EntryIncludeFilterItalianPenpals() {
 	}
 
 	@Override

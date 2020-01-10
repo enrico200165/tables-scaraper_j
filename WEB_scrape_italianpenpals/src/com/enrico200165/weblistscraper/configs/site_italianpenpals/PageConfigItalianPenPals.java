@@ -6,7 +6,6 @@ import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.page.EntryProcessorABC;
 import com.enrico200165.weblistscraper.page.NextTablePageSelectorsABC;
 import com.enrico200165.weblistscraper.page.TableScraperABC;
-import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import com.enrico200165.weblistscraper.tools.EntryCanActOnFilter;
 import com.enrico200165.weblistscraper.tools.EntryExcludeFilter;
 import com.enrico200165.weblistscraper.tools.EntryIncludeFilter;
@@ -47,13 +46,13 @@ public class PageConfigItalianPenPals extends PageConfigABC {
 	}
 
 	@Override
-	public EntryIncludeFilter getEntryIncludeFilterSpecific(SessionManagerAbstr smPar) {
-		return new EntryIncludeFilterItalianPenpals(smPar);
+	public EntryIncludeFilter getEntryIncludeFilterSpecific() {
+		return new EntryIncludeFilterItalianPenpals();
 	}
 
 	@Override
-	public EntryExcludeFilter getEntryExcludeFilterSpecific(SessionManagerAbstr smPar) {
-		return new EntryExcludeFilterItalianPenpals(smPar);
+	public EntryExcludeFilter getEntryExcludeFilterSpecific() {
+		return new EntryExcludeFilterItalianPenpals();
 	}
 
 	public EntryProcessorABC getEntryProc(String configID) {

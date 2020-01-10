@@ -1,23 +1,20 @@
 package com.enrico200165.weblistscraper.tools;
 
 
-import com.enrico200165.weblistscraper.marketingDB.*;
+import com.enrico200165.weblistscraper.marketingDB.ProspectCoreData;
+import org.apache.log4j.Logger;
 import org.jsoup.nodes.Element;
 
-import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
+public class EntryHTMLIncludeFilter extends FilterBase {
 
-public abstract class EntryIncludeFilter extends FilterBase {
-
-    public EntryIncludeFilter(SessionManagerAbstr smpar) {
-        super(smpar);
-        // TODO Auto-generated constructor stub
+    public EntryHTMLIncludeFilter() {
     }
 
-    abstract public boolean includeEntrySpecific(Element entry);
-
     public boolean includeHTMLEntry(Element entry) {
+
         boolean ret = false;
-        if (ret = includeEntrySpecific(entry)) {
+        log.error("not implemented");
+        if (ret) {
             incrTrueEntry();
         } else {
             incrFalseEntry();
@@ -25,11 +22,12 @@ public abstract class EntryIncludeFilter extends FilterBase {
         return ret;
     }
 
-    abstract public boolean includeProspectSpecific(ProspectCoreData prospectCastIt);
-
     public boolean includeProspect(ProspectCoreData prospectCastIt) {
         boolean ret;
-        if (ret = includeProspectSpecific(prospectCastIt)) {
+
+        ret = false;
+        log.error("not implemented");
+        if (ret) {
             incrTrueProspect();
         } else {
             incrFalseProspect();
@@ -37,4 +35,5 @@ public abstract class EntryIncludeFilter extends FilterBase {
         return ret;
     }
 
+    private static Logger log = Logger.getLogger(EntryHTMLIncludeFilter.class);
 }

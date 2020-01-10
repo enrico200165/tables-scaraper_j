@@ -4,9 +4,9 @@ import com.enrico200165.weblistscraper.marketingDB.ProspectCoreData;
 import org.apache.log4j.Logger;
 import org.jsoup.nodes.Element;
 
-public class EntryHTMLExcludeFilterVanilla extends EntryExcludeFilter {
+public class EntryHTMLExcludeFilter extends EntryExcludeFilter {
 
-	public EntryHTMLExcludeFilterVanilla() {
+	public EntryHTMLExcludeFilter() {
 	}
 
 	public boolean exclude(Element entry,  StringBuffer comments) {
@@ -45,6 +45,6 @@ public class EntryHTMLExcludeFilterVanilla extends EntryExcludeFilter {
 		return ret;
 	}
 
-	private static Logger log = Logger.getLogger(EntryHTMLExcludeFilterVanilla.class);
+	private static Logger log = Logger.getLogger(EntryHTMLExcludeFilter.class);
 
 }

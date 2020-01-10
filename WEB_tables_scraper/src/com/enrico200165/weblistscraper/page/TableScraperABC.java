@@ -1,15 +1,15 @@
 package com.enrico200165.weblistscraper.page;
 
+import com.enrico200165.weblistscraper.configs.PageConfigABC;
+import com.enrico200165.weblistscraper.configs.SessionLimitsBase;
+import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import com.enrico200165.weblistscraper.tools.EntryExcludeFilter;
 import com.enrico200165.weblistscraper.tools.ResponseWrapper;
-import org.apache.log4j.Logger;
-import org.jsoup.nodes.*;
-import org.jsoup.select.Elements;
-
-import com.enrico200165.weblistscraper.configs.SessionLimitsBase;
-import com.enrico200165.weblistscraper.configs.PageConfigABC;
-import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import com.enrico200165.weblistscraper.tools.Result;
+import org.apache.log4j.Logger;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 abstract public class TableScraperABC {
 
@@ -115,8 +115,8 @@ abstract public class TableScraperABC {
 
             StringBuffer annotations = new StringBuffer();
             boolean excludeIt = false;
-            if (!pageConfig.getEntryIncludeFilter(smgr).includeHTMLEntry(entry)) {
-                EntryExcludeFilter excludeFilter = pageConfig.getEntryExcludeFilter(smgr);
+            if (!pageConfig.getEntryIncludeFilter().includeHTMLEntry(entry)) {
+                EntryExcludeFilter excludeFilter = pageConfig.getEntryExcludeFilter();
                 excludeIt = excludeFilter.excludeHTMLEntry(entry, annotations);
             } else {
                 // log.info("inclusion forced by filter");

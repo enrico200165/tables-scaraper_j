@@ -1,12 +1,11 @@
 package com.enrico200165.weblistscraper.tools;
 
-import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
+import org.apache.log4j.Logger;
 
 public class FilterBase {
 
-	FilterBase(SessionManagerAbstr smpar) {
+	FilterBase() {
 		reset();
-		smgr = smpar;
 	}
 
 	void reset() {
@@ -52,10 +51,10 @@ public class FilterBase {
 		return this.nrFalseEntry;
 	}
 
-
-	SessionManagerAbstr smgr;
 	int nrTrueEntry;
 	int nrFalseEntry;
 	int nrTrueProspect;
 	int nrFalseProspect;
+
+	private static Logger log = Logger.getLogger(FilterBase.class);
 }

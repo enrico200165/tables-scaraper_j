@@ -3,27 +3,44 @@ package com.enrico200165.weblistscraper.configs.site_italianpenpals;
 import com.enrico200165.weblistscraper.configs.ChannelIFC;
 
 public class ChannelConfigItalianPenPalsUsersTable implements ChannelIFC {
-	
+
 	@Override
-	public String getChannelType() {
-		// web, email, banner, search
-		return "web";
+	public String getType() {
+		return null;
 	}
 
 	@Override
-	public String getChannelVendor() {
-		// ex. Web: japan-guide.com email: gmail 
-		return "italianpenpals";
+	public void setType(String v) {
+
 	}
 
 	@Override
-	public String getChannelName() {
-		// ex. WEB: site name: japan-guide | mailing: mailing template name
-		return "http://italianpenpas.org";
+	public String getVendor() {
+		return null;
 	}
 
 	@Override
-	public String getChannelItem() {
-		return "penpals global list";
+	public void setVendor(String v) {
+
+	}
+
+	@Override
+	public String getName() {
+		return null;
+	}
+
+	@Override
+	public void setName(String v) {
+
+	}
+
+	@Override
+	public String getItem() {
+		return null;
+	}
+
+	@Override
+	public void setItem(String v) {
+
 	}
 }

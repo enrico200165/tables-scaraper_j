@@ -2,9 +2,10 @@ package com.enrico200165.weblistscraper.configs.site_japanguide;
 
 import com.enrico200165.cookies.CookieStoreEV;
 import com.enrico200165.utils.net.http.Utils;
-import com.enrico200165.utils.str_regex.*;
+import com.enrico200165.utils.str_regex.NameValuePairString;
 import com.enrico200165.utils.various.Utl;
-import com.enrico200165.weblistscraper.common.*;
+import com.enrico200165.weblistscraper.common.ContactType;
+import com.enrico200165.weblistscraper.common.WEBUtils;
 import com.enrico200165.weblistscraper.configs.ChannelIFC;
 import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.configs.PageConfigABC;
@@ -15,13 +16,14 @@ import com.enrico200165.weblistscraper.session.SessionManager;
 import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import com.enrico200165.weblistscraper.tools.*;
 import org.apache.log4j.Logger;
-import org.jsoup.*;
-import org.jsoup.nodes.*;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientRequestFilter;
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
 
 public class MainJapanguide {
 

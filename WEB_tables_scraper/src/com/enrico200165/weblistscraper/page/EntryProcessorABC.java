@@ -43,9 +43,6 @@ public abstract class EntryProcessorABC {
 	abstract public Result processWebEntry(Element entryRawHTML, String formURL,
 										   Object otherParams, boolean excludeIt);
 
-
-
-
 	protected SessionManagerAbstr smgr;
 	protected PageConfigABC pageConfig;
 		

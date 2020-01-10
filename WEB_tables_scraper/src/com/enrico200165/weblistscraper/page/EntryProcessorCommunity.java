@@ -48,12 +48,12 @@ public abstract class EntryProcessorCommunity extends EntryProcessorABC {
         // --- su HTML entity
         FillEntry(entryRawHTML, entryW);
         // "exclude" filter
-        if (pageConfig.getEntryExcludeFilter(smgr).exclude(entryW)) {
+        if (pageConfig.getEntryExcludeFilter().exclude(entryW)) {
             log.info("filter excluded prospect: " + entryW.IDsToString());
             return res;
         }
         // "include" filter
-        if (!pageConfig.getEntryIncludeFilter(smgr).includeProspect(entryW)) {
+        if (!pageConfig.getEntryIncludeFilter().includeProspect(entryW)) {
             log.info("\"include\" filter did not include prospect: " + entryW.IDsToString());
             return res;
         }

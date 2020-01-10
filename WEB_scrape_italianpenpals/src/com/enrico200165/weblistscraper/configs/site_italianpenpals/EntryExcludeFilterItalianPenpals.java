@@ -1,13 +1,12 @@
 package com.enrico200165.weblistscraper.configs.site_italianpenpals;
 
-import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import com.enrico200165.weblistscraper.tools.EntryExcludeFilter;
 import org.jsoup.nodes.Element;
 
 public class EntryExcludeFilterItalianPenpals extends EntryExcludeFilter {
 
-	EntryExcludeFilterItalianPenpals(SessionManagerAbstr smpar) {
-		super(smpar);
+	EntryExcludeFilterItalianPenpals() {
+		super();
 	}
 
 	@Override

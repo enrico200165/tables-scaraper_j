@@ -3,14 +3,12 @@ package com.enrico200165.weblistscraper.configs;
 import com.enrico200165.utils.config.Exception_YAMLCfg_WrongType;
 import com.enrico200165.utils.config.YAML2Map;
 import com.enrico200165.weblistscraper.page.NextTablePageSelectorsABC;
-import com.enrico200165.weblistscraper.tools.EntryExcludeFilter;
-import com.enrico200165.weblistscraper.tools.EntryExcludeFilterVanilla;
-import com.enrico200165.weblistscraper.tools.EntryIncludeFilter;
-import com.enrico200165.weblistscraper.tools.EntryIncludeFilterVanilla;
+import com.enrico200165.weblistscraper.tools.*;
 import org.apache.log4j.Logger;
-import org.jetbrains.annotations.NotNull;
 
 import java.net.URI;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 //import com.enrico200165.utils.config.PropertiesYAMLEV;
@@ -34,19 +32,41 @@ public class ConfigReader   {
 
 
     // Constants
-    static final String TYPE_NOT_FOUND = "type_not_found";
-    static final String TYPE_KEY       = "type";
-    static final String TASK_KEY       = "task";
-    static final String ID_KEY         = "ID";
-    static final String HOST_KEY       = "host";
-    static final String HOST_URI       = "baseHostURI";
-    static final String LOGIN_KEY      ="login";
-    static final String CHANNEL_KEY    = "channel";
-    static final String TABLE_KEY      = "table";
+    static final String TYPE_NOT_FOUND       = "type_not_found";
+    static final String TYPE_KEY             = "type";
+    static final String TASK_KEY             = "task";
+    static final String ID_KEY               = "ID";
+    static final String SESSION_LIMITS_KEY   = "session_limits";
+    static final String HOST_KEY             = "host";
+    static final String HOST_URI             = "baseHostURI";
+    static final String LOGIN_KEY            ="login";
+    static final String CHANNEL_KEY          = "channel";
+    static final String TABLE_KEY            = "table";
+    static final String REGEXES_VERTICAL_KEY = "regexes_vertical";
+
+
+    private static List<String> parseRegexesVertical(Map.Entry<String, Object> entry, String fatherKeyP) throws Exception_YAMLCfg_WrongType {
+
+        List<String> regexesList = new ArrayList<String>();
+        Map<String, Object> taskListChildren = (Map<String, Object>) entry.getValue();
+        for (Map.Entry<String, Object> e : taskListChildren.entrySet()) {
+
+            String k = e.getKey(); Object value_o = (Object) e.getValue();
+            log.info("analyzing key: " + fullKey(fatherKeyP, k));
+
+            if (k.equals("")) {
+            } else {
+                log.error("unmanaged key: " + fullKey(fatherKeyP,k));
+                //System.exit(1);
+            }
+        }
+        return regexesList;
+    }
 
 
 
-	// logging methods to easily build composite key for printou
+
+    // logging methods to easily build composite key for printou
     static String fullKey(String father, String key) {
 	    return father+"."+key;
     }
@@ -191,7 +211,7 @@ public class ConfigReader   {
     }
 
 
-    private static SessionLimitsBase parseSessionLimits(Map.Entry<String, Object> entryPar, String fatherKeyP)
+    private static com.enrico200165.weblistscraper.configs.SessionLimitsBase parseSessionLimits(Map.Entry<String, Object> entryPar, String fatherKeyP)
             throws Exception_YAMLCfg_WrongType {
 
         String id = YAML2Map.getNameFromChild(entryPar); assert (id.length() > 0);
@@ -231,7 +251,7 @@ public class ConfigReader   {
 
         String id = YAML2Map.getNameFromChild(entryPar); assert (id.length() > 0);
 
-        EntryIncludeFilter inclFilter = new EntryIncludeFilterVanilla(null);
+        EntryIncludeFilter inclFilter = new EntryIncludeFilterVanilla();
 
         Map<String, Object> taskListChildren = (Map<String, Object>) entryPar.getValue();
         for (Map.Entry<String, Object> e : taskListChildren.entrySet()) {
@@ -240,6 +260,8 @@ public class ConfigReader   {
             log.info("analyzing key: " + fullKey(fatherKeyP, k));
 
             if (k.equals(ID_KEY)) {
+            } else if (k.equals(REGEXES_VERTICAL_KEY)) {
+                List<String> regexes = parseRegexesVertical(e, fatherKeyP);
             } else {
                 log.error("unmanaged key: " + fullKey(fatherKeyP, k, id));
                 System.exit(1);
@@ -255,7 +277,7 @@ public class ConfigReader   {
 
         String id = YAML2Map.getNameFromChild(entryPar); assert (id.length() > 0);
 
-        EntryExcludeFilter  filter = new EntryExcludeFilterVanilla(null);
+        EntryExcludeFilter  filter = new EntryExcludeFilterVanilla();
 
         Map<String, Object> taskListChildren = (Map<String, Object>) entryPar.getValue();
         for (Map.Entry<String, Object> e : taskListChildren.entrySet()) {
@@ -273,6 +295,56 @@ public class ConfigReader   {
         return filter;
     }
 
+
+    private EntryHTMLIncludeFilter  parseEntryHTMLIncludeFilter(Map.Entry<String, Object> entryPar, String fatherKeyP)
+            throws Exception_YAMLCfg_WrongType {
+
+        String id = YAML2Map.getNameFromChild(entryPar); assert (id.length() > 0);
+
+        EntryHTMLIncludeFilter inclFilter = new EntryHTMLIncludeFilter();
+
+        Map<String, Object> taskListChildren = (Map<String, Object>) entryPar.getValue();
+        for (Map.Entry<String, Object> e : taskListChildren.entrySet()) {
+
+            String k = e.getKey(); Object value_o = (Object) e.getValue();
+            log.info("analyzing key: " + fullKey(fatherKeyP, k));
+
+            if (k.equals(ID_KEY)) {
+            } else if (k.equals(REGEXES_VERTICAL_KEY)) {
+                List<String> regexes = parseRegexesVertical(e, fatherKeyP);
+            } else {
+                log.error("unmanaged key: " + fullKey(fatherKeyP, k, id));
+                System.exit(1);
+            }
+        }
+
+        return inclFilter;
+    }
+
+    private EntryHTMLExcludeFilter  parseEntryHTMLExcludeFilter(Map.Entry<String, Object> entryPar, String fatherKeyP)
+            throws Exception_YAMLCfg_WrongType {
+
+        String id = YAML2Map.getNameFromChild(entryPar); assert (id.length() > 0);
+
+        EntryHTMLExcludeFilter exclFilter = new EntryHTMLExcludeFilter();
+
+        Map<String, Object> taskListChildren = (Map<String, Object>) entryPar.getValue();
+        for (Map.Entry<String, Object> e : taskListChildren.entrySet()) {
+
+            String k = e.getKey(); Object value_o = (Object) e.getValue();
+            log.info("analyzing key: " + fullKey(fatherKeyP, k));
+
+            if (k.equals(ID_KEY)) {
+            } else if (k.equals(REGEXES_VERTICAL_KEY)) {
+                List<String> regexes = parseRegexesVertical(e, fatherKeyP);
+            } else {
+                log.error("unmanaged key: " + fullKey(fatherKeyP, k, id));
+                System.exit(1);
+            }
+        }
+
+        return exclFilter;
+    }
 
 
 
@@ -303,7 +375,11 @@ public class ConfigReader   {
                 gCfg.inclFilter = parseEntryIncludeFilter(e,fullKey(fatherKeyP, k));
             } else if (k.equals("entry_cont_exclude_filter"))   {
                 gCfg.exclFilter = parseEntryExcludeFilter(e,fullKey(fatherKeyP, k));
-            }  else {
+            } else if (k.equals("entry_html_include_filter"))   {
+                gCfg.htmlInclFilter = parseEntryHTMLIncludeFilter(e,fullKey(fatherKeyP, k));
+            }  else if (k.equals("entry_html_exclude_filter"))   {
+                gCfg.htmlExclFilter = parseEntryHTMLExcludeFilter(e,fullKey(fatherKeyP, k));
+            } else {
                 log.error("unmanaged key: " + fullKey(fatherKeyP, k, id));
                 System.exit(1);
             }
@@ -311,6 +387,7 @@ public class ConfigReader   {
 
         return pg_cfg;
     }
+
 
 
 
@@ -341,6 +418,9 @@ public class ConfigReader   {
             } else if (k.equals(TABLE_KEY)) {
                 log.warn("temporary dirt workaround while restructuring, remove ASAP");
                 parseTable(e,fullKey(fatherKeyP,k));
+            } else if (k.equals(SESSION_LIMITS_KEY)) {
+                log.warn("temporary dirt workaround while restructuring, remove ASAP");
+                parseSessionLimits(e,fullKey(fatherKeyP,k));
             } else { // non-structured values
                 log.error("unmanaged key: "+fullKey(fatherKeyP,k,id));
                 System.exit(1);
@@ -350,7 +430,7 @@ public class ConfigReader   {
     }
 
 
-    public  void parseTaskList(@NotNull Map.Entry<String, Object> tasksList, String fatherKeyP) throws Exception_YAMLCfg_WrongType {
+    public  void parseTaskList(Map.Entry<String, Object> tasksList, String fatherKeyP) throws Exception_YAMLCfg_WrongType {
 
         Map<String , Object> taskListChildren = (Map<String , Object> ) tasksList.getValue();
         for (Map.Entry<String , Object> e : taskListChildren.entrySet()) {

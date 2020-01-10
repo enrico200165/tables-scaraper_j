@@ -24,7 +24,7 @@ public class EntryExcludeFilterConcorsiItTest {
 
 	@Before
 	public void setUp() throws Exception {
-		filter = new EntryExcludeFilterVanilla(null);
+		filter = new EntryExcludeFilterVanilla();
 	}
 
 	@After

@@ -19,5 +19,8 @@
     <orderEntry type="library" name="javax.mail:javax.mail-api:1.6.1" level="application" />
     <orderEntry type="library" name="R User Library" level="project" />
     <orderEntry type="library" name="jaxrs-ri-maven" level="application" />
+    <orderEntry type="library" name="log4j:log4j:1.2.17" level="application" />
+    <orderEntry type="library" name="org.jsoup:jsoup:1.12.1" level="application" />
+    <orderEntry type="library" name="org.glassfish.jersey.core:jersey-client:2.27" level="application" />
   </component>
 </module>

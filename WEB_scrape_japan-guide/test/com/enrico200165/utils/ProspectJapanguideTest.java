@@ -4,7 +4,7 @@ import com.enrico200165.weblistscraper.configs.site_japanguide.ProspectJapanguid
 import com.enrico200165.weblistscraper.marketingDB.DBManagerMKT;
 import com.enrico200165.weblistscraper.marketingDB.ProspectCoreData;
 import org.apache.log4j.Logger;
-import org.junit.Test;
+
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class ProspectJapanguideTest {
 
-    @Test
+    @org.junit.Test
     public void testUpdateAndGetScore() throws Exception {
 
         DBManagerMKT ch = new DBManagerMKT("marketing");

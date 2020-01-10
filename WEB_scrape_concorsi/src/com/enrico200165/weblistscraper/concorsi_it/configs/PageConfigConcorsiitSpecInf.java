@@ -6,7 +6,6 @@ import com.enrico200165.weblistscraper.configs.*;
 import com.enrico200165.weblistscraper.page.NextTablePageSelectorsABC;
 import com.enrico200165.weblistscraper.page.EntryProcessorABC;
 import com.enrico200165.weblistscraper.page.TableScraperABC;
-import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import com.enrico200165.weblistscraper.tools.*;
 
 public class PageConfigConcorsiitSpecInf extends PageConfigConcorsi {
@@ -27,14 +26,15 @@ public class PageConfigConcorsiitSpecInf extends PageConfigConcorsi {
 	}
 
 	@Override
-	public EntryIncludeFilter getEntryIncludeFilterSpecific(SessionManagerAbstr smPar) {
-		return new EntryIncludeFilterVanilla(smPar);
+	public EntryIncludeFilter getEntryIncludeFilterSpecific() {
+		return new EntryIncludeFilterVanilla();
 	}
 
 	@Override
-	public EntryExcludeFilter getEntryExcludeFilterSpecific(SessionManagerAbstr smPar) {
-		return new EntryExcludeFilterVanilla(smPar);
+	public EntryExcludeFilter getEntryExcludeFilterSpecific() {
+		return new EntryExcludeFilterVanilla();
 	}
+
 
 	static NextTablePageSelectorsABC netPageSel = null;
 

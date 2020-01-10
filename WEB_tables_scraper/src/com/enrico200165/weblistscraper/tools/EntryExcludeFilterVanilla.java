@@ -1,14 +1,12 @@
 package com.enrico200165.weblistscraper.tools;
 
 import com.enrico200165.weblistscraper.marketingDB.ProspectCoreData;
-import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import org.apache.log4j.Logger;
 import org.jsoup.nodes.Element;
 
 public class EntryExcludeFilterVanilla extends EntryExcludeFilter {
 
-	public EntryExcludeFilterVanilla(SessionManagerAbstr smpar) {
-		super(smpar);
+	public EntryExcludeFilterVanilla() {
 	}
 
 	public boolean exclude(Element entry,  StringBuffer comments) {

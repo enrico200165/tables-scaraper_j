@@ -1,0 +1,5 @@
+10:04:18,800 INFO  PropertiesYAMLEVTest:63 - writing test config file: test.yaml in: C:\Users\vialien\Documents\00_ev_data\08_dev\dev_sources\Pers_Tools\EVUtils
+10:04:18,812 INFO  PropertiesYAMLEVTest:83 - 2020-00-08_10-04-18start basic reading
+10:04:18,980 ERROR PropertiesYAMLEVTest:122 - wrong type in YAMLfor key: dummy_test expected: String found: null
+10:04:18,980 INFO  PropertiesYAMLEVTest:125 - Completed yaml file parsing
+10:04:18,984 INFO  PropertiesYAMLEVTest:63 - writing test config file: test.yaml in: C:\Users\vialien\Documents\00_ev_data\08_dev\dev_sources\Pers_Tools\EVUtils

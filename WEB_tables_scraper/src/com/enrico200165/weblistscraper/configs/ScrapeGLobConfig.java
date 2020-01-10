@@ -3,10 +3,7 @@ package com.enrico200165.weblistscraper.configs;
 import com.enrico200165.weblistscraper.page.EntryProcessorABC;
 import com.enrico200165.weblistscraper.page.NextTablePageSelectorsABC;
 import com.enrico200165.weblistscraper.page.TableScraperABC;
-import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
-import com.enrico200165.weblistscraper.tools.EntryCanActOnFilter;
-import com.enrico200165.weblistscraper.tools.EntryExcludeFilter;
-import com.enrico200165.weblistscraper.tools.EntryIncludeFilter;
+import com.enrico200165.weblistscraper.tools.*;
 import org.apache.log4j.Logger;
 
 //import com.enrico200165.utils.config.PropertiesYAMLEV;
@@ -86,25 +83,25 @@ public class ScrapeGLobConfig extends PageConfigABC {
 	// -- END Forwarding to gloabl config
 
 	static EntryExcludeFilter entryExcludeFilter = null;
-	public EntryExcludeFilter getEntryExcludeFilter(SessionManagerAbstr smPar) {
+	public EntryExcludeFilter getEntryExcludeFilter() {
 		if (entryExcludeFilter == null) {
-			entryExcludeFilter = getEntryExcludeFilterSpecific(smPar);
+			entryExcludeFilter = getEntryExcludeFilterSpecific();
 		}
 		return entryExcludeFilter;
 	}
 
-	public  EntryExcludeFilter getEntryExcludeFilterSpecific(SessionManagerAbstr smPar) {
+	public  EntryExcludeFilter getEntryExcludeFilterSpecific() {
 		return null;
 	}
 	static EntryIncludeFilter entryIncludeFilter = null;
-	public EntryIncludeFilter getEntryIncludeFilter(SessionManagerAbstr smPar) {
+	public EntryIncludeFilter getEntryIncludeFilter() {
 		if (entryIncludeFilter == null) {
-			entryIncludeFilter = getEntryIncludeFilterSpecific(smPar);
+			entryIncludeFilter = getEntryIncludeFilterSpecific();
 		}
 		return entryIncludeFilter;
 	}
 
-	public  EntryIncludeFilter getEntryIncludeFilterSpecific(SessionManagerAbstr smPar){
+	public  EntryIncludeFilter getEntryIncludeFilterSpecific(){
 		return null;
 	}
 
@@ -152,6 +149,9 @@ public class ScrapeGLobConfig extends PageConfigABC {
 	// ----- functionoids non facilmente sostituiti da configurazione -----
     EntryIncludeFilter inclFilter;
     EntryExcludeFilter exclFilter;
+
+    EntryHTMLIncludeFilter htmlInclFilter;
+	EntryHTMLExcludeFilter htmlExclFilter;
 
     // ------ dati sostituibili o sostituiti da configurazione yaml ------
 	protected ChannelIFC channelInfo;

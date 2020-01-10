@@ -2,15 +2,12 @@ package com.enrico200165.weblistscraper.tools;
 
 
 import com.enrico200165.weblistscraper.marketingDB.ProspectCoreData;
-import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import org.apache.log4j.Logger;
 import org.jsoup.nodes.Element;
 
-public class EntryIncludeFilterVanilla extends EntryIncludeFilter {
+public class EntryIncludeFilterVanilla extends com.enrico200165.weblistscraper.tools.EntryIncludeFilter {
 
-	public EntryIncludeFilterVanilla(SessionManagerAbstr smpar) {
-		super(smpar);
-		// TODO Auto-generated constructor stub
+	public EntryIncludeFilterVanilla() {
 	}
 
 	public boolean includeEntrySpecific(Element entry) {
