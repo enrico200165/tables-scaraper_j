@@ -7,6 +7,7 @@ import com.enrico200165.weblistscraper.common.WEBUtils;
 import com.enrico200165.weblistscraper.concorsi_it.configs.PageConfigConcorsiitSpecInf;
 import com.enrico200165.weblistscraper.configs.ConfigReader;
 import com.enrico200165.weblistscraper.configs.PageConfigABC;
+import com.enrico200165.weblistscraper.configs.ScrapeGLobConfig;
 import com.enrico200165.weblistscraper.page.EntryProcessorABC;
 import com.enrico200165.weblistscraper.page.PageProcDescr;
 import com.enrico200165.weblistscraper.page.PageProcessor;
@@ -17,6 +18,9 @@ import org.apache.log4j.Logger;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientRequestFilter;
+
+
+// import com.sun.security.ntlm.Client;
 
 public class MainConcorsiIt {
 
@@ -30,16 +34,14 @@ public class MainConcorsiIt {
 		Utils.setFiddler(false);
 
 
-
         // --- Configurazione ---
 
 		// here the new configuration
 		ConfigReader cfg_reader = null;
-		if (true) {
-			String yaml_path = "../../../data_dev/web_scraper/concorsi_it.yaml";
-			cfg_reader = new ConfigReader(null, null, null, null, null);
-			cfg_reader.parseYAMLConfig(yaml_path);
-		}
+		ScrapeGLobConfig cfg;
+		String yaml_path = "C:\\Users\\vialien\\Google Drive\\dev_data_using\\web_scraper\\concorsi_it.yaml";
+		cfg_reader = new ConfigReader();
+		ScrapeGLobConfig gCfg = cfg_reader.parseYAMLConfig(yaml_path);
 
         // --- Cliente e connettività  ----------------------------
         CookieStoreEV cs = new CookieStoreEV();
@@ -47,9 +49,9 @@ public class MainConcorsiIt {
 		ClientRequestFilter cReqFilt = new ClReqFilterCookies(cs);
 		ClientRespFilterEV cResFilt = new ClientRespFilterEV(cs);
 		Client cl = WEBUtils.createClient(cReqFilt, cResFilt, false);
-		ClientWrapper cw = new ClientWrapper(cl, new InvocationBuilderWrapperIExplore(), cfg_reader.getHostConfig(), 1,
-				new FormManagerDummy(cfg_reader.getHostConfig()));
-		SessionManagerAbstr sm = new SessionManagerConcorsi(cw , cfg_reader.getSessionLimits());
+		ClientWrapper cw = new ClientWrapper(cl, new InvocationBuilderWrapperIExplore(), gCfg.getHostConfig(), 1,
+				new FormManagerDummy(gCfg.getHostConfig()));
+		SessionManagerAbstr sm = new SessionManagerConcorsi(cw , gCfg.getSessionLimits());
 
 
 
@@ -70,11 +72,11 @@ public class MainConcorsiIt {
 
 			EntryProcessorABC entryProcSpecInf = new EntryProcessorConcorsiItSpecInf(sm, null);
 			TableScraperABC tableSCraperSpecInf = new TableScraperConcorsiItSpecInf(sm, null, entryProcSpecInf);
-			PageConfigABC pageCfgPiuVisti = new PageConfigConcorsiitSpecInf(cfg_reader.getHostConfig()
+			PageConfigABC pageCfgPiuVisti = new PageConfigConcorsiitSpecInf(gCfg.getHostConfig()
                     ,tableSCraperSpecInf, entryCanActOn,
-					cfg_reader.getChannelInfo());
-			PageProcessor pageProcessorPiuVisti = new PageProcessor(cfg_reader.getHostConfig(), sm, pageCfgPiuVisti);
-			PageProcDescr tablePage = new PageProcDescr(cfg_reader.getHostConfig(), pageCfgPiuVisti, pageProcessorPiuVisti,
+					gCfg.getChannelInfo());
+			PageProcessor pageProcessorPiuVisti = new PageProcessor(gCfg.getHostConfig(), sm, pageCfgPiuVisti);
+			PageProcDescr tablePage = new PageProcDescr(gCfg.getHostConfig(), pageCfgPiuVisti, pageProcessorPiuVisti,
 					"https://concorsi.it/regione/lazio", WebPageAction.GET_SCRAPE);
 
 			// --- settaggi per rimediare a dipendenze circolari ---
@@ -148,7 +150,7 @@ public class MainConcorsiIt {
 		 * 
 		 * ------------------------------------------------------------------------------- */
 
-		sm.performSession(cfg_reader.getSessionLimits());
+		sm.performSession(gCfg.getSessionLimits());
 
 	}
 
