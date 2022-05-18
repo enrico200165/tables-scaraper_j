@@ -5,10 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/00_temp_learn_experiment/00_temp_learn_experiment.iml" filepath="$PROJECT_DIR$/00_temp_learn_experiment/00_temp_learn_experiment.iml" />
       <module fileurl="file://$PROJECT_DIR$/EVUtils/EVUtils.iml" filepath="$PROJECT_DIR$/EVUtils/EVUtils.iml" />
       <module fileurl="file://$PROJECT_DIR$/WEB_scrape_concorsi/WEB_scrape_concorsi.iml" filepath="$PROJECT_DIR$/WEB_scrape_concorsi/WEB_scrape_concorsi.iml" />
-      <module fileurl="file://$PROJECT_DIR$/WEB_scrape_italianpenpals/WEB_scrape_italianpenpals.iml" filepath="$PROJECT_DIR$/WEB_scrape_italianpenpals/WEB_scrape_italianpenpals.iml" />
-      <module fileurl="file://$PROJECT_DIR$/WEB_scrape_japan-guide/WEB_scrape_japan-guide.iml" filepath="$PROJECT_DIR$/WEB_scrape_japan-guide/WEB_scrape_japan-guide.iml" />
       <module fileurl="file://$PROJECT_DIR$/WEB_tables_scraper/WEB_tables_scraper.iml" filepath="$PROJECT_DIR$/WEB_tables_scraper/WEB_tables_scraper.iml" />
-      <module fileurl="file://$PROJECT_DIR$/italianpenpals_silverpop/italianpenpals_silverpop.iml" filepath="$PROJECT_DIR$/italianpenpals_silverpop/italianpenpals_silverpop.iml" />
     </modules>
   </component>
 </project>

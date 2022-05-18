@@ -10,14 +10,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="EVUtils" />
     <orderEntry type="module" module-name="WEB_tables_scraper" />
-    <orderEntry type="library" name="jsoup" level="application" />
-    <orderEntry type="library" name="sqlite" level="application" />
-    <orderEntry type="library" name="R Skeletons" level="application" />
-    <orderEntry type="library" name="log4j" level="application" />
-    <orderEntry type="library" scope="TEST" name="junit4-maven" level="application" />
-    <orderEntry type="library" name="jaxrs-ri-maven" level="application" />
-    <orderEntry type="library" name="org.eclipse.persistence:eclipselink:2.5.2" level="application" />
-    <orderEntry type="library" name="javax.mail:javax.mail-api:1.6.1" level="application" />
     <orderEntry type="module-library">
       <library name="testng">
         <CLASSES>
@@ -28,10 +20,8 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="junit4-maven" level="application" />
     <orderEntry type="library" name="R User Library" level="project" />
     <orderEntry type="library" name="log4j:log4j:1.2.17" level="application" />
-    <orderEntry type="library" name="org.eclipse.persistence:eclipselink:2.7.4" level="application" />
     <orderEntry type="library" name="org.jsoup:jsoup:1.12.1" level="application" />
     <orderEntry type="module-library">
       <library>
@@ -44,5 +34,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="org.glassfish.jersey.core:jersey-client:2.27" level="application" />
+    <orderEntry type="library" name="org.eclipse.persistence:eclipselink:2.6.1" level="application" />
   </component>
 </module>

@@ -114,8 +114,7 @@ public class PageProcDescr {
 		}
 
 		if (!fullUrl.toLowerCase().contains(hostConfig.baseHostURI.toString())) {
-			log.error("provided URI "+fullUrl+" does not match hostname: "+hostConfig.baseHostURI);
-			System.exit(1);
+			log.warn("provided URI "+fullUrl+" does not match hostname: "+hostConfig.baseHostURI);
 		}
 
 		try {
@@ -169,13 +168,9 @@ public class PageProcDescr {
 	public String getLoginFormAction() {
 		return loginFormAction;
 	}
-	public InvocationBuilderWrapper getIbw() {
-		return ibw;
-	}
-
 
 	public void setFormsParams(List<NameValuePairString> formFields,String formSelector, String loginFormAction,
-							   FormManagerABC formManager, InvocationBuilderWrapper ibw) {
+							   FormManagerABC formManager) {
         this.formFields = formFields;
         this.formSelector = formSelector;
         this.loginFormAction = loginFormAction;
@@ -204,7 +199,6 @@ public class PageProcDescr {
 	String loginFormAction;
 	FormManagerABC formManager;
 	InvocationBuilderWrapper ibw;
-
 
 	private static org.apache.log4j.Logger log = Logger.getLogger(PageProcDescr.class);
 }

@@ -29,7 +29,6 @@ public class HostConfig {
 
 
     public HostConfig() {
-        log.info("senza nome file, riscribere");
     }
 
 

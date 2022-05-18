@@ -17,13 +17,12 @@ import java.util.*;
 
 
 
-
-
 public class CookieStoreEV implements java.net.CookieStore {
 
     public CookieStoreEV(String persistUnit) {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistUnit);
-        em = factory.createEntityManager();
+        log.error("da sistemare un bug complicato di eclipselink\n");
+        // EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistUnit);
+        // em = factory.createEntityManager();
     }
 
     public CookieStoreEV() {
@@ -129,7 +128,7 @@ public class CookieStoreEV implements java.net.CookieStore {
     public List<HttpCookieJPA> getCookiesJPA(String domain, String path) {
 
         EntityTransaction tx = null;
-        List<HttpCookieJPA> allCookies = null;
+        List<HttpCookieJPA> allCookies = new ArrayList<HttpCookieJPA>();
         try {
             tx = em.getTransaction();
             boolean withinTx = tx.isActive();
@@ -143,7 +142,8 @@ public class CookieStoreEV implements java.net.CookieStore {
         } catch (Exception e) {
             log.error("");
         } finally {
-            if (tx.isActive()) tx.commit();
+            if (tx != null && tx.isActive())
+                tx.commit();
         }
 
         // filter out

@@ -40,7 +40,6 @@ public class ScrapeGLobConfig extends PageConfigABC {
     static final String TABLE_KEY      = "table";
 
 
-
 	// logging methods to easily build composite key for printou
     static String fullKey(String father, String key) {
 	    return father+"."+key;
@@ -48,9 +47,6 @@ public class ScrapeGLobConfig extends PageConfigABC {
     static String fullKey(String father, String key, String id) {
         return fullKey(father,key)+"["+id+"]";
     }
-
-
-    // --- now necessary,  in the future to be removed as these will build the full config
 
     // jsoup selector for the table in a page
     public  String TableSelectCSS() {

@@ -36,9 +36,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="org.eclipse.persistence:eclipselink:2.7.4" level="application" />
     <orderEntry type="library" name="org.glassfish.jersey.core:jersey-client:2.27" level="application" />
     <orderEntry type="library" name="R User Library" level="project" />
-    <orderEntry type="library" name="R Skeletons" level="application" />
   </component>
 </module>

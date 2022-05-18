@@ -27,7 +27,6 @@ import java.util.Locale;
  *
  */
 
-@Entity
 public class Concor extends EntityBase {
 
 	public static final String IDFieldName = "infoInternURL";

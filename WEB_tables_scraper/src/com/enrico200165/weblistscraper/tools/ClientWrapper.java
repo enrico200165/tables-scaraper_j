@@ -15,6 +15,7 @@ import javax.ws.rs.client.Invocation;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Form;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -116,8 +117,9 @@ public class ClientWrapper {
 
         baseTarget = this.client.target(uri);
         Invocation.Builder ib = baseTarget.request();
-        ibw.setBuilder(ib);
-        rw.setReponse(ibw.it().get());
+        ibw.setBuilder(ib); // ibw has headers for specific browsers ???
+        Response resp = ibw.it().get();
+        rw.setReponse(resp);
         rw.analyzeResponse(false, this);
         return rw;
     }

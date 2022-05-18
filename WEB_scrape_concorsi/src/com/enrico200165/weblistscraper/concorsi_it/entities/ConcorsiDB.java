@@ -5,16 +5,14 @@ import org.apache.log4j.Logger;
 
 import javax.persistence.*;
 import javax.persistence.criteria.*;
-import java.util.Collection;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class ConcorsiDB {
 
     public ConcorsiDB() {
-        super();
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("concorsi");
-        em = factory.createEntityManager();
+        log.error("da implementare a causa di un bug di eclipselink");
+        // EntityManagerFactory factory = Persistence.createEntityManagerFactory("concorsi");
+        //em = factory.createEntityManager();
     }
 
     public EntityManager it() {
@@ -34,6 +32,10 @@ public class ConcorsiDB {
 
     public List<Concor> findConcorNotReported() {
 
+        log.error("da implementare a causa di un bug di eclipselink");
+        if (true) {
+            return new ArrayList<Concor>();
+        }
         log.warn("codice temporaneo da correggere");
         // per ora pesco tutto
         log.error("codice sotto va riscritto, forse JPA1 da riscrivere in JPA2");
@@ -141,7 +143,8 @@ public class ConcorsiDB {
             if (detach) detachConcorsiFromJPA(concorsi);
         } catch (Exception e) {
             // MySQLIntegrityConstraintViolationException
-            if (tx.isActive()) tx.rollback();
+            log.error("da sistemare dopo fix di un banco di eclipselink");
+            //if (tx.isActive()) tx.rollback();
         }
         return this;
     }

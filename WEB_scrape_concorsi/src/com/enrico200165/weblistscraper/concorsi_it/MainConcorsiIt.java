@@ -155,5 +155,4 @@ public class MainConcorsiIt {
 	}
 
 	private static org.apache.log4j.Logger log = Logger.getLogger(MainConcorsiIt.class);
-
 }

@@ -130,7 +130,7 @@ public class PageProcessor extends PageProcessorAbstr {
         log.error("#################### post sembra fare login, perchè? ###############");
         //final String loginFormAction = pageProcDescr.getLoginFormAction();
         final String loginFormAction = pageProcDescr.getURL();
-        rw = cw.simplePOST(loginFormAction, formFields, pageProcDescr.getIbw(), 0);
+        rw = cw.simplePOST(loginFormAction, formFields, ibw, 0);
         rw.analyzeResponse(true, cw);
         if (!(rw.it().getStatus() == 200 || rw.it().getStatus() == 302)) {
             log.error("");
@@ -164,7 +164,7 @@ public class PageProcessor extends PageProcessorAbstr {
 
     ClientWrapper cw;
     PageConfigABC tcfg;
-
+    InvocationBuilderWrapper ibw;
     private static org.apache.log4j.Logger log = Logger.getLogger(PageProcessor.class);
 
 }

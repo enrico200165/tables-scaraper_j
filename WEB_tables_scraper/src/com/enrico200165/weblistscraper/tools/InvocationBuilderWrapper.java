@@ -1,11 +1,10 @@
 package com.enrico200165.weblistscraper.tools;
 
-import java.util.HashMap;
-import java.util.Map;
+import org.apache.log4j.Logger;
 
 import javax.ws.rs.client.Invocation.Builder;
-
-import org.apache.log4j.Logger;
+import java.util.HashMap;
+import java.util.Map;
 
 /* importante per capire qualcosa di questa classe:
  * l'invocation builder viene generato dal target, quindi è disponibile poco prima dell'invocazione,
@@ -45,6 +44,7 @@ public abstract class InvocationBuilderWrapper {
 
 	protected abstract InvocationBuilderWrapper adjustHeader(String headerName);
 
+	// aggiusta gli headers credo
 	abstract public InvocationBuilderWrapper onSet();
 
 	protected Builder bld;

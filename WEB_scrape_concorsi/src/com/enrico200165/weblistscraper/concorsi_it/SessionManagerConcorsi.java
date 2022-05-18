@@ -67,7 +67,7 @@ public class SessionManagerConcorsi extends SessionManager {
 		
 		log.info("esaminate raw: "+getRawEntriesEsaminate());
 		
-		String dir = "v:/";
+		String dir = "";
 		//String filename = "concorsi"+Utl.todayDateStamp();
 		String filename = "concorsi"+Utl.todayDateStamp()+".html";		
 		HTMLDisplayInBrowser.writeOut(dir+filename, html, true);

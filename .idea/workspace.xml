@@ -5,120 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb5cd886-e6b4-44fc-bef3-a7e83aff0dcf" name="Default" comment="sembra si era perso tutto">
-      <change afterPath="$PROJECT_DIR$/.idea/rSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/config/YAML2Map.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/EntryHTMLIncludeFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/00_temp_learn_experiment/00_temp_learn_experiment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/00_temp_learn_experiment/00_temp_learn_experiment.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00_temp_learn_experiment/ssh_jsch_examples/KeyGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/00_temp_learn_experiment/ssh_jsch_examples/KeyGen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CGI_project/CGI_project.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/EVUtils/EVUtils.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EVUtils/EVUtils.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/config/PropertiesYAMLEV.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EVUtils/test/com/enrico200165/utils/config/PropertiesYAMLEVTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/WEB_scrape_concorsi/WEB_scrape_concorsi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_concorsi/WEB_scrape_concorsi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/EntryProcessorConcorsiBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/EntryProcessorConcorsiBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/configs/PageConfigConcorsi.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/configs/PageConfigConcorsi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/configs/PageConfigConcorsiitSpecInf.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/configs/PageConfigConcorsiitSpecInf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/configs/test/EntryExcludeFilterConcorsiItTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/configs/test/EntryExcludeFilterConcorsiItTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_scrape_italianpenpals/WEB_scrape_italianpenpals.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_italianpenpals/WEB_scrape_italianpenpals.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_scrape_italianpenpals/src/com/enrico200165/weblistscraper/configs/site_italianpenpals/ChannelConfigItalianPenPalsUsersTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_italianpenpals/src/com/enrico200165/weblistscraper/configs/site_italianpenpals/ChannelConfigItalianPenPalsUsersTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_scrape_italianpenpals/src/com/enrico200165/weblistscraper/configs/site_italianpenpals/EntryExcludeFilterItalianPenpals.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_italianpenpals/src/com/enrico200165/weblistscraper/configs/site_italianpenpals/EntryExcludeFilterItalianPenpals.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_scrape_italianpenpals/src/com/enrico200165/weblistscraper/configs/site_italianpenpals/EntryIncludeFilterItalianPenpals.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_italianpenpals/src/com/enrico200165/weblistscraper/configs/site_italianpenpals/EntryIncludeFilterItalianPenpals.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_scrape_italianpenpals/src/com/enrico200165/weblistscraper/configs/site_italianpenpals/PageConfigItalianPenPals.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_italianpenpals/src/com/enrico200165/weblistscraper/configs/site_italianpenpals/PageConfigItalianPenPals.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_scrape_italianpenpals/src/com/enrico200165/weblistscraper/configs/site_italianpenpals/SessionLimitsItalianPenPals.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_italianpenpals/src/com/enrico200165/weblistscraper/configs/site_italianpenpals/SessionLimitsItalianPenPals.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_scrape_japan-guide/WEB_scrape_japan-guide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_japan-guide/WEB_scrape_japan-guide.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_scrape_japan-guide/src/com/enrico200165/weblistscraper/configs/site_japanguide/EntryExcludeFilterJapanguide.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_japan-guide/src/com/enrico200165/weblistscraper/configs/site_japanguide/EntryExcludeFilterJapanguide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_scrape_japan-guide/src/com/enrico200165/weblistscraper/configs/site_japanguide/EntryIncludeFilterJapanguide.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_japan-guide/src/com/enrico200165/weblistscraper/configs/site_japanguide/EntryIncludeFilterJapanguide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_scrape_japan-guide/src/com/enrico200165/weblistscraper/configs/site_japanguide/MainJapanguide.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_japan-guide/src/com/enrico200165/weblistscraper/configs/site_japanguide/MainJapanguide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_scrape_japan-guide/src/com/enrico200165/weblistscraper/configs/site_japanguide/PageConfigJapanguide.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_japan-guide/src/com/enrico200165/weblistscraper/configs/site_japanguide/PageConfigJapanguide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_scrape_japan-guide/test/com/enrico200165/utils/ProspectJapanguideTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_japan-guide/test/com/enrico200165/utils/ProspectJapanguideTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/SQL/contact.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/SQL/contact_by_userID.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/WEB_tables_scraper.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/consorsi.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/cookies.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/info_progetto_v00.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/lib/db-derby-10.11.1.1/derby.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/lib/db-derby-10.11.1.1/derby.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/lib/db-derby-10.11.1.1/derbyLocale_it.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/lib/db-derby-10.11.1.1/derbyclient.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/lib/db-derby-10.11.1.1/derbynet.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/lib/db-derby-10.11.1.1/derbyoptionaltools.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/lib/db-derby-10.11.1.1/derbyrun.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/lib/db-derby-10.11.1.1/derbytools.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/lib/jsoup-1.8.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/lib/lombok.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/lib/mysql-connector-java-5.1.31-bin.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/log.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/manage/documentatzione.tzt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/manage/todo.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/cookies/CookieStoreEV.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/cookies/HttpCookieJPA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/cookies/HttpCookieJPAKey.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/common/ContactType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/common/WEBUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/ChannelConfigVanilla.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/ConfigReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/HostConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/HostConfigDrupalLocalTCPMonitorProxy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/HostConfigVanilla.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/LoginConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/PageConfigABC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/PageConfigVanilla.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/SessionLimitsBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/Tasks.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/drupal7/FormManagerLoginDrupal7.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/entities/EntityBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/marketingDB/Contact.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/marketingDB/DBManagerMKT.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/marketingDB/ProspectABC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/marketingDB/ProspectCoreData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/marketingDB/ProspectVanilla.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/page/EntryProcessorABC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/page/EntryProcessorCommunity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/page/NextTablePageSelectorsABC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/page/PageProcDescr.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/page/PageProcessResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/page/PageProcessor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/page/PageProcessorAbstr.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/page/TableScraperABC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/session/SessionManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/session/SessionManagerAbstr.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/ClReqFilterCookies.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/ClientRespFilterEV.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/ClientWrapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/EntryCanActOnFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/EntryExcludeFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/EntryExcludeFilterVanilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/EntryHTMLExcludeFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/EntryIncludeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/EntryIncludeFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/EntryIncludeFilterVanilla.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/Experiment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/FilterBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/FormManagerABC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/FormManagerDummy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/InvocationBuilderWrapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/InvocationBuilderWrapperIExplore.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/RequestFilterNull.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/RespFilterNull.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/ResponseWrapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/Result.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/WebPageAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/scratch.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/test/com/enrico200165/cookies/CookieStoreEVTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/test/com/enrico200165/cookies/HTTPCookieJPATest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/test/com/enrico200165/weblistscraper/tools/JSoupVerify.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/test/com/enrico200165/weblistscraper/tools/WEBUtilsTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/test/jax_rs/JAXRSUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/test/jax_rs/WebAuthFormCookieTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/test/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/italianpenpals_silverpop/italianpenpals_silverpop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/italianpenpals_silverpop/italianpenpals_silverpop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/MainConcorsiIt.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/MainConcorsiIt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/SessionManagerConcorsi.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/SessionManagerConcorsi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/entities/Concor.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/entities/Concor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/entities/ConcorsiDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_scrape_concorsi/src/com/enrico200165/weblistscraper/concorsi_it/entities/ConcorsiDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/WEB_tables_scraper.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_tables_scraper/WEB_tables_scraper.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_tables_scraper/src/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/cookies/CookieStoreEV.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/cookies/CookieStoreEV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/ConfigReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/ConfigReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/HostConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/HostConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/LoginConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/LoginConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/ScrapeGLobConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/ScrapeGLobConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/page/PageProcDescr.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/page/PageProcDescr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/page/PageProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/page/PageProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/ClientWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/ClientWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/InvocationBuilderWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools/InvocationBuilderWrapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.out" beforeDir="false" afterPath="$PROJECT_DIR$/log.out" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,17 +84,20 @@
     <property name="SearchEverywhereHistoryKey" value="InvocationBuilderWrapper&#9;PSI&#9;JAVA://com.enrico200165.weblistscraper.tools.InvocationBuilderWrapper" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/tools" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../deep-learning" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.27297795" />
-    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.enrico200165.utils.net.http" />
       <recent name="com.enrico200165.utils.html" />
       <recent name="com.enrico200165.utils.html.test" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -197,8 +106,8 @@
       <recent name="com.enrico200165.utils.str_regex" />
       <recent name="com.enrico200165.utils" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vialien\Documents\00_ev_data\08_dev\dev_sources\tables_scaraper_intellij\WEB_scrape_concorsi\src\META-INF" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.enrico200165.weblistscraper.tools" />
@@ -415,58 +324,86 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="70" key="#Plugins/0.0.1536.824@0.0.1536.824" timestamp="1578651699409" />
+    <state x="361" y="74" key="#Project_Structure" timestamp="1578822789426">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1578822789426" />
     <state x="574" y="126" key="#com.intellij.ide.util.MemberChooser" timestamp="1578660671850">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="126" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1578660671850" />
-    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1578651820546">
+    <state x="499" y="170" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1578822070303">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1578651820546" />
-    <state width="1342" height="239" key="GridCell.Tab.0.bottom" timestamp="1578664711129">
+    <state x="499" y="170" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824@0.0.1536.824" timestamp="1578822070303" />
+    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1579089319428">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="239" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578664711129" />
-    <state width="1342" height="239" key="GridCell.Tab.0.center" timestamp="1578664711129">
+    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1579089319428" />
+    <state width="1342" height="253" key="GridCell.Tab.0.bottom" timestamp="1578826575774">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="239" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1578664711129" />
-    <state width="1342" height="239" key="GridCell.Tab.0.left" timestamp="1578664711129">
+    <state width="1342" height="253" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578826575774" />
+    <state width="1342" height="253" key="GridCell.Tab.0.center" timestamp="1578826575774">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="239" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1578664711129" />
-    <state width="1342" height="239" key="GridCell.Tab.0.right" timestamp="1578664711129">
+    <state width="1342" height="253" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1578826575774" />
+    <state width="1342" height="253" key="GridCell.Tab.0.left" timestamp="1578826575774">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="239" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1578664711129" />
-    <state width="1342" height="253" key="GridCell.Tab.1.bottom" timestamp="1578654471472">
+    <state width="1342" height="253" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1578826575774" />
+    <state width="1342" height="253" key="GridCell.Tab.0.right" timestamp="1578826575774">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="253" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578654471472" />
-    <state width="1342" height="253" key="GridCell.Tab.1.center" timestamp="1578654471472">
+    <state width="1342" height="253" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1578826575774" />
+    <state width="1342" height="253" key="GridCell.Tab.1.bottom" timestamp="1578826575774">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="253" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1578654471472" />
-    <state width="1342" height="253" key="GridCell.Tab.1.left" timestamp="1578654471472">
+    <state width="1342" height="253" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578826575774" />
+    <state width="1342" height="253" key="GridCell.Tab.1.center" timestamp="1578826575774">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="253" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1578654471472" />
-    <state width="1342" height="253" key="GridCell.Tab.1.right" timestamp="1578654471472">
+    <state width="1342" height="253" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1578826575774" />
+    <state width="1342" height="253" key="GridCell.Tab.1.left" timestamp="1578826575774">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="253" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1578654471472" />
-    <state x="490" y="162" width="540" height="524" key="StructurePopup" timestamp="1578662733445">
+    <state width="1342" height="253" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1578826575774" />
+    <state width="1342" height="253" key="GridCell.Tab.1.right" timestamp="1578826575774">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="490" y="162" width="540" height="524" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1578662733445" />
+    <state width="1342" height="253" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1578826575774" />
+    <state x="277" y="58" key="SettingsEditor" timestamp="1578821875231">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1578821875231" />
+    <state x="490" y="162" width="540" height="524" key="StructurePopup" timestamp="1578823443830">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="490" y="162" width="540" height="524" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1578823443830" />
     <state x="584" y="189" width="662" height="445" key="chooseDestDirectoryDialog" timestamp="1578654367922">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="584" y="189" width="662" height="445" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1578654367922" />
-    <state x="465" y="235" key="com.intellij.ide.util.TipDialog" timestamp="1578664883533">
+    <state x="168" y="124" width="1200" height="584" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1578824329790">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="235" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1578664883533" />
+    <state x="168" y="124" width="1200" height="584" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1578824329790" />
+    <state x="465" y="235" key="com.intellij.ide.util.TipDialog" timestamp="1579089266239">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="235" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1579089266239" />
+    <state x="498" y="309" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1578822761614">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="309" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1578822761614" />
+    <state x="475" y="34" key="refactoring.ChangeSignatureDialog" timestamp="1578823991447">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="475" y="34" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1578823991447" />
+    <state x="425" y="73" width="672" height="676" key="search.everywhere.popup" timestamp="1578825829335">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="73" width="672" height="676" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1578825829335" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -518,8 +455,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/ConfigReader.java</url>
-          <line>382</line>
-          <option name="timeStamp" value="151" />
+          <line>353</line>
+          <option name="timeStamp" value="152" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/configs/ConfigReader.java</url>
+          <line>400</line>
+          <option name="timeStamp" value="153" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/EVUtils/src/com/enrico200165/utils/html/HTMLDisplayInBrowser.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="160" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/WEB_tables_scraper/src/com/enrico200165/weblistscraper/page/TableScraperABC.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="170" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
