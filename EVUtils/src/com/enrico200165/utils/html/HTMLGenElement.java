@@ -1,9 +1,10 @@
 package com.enrico200165.utils.html;
 
-import org.apache.log4j.*;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
-
 
 
 /**
@@ -149,5 +150,5 @@ public class HTMLGenElement implements IHTMLContent {
 	ArrayList<Attributoid> attributoids;
 	ArrayList<HTMLGenElement> subElements;
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(HTMLGenElement.class);
+	private static Logger log = LogManager.getLogger(HTMLGenElement.class);
 }

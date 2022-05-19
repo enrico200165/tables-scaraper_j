@@ -1,10 +1,11 @@
 package com.enrico200165.weblistscraper.tools;
 
-import java.util.List;
-
-import com.enrico200165.utils.str_regex.*;
+import com.enrico200165.utils.str_regex.NameValuePairString;
 import com.enrico200165.weblistscraper.configs.HostConfig;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.List;
 
 public abstract class FormManagerABC {
 
@@ -21,5 +22,5 @@ public abstract class FormManagerABC {
 	
 	protected HostConfig hcfg;
 	
-	private static org.apache.log4j.Logger log = Logger.getLogger(FormManagerABC.class);
+	private static Logger log = LogManager.getLogger(FormManagerABC.class.getName());
 }

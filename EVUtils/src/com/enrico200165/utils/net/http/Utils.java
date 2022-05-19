@@ -1,8 +1,8 @@
 package com.enrico200165.utils.net.http;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import javax.ws.rs.core.NewCookie;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
@@ -189,7 +189,7 @@ public class Utils {
 	}
 
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(Utils.class);
+	private static Logger log = LogManager.getLogger(Utils.class.getName());
 
 
 }

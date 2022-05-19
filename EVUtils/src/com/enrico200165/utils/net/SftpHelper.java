@@ -1,7 +1,9 @@
 package com.enrico200165.utils.net;
 
 import com.jcraft.jsch.*;
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.swing.*;
 import java.awt.*;
@@ -229,6 +231,6 @@ public class SftpHelper {
 
 	private static String help = "guarda il codice originale per l'help";
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(SftpHelper.class);
+	private static Logger log = LogManager.getLogger(SftpHelper.class.getName());
 
 }

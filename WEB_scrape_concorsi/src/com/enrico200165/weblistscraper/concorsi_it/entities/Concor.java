@@ -7,9 +7,13 @@ import com.enrico200165.utils.html.Table;
 import com.enrico200165.utils.net.security.HashGeneratorUtils;
 import com.enrico200165.utils.str_regex.StringUtils;
 import com.enrico200165.weblistscraper.entities.EntityBase;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -319,6 +323,5 @@ public class Concor extends EntityBase {
 
 	// --- fine scheda di sintesi ---
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(Concor.class);
-
+	private static Logger log = LogManager.getLogger(Concor.class.getName());
 }

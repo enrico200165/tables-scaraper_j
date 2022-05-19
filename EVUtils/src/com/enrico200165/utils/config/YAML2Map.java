@@ -1,6 +1,7 @@
 package com.enrico200165.utils.config;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.IOException;
@@ -39,6 +40,5 @@ public class YAML2Map {
     }
 
 
-    private static org.apache.log4j.Logger log = Logger.getLogger(YAML2Map.class);
-
+    private static Logger log = LogManager.getLogger(YAML2Map.class);
 }

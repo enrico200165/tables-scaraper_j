@@ -6,7 +6,8 @@ import com.enrico200165.utils.str_regex.NameValuePairString;
 import com.enrico200165.weblistscraper.common.WEBUtils;
 import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.page.PageProcDescr;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.glassfish.jersey.client.ClientProperties;
 
 import javax.ws.rs.client.Client;
@@ -299,12 +300,12 @@ public class ClientWrapper {
     }
 
 
-    public static org.apache.log4j.Logger getLog() {
+    public static Logger getLog() {
         return log;
     }
 
 
-    public static void setLog(org.apache.log4j.Logger log) {
+    public static void setLog(Logger log) {
         ClientWrapper.log = log;
     }
 
@@ -361,7 +362,7 @@ public class ClientWrapper {
     int pageLoadDelay;
     FormManagerABC fm;
 
-    private static org.apache.log4j.Logger log = Logger.getLogger(ClientWrapper.class);
+    private static Logger log = LogManager.getLogger(ClientWrapper.class.getName());
 
 
 }

@@ -2,13 +2,17 @@ package com.enrico200165.weblistscraper.concorsi_it.configs.test;
 
 import com.enrico200165.weblistscraper.tools.EntryExcludeFilter;
 import com.enrico200165.weblistscraper.tools.EntryExcludeFilterVanilla;
-import org.apache.log4j.Logger;
+
 import org.jsoup.nodes.Element;
 import org.jsoup.parser.Tag;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
+
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class EntryExcludeFilterConcorsiItTest {
 
@@ -47,6 +51,5 @@ public class EntryExcludeFilterConcorsiItTest {
 	
 	EntryExcludeFilter filter;
 	
-	private static org.apache.log4j.Logger log = Logger.getLogger(EntryExcludeFilterConcorsiItTest.class);
-
+	private static Logger log = LogManager.getLogger(EntryExcludeFilterConcorsiItTest.class.getName());
 }

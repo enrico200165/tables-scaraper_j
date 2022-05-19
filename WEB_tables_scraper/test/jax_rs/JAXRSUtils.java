@@ -1,12 +1,12 @@
 package jax_rs;
 
 import com.enrico200165.utils.net.http.Utils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 
-import com.enrico200165.weblistscraper.common.WEBUtils;
-
 import static org.junit.Assert.assertEquals;
+
 
 public class JAXRSUtils {
 
@@ -26,6 +26,5 @@ public class JAXRSUtils {
 		// assertEquals(true,WEBUtils.isRelative("//"));		
 	}
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(JAXRSUtils.class);
-
+	private static Logger log = LogManager.getLogger(JAXRSUtils.class.getName());
 }

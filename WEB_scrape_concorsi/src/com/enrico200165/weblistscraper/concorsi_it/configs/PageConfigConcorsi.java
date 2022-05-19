@@ -9,7 +9,9 @@ import com.enrico200165.weblistscraper.page.TableScraperABC;
 import com.enrico200165.weblistscraper.tools.EntryCanActOnFilter;
 import com.enrico200165.weblistscraper.tools.EntryExcludeFilter;
 import com.enrico200165.weblistscraper.tools.EntryIncludeFilter;
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Tage = table/page
@@ -102,6 +104,6 @@ public abstract class PageConfigConcorsi extends PageConfigABC {
 
     protected abstract NextTablePageSelectorsABC getNextTablePageSelectorsSpecific();
 
-    private static org.apache.log4j.Logger log = Logger.getLogger(PageConfigConcorsi.class);
+    private static Logger log = LogManager.getLogger(PageConfigConcorsi.class.getName());
 
 }

@@ -2,7 +2,6 @@ package com.enrico200165.weblistscraper.marketingDB;
 
 import com.enrico200165.weblistscraper.common.ContactType;
 import com.enrico200165.weblistscraper.configs.ChannelIFC;
-import org.eclipse.persistence.annotations.Index;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +16,6 @@ public class Contact {
 
 	public Contact() {
 	}
-
 
 	public Contact(ProspectABC prospect, String chType, String chVend,String chID,
 				   String contactComm,String contMessage) {
@@ -211,9 +209,8 @@ public class Contact {
 	ContactType	contactType;
 
 
-	@Index
 	String prospectID;
-	@Index
+
 	String contactMail;
 
 	// -- channel info ---

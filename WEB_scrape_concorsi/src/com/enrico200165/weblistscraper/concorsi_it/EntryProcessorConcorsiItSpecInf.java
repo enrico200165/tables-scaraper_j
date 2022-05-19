@@ -4,10 +4,12 @@ import com.enrico200165.weblistscraper.common.WEBUtils;
 import com.enrico200165.weblistscraper.concorsi_it.entities.Concor;
 import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jsoup.nodes.Element;
 
 import java.net.URI;
+
 
 public class EntryProcessorConcorsiItSpecInf extends EntryProcessorConcorsiBase {
 
@@ -57,5 +59,5 @@ public class EntryProcessorConcorsiItSpecInf extends EntryProcessorConcorsiBase 
 	}
 	
 	
-	private static org.apache.log4j.Logger log = Logger.getLogger(EntryProcessorConcorsiItSpecInf.class);
+	private static Logger log = LogManager.getLogger(EntryProcessorConcorsiItSpecInf.class.getName());
 }

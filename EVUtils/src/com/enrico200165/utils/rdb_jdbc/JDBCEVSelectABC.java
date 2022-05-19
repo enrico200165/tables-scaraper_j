@@ -1,14 +1,17 @@
 package com.enrico200165.utils.rdb_jdbc;
 
-import java.sql.*;
-import java.util.*;
-
 import com.enrico200165.utils.files.FileHelper;
 import com.enrico200165.utils.files.IRenderableAsTexLineStringWrapper;
 import com.enrico200165.utils.files.IRenderableAsTextLine;
 import com.enrico200165.utils.files.TexLineRendererString;
 import com.enrico200165.utils.str_regex.StringUtils;
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author enrico
@@ -165,5 +168,5 @@ public abstract class JDBCEVSelectABC implements IRowSetSelector {
 	String sqlStatement;
 	ResultSet rs;
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(JDBCEVSelectABC.class);
+	private static Logger log = LogManager.getLogger(JDBCEVSelectABC.class.getName());
 }

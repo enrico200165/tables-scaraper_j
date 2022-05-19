@@ -1,10 +1,14 @@
 package com.enrico200165.weblistscraper.common;
 
 import com.enrico200165.cookies.CookieStoreEV;
-import com.enrico200165.utils.str_regex.*;
-import com.enrico200165.weblistscraper.tools.*;
+import com.enrico200165.utils.str_regex.NameValuePairString;
+import com.enrico200165.weblistscraper.tools.ClReqFilterCookies;
+import com.enrico200165.weblistscraper.tools.ClientRespFilterEV;
+import com.enrico200165.weblistscraper.tools.ResponseWrapper;
+import com.enrico200165.weblistscraper.tools.Result;
 import com.enrico200165.weblistscraper.tools.Result.RC;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -16,8 +20,12 @@ import javax.ws.rs.client.ClientResponseFilter;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.NewCookie;
 import javax.ws.rs.core.Response;
-import java.net.*;
-import java.util.*;
+import java.net.HttpCookie;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Random;
+
 
 public class WEBUtils {
 
@@ -413,5 +421,5 @@ public class WEBUtils {
         return true;
     }
 
-    private static org.apache.log4j.Logger log = Logger.getLogger(WEBUtils.class);
+    private static Logger log = LogManager.getLogger(WEBUtils.class.getName());
 }

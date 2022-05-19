@@ -1,9 +1,9 @@
 package com.enrico200165.utils.ext_proc.single_thread;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.ArrayList;
-
-import org.apache.log4j.Logger;
-
 
 public abstract class aExecutor implements iExecutor {
 
@@ -83,6 +83,5 @@ public abstract class aExecutor implements iExecutor {
 	
 	abstract public void exec(String argsPar[], boolean isShellCommand);
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(aExecutor.class);
-
+	private static Logger log = LogManager.getLogger(aExecutor.class);
 }

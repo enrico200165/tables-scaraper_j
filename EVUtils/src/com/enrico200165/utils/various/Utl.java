@@ -1,12 +1,15 @@
 package com.enrico200165.utils.various;
 
-import org.apache.log4j.Logger;
 
-import java.io.*;
-import java.util.*;
-import java.util.regex.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.io.File;
 import java.lang.management.ManagementFactory;
 import java.lang.management.RuntimeMXBean;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Utl {
 
@@ -399,5 +402,5 @@ public class Utl {
 
     public static final String ENCODING_UTF8 = "UTF8";
 
-    private static org.apache.log4j.Logger log = Logger.getLogger(Utl.class);
+    private static Logger log = LogManager.getLogger(Utl.class.getName());
 }

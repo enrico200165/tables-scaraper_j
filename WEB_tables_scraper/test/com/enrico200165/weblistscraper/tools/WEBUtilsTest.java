@@ -1,16 +1,17 @@
 package com.enrico200165.weblistscraper.tools;
 
 import com.enrico200165.utils.net.http.Utils;
-import com.enrico200165.utils.str_regex.*;
-import com.enrico200165.weblistscraper.common.*;
-import org.apache.log4j.Logger;
+import com.enrico200165.utils.str_regex.NameValuePairString;
+import com.enrico200165.weblistscraper.common.WEBUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.net.URI;
-import java.util.*;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -212,6 +213,5 @@ public class WEBUtilsTest {
 	}
 
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(WEBUtilsTest.class);
-
+	private static Logger log = LogManager.getLogger(WEBUtilsTest.class.getName());
 }

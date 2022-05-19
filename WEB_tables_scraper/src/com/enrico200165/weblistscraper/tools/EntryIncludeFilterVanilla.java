@@ -2,8 +2,12 @@ package com.enrico200165.weblistscraper.tools;
 
 
 import com.enrico200165.weblistscraper.marketingDB.ProspectCoreData;
-import org.apache.log4j.Logger;
 import org.jsoup.nodes.Element;
+
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 public class EntryIncludeFilterVanilla extends com.enrico200165.weblistscraper.tools.EntryIncludeFilter {
 
@@ -40,6 +44,6 @@ public class EntryIncludeFilterVanilla extends com.enrico200165.weblistscraper.t
 		return ret;
 	}
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(EntryIncludeFilterVanilla.class);
+	private static Logger log = LogManager.getLogger(EntryIncludeFilterVanilla.class.getName());
 
 }

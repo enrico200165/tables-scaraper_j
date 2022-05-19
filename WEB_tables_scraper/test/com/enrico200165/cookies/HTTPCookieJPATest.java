@@ -1,6 +1,7 @@
 package com.enrico200165.cookies;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -14,6 +15,7 @@ import java.util.Date;
 import java.util.List;
 
 import static org.junit.Assert.*;
+
 
 public class HTTPCookieJPATest {
 
@@ -184,5 +186,5 @@ public class HTTPCookieJPATest {
 
     ArrayList<HttpCookieJPA> cookies;
 
-    private static org.apache.log4j.Logger log = Logger.getLogger(HTTPCookieJPATest.class);
+    private static Logger log = LogManager.getLogger(HTTPCookieJPATest.class.getName());
 }

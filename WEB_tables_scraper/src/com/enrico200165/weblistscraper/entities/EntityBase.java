@@ -1,14 +1,6 @@
 package com.enrico200165.weblistscraper.entities;
 
-import java.sql.Timestamp;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.Transient;
-
-import org.eclipse.persistence.annotations.Index;
 
 
 /**

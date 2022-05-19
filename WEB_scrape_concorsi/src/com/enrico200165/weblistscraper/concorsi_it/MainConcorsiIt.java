@@ -14,7 +14,9 @@ import com.enrico200165.weblistscraper.page.PageProcessor;
 import com.enrico200165.weblistscraper.page.TableScraperABC;
 import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import com.enrico200165.weblistscraper.tools.*;
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientRequestFilter;
@@ -154,5 +156,5 @@ public class MainConcorsiIt {
 
 	}
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(MainConcorsiIt.class);
+	private static Logger log = LogManager.getLogger(MainConcorsiIt.class.getName());
 }

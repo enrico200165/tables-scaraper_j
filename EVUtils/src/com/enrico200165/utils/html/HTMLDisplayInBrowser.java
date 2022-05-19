@@ -1,8 +1,7 @@
 package com.enrico200165.utils.html;
 
 import com.enrico200165.utils.files.FileHelper;
-import org.apache.log4j.Logger;
-
+import java.util.logging.Logger;
 import java.awt.*;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -113,5 +112,5 @@ public class HTMLDisplayInBrowser {
 
 	}
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(HTMLDisplayInBrowser.class);
+	private static Logger log = Logger.getLogger(HTMLDisplayInBrowser.class.getName());
 }

@@ -1,9 +1,11 @@
 package com.enrico200165.utils.rdb_jdbc;
 
-import java.io.*;
-import java.sql.*;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
+import java.io.File;
+import java.io.IOException;
+import java.sql.SQLException;
 public class RDBManagerSQLite extends RDBManager {
 
 	public RDBManagerSQLite(String DBPathname, boolean mustExist)
@@ -70,6 +72,5 @@ public class RDBManagerSQLite extends RDBManager {
 		return connectToDBMS() && openDB();
 	}
 
-	private static org.apache.log4j.Logger log = Logger
-			.getLogger(RDBManagerSQLite.class);
+	private static Logger log = LogManager.getLogger(RDBManagerSQLite.class.getName());
 }

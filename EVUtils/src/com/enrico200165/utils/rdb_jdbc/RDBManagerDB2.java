@@ -1,7 +1,8 @@
 package com.enrico200165.utils.rdb_jdbc;
 
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class RDBManagerDB2 extends RDBManager {
 
@@ -18,7 +19,6 @@ public class RDBManagerDB2 extends RDBManager {
 		return true;
 	}
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(RDBManagerDB2.class);
 
 	@Override
 	protected String buildConnStr() {
@@ -29,4 +29,5 @@ public class RDBManagerDB2 extends RDBManager {
 		return DBMSFullURL;
 	}
 
+	private static Logger log = LogManager.getLogger(RDBManagerDB2.class.getName());
 }

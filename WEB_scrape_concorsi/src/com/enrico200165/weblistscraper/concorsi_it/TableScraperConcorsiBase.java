@@ -1,17 +1,17 @@
 package com.enrico200165.weblistscraper.concorsi_it;
 
 
-
-import java.util.*;
-
-import org.apache.log4j.Logger;
-
 import com.enrico200165.weblistscraper.concorsi_it.entities.Concor;
 import com.enrico200165.weblistscraper.concorsi_it.entities.ConcorsiDB;
 import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.page.EntryProcessorABC;
 import com.enrico200165.weblistscraper.page.TableScraperABC;
 import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.ArrayList;
 
 public abstract class TableScraperConcorsiBase extends TableScraperABC {
 
@@ -52,6 +52,6 @@ public abstract class TableScraperConcorsiBase extends TableScraperABC {
 	ConcorsiDB concDB;
 	ArrayList<Concor> concEsclusi;
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(TableScraperConcorsiBase.class);
+	private static Logger log = LogManager.getLogger(TableScraperConcorsiBase.class.getName());
 
 }

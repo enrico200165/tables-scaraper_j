@@ -1,10 +1,10 @@
 package com.enrico200165.utils.various;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.File;
 import java.util.Map;
-
-import org.apache.log4j.Logger;
-
 public class EnvMap {
 	EnvMap() {
 	}
@@ -37,5 +37,5 @@ public class EnvMap {
 	}
 
 	static Map<String, String> singletonEnvMap;
-	private static org.apache.log4j.Logger log = Logger.getLogger(EnvMap.class);
+	private static Logger log = LogManager.getLogger(EnvMap.class.getName());
 }

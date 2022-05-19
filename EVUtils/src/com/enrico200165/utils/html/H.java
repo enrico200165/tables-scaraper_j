@@ -1,6 +1,6 @@
 package com.enrico200165.utils.html;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 public class H extends HTMLElement {
 
@@ -19,5 +19,5 @@ public class H extends HTMLElement {
 	}
 
 	
-	private static org.apache.log4j.Logger log = Logger.getLogger(H.class);
+	private static Logger log = Logger.getLogger(H.class.getName());
 }

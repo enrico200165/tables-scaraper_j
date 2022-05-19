@@ -1,11 +1,11 @@
 package com.enrico200165.weblistscraper.tools;
 
-import java.util.List;
-
-import com.enrico200165.utils.str_regex.*;
-import org.apache.log4j.Logger;
-
+import com.enrico200165.utils.str_regex.NameValuePairString;
 import com.enrico200165.weblistscraper.configs.HostConfig;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.List;
 
 public class FormManagerDummy extends FormManagerABC{
 
@@ -24,5 +24,5 @@ public class FormManagerDummy extends FormManagerABC{
 	
 	protected HostConfig hcfg;
 	
-	private static org.apache.log4j.Logger log = Logger.getLogger(FormManagerDummy.class);
+	private static Logger log = LogManager.getLogger(FormManagerDummy.class.getName());
 }

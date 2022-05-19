@@ -1,7 +1,8 @@
 package com.enrico200165.weblistscraper.configs;
 
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class SessionLimitsBase {
 
@@ -129,5 +130,5 @@ public class SessionLimitsBase {
 	int contacts;
 	int reads;
 
-	private static Logger log = Logger.getLogger(SessionLimitsBase.class);
+	private static Logger log = LogManager.getLogger(SessionLimitsBase.class.getName());
 }

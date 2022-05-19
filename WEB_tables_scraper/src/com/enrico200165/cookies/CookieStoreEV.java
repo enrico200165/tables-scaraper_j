@@ -1,9 +1,14 @@
 package com.enrico200165.cookies;
 
-import com.enrico200165.weblistscraper.common.WEBUtils;
-import org.apache.log4j.Logger;
 
-import javax.persistence.*;
+import com.enrico200165.weblistscraper.common.WEBUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
@@ -14,8 +19,6 @@ import java.net.HttpCookie;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.*;
-
-
 
 public class CookieStoreEV implements java.net.CookieStore {
 
@@ -380,6 +383,5 @@ public class CookieStoreEV implements java.net.CookieStore {
 
     EntityManager em;
 
-    private static org.apache.log4j.Logger log = Logger.getLogger(CookieStoreEV.class);
-
+    private static Logger log = LogManager.getLogger(CookieStoreEV.class.getName());
 }

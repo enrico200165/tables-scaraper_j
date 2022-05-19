@@ -7,11 +7,15 @@ import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import com.enrico200165.weblistscraper.tools.ClientWrapper;
 import com.enrico200165.weblistscraper.tools.ResponseWrapper;
 import com.enrico200165.weblistscraper.tools.Result;
-import org.apache.log4j.Logger;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 public abstract class EntryProcessorConcorsiBase extends EntryProcessorABC {
 
@@ -98,5 +102,5 @@ public abstract class EntryProcessorConcorsiBase extends EntryProcessorABC {
 		return res;
 	}
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(EntryProcessorConcorsiBase.class);
+	private static Logger log = LogManager.getLogger(EntryProcessorConcorsiBase.class.getName());
 }

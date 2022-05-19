@@ -9,7 +9,10 @@ import com.enrico200165.weblistscraper.concorsi_it.entities.ConcorsiDB;
 import com.enrico200165.weblistscraper.configs.SessionLimitsBase;
 import com.enrico200165.weblistscraper.session.SessionManager;
 import com.enrico200165.weblistscraper.tools.ClientWrapper;
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -115,5 +118,5 @@ public class SessionManagerConcorsi extends SessionManager {
 	int included;
 	int excluded;
 	
-	private static org.apache.log4j.Logger log = Logger.getLogger(SessionManagerConcorsi.class);
+	private static Logger log = LogManager.getLogger(SessionManagerConcorsi.class.getName());
 }

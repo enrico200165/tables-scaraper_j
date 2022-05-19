@@ -1,15 +1,17 @@
 package com.enrico200165.weblistscraper.tools;
 
-import java.util.List;
-
-import javax.ws.rs.client.*;
-
-import com.enrico200165.utils.str_regex.*;
-import org.apache.log4j.Logger;
+import com.enrico200165.utils.str_regex.NameValuePairString;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Invocation;
+import javax.ws.rs.client.WebTarget;
+import java.util.List;
 
 
 public class Experiment  {
@@ -67,5 +69,5 @@ public class Experiment  {
 	}
 
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(Experiment.class);
+	private static Logger log = LogManager.getLogger(Experiment.class.getName());
 }

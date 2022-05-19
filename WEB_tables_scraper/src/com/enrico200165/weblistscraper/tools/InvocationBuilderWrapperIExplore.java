@@ -1,6 +1,8 @@
 package com.enrico200165.weblistscraper.tools;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 public class InvocationBuilderWrapperIExplore extends InvocationBuilderWrapper {
 
@@ -41,5 +43,5 @@ public class InvocationBuilderWrapperIExplore extends InvocationBuilderWrapper {
 		return this;
 	}
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(InvocationBuilderWrapperIExplore.class);
+	private static Logger log = LogManager.getLogger(InvocationBuilderWrapperIExplore.class.getName());
 }

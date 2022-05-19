@@ -2,10 +2,11 @@ package com.enrico200165.weblistscraper.page;
 
 import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
-import org.apache.log4j.Logger;
 
 import com.enrico200165.weblistscraper.configs.HostConfig;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 /**
  * @author enrico
  * 
@@ -43,5 +44,5 @@ public abstract class PageProcessorAbstr {
 
 	HostConfig hostConfig;
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(PageProcessorAbstr.class);
+	private static Logger log = LogManager.getLogger(PageProcessorAbstr.class.getName());
 }

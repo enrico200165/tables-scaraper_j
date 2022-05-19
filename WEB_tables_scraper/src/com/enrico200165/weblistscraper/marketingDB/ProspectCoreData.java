@@ -7,6 +7,8 @@ import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Timestamp;
 
+
+
 /**
  * Models the basic common fields of a project that will be stored on DB
  * Every Web site or channel will have a different "ProspectCoreData", with different fields,
@@ -34,13 +36,13 @@ public class ProspectCoreData extends EntityBase  {
     }
 */
 
-    public String getFistName() {
-        return fistName;
+    public String getFirstName() {
+        return firstName;
     }
 
 
     public void setFistName(String fistName) {
-        this.fistName = fistName;
+        this.firstName = fistName;
     }
 
 
@@ -321,10 +323,12 @@ public class ProspectCoreData extends EntityBase  {
     @GeneratedValue
     long internalID;
 
-    @org.eclipse.persistence.annotations.Index
-    String fistName;
-    @org.eclipse.persistence.annotations.Index
+    @Column
     String lastName;
+
+    @Column
+    String firstName;
+
     @Column(length = 1)
     String sex;
     int age;

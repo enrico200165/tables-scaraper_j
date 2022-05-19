@@ -1,7 +1,10 @@
 package com.enrico200165.cookies;
 
-import org.apache.log4j.Logger;
-import org.junit.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.net.HttpCookie;
 import java.util.ArrayList;
@@ -215,6 +218,6 @@ public class CookieStoreEVTest {
 	
 	CookieStoreEV defCookieStoreEV;
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(CookieStoreEVTest.class);
+	private static Logger log = LogManager.getLogger(CookieStoreEVTest.class.getName());
 
 }

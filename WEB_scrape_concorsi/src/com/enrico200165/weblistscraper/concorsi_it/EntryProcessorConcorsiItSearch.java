@@ -1,14 +1,15 @@
 package com.enrico200165.weblistscraper.concorsi_it;
 
-import java.net.URI;
-
 import com.enrico200165.weblistscraper.common.WEBUtils;
-import org.apache.log4j.Logger;
-import org.jsoup.nodes.Element;
-
 import com.enrico200165.weblistscraper.concorsi_it.entities.Concor;
 import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.jsoup.nodes.Element;
+
+import java.net.URI;
+
 
 public class EntryProcessorConcorsiItSearch extends  EntryProcessorConcorsiBase {
 
@@ -51,7 +52,5 @@ public class EntryProcessorConcorsiItSearch extends  EntryProcessorConcorsiBase 
 		return true;
 	}
 
-	
-	
-	private static org.apache.log4j.Logger log = Logger.getLogger(EntryProcessorConcorsiItSearch.class);
+	private static Logger log = LogManager.getLogger(EntryProcessorConcorsiItSearch.class.getName());
 }

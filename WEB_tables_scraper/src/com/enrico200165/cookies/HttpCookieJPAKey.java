@@ -1,10 +1,12 @@
 package com.enrico200165.cookies;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.io.Serializable;
+
 
 @Entity
 public class HttpCookieJPAKey implements Serializable {
@@ -64,6 +66,6 @@ public class HttpCookieJPAKey implements Serializable {
 		return domain.hashCode() + name.hashCode();
 	}
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(HttpCookieJPAKey.class);
+	private static Logger log = LogManager.getLogger(HttpCookieJPAKey.class.getName());
 
 }

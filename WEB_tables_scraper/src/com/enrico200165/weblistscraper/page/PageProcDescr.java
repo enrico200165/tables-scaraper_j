@@ -7,11 +7,16 @@ import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.tools.FormManagerABC;
 import com.enrico200165.weblistscraper.tools.InvocationBuilderWrapper;
 import com.enrico200165.weblistscraper.tools.WebPageAction;
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
+
+
 
 /**
  * Lavora usando PageProcessor e PageConfig, forse dovrebbero essere fuse (risulterebbe entità complessa?)
@@ -93,11 +98,11 @@ public class PageProcDescr {
 		this.httpCallDelay = httpCallDelay;
 	}
 
-	public static org.apache.log4j.Logger getLog() {
+	public static Logger getLog() {
 		return log;
 	}
 
-	public static void setLog(org.apache.log4j.Logger log) {
+	public static void setLog(Logger log) {
 		PageProcDescr.log = log;
 	}
 
@@ -200,5 +205,5 @@ public class PageProcDescr {
 	FormManagerABC formManager;
 	InvocationBuilderWrapper ibw;
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(PageProcDescr.class);
+	private static Logger log = LogManager.getLogger(PageProcDescr.class.getName());
 }

@@ -1,11 +1,11 @@
 package com.enrico200165.weblistscraper.tools;
 
-import org.apache.log4j.*;
-import org.jsoup.*;
-import org.jsoup.nodes.*;
-import org.jsoup.select.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
 
-import static java.lang.System.*;
 
 /**
  * Created by enrico on 2/19/2016.
@@ -43,7 +43,5 @@ public class JSoupVerify {
 
 
 
-    private static org.apache.log4j.Logger log = Logger.getLogger(JSoupVerify.class);
-
-
+    private static Logger log = LogManager.getLogger(JSoupVerify.class.getName());
 } 

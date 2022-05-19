@@ -2,7 +2,8 @@ package com.enrico200165.cookies;
 
 import com.enrico200165.utils.str_regex.StringUtils;
 import com.enrico200165.weblistscraper.common.WEBUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.persistence.*;
 import javax.ws.rs.core.Cookie;
@@ -390,6 +391,6 @@ public class HttpCookieJPA {
     @Id
     String domain;
 
-    private static org.apache.log4j.Logger log = Logger.getLogger(HttpCookieJPA.class);
+    private static Logger log = LogManager.getLogger(HttpCookieJPA.class.getName());
 
 }

@@ -2,10 +2,13 @@ package com.enrico200165.weblistscraper.session;
 
 import com.enrico200165.weblistscraper.page.PageProcessResult;
 import com.enrico200165.weblistscraper.tools.ClientWrapper;
-import org.apache.log4j.Logger;
+
 
 import com.enrico200165.weblistscraper.configs.SessionLimitsBase;
 import com.enrico200165.weblistscraper.page.PageProcDescr;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class SessionManager extends SessionManagerAbstr {
 
@@ -49,5 +52,5 @@ public class SessionManager extends SessionManagerAbstr {
 
 	
 	
-	private static org.apache.log4j.Logger log = Logger.getLogger(SessionManager.class);
+	private static Logger log = LogManager.getLogger(SessionManager.class.getName());
 }

@@ -1,6 +1,6 @@
 package com.enrico200165.utils.rdb_jdbc;
 
-//import org.apache.log4j.Logger;
+//import java.util.logging.Logger;
 
 public class JDBCEVField {
 

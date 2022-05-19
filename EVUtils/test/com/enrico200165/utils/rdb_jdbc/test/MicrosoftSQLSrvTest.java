@@ -1,6 +1,11 @@
 
 package com.enrico200165.utils.rdb_jdbc.test;
 
+import com.enrico200165.utils.rdb_jdbc.JDBCEVTable;
+import com.enrico200165.utils.rdb_jdbc.RDBManagerMicrosoftSQLSrv;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
@@ -10,11 +15,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
-import org.apache.log4j.Logger;
-
-import com.enrico200165.utils.rdb_jdbc.JDBCEVTable;
-import com.enrico200165.utils.rdb_jdbc.RDBManagerMicrosoftSQLSrv;
 
 public class MicrosoftSQLSrvTest {
 
@@ -214,6 +214,5 @@ public class MicrosoftSQLSrvTest {
 	static final String contactTable = "UA_IndivContactHistory";
 	ArrayList<String> contactTFields;
 
-	private static org.apache.log4j.Logger log = Logger
-			.getLogger(MicrosoftSQLSrvTest.class);
+	private static Logger log = LogManager.getLogger(MicrosoftSQLSrvTest.class.getName());
 }

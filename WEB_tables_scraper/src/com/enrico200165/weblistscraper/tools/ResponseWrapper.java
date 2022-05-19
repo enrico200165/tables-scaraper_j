@@ -1,8 +1,10 @@
 package com.enrico200165.weblistscraper.tools;
 
-import com.enrico200165.utils.str_regex.*;
+import com.enrico200165.utils.str_regex.NameValuePairString;
+import com.enrico200165.utils.str_regex.StringUtils;
 import com.enrico200165.weblistscraper.page.NextTablePageSelectorsABC;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -229,5 +231,5 @@ public class ResponseWrapper {
     Response response;
     Document doc;
 
-    private static org.apache.log4j.Logger log = Logger.getLogger(ResponseWrapper.class);
+    private static Logger log = LogManager.getLogger(ResponseWrapper.class.getName());
 }

@@ -1,12 +1,10 @@
 package com.enrico200165.utils.ext_proc.single_thread;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 public class ExecutorRuntime extends aExecutor {
-
-
-
 	/*
 	 */
 	@Override
@@ -38,6 +36,6 @@ public class ExecutorRuntime extends aExecutor {
 	}
 
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(ExecutorRuntime.class);
+	private static Logger log = LogManager.getLogger(ExecutorRuntime.class);
 
 }

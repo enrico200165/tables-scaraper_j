@@ -1,10 +1,12 @@
 package com.enrico200165.weblistscraper.tools;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.ws.rs.client.Invocation.Builder;
 import java.util.HashMap;
 import java.util.Map;
+
 
 /* importante per capire qualcosa di questa classe:
  * l'invocation builder viene generato dal target, quindi è disponibile poco prima dell'invocazione,
@@ -52,5 +54,5 @@ public abstract class InvocationBuilderWrapper {
 	
 	protected Map<String, String> headers;
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(InvocationBuilderWrapper.class);
+	private static Logger log = LogManager.getLogger(InvocationBuilderWrapper.class.getName());
 }

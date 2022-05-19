@@ -1,6 +1,8 @@
 package com.enrico200165.weblistscraper.marketingDB;
 
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.persistence.*;
 import javax.persistence.criteria.*;
@@ -363,5 +365,5 @@ public class DBManagerMKT {
     }
 
     private EntityManager em;
-    private static org.apache.log4j.Logger log = Logger.getLogger(DBManagerMKT.class);
+    private static Logger log = LogManager.getLogger(DBManagerMKT.class.getName());
 }

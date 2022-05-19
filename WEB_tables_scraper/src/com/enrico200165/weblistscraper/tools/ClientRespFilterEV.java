@@ -1,7 +1,8 @@
 package com.enrico200165.weblistscraper.tools;
 
 import com.enrico200165.cookies.CookieStoreEV;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.ws.rs.client.ClientRequestContext;
 import javax.ws.rs.client.ClientResponseContext;
@@ -12,6 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+
 
 public class ClientRespFilterEV implements ClientResponseFilter {
 
@@ -59,5 +61,5 @@ public class ClientRespFilterEV implements ClientResponseFilter {
     Map<String, NewCookie> cr;
     CookieStoreEV cookieStore;
 
-    private static org.apache.log4j.Logger log = Logger.getLogger(ClientRespFilterEV.class);
+    private static Logger log = LogManager.getLogger(ClientRespFilterEV.class.getName());
 }

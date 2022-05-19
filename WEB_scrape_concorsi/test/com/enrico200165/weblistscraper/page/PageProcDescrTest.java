@@ -1,10 +1,13 @@
 package com.enrico200165.weblistscraper.page;
 
-import com.enrico200165.weblistscraper.concorsi_it.configs.*;
-import com.enrico200165.weblistscraper.configs.*;
-import com.enrico200165.weblistscraper.tools.*;
-import org.apache.log4j.*;
-import org.junit.*;
+import com.enrico200165.weblistscraper.configs.HostConfig;
+import com.enrico200165.weblistscraper.tools.WebPageAction;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
 
 /**
  * Created by enrico on 2/14/2016.
@@ -67,6 +70,5 @@ public class PageProcDescrTest {
 
     }
 
-    private static org.apache.log4j.Logger log = Logger.getLogger(PageProcDescrTest.class);
-
+    private static Logger log = LogManager.getLogger(PageProcDescrTest.class.getName());
 }

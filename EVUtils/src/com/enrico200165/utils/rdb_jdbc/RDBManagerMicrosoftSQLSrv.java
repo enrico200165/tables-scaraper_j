@@ -1,8 +1,9 @@
 package com.enrico200165.utils.rdb_jdbc;
 
-import java.io.IOException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import org.apache.log4j.Logger;
+import java.io.IOException;
 
 public class RDBManagerMicrosoftSQLSrv extends RDBManager {
 
@@ -56,8 +57,6 @@ public class RDBManagerMicrosoftSQLSrv extends RDBManager {
 		}
 	}
 
-	private static org.apache.log4j.Logger log = Logger
-			.getLogger(RDBManagerMicrosoftSQLSrv.class);
-
 	String host;
+	private static Logger log = LogManager.getLogger(RDBManagerMicrosoftSQLSrv.class.getName());
 }

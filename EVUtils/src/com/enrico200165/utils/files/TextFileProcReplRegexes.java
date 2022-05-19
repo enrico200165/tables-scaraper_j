@@ -1,9 +1,11 @@
 package com.enrico200165.utils.files;
 
-import com.enrico200165.utils.str_regex.*;
-import org.apache.log4j.*;
+import com.enrico200165.utils.str_regex.NameValuePairString;
 
-import java.util.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.List;
 
 /**
  * Created by enrico on 3/12/2016.
@@ -33,6 +35,6 @@ public class TextFileProcReplRegexes implements TextLineProcessorI {
     }
 
     List<NameValuePairString> replaces;
-    private static org.apache.log4j.Logger log = Logger.getLogger(TextFileProcReplRegexes.class);
+    private static Logger log = LogManager.getLogger(TextFileProcReplRegexes.class);
 
 }

@@ -1,11 +1,13 @@
 package com.enrico200165.utils.files;
 
-import java.io.*;
-import java.util.*;
-
-import com.enrico200165.utils.str_regex.*;
+import com.enrico200165.utils.str_regex.NameValuePairString;
 import com.enrico200165.utils.various.Utl;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author enrico00165
@@ -348,5 +350,5 @@ public class FileHelper implements FileProcessorI {
 											// perform()
 	boolean intoInterBuff; // holds parameter for functionoid perform()
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(FileHelper.class);
+	private static Logger log = LogManager.getLogger(FileHelper.class);
 }

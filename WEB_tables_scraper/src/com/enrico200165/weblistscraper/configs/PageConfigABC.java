@@ -6,8 +6,9 @@ import com.enrico200165.weblistscraper.page.TableScraperABC;
 import com.enrico200165.weblistscraper.tools.EntryCanActOnFilter;
 import com.enrico200165.weblistscraper.tools.EntryExcludeFilter;
 import com.enrico200165.weblistscraper.tools.EntryIncludeFilter;
-import org.apache.log4j.Logger;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 /**
  * Tage = table/page SEMBREREBBE che fornisce tutto ciò che serve a elaborare una pagina: - indirizzi (host-config) - selettori - oggetti
  * specifici
@@ -118,6 +119,5 @@ public abstract class PageConfigABC {
 
 	protected EntryCanActOnFilter entryCanActOn;
 
-
-	private static org.apache.log4j.Logger log = Logger.getLogger(PageConfigABC.class);
+	private static Logger log = LogManager.getLogger(PageConfigABC.class.getName());
 }

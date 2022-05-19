@@ -1,16 +1,20 @@
 package com.enrico200165.weblistscraper.page;
 
-import com.enrico200165.weblistscraper.common.*;
+import com.enrico200165.weblistscraper.common.ContactType;
 import com.enrico200165.weblistscraper.configs.PageConfigABC;
-import com.enrico200165.weblistscraper.marketingDB.*;
+import com.enrico200165.weblistscraper.marketingDB.Contact;
+import com.enrico200165.weblistscraper.marketingDB.DBManagerMKT;
+import com.enrico200165.weblistscraper.marketingDB.ProspectCoreData;
 import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import com.enrico200165.weblistscraper.tools.ClientWrapper;
 import com.enrico200165.weblistscraper.tools.Result;
 import com.enrico200165.weblistscraper.tools.Result.RC;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jsoup.nodes.Element;
 
 import java.util.Date;
+
 
 public abstract class EntryProcessorCommunity extends EntryProcessorABC {
 
@@ -120,5 +124,5 @@ public abstract class EntryProcessorCommunity extends EntryProcessorABC {
     protected ClientWrapper cw;
 
 
-    private static org.apache.log4j.Logger log = Logger.getLogger(EntryProcessorCommunity.class);
+    private static Logger log = LogManager.getLogger(EntryProcessorCommunity.class.getName());
 }

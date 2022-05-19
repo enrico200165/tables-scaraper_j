@@ -1,11 +1,13 @@
 package com.enrico200165.weblistscraper.configs.drupal7;
 
+import com.enrico200165.utils.str_regex.NameValuePairString;
 import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.tools.FormManagerABC;
-import com.enrico200165.utils.str_regex.NameValuePairString;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.List;
+
 
 /**
  * @author enrico Functionoid to read hidden values in Drupal 7 login form outputs list of name values of hidden fields
@@ -24,5 +26,5 @@ public class FormManagerLoginDrupal7 extends FormManagerABC {
 		replaceVals.add(new NameValuePairString("aPASSWORD",hcfg.getPassword()));
 	}
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(FormManagerLoginDrupal7.class);
+	private static Logger log = LogManager.getLogger(FormManagerLoginDrupal7.class.getName());
 }

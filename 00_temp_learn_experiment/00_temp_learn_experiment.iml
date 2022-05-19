@@ -8,20 +8,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="log4j" level="application" />
-    <orderEntry type="library" name="jsch" level="application" />
-    <orderEntry type="library" name="jsoup" level="application" />
-    <orderEntry type="library" name="jax-rs" level="application" />
-    <orderEntry type="library" name="sqlite" level="application" />
-    <orderEntry type="library" name="jaxrs-ri-maven" level="application" />
-    <orderEntry type="library" name="eclipselink-maven" level="application" />
-    <orderEntry type="library" name="javax.mail-maven" level="application" />
-    <orderEntry type="library" name="R User Library" level="project" />
-    <orderEntry type="library" name="log4j:log4j:1.2.17" level="application" />
-    <orderEntry type="library" name="com.sun.mail:javax.mail:1.4.7" level="application" />
-    <orderEntry type="library" name="org.jsoup:jsoup:1.12.1" level="application" />
-    <orderEntry type="library" name="com.jcraft:jsch:0.1.55" level="application" />
-    <orderEntry type="library" name="org.yaml:snakeyaml:1.25" level="application" />
-    <orderEntry type="library" name="org.codehaus.geb:geb-junit4:0.5.1" level="application" />
+    <orderEntry type="library" name="jcraft.jsch" level="application" />
+    <orderEntry type="library" name="apache.logging.log4j.api" level="application" />
+    <orderEntry type="library" scope="TEST" name="junit" level="application" />
   </component>
 </module>

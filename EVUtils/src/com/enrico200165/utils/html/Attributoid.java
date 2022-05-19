@@ -1,10 +1,8 @@
 package com.enrico200165.utils.html;
 
-import org.apache.log4j.*;
-
 import java.util.ArrayList;
 
-
+import java.util.logging.Logger;
 public class Attributoid implements IHTMLContent {
 
 	Attributoid(String name, String value) {
@@ -29,6 +27,6 @@ public class Attributoid implements IHTMLContent {
 
 	String name;
 	ArrayList<String> values;
-	private static org.apache.log4j.Logger log = Logger.getLogger(Attributoid.class);
+	private static Logger log = Logger.getLogger(Attributoid.class.getName());
 
 }

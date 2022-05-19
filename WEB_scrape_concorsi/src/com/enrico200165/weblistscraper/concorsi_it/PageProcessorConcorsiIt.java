@@ -2,12 +2,15 @@ package com.enrico200165.weblistscraper.concorsi_it;
 
 import com.enrico200165.weblistscraper.page.TableScraperABC;
 import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
-import org.apache.log4j.Logger;
 
 import com.enrico200165.weblistscraper.concorsi_it.entities.ConcorsiDB;
 import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.page.PageProcessor;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 public class PageProcessorConcorsiIt extends PageProcessor {
 
@@ -46,5 +49,5 @@ public class PageProcessorConcorsiIt extends PageProcessor {
 	SessionManagerAbstr sesMgr;
 	ConcorsiDB concDB;
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(PageProcessorConcorsiIt.class);
+	private static Logger log = LogManager.getLogger(PageProcessorConcorsiIt.class.getName());
 }

@@ -1,19 +1,19 @@
 package com.enrico200165.weblistscraper.configs;
 
+
 import com.enrico200165.utils.config.Exception_YAMLCfg_WrongType;
 import com.enrico200165.utils.config.YAML2Map;
 import com.enrico200165.weblistscraper.page.NextTablePageSelectorsABC;
 import com.enrico200165.weblistscraper.tools.*;
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 //import com.enrico200165.utils.config.PropertiesYAMLEV;
-
-
 
 
 
@@ -498,5 +498,5 @@ public class ConfigReader   {
     // todo qui solo per semplificare, dovrebbe essere locale
     ScrapeGLobConfig gCfg = null; // new ScrapeGLobConfig();
 
-    private static Logger log = Logger.getLogger(ConfigReader.class);
+    private static Logger log = LogManager.getLogger(ConfigReader.class.getName());
 }

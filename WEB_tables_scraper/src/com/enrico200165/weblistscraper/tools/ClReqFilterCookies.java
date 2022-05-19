@@ -2,8 +2,9 @@ package com.enrico200165.weblistscraper.tools;
 
 import com.enrico200165.cookies.CookieStoreEV;
 import com.enrico200165.utils.net.http.Utils;
-import com.enrico200165.weblistscraper.common.*;
-import org.apache.log4j.Logger;
+import com.enrico200165.weblistscraper.common.WEBUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientRequestContext;
@@ -14,6 +15,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.util.List;
 import java.util.Random;
+
 
 public class ClReqFilterCookies implements ClientRequestFilter {
 
@@ -90,5 +92,5 @@ public class ClReqFilterCookies implements ClientRequestFilter {
 
 	CookieStoreEV cookieStore;
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(ClReqFilterCookies.class);
+	private static Logger log = LogManager.getLogger(ClReqFilterCookies.class.getName());
 }

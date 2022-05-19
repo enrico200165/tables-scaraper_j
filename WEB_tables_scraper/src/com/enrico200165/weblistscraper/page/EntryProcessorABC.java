@@ -3,8 +3,10 @@ package com.enrico200165.weblistscraper.page;
 import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import com.enrico200165.weblistscraper.tools.Result;
-import org.apache.log4j.Logger;
 import org.jsoup.nodes.Element;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Elabora una riga di una tabella
@@ -46,5 +48,5 @@ public abstract class EntryProcessorABC {
 	protected SessionManagerAbstr smgr;
 	protected PageConfigABC pageConfig;
 		
-	private static org.apache.log4j.Logger log = Logger.getLogger(EntryProcessorABC.class);
+	private static Logger log = LogManager.getLogger(EntryProcessorABC.class.getName());
 }

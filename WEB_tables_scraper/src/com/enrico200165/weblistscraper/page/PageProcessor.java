@@ -1,17 +1,17 @@
 package com.enrico200165.weblistscraper.page;
 
-import com.enrico200165.utils.str_regex.*;
-import com.enrico200165.weblistscraper.common.*;
+import com.enrico200165.utils.str_regex.NameValuePairString;
+import com.enrico200165.weblistscraper.common.WEBUtils;
+import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import com.enrico200165.weblistscraper.tools.*;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import com.enrico200165.weblistscraper.configs.HostConfig;
-
-import javax.ws.rs.core.*;
-import java.util.*;
-
+import javax.ws.rs.core.Form;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PageProcessor extends PageProcessorAbstr {
 
@@ -165,6 +165,6 @@ public class PageProcessor extends PageProcessorAbstr {
     ClientWrapper cw;
     PageConfigABC tcfg;
     InvocationBuilderWrapper ibw;
-    private static org.apache.log4j.Logger log = Logger.getLogger(PageProcessor.class);
+    private static Logger log = LogManager.getLogger(PageProcessor.class.getName());
 
 }

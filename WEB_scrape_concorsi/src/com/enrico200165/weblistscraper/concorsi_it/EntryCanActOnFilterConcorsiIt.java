@@ -2,7 +2,9 @@ package com.enrico200165.weblistscraper.concorsi_it;
 
 import com.enrico200165.weblistscraper.marketingDB.Contact;
 import com.enrico200165.weblistscraper.marketingDB.ProspectCoreData;
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.enrico200165.weblistscraper.tools.EntryCanActOnFilter;
 
@@ -28,6 +30,6 @@ public class EntryCanActOnFilterConcorsiIt extends EntryCanActOnFilter {
 				|| prospect.it().getUserID().equals("armand") || prospect.it().getUserID().equals("italianpenpals");
 	}
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(EntryCanActOnFilterConcorsiIt.class);
+	private static Logger log = LogManager.getLogger(EntryCanActOnFilterConcorsiIt.class.getName());
 
 }

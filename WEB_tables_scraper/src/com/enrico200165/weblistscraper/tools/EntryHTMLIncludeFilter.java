@@ -1,9 +1,13 @@
 package com.enrico200165.weblistscraper.tools;
 
 
-import com.enrico200165.weblistscraper.marketingDB.ProspectCoreData;
-import org.apache.log4j.Logger;
 import org.jsoup.nodes.Element;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.enrico200165.weblistscraper.marketingDB.ProspectCoreData;
+
 
 public class EntryHTMLIncludeFilter extends FilterBase {
 
@@ -35,5 +39,5 @@ public class EntryHTMLIncludeFilter extends FilterBase {
         return ret;
     }
 
-    private static Logger log = Logger.getLogger(EntryHTMLIncludeFilter.class);
+    private static Logger log = LogManager.getLogger(EntryHTMLIncludeFilter.class.getName());
 }

@@ -1,10 +1,11 @@
 package com.enrico200165.utils.files;
 
-import java.io.*;
-import java.util.ArrayList;
-
 import com.enrico200165.utils.various.Utl;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.io.File;
+import java.util.ArrayList;
 
 
 public class FileDirTreeWalk {
@@ -102,5 +103,5 @@ public class FileDirTreeWalk {
 	String _baseName;
 	ArrayList<TextFileLine> _globTextFileLine;
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(FileDirTreeWalk.class);
+	private static Logger log = LogManager.getLogger(FileDirTreeWalk.class);
 }

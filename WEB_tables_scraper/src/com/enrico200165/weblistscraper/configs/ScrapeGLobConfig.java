@@ -4,7 +4,9 @@ import com.enrico200165.weblistscraper.page.EntryProcessorABC;
 import com.enrico200165.weblistscraper.page.NextTablePageSelectorsABC;
 import com.enrico200165.weblistscraper.page.TableScraperABC;
 import com.enrico200165.weblistscraper.tools.*;
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 //import com.enrico200165.utils.config.PropertiesYAMLEV;
 
@@ -153,5 +155,5 @@ public class ScrapeGLobConfig extends PageConfigABC {
 	protected ChannelIFC channelInfo;
     SessionLimitsBase sessionLimits;
 
-	private static Logger log = Logger.getLogger(ScrapeGLobConfig.class);
+	private static Logger log = LogManager.getLogger(ScrapeGLobConfig.class.getName());
 }
