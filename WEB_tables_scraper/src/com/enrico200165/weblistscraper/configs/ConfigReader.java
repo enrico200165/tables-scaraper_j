@@ -469,6 +469,8 @@ public class ConfigReader   {
     public ScrapeGLobConfig parseYAMLConfig(String fpath) {
 
         this.gCfg = new ScrapeGLobConfig("dummyName", null, null, null, null);;
+        log.error("Should check if the file exits an warn if not");
+
         Map<String, Object> prop = YAML2Map.YAML2Map(fpath);
 
         try {

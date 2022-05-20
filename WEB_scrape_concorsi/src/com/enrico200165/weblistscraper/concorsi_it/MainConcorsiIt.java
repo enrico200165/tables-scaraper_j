@@ -2,6 +2,7 @@ package com.enrico200165.weblistscraper.concorsi_it;
 
 import com.enrico200165.cookies.CookieStoreEV;
 import com.enrico200165.utils.net.http.Utils;
+import com.enrico200165.utils.os.DirFileLittleUtils;
 import com.enrico200165.utils.various.Utl;
 import com.enrico200165.weblistscraper.common.WEBUtils;
 import com.enrico200165.weblistscraper.concorsi_it.configs.PageConfigConcorsiitSpecInf;
@@ -14,7 +15,6 @@ import com.enrico200165.weblistscraper.page.PageProcessor;
 import com.enrico200165.weblistscraper.page.TableScraperABC;
 import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import com.enrico200165.weblistscraper.tools.*;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -35,13 +35,11 @@ public class MainConcorsiIt {
 
 		Utils.setFiddler(false);
 
-
         // --- Configurazione ---
-
-		// here the new configuration
 		ConfigReader cfg_reader = null;
 		ScrapeGLobConfig cfg;
-		String yaml_path = "C:\\Users\\vialien\\Google Drive\\dev_data_using\\web_scraper\\concorsi_it.yaml";
+		String basePath = DirFileLittleUtils.getEnvVar("GDRIVE_ENRICO200165_HOME");
+		String yaml_path = basePath+"\\08_dev_gdrive\\configs\\web_scraper\\concorsi_it.yaml";
 		cfg_reader = new ConfigReader();
 		ScrapeGLobConfig gCfg = cfg_reader.parseYAMLConfig(yaml_path);
 
