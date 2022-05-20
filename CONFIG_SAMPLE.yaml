@@ -1,0 +1,102 @@
+task_list:
+    ID: concorsi task list ID
+    task:
+        ID: concorsi 1 ID
+        table:
+            ID: concorsi lazio
+            next_table_page_selector:
+                ID: dummy
+                title_regex: Pagina Successiva
+                url_regex: .*/regione/lazio/page/.*
+                id_regex: dummy
+                class_regex: dummy
+                testo_regex: dummy
+            entry_cont_include_filter:
+                ID: dummy
+                regexes_vertical:
+                    dummmy_desrc_name1: regex_value
+                    dummmy_desrc_name2: regex_value
+            entry_html_include_filter:
+                ID: dummy
+            entry_cont_exclude_filter:
+                ID: dummy
+            entry_html_exclude_filter:
+                ID: dummy
+            table_url: concorsi
+            table_selector: '#datagrid > table'  # TableSelectCSS()
+            entry_selector: 'tr' #   EntrySelectCSS() {
+            host:
+                ID: host1
+                baseHostURI: https://concorsi.it
+                login:
+                    ID: dummy login ID
+                    loginFormURL: /loginFormURL/hghgh
+                    formAction: post
+                    LoginFormSelector: dummy_login_form_selector
+                    userField: filenane
+                    userValue: xxxxx
+                    passwordField: xxxxxxx
+                    passwordValue: xxxxxx
+task_list:
+    ID: concorsi task list ID
+    task:
+        ID: concorsi 1 ID
+        channel:
+            ID: italianpenpas.org
+            name: http://italianpenpas.org
+            type: web # web, email, banner, search
+            vendor: italianpenpals # ex. Web: japan-guide.com email: gmail
+            item: penpals global list
+        session_limits:
+            ID: dummy
+            max_entries_read: 0
+            max_new_prospects_saves: 0
+            max_contacts_exec: 0  # 0 = unlimited
+            max_process: 0
+            max_HTTP_calls: 0
+        table:
+            ID: concorsi
+            host:
+                ID: host2
+                baseHostURI: https://concorsi.it
+                login:
+                    ID: dummy login ID
+                    loginFormURL: /loginFormURL/hghgh
+                    formAction: post
+                    LoginFormSelector: dummy_login_form_selector
+                    userField: filenane
+                    userValue: xxxxx
+                    passwordField: xxxxx
+                    passwordValue: xxxxx
+            next_table_page_selector:
+                ID: dummy
+                title_regex: Pagina Successiva
+                url_regex: .*/regione/lazio/page/.*
+                id_regex: dummy
+                class_regex: dummy
+                testo_regex: dummy
+            entry_cont_include_filter:
+                ID: dummy
+                regexes_vertical:
+                    dummmy_desrc_name1: regex_value
+                    dummmy_desrc_name2: regex_value
+            entry_html_include_filter:
+                ID: dummy
+            entry_cont_exclude_filter:
+                ID: dummy
+            entry_html_exclude_filter:
+                ID: dummy
+            table_url: concorsi
+            table_selector: '#datagrid > table'  # TableSelectCSS()
+            entry_selector: 'tr' #   EntrySelectCSS() {
+#            htmlEntryIncl: ["",""]
+#               htmlEntryExcl: ["",""]
+#           concorsi2:
+#               type2: table
+#               tableUrl: /concorsi
+#               selector: myselector
+#               htmlEntryIncl: ["",""]
+#               htmlEntryExcl: ["",""]
+
+
+
