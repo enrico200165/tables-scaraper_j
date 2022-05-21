@@ -11,5 +11,8 @@
     <orderEntry type="library" name="jcraft.jsch" level="application" />
     <orderEntry type="library" name="apache.logging.log4j.api" level="application" />
     <orderEntry type="library" scope="TEST" name="junit" level="application" />
+    <orderEntry type="library" name="guicedee.services.log4j.core" level="application" />
+    <orderEntry type="library" name="glassfish.jersey.core.client" level="application" />
+    <orderEntry type="library" name="github.gotson.sqlite.jdbc" level="application" />
   </component>
 </module>

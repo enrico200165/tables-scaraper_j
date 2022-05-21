@@ -36,11 +36,9 @@ public class MainConcorsiIt {
 		Utils.setFiddler(false);
 
         // --- Configurazione ---
-		ConfigReader cfg_reader = null;
-		ScrapeGLobConfig cfg;
+		ConfigReader cfg_reader = new ConfigReader();
 		String basePath = DirFileLittleUtils.getEnvVar("GDRIVE_ENRICO200165_HOME");
 		String yaml_path = basePath+"\\08_dev_gdrive\\configs\\web_scraper\\concorsi_it.yaml";
-		cfg_reader = new ConfigReader();
 		ScrapeGLobConfig gCfg = cfg_reader.parseYAMLConfig(yaml_path);
 
         // --- Cliente e connettività  ----------------------------

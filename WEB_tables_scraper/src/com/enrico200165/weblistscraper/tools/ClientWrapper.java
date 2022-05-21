@@ -8,7 +8,6 @@ import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.page.PageProcDescr;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.glassfish.jersey.client.ClientProperties;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.Entity;
@@ -171,7 +170,7 @@ public class ClientWrapper {
 
         baseTarget = client.target(uri);
         Invocation.Builder frmReqBld = baseTarget.request();
-        frmReqBld.property(ClientProperties.FOLLOW_REDIRECTS, false);
+        // TODO viene da glassfish, tentativo di non includerlo frmReqBld.property(ClientProperties.FOLLOW_REDIRECTS, false);
         ibw.setBuilder(frmReqBld);
         frmReqBld.accept(MediaType.TEXT_HTML_TYPE, MediaType.TEXT_PLAIN_TYPE);
         ResponseWrapper rw = new ResponseWrapper(frmReqBld.post(Entity.form(form)));

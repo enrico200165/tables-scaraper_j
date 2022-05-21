@@ -25,6 +25,7 @@ public class ScrapeGLobConfig extends PageConfigABC {
             , EntryCanActOnFilter entryCanActOnPar, ChannelIFC channelInfoPar) {
         super(null,null,null,null);
 
+		this.sessionLimits = new SessionLimitsBase();
         this.tableScraper = ts;
         this.entryCanActOn = entryCanActOnPar;
     }

@@ -5,10 +5,7 @@ import com.enrico200165.weblistscraper.common.WEBUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
+import javax.persistence.*;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
@@ -23,9 +20,9 @@ import java.util.*;
 public class CookieStoreEV implements java.net.CookieStore {
 
     public CookieStoreEV(String persistUnit) {
-        log.error("da sistemare un bug complicato di eclipselink\n");
-        // EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistUnit);
-        // em = factory.createEntityManager();
+        log.info("creo sqlite DB a "+persistUnit);
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistUnit);
+        em = factory.createEntityManager();
     }
 
     public CookieStoreEV() {

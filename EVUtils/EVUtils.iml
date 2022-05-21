@@ -8,12 +8,17 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="javax.ws.rs.api" level="application" />
     <orderEntry type="library" name="javax.mail" level="application" />
     <orderEntry type="library" name="jcraft.jsch" level="application" />
     <orderEntry type="library" name="apache.logging.log4j.api" level="application" />
     <orderEntry type="library" name="yaml.snakeyaml" level="application" />
     <orderEntry type="library" name="junit" level="application" />
     <orderEntry type="library" name="javax.persistence.api" level="application" />
+    <orderEntry type="library" name="guicedee.services.log4j.core" level="application" />
+    <orderEntry type="library" name="javax.ws.rs.api" level="application" />
+    <orderEntry type="library" name="glassfish.jersey.core.client" level="application" />
+    <orderEntry type="library" name="atomikos.transactions.eclipselink" level="application" />
+    <orderEntry type="library" name="eclipse.persistence.eclipselink" level="application" />
+    <orderEntry type="library" name="github.gotson.sqlite.jdbc" level="application" />
   </component>
 </module>

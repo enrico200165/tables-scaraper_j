@@ -27,8 +27,6 @@ public abstract class InvocationBuilderWrapper {
 		oauthToken = oauthTokenPar;
 	}
 
-	
-	
 	public Builder it() {
 		return this.bld;
 	}

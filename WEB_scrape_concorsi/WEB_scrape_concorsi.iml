@@ -14,6 +14,12 @@
     <orderEntry type="library" name="junit" level="application" />
     <orderEntry type="module" module-name="EVUtils" />
     <orderEntry type="library" name="javax.persistence.api" level="application" />
+    <orderEntry type="library" name="guicedee.services.log4j.core" level="application" />
     <orderEntry type="library" name="javax.ws.rs.api" level="application" />
+    <orderEntry type="library" name="glassfish.jersey.core.client" level="application" />
+    <orderEntry type="library" name="glassfish.jersey.inject.hk2" level="application" />
+    <orderEntry type="library" name="atomikos.transactions.eclipselink" level="application" />
+    <orderEntry type="library" name="eclipse.persistence.eclipselink" level="application" />
+    <orderEntry type="library" name="github.gotson.sqlite.jdbc" level="application" />
   </component>
 </module>
