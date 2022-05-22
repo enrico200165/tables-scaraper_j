@@ -32,5 +32,5 @@ public class HTMLElement extends HTMLGenElement {
 	}
 
 	
-	private static Logger log = LogManager.getLogger(HTMLElement.class.getName());
+	private static Logger log = LogManager.getLogger(HTMLElement.class.getSimpleName());
 }

@@ -421,5 +421,5 @@ public class WEBUtils {
         return true;
     }
 
-    private static Logger log = LogManager.getLogger(WEBUtils.class.getName());
+    private static Logger log = LogManager.getLogger(WEBUtils.class.getSimpleName());
 }

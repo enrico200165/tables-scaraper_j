@@ -218,6 +218,6 @@ public class CookieStoreEVTest {
 	
 	CookieStoreEV defCookieStoreEV;
 
-	private static Logger log = LogManager.getLogger(CookieStoreEVTest.class.getName());
+	private static Logger log = LogManager.getLogger(CookieStoreEVTest.class.getSimpleName());
 
 }

@@ -204,5 +204,5 @@ public class IBM_DB2_test {
 	static final String contactTable = "UA_IndivContactHistory";
 	ArrayList<String> contactTFields;
 
-	private static Logger log = LogManager.getLogger(IBM_DB2_test.class.getName());
+	private static Logger log = LogManager.getLogger(IBM_DB2_test.class.getSimpleName());
 }

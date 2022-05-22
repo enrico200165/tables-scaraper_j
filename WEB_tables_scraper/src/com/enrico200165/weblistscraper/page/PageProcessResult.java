@@ -31,5 +31,5 @@ public class PageProcessResult {
 	public Result result;
 	PageProcDescr pPDescr;
 
-	private static Logger log = LogManager.getLogger(PageProcessor.class.getName());
+	private static Logger log = LogManager.getLogger(PageProcessor.class.getSimpleName());
 }

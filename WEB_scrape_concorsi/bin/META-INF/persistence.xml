@@ -15,7 +15,7 @@
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/concorsi" />
 		      -->
 			<property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:sqlite:V:/data/pers_dev/data_dbs/concorsi.db" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:sqlite:./data_dbs/concorsi.db" />
 
 
 

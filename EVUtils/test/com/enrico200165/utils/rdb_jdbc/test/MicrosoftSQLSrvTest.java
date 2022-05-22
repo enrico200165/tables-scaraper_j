@@ -214,5 +214,5 @@ public class MicrosoftSQLSrvTest {
 	static final String contactTable = "UA_IndivContactHistory";
 	ArrayList<String> contactTFields;
 
-	private static Logger log = LogManager.getLogger(MicrosoftSQLSrvTest.class.getName());
+	private static Logger log = LogManager.getLogger(MicrosoftSQLSrvTest.class.getSimpleName());
 }

@@ -72,5 +72,5 @@ public class RDBManagerSQLite extends RDBManager {
 		return connectToDBMS() && openDB();
 	}
 
-	private static Logger log = LogManager.getLogger(RDBManagerSQLite.class.getName());
+	private static Logger log = LogManager.getLogger(RDBManagerSQLite.class.getSimpleName());
 }

@@ -51,5 +51,5 @@ public class EntryExcludeFilterConcorsiItTest {
 	
 	EntryExcludeFilter filter;
 	
-	private static Logger log = LogManager.getLogger(EntryExcludeFilterConcorsiItTest.class.getName());
+	private static Logger log = LogManager.getLogger(EntryExcludeFilterConcorsiItTest.class.getSimpleName());
 }

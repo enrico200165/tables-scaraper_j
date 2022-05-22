@@ -33,5 +33,5 @@ public class StatementEV {
 	}
 
 	Statement st;
-	private static Logger log = LogManager.getLogger(StatementEV.class.getName());
+	private static Logger log = LogManager.getLogger(StatementEV.class.getSimpleName());
 }

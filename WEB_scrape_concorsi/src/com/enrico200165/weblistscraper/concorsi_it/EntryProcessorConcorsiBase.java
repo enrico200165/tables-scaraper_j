@@ -102,5 +102,5 @@ public abstract class EntryProcessorConcorsiBase extends EntryProcessorABC {
 		return res;
 	}
 
-	private static Logger log = LogManager.getLogger(EntryProcessorConcorsiBase.class.getName());
+	private static Logger log = LogManager.getLogger(EntryProcessorConcorsiBase.class.getSimpleName());
 }

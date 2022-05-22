@@ -186,5 +186,5 @@ public class HTTPCookieJPATest {
 
     ArrayList<HttpCookieJPA> cookies;
 
-    private static Logger log = LogManager.getLogger(HTTPCookieJPATest.class.getName());
+    private static Logger log = LogManager.getLogger(HTTPCookieJPATest.class.getSimpleName());
 }

@@ -12,6 +12,6 @@ public class RequestFilterNull implements ClientRequestFilter {
 	public void filter(ClientRequestContext requestContext) throws IOException {
 	}
 
-	private static Logger log = LogManager.getLogger(RequestFilterNull.class.getName());
+	private static Logger log = LogManager.getLogger(RequestFilterNull.class.getSimpleName());
 
 }

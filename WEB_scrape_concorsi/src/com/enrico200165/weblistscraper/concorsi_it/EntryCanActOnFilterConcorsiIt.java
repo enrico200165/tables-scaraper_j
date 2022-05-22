@@ -30,6 +30,6 @@ public class EntryCanActOnFilterConcorsiIt extends EntryCanActOnFilter {
 				|| prospect.it().getUserID().equals("armand") || prospect.it().getUserID().equals("italianpenpals");
 	}
 
-	private static Logger log = LogManager.getLogger(EntryCanActOnFilterConcorsiIt.class.getName());
+	private static Logger log = LogManager.getLogger(EntryCanActOnFilterConcorsiIt.class.getSimpleName());
 
 }

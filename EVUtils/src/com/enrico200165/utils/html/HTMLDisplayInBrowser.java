@@ -112,5 +112,5 @@ public class HTMLDisplayInBrowser {
 
 	}
 
-	private static Logger log = Logger.getLogger(HTMLDisplayInBrowser.class.getName());
+	private static Logger log = Logger.getLogger(HTMLDisplayInBrowser.class.getSimpleName());
 }

@@ -59,5 +59,5 @@ public class EntryProcessorConcorsiItSpecInf extends EntryProcessorConcorsiBase 
 	}
 	
 	
-	private static Logger log = LogManager.getLogger(EntryProcessorConcorsiItSpecInf.class.getName());
+	private static Logger log = LogManager.getLogger(EntryProcessorConcorsiItSpecInf.class.getSimpleName());
 }

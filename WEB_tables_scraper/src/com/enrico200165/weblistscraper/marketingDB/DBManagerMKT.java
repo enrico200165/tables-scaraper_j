@@ -365,5 +365,5 @@ public class DBManagerMKT {
     }
 
     private EntityManager em;
-    private static Logger log = LogManager.getLogger(DBManagerMKT.class.getName());
+    private static Logger log = LogManager.getLogger(DBManagerMKT.class.getSimpleName());
 }

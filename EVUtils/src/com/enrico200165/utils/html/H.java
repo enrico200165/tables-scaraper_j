@@ -19,5 +19,5 @@ public class H extends HTMLElement {
 	}
 
 	
-	private static Logger log = Logger.getLogger(H.class.getName());
+	private static Logger log = Logger.getLogger(H.class.getSimpleName());
 }

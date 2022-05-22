@@ -121,5 +121,5 @@ public class HostConfig {
     }
 
 
-    private static Logger log = LogManager.getLogger(HostConfig.class.getName());
+    private static Logger log = LogManager.getLogger(HostConfig.class.getSimpleName());
 }

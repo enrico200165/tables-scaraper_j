@@ -22,5 +22,5 @@ public abstract class FormManagerABC {
 	
 	protected HostConfig hcfg;
 	
-	private static Logger log = LogManager.getLogger(FormManagerABC.class.getName());
+	private static Logger log = LogManager.getLogger(FormManagerABC.class.getSimpleName());
 }

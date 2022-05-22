@@ -168,5 +168,5 @@ public abstract class JDBCEVSelectABC implements IRowSetSelector {
 	String sqlStatement;
 	ResultSet rs;
 
-	private static Logger log = LogManager.getLogger(JDBCEVSelectABC.class.getName());
+	private static Logger log = LogManager.getLogger(JDBCEVSelectABC.class.getSimpleName());
 }

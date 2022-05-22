@@ -70,5 +70,5 @@ public class PageProcDescrTest {
 
     }
 
-    private static Logger log = LogManager.getLogger(PageProcDescrTest.class.getName());
+    private static Logger log = LogManager.getLogger(PageProcDescrTest.class.getSimpleName());
 }

@@ -47,5 +47,5 @@ public class EntryHTMLExcludeFilter extends EntryExcludeFilter {
 		return ret;
 	}
 
-	private static Logger log = LogManager.getLogger(EntryHTMLExcludeFilter.class.getName());
+	private static Logger log = LogManager.getLogger(EntryHTMLExcludeFilter.class.getSimpleName());
 }

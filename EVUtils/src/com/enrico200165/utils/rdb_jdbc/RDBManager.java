@@ -180,5 +180,5 @@ public abstract class RDBManager implements IRDBManager {
 	String username;
 	String password;
 
-	private static Logger log = LogManager.getLogger(RDBManager.class.getName());
+	private static Logger log = LogManager.getLogger(RDBManager.class.getSimpleName());
 }

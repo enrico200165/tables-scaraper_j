@@ -207,14 +207,10 @@ public class Utl {
     public static boolean checks() {
         boolean ret = true;
 
-
-        System.out.println(System.getProperty("java.home"));
-        System.out.println(System.getProperty("user.dir"));
-
-
         ret = duplInSingleEnvPath("libmecab.dll") && ret;
         ret = checkEnvVarPaths() && ret;
         ret = checkDuplFilesInEnvPaths(/* filename regex */"libmecab.dll") && ret;
+
         return ret;
     }
 
@@ -258,6 +254,7 @@ public class Utl {
     public static boolean fileExists(String filePathName) {
         File f = new File(filePathName);
         if (!f.exists()) return false;
+
         return !f.isDirectory();
     }
 
@@ -402,5 +399,5 @@ public class Utl {
 
     public static final String ENCODING_UTF8 = "UTF8";
 
-    private static Logger log = LogManager.getLogger(Utl.class.getName());
+    private static Logger log = LogManager.getLogger(Utl.class.getSimpleName());
 }

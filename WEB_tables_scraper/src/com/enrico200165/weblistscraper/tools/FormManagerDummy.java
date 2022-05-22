@@ -24,5 +24,5 @@ public class FormManagerDummy extends FormManagerABC{
 	
 	protected HostConfig hcfg;
 	
-	private static Logger log = LogManager.getLogger(FormManagerDummy.class.getName());
+	private static Logger log = LogManager.getLogger(FormManagerDummy.class.getSimpleName());
 }

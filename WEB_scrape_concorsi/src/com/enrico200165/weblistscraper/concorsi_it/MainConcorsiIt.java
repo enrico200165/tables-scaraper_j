@@ -26,12 +26,13 @@ import javax.ws.rs.client.ClientRequestFilter;
 
 public class MainConcorsiIt {
 
+
 	public static void main(String[] args) {
 
-		Utl.checks();
+		System.out.println("Working directory: "+System.getProperty("user.dir"));
+		log.info("java.home: "+System.getProperty("java.home"));
 
-		log.info("Working dir: "+System.getProperty("user.dir"));
-		int dummy;
+		Utl.checks();
 
 		Utils.setFiddler(false);
 
@@ -152,5 +153,5 @@ public class MainConcorsiIt {
 
 	}
 
-	private static Logger log = LogManager.getLogger(MainConcorsiIt.class.getName());
+	private static Logger log = LogManager.getLogger(MainConcorsiIt.class.getSimpleName());
 }

@@ -30,5 +30,5 @@ public class DirFileLittleUtils {
     }
 
     static Map<String, String> envVars = null;
-    private static Logger log = LogManager.getLogger(DirFileLittleUtils.class.getName());
+    private static Logger log = LogManager.getLogger(DirFileLittleUtils.class.getSimpleName());
 }

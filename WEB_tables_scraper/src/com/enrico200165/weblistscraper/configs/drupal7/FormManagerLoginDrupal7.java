@@ -26,5 +26,5 @@ public class FormManagerLoginDrupal7 extends FormManagerABC {
 		replaceVals.add(new NameValuePairString("aPASSWORD",hcfg.getPassword()));
 	}
 
-	private static Logger log = LogManager.getLogger(FormManagerLoginDrupal7.class.getName());
+	private static Logger log = LogManager.getLogger(FormManagerLoginDrupal7.class.getSimpleName());
 }

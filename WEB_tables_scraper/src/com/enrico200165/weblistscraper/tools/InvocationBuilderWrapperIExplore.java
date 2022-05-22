@@ -43,5 +43,5 @@ public class InvocationBuilderWrapperIExplore extends InvocationBuilderWrapper {
 		return this;
 	}
 
-	private static Logger log = LogManager.getLogger(InvocationBuilderWrapperIExplore.class.getName());
+	private static Logger log = LogManager.getLogger(InvocationBuilderWrapperIExplore.class.getSimpleName());
 }

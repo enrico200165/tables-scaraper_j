@@ -36,7 +36,7 @@ public class Daemon{
 
       session.connect();
 
-      //session.setPortForwardingR(rport, Parrot.class.getName());
+      //session.setPortForwardingR(rport, Parrot.class.getSimpleName());
       session.setPortForwardingR(rport, "Daemon$Parrot");
       System.out.println(host+":"+rport+" <--> "+"Parrot");
     }

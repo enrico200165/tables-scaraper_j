@@ -104,6 +104,6 @@ public abstract class PageConfigConcorsi extends PageConfigABC {
 
     protected abstract NextTablePageSelectorsABC getNextTablePageSelectorsSpecific();
 
-    private static Logger log = LogManager.getLogger(PageConfigConcorsi.class.getName());
+    private static Logger log = LogManager.getLogger(PageConfigConcorsi.class.getSimpleName());
 
 }

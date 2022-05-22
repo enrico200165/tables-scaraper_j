@@ -119,5 +119,5 @@ public abstract class PageConfigABC {
 
 	protected EntryCanActOnFilter entryCanActOn;
 
-	private static Logger log = LogManager.getLogger(PageConfigABC.class.getName());
+	private static Logger log = LogManager.getLogger(PageConfigABC.class.getSimpleName());
 }

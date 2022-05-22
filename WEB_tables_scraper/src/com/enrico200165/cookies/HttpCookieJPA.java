@@ -391,6 +391,6 @@ public class HttpCookieJPA {
     @Id
     String domain;
 
-    private static Logger log = LogManager.getLogger(HttpCookieJPA.class.getName());
+    private static Logger log = LogManager.getLogger(HttpCookieJPA.class.getSimpleName());
 
 }

@@ -43,5 +43,5 @@ public class JSoupVerify {
 
 
 
-    private static Logger log = LogManager.getLogger(JSoupVerify.class.getName());
+    private static Logger log = LogManager.getLogger(JSoupVerify.class.getSimpleName());
 } 

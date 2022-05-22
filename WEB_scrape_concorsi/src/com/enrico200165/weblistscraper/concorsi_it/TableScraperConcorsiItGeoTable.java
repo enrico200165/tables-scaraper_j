@@ -31,5 +31,5 @@ public class TableScraperConcorsiItGeoTable extends TableScraperConcorsiBase {
 		return true;
 	}
 
-	private static Logger log = LogManager.getLogger(TableScraperConcorsiItGeoTable.class.getName());
+	private static Logger log = LogManager.getLogger(TableScraperConcorsiItGeoTable.class.getSimpleName());
 }

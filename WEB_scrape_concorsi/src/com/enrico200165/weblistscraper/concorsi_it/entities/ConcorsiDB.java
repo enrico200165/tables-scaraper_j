@@ -185,5 +185,5 @@ public class ConcorsiDB {
     }
 
     EntityManager em;
-    private static Logger log = LogManager.getLogger(ConcorsiDB.class.getName());
+    private static Logger log = LogManager.getLogger(ConcorsiDB.class.getSimpleName());
 }

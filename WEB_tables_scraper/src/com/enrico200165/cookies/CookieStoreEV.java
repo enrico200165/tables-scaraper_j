@@ -380,5 +380,5 @@ public class CookieStoreEV implements java.net.CookieStore {
 
     EntityManager em;
 
-    private static Logger log = LogManager.getLogger(CookieStoreEV.class.getName());
+    private static Logger log = LogManager.getLogger(CookieStoreEV.class.getSimpleName());
 }

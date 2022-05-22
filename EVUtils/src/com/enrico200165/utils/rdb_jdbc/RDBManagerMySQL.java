@@ -42,5 +42,5 @@ public class RDBManagerMySQL extends RDBManager {
 		return DBMSFullURL;
 	}
 
-	private static Logger log = LogManager.getLogger(RDBManagerMySQL.class.getName());
+	private static Logger log = LogManager.getLogger(RDBManagerMySQL.class.getSimpleName());
 }

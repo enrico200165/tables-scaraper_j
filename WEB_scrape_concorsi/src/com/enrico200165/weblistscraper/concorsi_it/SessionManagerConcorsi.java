@@ -118,5 +118,5 @@ public class SessionManagerConcorsi extends SessionManager {
 	int included;
 	int excluded;
 	
-	private static Logger log = LogManager.getLogger(SessionManagerConcorsi.class.getName());
+	private static Logger log = LogManager.getLogger(SessionManagerConcorsi.class.getSimpleName());
 }

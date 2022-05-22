@@ -213,5 +213,5 @@ public class WEBUtilsTest {
 	}
 
 
-	private static Logger log = LogManager.getLogger(WEBUtilsTest.class.getName());
+	private static Logger log = LogManager.getLogger(WEBUtilsTest.class.getSimpleName());
 }

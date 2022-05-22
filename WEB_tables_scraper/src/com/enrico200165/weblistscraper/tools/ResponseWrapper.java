@@ -231,5 +231,5 @@ public class ResponseWrapper {
     Response response;
     Document doc;
 
-    private static Logger log = LogManager.getLogger(ResponseWrapper.class.getName());
+    private static Logger log = LogManager.getLogger(ResponseWrapper.class.getSimpleName());
 }

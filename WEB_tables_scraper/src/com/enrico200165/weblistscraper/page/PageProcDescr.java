@@ -205,5 +205,5 @@ public class PageProcDescr {
 	FormManagerABC formManager;
 	InvocationBuilderWrapper ibw;
 
-	private static Logger log = LogManager.getLogger(PageProcDescr.class.getName());
+	private static Logger log = LogManager.getLogger(PageProcDescr.class.getSimpleName());
 }

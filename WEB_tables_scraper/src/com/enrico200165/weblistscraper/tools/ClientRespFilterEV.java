@@ -61,5 +61,5 @@ public class ClientRespFilterEV implements ClientResponseFilter {
     Map<String, NewCookie> cr;
     CookieStoreEV cookieStore;
 
-    private static Logger log = LogManager.getLogger(ClientRespFilterEV.class.getName());
+    private static Logger log = LogManager.getLogger(ClientRespFilterEV.class.getSimpleName());
 }

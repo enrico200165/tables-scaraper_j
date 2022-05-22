@@ -231,5 +231,5 @@ public class DBManagerMKTTest {
 
     DBManagerMKT ch;
 
-    private static Logger log = LogManager.getLogger(DBManagerMKTTest.class.getName());
+    private static Logger log = LogManager.getLogger(DBManagerMKTTest.class.getSimpleName());
 }

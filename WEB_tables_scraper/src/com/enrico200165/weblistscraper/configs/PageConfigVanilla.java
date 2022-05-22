@@ -134,5 +134,5 @@ public class PageConfigVanilla extends PageConfigABC {
 	String tableURl;
 	ScrapeGLobConfig gCfg;
 
-	private static Logger log = LogManager.getLogger(PageConfigVanilla.class.getName());
+	private static Logger log = LogManager.getLogger(PageConfigVanilla.class.getSimpleName());
 }

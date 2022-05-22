@@ -30,5 +30,5 @@ public class TableScraperConcorsiItSearch extends TableScraperConcorsiBase {
 		return true;
 	}
 
-	private static Logger log = LogManager.getLogger(TableScraperConcorsiItSearch.class.getName());
+	private static Logger log = LogManager.getLogger(TableScraperConcorsiItSearch.class.getSimpleName());
 }

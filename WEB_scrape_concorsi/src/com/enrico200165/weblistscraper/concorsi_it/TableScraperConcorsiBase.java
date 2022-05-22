@@ -52,6 +52,6 @@ public abstract class TableScraperConcorsiBase extends TableScraperABC {
 	ConcorsiDB concDB;
 	ArrayList<Concor> concEsclusi;
 
-	private static Logger log = LogManager.getLogger(TableScraperConcorsiBase.class.getName());
+	private static Logger log = LogManager.getLogger(TableScraperConcorsiBase.class.getSimpleName());
 
 }

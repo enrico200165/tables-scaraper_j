@@ -9,5 +9,5 @@ import org.apache.logging.log4j.Logger;
 public class GlobalConfigConcorsiIt {
 
 
-    private static Logger log = LogManager.getLogger(PageProcDescr.class.getName());
+    private static Logger log = LogManager.getLogger(PageProcDescr.class.getSimpleName());
 }

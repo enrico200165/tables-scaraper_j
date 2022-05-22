@@ -66,6 +66,6 @@ public class HttpCookieJPAKey implements Serializable {
 		return domain.hashCode() + name.hashCode();
 	}
 
-	private static Logger log = LogManager.getLogger(HttpCookieJPAKey.class.getName());
+	private static Logger log = LogManager.getLogger(HttpCookieJPAKey.class.getSimpleName());
 
 }

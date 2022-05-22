@@ -57,5 +57,5 @@ public class FilterBase {
 	int nrTrueProspect;
 	int nrFalseProspect;
 
-	private static Logger log = LogManager.getLogger(FilterBase.class.getName());
+	private static Logger log = LogManager.getLogger(FilterBase.class.getSimpleName());
 }

@@ -27,6 +27,6 @@ public class Attributoid implements IHTMLContent {
 
 	String name;
 	ArrayList<String> values;
-	private static Logger log = Logger.getLogger(Attributoid.class.getName());
+	private static Logger log = Logger.getLogger(Attributoid.class.getSimpleName());
 
 }
