@@ -1,9 +1,15 @@
+*.db
 *.html
 *.log
 *.out
-
-
+*.js
 *.class
+
+WEB_scrape_concorsi/bin/*
+
+
+japanguide_files/*
+
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
