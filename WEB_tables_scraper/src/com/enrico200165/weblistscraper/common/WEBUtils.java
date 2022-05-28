@@ -136,7 +136,7 @@ public class WEBUtils {
 
     static CookieStoreEV cookieStore = null;
 
-    static CookieStoreEV getCookieStoreEV() {
+    public static CookieStoreEV getCookieStoreEV() {
         if (cookieStore == null) {
             cookieStore = new CookieStoreEV();
         }

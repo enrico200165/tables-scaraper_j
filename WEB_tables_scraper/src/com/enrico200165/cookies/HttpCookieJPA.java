@@ -102,18 +102,14 @@ public class HttpCookieJPA {
         return httpCookie.getName();
     }
 
-
-    // complicato dal fatto che HttpCookie does not allow to set name
-    // sono costretto a rigenerare
+    // complicato dal fatto che HttpCookie does not allow to set name sono costretto a rigenerare
     public void setName(String name) {
 
-        if (httpCookie == null) {
-            // dovrebbe accadere solo quando chiamati da JPA
+        if (httpCookie == null) { // dovrebbe accadere solo quando chiamati da JPA
             this.httpCookie = new HttpCookie(name, "da impostare");
-            // httpCookie othe firlds will be filled by JPA
+            // httpCookie othe fields will be filled by JPA
         } else {
-            // we can NOT set name in HTTPCookie, so we have to create a new one
-            // and copy into it values from the old ones
+            // we can NOT set name in HTTPCookie, so we have to create a new one and copy into it values from the old ones
             HttpCookie newCookie = new HttpCookie(name, httpCookie.getValue());
 
             newCookie.setComment(httpCookie.getComment());
@@ -134,12 +130,7 @@ public class HttpCookieJPA {
 
 
     public String dump() {
-        String ret = "";
-
-        ret = getName() + " " + getDomain() + " " + getPath() + " = " + getValue()
-        //+ getExpiryDate()
-        ;
-
+        String ret = getName() + " " + getDomain() + " " + getPath() + " = " + getValue(); //+ getExpiryDate()
         return ret;
     }
 
@@ -183,14 +174,16 @@ public class HttpCookieJPA {
         return WEBUtils.isSubDomainOf(this.getDomain(), domain, true);
     }
 
-
     // -------- ordinary Get/Set ------------
 
     public String getDomain() {
         return httpCookie.getDomain();
     }
 
-    public HttpCookieJPA setDomain(String s) { httpCookie.setDomain(s); return this; }
+    public HttpCookieJPA setDomain(String s) {
+        httpCookie.setDomain(s);
+        return this;
+    }
 
     public String getComment() {
         return httpCookie.getComment();
@@ -388,8 +381,9 @@ public class HttpCookieJPA {
 
     @Id
     String name;
-    @Id
-    String domain;
+
+    // if put as ID there are cases when null and makes persistence fail
+    // String domain;
 
     private static Logger log = LogManager.getLogger(HttpCookieJPA.class.getSimpleName());
 

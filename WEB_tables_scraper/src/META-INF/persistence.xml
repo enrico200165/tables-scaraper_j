@@ -3,6 +3,53 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
 
+	<persistence-unit name="cookiesGlobalStore"  transaction-type="RESOURCE_LOCAL">
+		<class>com.enrico200165.cookies.HttpCookieJPA</class>
+
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:sqlite:cookies.db" />
+
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="ocirne00" />
+
+			<!-- EclipseLink should create the database schema automatically -->
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+
+			<property name="eclipselink.ddl-generation.output-mode"  value="database" />
+		</properties>
+
+	</persistence-unit>
+
+	<persistence-unit name="concorsi" transaction-type="RESOURCE_LOCAL">
+
+		<class>com.enrico200165.weblistscraper.concorsi_it.entities.Concor</class>
+		<class>ConcorPermState</class>
+
+		<properties>
+
+		     <!-- 
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/concorsi" />
+		      -->
+			<property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:sqlite:concorsi.db" />
+
+
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="ocirne00" />
+
+			<!-- EclipseLink should create the database schema automatically -->
+
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/> 
+			<!--
+			<property name="eclipselink.ddl-generation" value="create-tables" />
+			-->
+
+			<property name="eclipselink.ddl-generation.output-mode" value="database" />
+		</properties>
+
+	</persistence-unit>
 
 
 	<persistence-unit name="test" transaction-type="RESOURCE_LOCAL">
@@ -65,29 +112,6 @@
 
 
 
-	<persistence-unit name="cookiesGlobalStore"
-		transaction-type="RESOURCE_LOCAL">
-
-		<class>com.enrico200165.cookies.HttpCookieJPA</class>
-
-		<properties>
-
-			<property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:sqlite:../../../data_dev/web_scraper/cookies.db" />
-
-			<property name="javax.persistence.jdbc.user" value="root" />
-			<property name="javax.persistence.jdbc.password" value="ocirne00" />
-
-			<!-- EclipseLink should create the database schema automatically -->
-			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
-			<!-- <property name="eclipselink.ddl-generation" value="create-tables" 
-				/> -->
-
-			<property name="eclipselink.ddl-generation.output-mode"
-				value="database" />
-		</properties>
-
-	</persistence-unit>
 
 
 </persistence>

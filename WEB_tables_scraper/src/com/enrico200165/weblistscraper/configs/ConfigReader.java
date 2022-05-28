@@ -5,11 +5,12 @@ import com.enrico200165.utils.config.Exception_YAMLCfg_WrongType;
 import com.enrico200165.utils.config.YAML2Map;
 import com.enrico200165.weblistscraper.page.NextTablePageSelectorsABC;
 import com.enrico200165.weblistscraper.tools.*;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.net.URI;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -62,7 +63,8 @@ public class ConfigReader   {
         Map<String, Object> taskListChildren = (Map<String, Object>) entry.getValue();
         for (Map.Entry<String, Object> e : taskListChildren.entrySet()) {
 
-            String k = e.getKey(); Object value_o = (Object) e.getValue();
+            String k = e.getKey();
+            Object value_o = (Object) e.getValue();
             log.debug("analyzing key: " + fullKey(fatherKeyP, k));
 
             if (k.equals("")) {
@@ -457,7 +459,6 @@ public class ConfigReader   {
                 log.error("unmanaged key: "+k+" exiting");
                 System.exit(1);
             }
-
         }
     }
 
@@ -468,8 +469,12 @@ public class ConfigReader   {
      */
     public ScrapeGLobConfig parseYAMLConfig(String fpath) {
 
+        if (Files.notExists(Paths.get(fpath))) {
+            log.error(fpath+" file does not exist, exiting ");
+            System.exit(1);
+        }
+
         this.gCfg = new ScrapeGLobConfig("dummyName", null, null, null, null);;
-        log.error("Should check if the file exits an warn if not");
 
         Map<String, Object> prop = YAML2Map.YAML2Map(fpath);
 
@@ -477,7 +482,6 @@ public class ConfigReader   {
             for (Map.Entry<String, Object> entry : prop.entrySet()) {
 
                 String entry_type = entry.getKey();
-
                 if (entry_type.equals(ENTRY_TASK_LIST)) {
                     parseTaskList(entry ,entry_type);
                     continue;

@@ -20,9 +20,14 @@ import java.util.*;
 public class CookieStoreEV implements java.net.CookieStore {
 
     public CookieStoreEV(String persistUnit) {
-        log.info("creo sqlite DB a "+persistUnit);
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistUnit);
-        em = factory.createEntityManager();
+        if (CookieStoreEV.em == null) {
+            log.info("creo sqlite DB a " + persistUnit);
+            EntityManagerFactory factory = Persistence.createEntityManagerFactory(persistUnit);
+            em = factory.createEntityManager();
+            log.info(persistUnit + " persistence unit, Entity manager created");
+        } else {
+            log.warn(persistUnit+" persistence unit: attempt to create entity manager already created");
+        }
     }
 
     public CookieStoreEV() {
@@ -30,12 +35,13 @@ public class CookieStoreEV implements java.net.CookieStore {
     }
 
     public int addMap(Map<String, NewCookie> newCookies, URI uri) {
-        int nrCookiesAdded = 0;
+
         if (newCookies == null || newCookies.size() <= 0) {
             log.warn("non saremmo dovuti entrare in questa funzione");
             return 0;
         }
 
+        int nrCookiesAdded = 0;
         for (NewCookie cookie : newCookies.values()) {
             if (cookie.getName().length() > 0) {
                 add(uri, cookie);
@@ -96,13 +102,12 @@ public class CookieStoreEV implements java.net.CookieStore {
             // it means that I must only delete old, done above, and not write the new
             return;
         } else {
-
             try {
                 tx = em.getTransaction();
                 if (!tx.isActive()) tx.begin();
                 em.persist(cookie);
             } catch (Exception e) {
-                log.error("", e);
+                log.error(e);
             } finally {
                 if (tx != null) {
                     tx.commit();
@@ -182,8 +187,11 @@ public class CookieStoreEV implements java.net.CookieStore {
         CriteriaQuery<HttpCookieJPA> query = criteriaBuilder.createQuery(HttpCookieJPA.class);
         Root<HttpCookieJPA> from = query.from(HttpCookieJPA.class);
 
-        Predicate andClause = criteriaBuilder.and(criteriaBuilder.equal(from.get("domain"), domain),
-                criteriaBuilder.equal(from.get("name"), name));
+        log.error("removed domain for a but, put it back");
+        /*Predicate andClause = criteriaBuilder.and(criteriaBuilder.equal(from.get("domain"), domain),
+                criteriaBuilder.equal(from.get("name"), name));*/
+        Predicate andClause = criteriaBuilder.and(criteriaBuilder.equal(from.get("name"), name));
+
         query.where(andClause);
 
         TypedQuery<HttpCookieJPA> q = em.createQuery(query);
@@ -378,7 +386,7 @@ public class CookieStoreEV implements java.net.CookieStore {
         return false;
     }
 
-    EntityManager em;
+    static EntityManager em = null;
 
     private static Logger log = LogManager.getLogger(CookieStoreEV.class.getSimpleName());
 }
