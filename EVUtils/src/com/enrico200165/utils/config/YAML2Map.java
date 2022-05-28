@@ -27,14 +27,13 @@ public class YAML2Map {
     public static Map<String, Object> YAML2Map(String fpath) {
 
         String content = null;
-
         log.info("will parse config file: "+fpath);
         try  {  content = new String(Files.readAllBytes(Paths.get(fpath))); }
         catch (IOException e) { log.error("working dir"+System.getProperty("user.dir"),e);  }
 
         Map<String, Object> propertiesMap = (Map<String, Object>) (new Yaml()).load(content);
 
-        log.info("Completed yaml file parsing");
+        log.debug("Completed yaml file parsing");
 
         return propertiesMap;
     }
