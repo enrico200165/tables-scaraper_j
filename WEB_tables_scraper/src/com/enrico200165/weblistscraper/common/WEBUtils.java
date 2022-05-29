@@ -20,6 +20,7 @@ import javax.ws.rs.client.ClientResponseFilter;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.NewCookie;
 import javax.ws.rs.core.Response;
+import java.io.IOException;
 import java.net.HttpCookie;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -118,7 +119,7 @@ public class WEBUtils {
 
     static ClReqFilterCookies clReqFilterCookies = null;
 
-    static public ClReqFilterCookies getClReqFilterCookies() {
+    static public ClReqFilterCookies getClReqFilterCookies() throws IOException, ClassNotFoundException {
         if (clReqFilterCookies == null) {
             clReqFilterCookies = new ClReqFilterCookies(getCookieStoreEV());
         }
@@ -127,7 +128,7 @@ public class WEBUtils {
 
     static ClientResponseFilter respFilter = null;
 
-    static public ClientResponseFilter getClRespFilter() {
+    static public ClientResponseFilter getClRespFilter() throws IOException, ClassNotFoundException {
         if (respFilter == null) {
             respFilter = new ClientRespFilterEV(getCookieStoreEV());
         }
@@ -136,7 +137,7 @@ public class WEBUtils {
 
     static CookieStoreEV cookieStore = null;
 
-    public static CookieStoreEV getCookieStoreEV() {
+    public static CookieStoreEV getCookieStoreEV() throws IOException, ClassNotFoundException {
         if (cookieStore == null) {
             cookieStore = new CookieStoreEV();
         }
@@ -145,7 +146,7 @@ public class WEBUtils {
 
     static Client client = null;
 
-    public static Client createClient(ClientRequestFilter reqF, ClientResponseFilter crespF, boolean recreate) {
+    public static Client createClient(ClientRequestFilter reqF, ClientResponseFilter crespF, boolean recreate) throws IOException, ClassNotFoundException {
 
         if (client != null && recreate) {
             log.warn("ricreo client");

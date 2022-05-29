@@ -9,10 +9,11 @@ import org.apache.logging.log4j.Logger;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientRequestContext;
 import javax.ws.rs.client.ClientRequestFilter;
-import javax.ws.rs.core.Cookie;
 import javax.ws.rs.core.UriBuilder;
 import java.io.IOException;
+import java.net.HttpCookie;
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -40,8 +41,7 @@ public class ClReqFilterCookies implements ClientRequestFilter {
 		waitToSimulateHuman(delay);
 
 		URI uri = requestContext.getUri();
-		log.info("log da filter: " + requestContext.getMethod() + " " + uri);
-
+		log.info("filter: " + requestContext.getMethod() + " " + uri);
 		// addMap / if empty path
 		if (uri.getPath() == null || uri.getPath().length() == 0) {
 			requestContext.setUri(UriBuilder.fromUri(uri).path("/").build());
@@ -56,21 +56,25 @@ public class ClReqFilterCookies implements ClientRequestFilter {
 			String domain = requestContext.getUri().getHost();
 			String path = requestContext.getUri().getPath();
 
-			List<Cookie> cookies = cookieStore.getCookies(domain, path);
-			if (cookies != null && cookies.size() > 0) {
-
-				log.debug(cookieStore.dump(true));
-
+			List<HttpCookie> cookies_all = cookieStore.getCookies();
+			if (cookies_all != null && cookies_all.size() > 0) {
+				List<HttpCookie> cookies = new ArrayList<HttpCookie>();
+				for (HttpCookie c : cookies_all) {
+					if (c.getDomain() == null || c.getName() == null ) {
+						log.warn("discarding cookie, this may be  NORMAL:\n"+c.toString());
+						continue;
+					}
+					cookies.add(c);
+				}
 				// vecchio sistema abbandonato
 				// requestContext.getHeaders().put("Cookie", cookies);
 				StringBuilder strBuilder = new StringBuilder();
-				for (Cookie cookie : cookies) {
+				for (HttpCookie cookie : cookies) {
 					strBuilder.append(cookie.getName()).append("=").append(cookie.getValue()).append(";");
 				}
 				requestContext.getHeaders().add("Cookie", strBuilder.toString());
 			}
 		}
-
 	}
 
 	void waitToSimulateHuman(int seconds) {

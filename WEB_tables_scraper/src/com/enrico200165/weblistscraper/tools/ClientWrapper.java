@@ -16,6 +16,7 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Form;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -25,7 +26,7 @@ import java.util.List;
 public class ClientWrapper {
 
     public ClientWrapper(Client clientPar, InvocationBuilderWrapper ibwPar,
-                         HostConfig hostCfgPar, int pageLoadDelayPar, FormManagerABC fmPar) {
+                         HostConfig hostCfgPar, int pageLoadDelayPar, FormManagerABC fmPar) throws IOException, ClassNotFoundException {
         super();
         pageLoadDelay = pageLoadDelayPar;
         hostCfg = hostCfgPar;

@@ -20,14 +20,15 @@ import org.apache.logging.log4j.Logger;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientRequestFilter;
-
+import java.io.IOException;
+import com.enrico200165.weblistscraper.concorsi_it.SessionManagerConcorsi;
 
 // import com.sun.security.ntlm.Client;
 
 public class MainConcorsiIt {
 
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException, ClassNotFoundException {
 
 		System.out.println("Working directory: "+System.getProperty("user.dir"));
 		log.info("java.home: "+System.getProperty("java.home"));
