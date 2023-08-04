@@ -23,7 +23,7 @@
 
 	<persistence-unit name="concorsi" transaction-type="RESOURCE_LOCAL">
 
-		<class>com.enrico200165.weblistscraper.concorsi_it.entities.Concor</class>
+		<class>entities.com.enrico200165.weblistscraper.concorsi_it.main.Concor</class>
 		<class>ConcorPermState</class>
 
 		<properties>

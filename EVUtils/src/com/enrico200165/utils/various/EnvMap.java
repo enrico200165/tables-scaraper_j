@@ -1,7 +1,8 @@
 package com.enrico200165.utils.various;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 import java.io.File;
 import java.util.Map;
@@ -29,7 +30,7 @@ public class EnvMap {
 		File f = new File(dir);
 		if (!f.exists()) {
 			if (reportError) {
-				log.error("not existing dir: " + dir);
+				log.log(Level.SEVERE, "not existing dir: " + dir);
 			}
 			return false;
 		}
@@ -37,5 +38,5 @@ public class EnvMap {
 	}
 
 	static Map<String, String> singletonEnvMap;
-	private static Logger log = LogManager.getLogger(EnvMap.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(EnvMap.class.getSimpleName());
 }

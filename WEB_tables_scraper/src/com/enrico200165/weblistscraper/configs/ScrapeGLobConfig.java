@@ -5,9 +5,10 @@ import com.enrico200165.weblistscraper.page.NextTablePageSelectorsABC;
 import com.enrico200165.weblistscraper.page.TableScraperABC;
 import com.enrico200165.weblistscraper.tools.*;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
+import java.util.logging.Level;
 //import com.enrico200165.utils.config.PropertiesYAMLEV;
 
 
@@ -113,7 +114,7 @@ public class ScrapeGLobConfig extends PageConfigABC {
 		if (tablePageScraper == null) {
 			tablePageScraper = getTableScraperObject();
 		}
-		log.warn("patch per rimediare a una dipendenza circolare dovuta a design assurdo");
+		log.log(Level.WARNING,  "patch per rimediare a una dipendenza circolare dovuta a design assurdo");
 		tablePageScraper.setPageConfig(this);
 		return tablePageScraper;
 	}
@@ -156,5 +157,5 @@ public class ScrapeGLobConfig extends PageConfigABC {
 	protected ChannelIFC channelInfo;
     SessionLimitsBase sessionLimits;
 
-	private static Logger log = LogManager.getLogger(ScrapeGLobConfig.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(ScrapeGLobConfig.class.getSimpleName());
 }

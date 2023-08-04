@@ -1,13 +1,14 @@
 package com.enrico200165.utils.config;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 public class YAML2Map {
 
@@ -18,7 +19,7 @@ public class YAML2Map {
      * @return
      */
     public static String getNameFromChild(Map.Entry<String, Object> element) {
-        Map values = (Map) element.getValue();
+        Map<String, Object>  values = (Map<String, Object>) element.getValue();
         String name = (String) values.get("ID"); // todo use constant
         return name;
     }
@@ -29,15 +30,17 @@ public class YAML2Map {
         String content = null;
         log.info("will parse config file: "+fpath);
         try  {  content = new String(Files.readAllBytes(Paths.get(fpath))); }
-        catch (IOException e) { log.error("working dir"+System.getProperty("user.dir"),e);  }
+        catch (IOException e) {
+            log.log(Level.SEVERE,"working dir"+System.getProperty("user.dir") + e.toString());
+        }
 
-        Map<String, Object> propertiesMap = (Map<String, Object>) (new Yaml()).load(content);
+        Map<String, Object> propertiesMap = (new Yaml()).load(content);
 
-        log.debug("Completed yaml file parsing");
+        log.log(Level.SEVERE, "Completed yaml file parsing");
 
         return propertiesMap;
     }
 
 
-    private static Logger log = LogManager.getLogger(YAML2Map.class);
+    private static final Logger log = LogManager.getLogManager().getLogger(YAML2Map.class.getName());
 }

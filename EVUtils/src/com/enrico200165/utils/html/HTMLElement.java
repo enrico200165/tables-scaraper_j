@@ -1,7 +1,8 @@
 package com.enrico200165.utils.html;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 public class HTMLElement extends HTMLGenElement {
 
@@ -15,7 +16,7 @@ public class HTMLElement extends HTMLGenElement {
 	
 	public void addElement(SPAN e) {
 		if (stringContent.length() > 0) {
-			log.error("mischiati due tipi di contenuto");
+			log.log(Level.SEVERE, "mischiati due tipi di contenuto");
 			System.exit(1);
 		}
 		this.subElements.add(e);
@@ -32,5 +33,5 @@ public class HTMLElement extends HTMLGenElement {
 	}
 
 	
-	private static Logger log = LogManager.getLogger(HTMLElement.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(HTMLElement.class.getSimpleName());
 }

@@ -1,8 +1,9 @@
 package com.enrico200165.utils.html;
 
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 import java.util.ArrayList;
 
@@ -37,7 +38,7 @@ public class HTMLGenElement implements IHTMLContent {
 
 		// --- check ---
 		if ((stringContent != null) && (stringContent.length() > 0) && this.subElements.size() > 0) {
-			log.warn("element: <" + this.name + "> with both content and children: " + stringContent);
+			log.log(Level.WARNING,  "element: <" + this.name + "> with both content and children: " + stringContent);
 		}
 
 		// --- prepare ---
@@ -77,7 +78,7 @@ public class HTMLGenElement implements IHTMLContent {
 
 	public boolean addValueToAttr(String name, String value) {
 		if (stringContent.length() > 0) {
-			log.error("mischiati due tipi di contenuto");
+			log.log(Level.SEVERE, "mischiati due tipi di contenuto");
 		}
 		for (Attributoid a : this.attributoids) {
 			if (a.name.equals(name)) {
@@ -85,7 +86,7 @@ public class HTMLGenElement implements IHTMLContent {
 				return true;
 			}
 		}
-		log.error("attempt to add value <" + value + "> to non existing attribute: " + name);
+		log.log(Level.SEVERE, "attempt to add value <" + value + "> to non existing attribute: " + name);
 		return false;
 	}
 
@@ -103,7 +104,7 @@ public class HTMLGenElement implements IHTMLContent {
 	public boolean setID(String value) {
 		for (Attributoid a : this.attributoids) {
 			if (a.name.equals("ID")) {
-				log.error("id already exists" + a.values.get(0));
+				log.log(Level.SEVERE, "id already exists" + a.values.get(0));
 				return false;
 			}
 		}
@@ -135,10 +136,10 @@ public class HTMLGenElement implements IHTMLContent {
 
 	public HTMLGenElement addHTMLContent(String c) {
 		if (c == null || c.equals("null")) {
-			// log.warn("adding null string, ignore it");
+			// log.log(Level.WARNING,  "adding null string, ignore it");
 		} else {
 			if (c.length() == 0) {
-				// log.debug("passing an empty string");
+				// log.log( Level.FINE, "passing an empty string");
 			}
 			stringContent += c;
 		}
@@ -150,5 +151,5 @@ public class HTMLGenElement implements IHTMLContent {
 	ArrayList<Attributoid> attributoids;
 	ArrayList<HTMLGenElement> subElements;
 
-	private static Logger log = LogManager.getLogger(HTMLGenElement.class);
+	private static Logger log = LogManager.getLogManager().getLogger(HTMLGenElement.class.getName());
 }

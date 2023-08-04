@@ -1,7 +1,8 @@
 package com.enrico200165.utils.rdb_jdbc;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,14 +16,14 @@ public abstract class RDBManager implements IRDBManager {
 
 		this.driverClass = driverClassName;
 		Class.forName(this.driverClass);
-		log.debug("OK: JDBC driver caricato");
+		log.log( Level.FINE, "OK: JDBC driver caricato");
 		this.dbName = DBName; // un po' ridondamte con DBMSFullURL che
 								// normalmente la include
 		this.DBMSFullURL = DBMFullURLPar; // andrebbe costruita dentro i db
 											// manager
 		this.password = password;
 		this.username = username;
-		log.debug("configured RDB manager, values\n" + "DBMSFullURL: " + this.DBMSFullURL);
+		log.log( Level.FINE, "configured RDB manager, values\n" + "DBMSFullURL: " + this.DBMSFullURL);
 	}
 
 	public String getDBName() {
@@ -52,7 +53,7 @@ public abstract class RDBManager implements IRDBManager {
 	abstract protected String buildConnStr(); /*
 											 * {
 											 * if (DBMSFullURL == null) {
-											 * log.error(
+											 * log.log(Level.SEVERE, 
 											 * "DB URL is null, cannot open it"
 											 * );
 											 * return "";
@@ -68,23 +69,23 @@ public abstract class RDBManager implements IRDBManager {
 		Statement stmt;
 
 		if (!startDBServer()) {
-			log.error("Nono sono riuscito ad avviare il server");
+			log.log(Level.SEVERE, "Nono sono riuscito ad avviare il server");
 			return false;
 		}
 
 		String connStr = buildConnStr();
 
 		try {
-			log.debug("connetto a DBMS e DB con URL: " + connStr);
+			log.log( Level.FINE, "connetto a DBMS e DB con URL: " + connStr);
 			if (conn != null) {
 				conn.close();
 				conn = null;
 			}
 			conn = DriverManager.getConnection(connStr, username, password);
-			log.trace("connected to DBMS ok, conn string:\n" + connStr);
+			log.log(Level.SEVERE, "connected to DBMS ok, conn string:\n" + connStr);
 			return true;
 		} catch (SQLException e) {
-			log.warn("DB conn. fallita, forse DB non esiste?", e);
+			log.log(Level.WARNING,  "DB conn. fallita, forse DB non esiste?", e.toString());
 		}
 		return false;
 	}
@@ -103,7 +104,7 @@ public abstract class RDBManager implements IRDBManager {
 		String stmtStr = "CREATE DATABASE IF NOT EXISTS " + this.getDBName();
 
 		if (conn == null) {
-			log.error("oggetto connessione jdbc � null");
+			log.log(Level.SEVERE, "oggetto connessione jdbc � null");
 			return false;
 		}
 		try {
@@ -120,7 +121,7 @@ public abstract class RDBManager implements IRDBManager {
 										 * sono di fretta ristrutturare poi
 										 */);
 		} catch (SQLException e) {
-			log.fatal("non riesco ad aprire il database", e);
+			log.log(Level.SEVERE, "non riesco ad aprire il database", e.toString());
 			return false;
 		}
 		return true;
@@ -130,7 +131,7 @@ public abstract class RDBManager implements IRDBManager {
 		try {
 			if (conn != null && closeAndReopen) {
 				conn.close();
-				log.debug("OK connessione DB chiusa. RIAPRO IMMEDIATAMENTE");
+				log.log( Level.FINE, "OK connessione DB chiusa. RIAPRO IMMEDIATAMENTE");
 				conn = null;
 				conn = DriverManager.getConnection(buildConnStr(), username, password);
 			}
@@ -138,7 +139,7 @@ public abstract class RDBManager implements IRDBManager {
 				connectToDBMS();
 			}
 		} catch (SQLException e) {
-			log.error("getConnection(), chiusura connessione per clean up fallita", e);
+			log.log(Level.SEVERE, "getConnection(), chiusura connessione per clean up fallita", e.toString());
 		}
 		return conn;
 	}
@@ -148,7 +149,7 @@ public abstract class RDBManager implements IRDBManager {
 			conn.commit();
 			return true;
 		} catch (SQLException e) {
-			log.error("flush/commit fallito", e);
+			log.log(Level.SEVERE, "flush/commit fallito", e.toString());
 			return false;
 		}
 		return false;
@@ -161,7 +162,7 @@ public abstract class RDBManager implements IRDBManager {
 			conn = null;
 			return true;
 		} catch (SQLException e) {
-			log.error("chiusura connessione DBMSfallita", e);
+			log.log(Level.SEVERE, "chiusura connessione DBMSfallita", e.toString());
 		}
 		return false;
 	}
@@ -180,5 +181,5 @@ public abstract class RDBManager implements IRDBManager {
 	String username;
 	String password;
 
-	private static Logger log = LogManager.getLogger(RDBManager.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(RDBManager.class.getSimpleName());
 }

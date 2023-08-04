@@ -7,8 +7,11 @@ import com.enrico200165.weblistscraper.tools.EntryCanActOnFilter;
 import com.enrico200165.weblistscraper.tools.EntryExcludeFilter;
 import com.enrico200165.weblistscraper.tools.EntryIncludeFilter;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
+import java.util.logging.Level;
+
 
 /**
  * Tage = table/page SEMBREREBBE che fornisce tutto ciò che serve a elaborare una pagina: - indirizzi (host-config) - selettori - oggetti
@@ -90,7 +93,7 @@ public class PageConfigVanilla extends PageConfigABC {
 			tablePageScraper = getTableScraperObject();
 		}
 
-		log.warn("patch per rimediare a una dipendenza circolare dovuta a design assurdo");
+		log.log(Level.WARNING,  "patch per rimediare a una dipendenza circolare dovuta a design assurdo");
 		tablePageScraper.setPageConfig(this);
 
 		return tablePageScraper;
@@ -134,5 +137,5 @@ public class PageConfigVanilla extends PageConfigABC {
 	String tableURl;
 	ScrapeGLobConfig gCfg;
 
-	private static Logger log = LogManager.getLogger(PageConfigVanilla.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(PageConfigVanilla.class.getSimpleName());
 }

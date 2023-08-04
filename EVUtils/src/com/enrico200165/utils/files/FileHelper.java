@@ -2,8 +2,10 @@ package com.enrico200165.utils.files;
 
 import com.enrico200165.utils.str_regex.NameValuePairString;
 import com.enrico200165.utils.various.Utl;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -74,7 +76,7 @@ public class FileHelper implements FileProcessorI {
 		File f = new File(pathName);
 		if (!f.exists()) {
 			if (reportError) {
-				log.error("not existing pathName: " + pathName);
+				log.log(Level.SEVERE, "not existing pathName: " + pathName);
 			}
 			return false;
 		}
@@ -136,11 +138,11 @@ public class FileHelper implements FileProcessorI {
 			ITexLineRenderer renderer, int first, int last, int maxPerFile, boolean overwriteFile, String delimiter) {
 
 		if (entries.size() == 0) {
-			log.error("attempt to write to file when empty");
+			log.log(Level.SEVERE, "attempt to write to file when empty");
 			return false;
 		}
 		if (!overwriteFile && (new File(_pathName)).exists()) {
-			log.warn("file exists, will not overwrite it, file: " + fullPath());
+			log.log(Level.WARNING, "file exists, will not overwrite it, file: " + fullPath());
 			return false;
 		}
 
@@ -184,14 +186,14 @@ public class FileHelper implements FileProcessorI {
 				line = renderer.render(e, scanned, written, 0);
 				if (delimiter != null && delimiter.length() > 0)
 					line += delimiter;
-				log.debug("writing #: " + scanned + " " + line);
+				log.log( Level.FINE, "writing #: " + scanned + " " + line);
 				outwriter.write(line);
 				++written;
 				++inFile;
 			}
 			if (footer != null)
 			outwriter.write(footer);
-			else log.warn("footer null for file: "+getPathName());
+			else log.log(Level.WARNING, "footer null for file: "+getPathName());
 			outwriter.flush();
 			outwriter.close();
 			outwriter = null;
@@ -204,7 +206,7 @@ public class FileHelper implements FileProcessorI {
 			// rt.exec("firefox "+pathName);
 			return true;
 		} catch (IOException e) {
-			log.error("Eccezione di IO", e);
+			log.log(Level.SEVERE, "Eccezione di IO", e.toString());
 		} finally {
 			System.gc();
 		}
@@ -214,12 +216,12 @@ public class FileHelper implements FileProcessorI {
 	
 	public static boolean CopyFile(File in, File out) {
 		if (!in.exists()) {
-			log.error("FileDirTreeWalk: " + in.getAbsolutePath() + " non existing, cancel copy");
+			log.log(Level.SEVERE, "FileDirTreeWalk: " + in.getAbsolutePath() + " non existing, cancel copy");
 			return false;
 		}
 		/*
 		 * andrebbe controllata la directory if (!out.exists()) {
-		 * log.error("FileDirTreeWalk: " + out.getAbsolutePath() +
+		 * log.log(Level.SEVERE, "FileDirTreeWalk: " + out.getAbsolutePath() +
 		 * " non existing, cancel copy"); return false; }
 		 */
 		FileInputStream fis = null;
@@ -255,20 +257,20 @@ public class FileHelper implements FileProcessorI {
 		BufferedReader bufferedReader;
 
 		if (!(new File(_pathName)).exists()) {
-			log.error("read non existing file: " + _pathName);
+			log.log(Level.SEVERE, "read non existing file: " + _pathName);
 			return false;
 		}
 
 		try {
-			log.trace("Dir di lavoro: " + System.getProperty("user.dir") + "\nopening: " + _pathName);
+			log.info("Dir di lavoro: " + System.getProperty("user.dir") + "\nopening: " + _pathName);
 			FileInputStream fis = new FileInputStream(getPathName());
 			if (!fileExists(getPathName())) {
-				log.error("file does not exitst: "+getPathName());
+				log.log(Level.SEVERE, "file does not exitst: "+getPathName());
 				return false;
 			}
 			isr = new InputStreamReader(fis, _encoding);
 			bufferedReader = new BufferedReader(isr);
-			log.debug("Encoding: in lettura " + isr.getEncoding());
+			log.log( Level.FINE, "Encoding: in lettura " + isr.getEncoding());
 
 			String line;
 			int lineNr;
@@ -278,12 +280,12 @@ public class FileHelper implements FileProcessorI {
 				if (appendToGloBuffer != null) appendToGloBuffer.add(new TextFileLine(relPath, lineNr, line));
 			}
 			bufferedReader.close();
-			log.debug("elaborate nr linee input: " + lineNr);
+			log.log( Level.FINE, "elaborate nr linee input: " + lineNr);
 		} catch (IOException e) {
-			log.error("", e);
+			log.log(Level.SEVERE, "", e.toString());
 			return false;
 		} catch (Exception e) {
-			log.error("Exception", e);
+			log.log(Level.SEVERE, "Exception", e.toString());
 			return false;
 		}
 
@@ -350,5 +352,5 @@ public class FileHelper implements FileProcessorI {
 											// perform()
 	boolean intoInterBuff; // holds parameter for functionoid perform()
 
-	private static Logger log = LogManager.getLogger(FileHelper.class);
+	private static Logger log = LogManager.getLogManager().getLogger(FileHelper.class.getName());
 }

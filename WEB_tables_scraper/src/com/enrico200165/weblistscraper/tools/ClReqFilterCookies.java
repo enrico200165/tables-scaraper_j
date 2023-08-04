@@ -3,8 +3,6 @@ package com.enrico200165.weblistscraper.tools;
 import com.enrico200165.cookies.CookieStoreEV;
 import com.enrico200165.utils.net.http.Utils;
 import com.enrico200165.weblistscraper.common.WEBUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientRequestContext;
@@ -16,6 +14,9 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 
 public class ClReqFilterCookies implements ClientRequestFilter {
@@ -35,7 +36,7 @@ public class ClReqFilterCookies implements ClientRequestFilter {
 		//		}
 		Integer delay = (Integer) client.getConfiguration().getProperty(WEBUtils.callDelayProperty);
 		if (delay == null) {
-			log.debug("delay is null, setting it to 2");
+			log.log( Level.FINE, "delay is null, setting it to 2");
 			delay = new Integer(2);
 		}
 		waitToSimulateHuman(delay);
@@ -48,7 +49,7 @@ public class ClReqFilterCookies implements ClientRequestFilter {
 			uri = requestContext.getUri();
 		}
 		if (!Utils.isUsableURI(uri)) {
-			log.error("URI not usable: " + uri);
+			log.log(Level.SEVERE, "URI not usable: " + uri);
 			System.exit(1);
 		}
 
@@ -61,7 +62,7 @@ public class ClReqFilterCookies implements ClientRequestFilter {
 				List<HttpCookie> cookies = new ArrayList<HttpCookie>();
 				for (HttpCookie c : cookies_all) {
 					if (c.getDomain() == null || c.getName() == null ) {
-						log.warn("discarding cookie, this may be  NORMAL:\n"+c.toString());
+						log.log(Level.WARNING,  "discarding cookie, this may be  NORMAL:\n"+c.toString());
 						continue;
 					}
 					cookies.add(c);
@@ -96,5 +97,5 @@ public class ClReqFilterCookies implements ClientRequestFilter {
 
 	CookieStoreEV cookieStore;
 
-	private static Logger log = LogManager.getLogger(ClReqFilterCookies.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(ClReqFilterCookies.class.getSimpleName());
 }

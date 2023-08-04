@@ -1,12 +1,12 @@
 package com.enrico200165.weblistscraper.tools;
 
 
+import com.enrico200165.weblistscraper.marketingDB.ProspectCoreData;
 import org.jsoup.nodes.Element;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import com.enrico200165.weblistscraper.marketingDB.ProspectCoreData;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 
 public class EntryHTMLIncludeFilter extends FilterBase {
@@ -17,7 +17,7 @@ public class EntryHTMLIncludeFilter extends FilterBase {
     public boolean includeHTMLEntry(Element entry) {
 
         boolean ret = false;
-        log.error("not implemented");
+        log.log(Level.SEVERE, "not implemented");
         if (ret) {
             incrTrueEntry();
         } else {
@@ -30,7 +30,7 @@ public class EntryHTMLIncludeFilter extends FilterBase {
         boolean ret;
 
         ret = false;
-        log.error("not implemented");
+        log.log(Level.SEVERE, "not implemented");
         if (ret) {
             incrTrueProspect();
         } else {
@@ -39,5 +39,5 @@ public class EntryHTMLIncludeFilter extends FilterBase {
         return ret;
     }
 
-    private static Logger log = LogManager.getLogger(EntryHTMLIncludeFilter.class.getSimpleName());
+    private static Logger log = LogManager.getLogManager().getLogger(EntryHTMLIncludeFilter.class.getSimpleName());
 }

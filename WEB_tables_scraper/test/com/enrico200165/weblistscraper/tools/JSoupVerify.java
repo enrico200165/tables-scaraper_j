@@ -1,8 +1,8 @@
 package com.enrico200165.weblistscraper.tools;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.jsoup.Jsoup;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
@@ -43,5 +43,5 @@ public class JSoupVerify {
 
 
 
-    private static Logger log = LogManager.getLogger(JSoupVerify.class.getSimpleName());
+    private static Logger log = LogManager.getLogManager().getLogger(JSoupVerify.class.getSimpleName());
 } 

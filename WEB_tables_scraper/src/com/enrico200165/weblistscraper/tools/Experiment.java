@@ -1,8 +1,6 @@
 package com.enrico200165.weblistscraper.tools;
 
 import com.enrico200165.utils.str_regex.NameValuePairString;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -12,6 +10,9 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Invocation;
 import javax.ws.rs.client.WebTarget;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 
 public class Experiment  {
@@ -34,12 +35,12 @@ public class Experiment  {
 		Invocation.Builder invocationBuilder = target.request();
 		ResponseWrapper rw = new ResponseWrapper(invocationBuilder.get());
 		if (rw.it().getStatus() != 200) {
-			log.warn("some problem, maybe not blocking, getting page with login form: " + rw.it().getStatus());
+			log.log(Level.WARNING,  "some problem, maybe not blocking, getting page with login form: " + rw.it().getStatus());
 		}
 		Document doc = rw.getJSoupDocument();
 		Element loginForm = doc.select("#user-login-form").get(0);
 		if (loginForm == null) {
-			log.error("failed to get form to analyze at: "+ target.getUri());
+			log.log(Level.SEVERE, "failed to get form to analyze at: "+ target.getUri());
 			System.exit(1);
 		}
 		// log.info("login form OUTER HTML\n" + loginForm.outerHtml());
@@ -54,7 +55,7 @@ public class Experiment  {
 				hiddenFormFields.add(new NameValuePairString(attrName, passwd));
 			} else { // campi che riportiamo tali e quali
 				hiddenFormFields.add(new NameValuePairString(attrName, e.val()));
-				log.debug("captured form input: " + attrName + " = " + e.val());
+				log.log( Level.FINE, "captured form input: " + attrName + " = " + e.val());
 				continue;
 			}
 		}
@@ -69,5 +70,5 @@ public class Experiment  {
 	}
 
 
-	private static Logger log = LogManager.getLogger(Experiment.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(Experiment.class.getSimpleName());
 }

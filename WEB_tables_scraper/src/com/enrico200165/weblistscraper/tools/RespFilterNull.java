@@ -1,8 +1,8 @@
 package com.enrico200165.weblistscraper.tools;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 import javax.ws.rs.client.ClientRequestContext;
 import javax.ws.rs.client.ClientResponseContext;
 import javax.ws.rs.client.ClientResponseFilter;
@@ -20,5 +20,5 @@ public class RespFilterNull implements ClientResponseFilter {
 
 	}
 
-	private static Logger log = LogManager.getLogger(RespFilterNull.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(RespFilterNull.class.getSimpleName());
 }

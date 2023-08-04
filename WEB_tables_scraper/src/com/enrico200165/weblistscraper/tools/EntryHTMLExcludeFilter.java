@@ -3,8 +3,11 @@ package com.enrico200165.weblistscraper.tools;
 import com.enrico200165.weblistscraper.marketingDB.ProspectCoreData;
 import org.jsoup.nodes.Element;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
+import java.util.logging.Level;
+
 
 public class EntryHTMLExcludeFilter extends EntryExcludeFilter {
 
@@ -12,7 +15,7 @@ public class EntryHTMLExcludeFilter extends EntryExcludeFilter {
 	}
 
 	public boolean exclude(Element entry,  StringBuffer comments) {
-		log.error("da implementare");
+		log.log(Level.SEVERE, "da implementare");
 		return false;
 	}
 
@@ -26,7 +29,7 @@ public class EntryHTMLExcludeFilter extends EntryExcludeFilter {
 	}
 
 	public boolean excludeTypedEntry(Object castMeInDerivedFilter) {
-		log.error("da implementare");
+		log.log(Level.SEVERE, "da implementare");
 		return false;
 
 	}
@@ -47,5 +50,5 @@ public class EntryHTMLExcludeFilter extends EntryExcludeFilter {
 		return ret;
 	}
 
-	private static Logger log = LogManager.getLogger(EntryHTMLExcludeFilter.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(EntryHTMLExcludeFilter.class.getSimpleName());
 }

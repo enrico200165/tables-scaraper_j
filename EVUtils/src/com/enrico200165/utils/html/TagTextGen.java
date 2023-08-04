@@ -1,8 +1,8 @@
 package com.enrico200165.utils.html;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 public class TagTextGen {
 	final String indent = "  ";
 
@@ -40,7 +40,7 @@ public class TagTextGen {
 			String content, int level) {
 
 		if (content != null && content.trim().length() >0 ) {
-			log.error("element <"+tag+"> has contents, it should not when calling this");
+			log.log(Level.SEVERE, "element <"+tag+"> has contents, it should not when calling this");
 		}
 		
 		String pad = indent(level);		
@@ -107,6 +107,6 @@ public class TagTextGen {
 		return indent;
 	}
 
-	private static Logger log = LogManager.getLogger(TagTextGen.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(TagTextGen.class.getSimpleName());
 
 }

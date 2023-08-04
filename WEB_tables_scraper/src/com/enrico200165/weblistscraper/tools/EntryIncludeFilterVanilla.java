@@ -5,8 +5,10 @@ import com.enrico200165.weblistscraper.marketingDB.ProspectCoreData;
 import org.jsoup.nodes.Element;
 
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
+import java.util.logging.Level;
 
 
 public class EntryIncludeFilterVanilla extends com.enrico200165.weblistscraper.tools.EntryIncludeFilter {
@@ -15,7 +17,7 @@ public class EntryIncludeFilterVanilla extends com.enrico200165.weblistscraper.t
 	}
 
 	public boolean includeEntrySpecific(Element entry) {
-		log.error("to be implemented");
+		log.log(Level.SEVERE, "to be implemented");
 		return false;
 	}
 
@@ -30,7 +32,7 @@ public class EntryIncludeFilterVanilla extends com.enrico200165.weblistscraper.t
 	}
 
 	public boolean includeProspectSpecific(ProspectCoreData prospectCastIt) {
-		log.error("to be implemented");
+		log.log(Level.SEVERE, "to be implemented");
 		return false;
 	}
 
@@ -44,6 +46,6 @@ public class EntryIncludeFilterVanilla extends com.enrico200165.weblistscraper.t
 		return ret;
 	}
 
-	private static Logger log = LogManager.getLogger(EntryIncludeFilterVanilla.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(EntryIncludeFilterVanilla.class.getSimpleName());
 
 }

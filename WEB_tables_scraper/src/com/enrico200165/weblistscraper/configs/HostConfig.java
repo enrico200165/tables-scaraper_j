@@ -1,8 +1,8 @@
 package com.enrico200165.weblistscraper.configs;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -10,7 +10,7 @@ import java.io.InputStream;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Properties;
-
+import java.util.logging.Level;
 public class HostConfig {
 
     public String fname;
@@ -36,7 +36,7 @@ public class HostConfig {
     public boolean readCfg(String loginInfoPropFile) {
         if (loginInfoPropFile.equals("none")) {
             // special value for when we don't need it
-            log.error("Should never pass here");
+            log.log(Level.SEVERE, "Should never pass here");
             System.exit(1);
         } else {
             InputStream input = null;
@@ -75,14 +75,14 @@ public class HostConfig {
             else
                 baseHostURI = new URI("http://"+uriPar);
         } catch (URISyntaxException e) {
-            log.error(e);
+            log.log(Level.SEVERE, e.toString());
             System.exit(1);
         }
     }
 
 
     public  String getHostNoport() {
-        log.error("da implementare, esco");
+        log.log(Level.SEVERE, "da implementare, esco");
         System.exit(1);
         return this.getHost();
     }
@@ -121,5 +121,5 @@ public class HostConfig {
     }
 
 
-    private static Logger log = LogManager.getLogger(HostConfig.class.getSimpleName());
+    private static Logger log = LogManager.getLogManager().getLogger(HostConfig.class.getSimpleName());
 }

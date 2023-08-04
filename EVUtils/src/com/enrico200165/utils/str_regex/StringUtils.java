@@ -2,8 +2,11 @@ package com.enrico200165.utils.str_regex;
 
 import com.enrico200165.utils.various.Utl;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
+
+
 
 import java.util.ArrayList;
 
@@ -32,7 +35,7 @@ public class StringUtils {
 
 	public static String safeTruncate(String s, int maxChars) {
 		if (s == null) {
-			log.error("setting null or wrong length string, ESCO");
+			log.log(Level.SEVERE, "setting null or wrong length string, ESCO");
 			System.exit(1);
 			return null;
 		}
@@ -68,14 +71,14 @@ public class StringUtils {
 	public static boolean str2int(String s, Integer i) {
 		i = Utl.NOT_INITIALIZED_INT;
 		if (s == null || s.length() <= 0) {
-			log.error("string null or empty, cannot convert to int");
+			log.log(Level.SEVERE, "string null or empty, cannot convert to int");
 			return false;
 		}
 		try {
 			i = Integer.parseInt(s);
 		} catch (NumberFormatException e) {
 			i = Utl.NOT_INITIALIZED_INT;
-			log.error("errore parsing string \"" + s + "\" into int ", e);
+			log.log(Level.SEVERE, "errore parsing string \"" + s + "\" into int ", e.toString());
 			return false;
 		}
 		return true;
@@ -84,14 +87,14 @@ public class StringUtils {
 	public static int intFromStringAt1(String s) {
 		int ret = Utl.NOT_INITIALIZED_INT;
 		if (s == null || s.length() < 2) {
-			log.error("string null or too short");
+			log.log(Level.SEVERE, "string null or too short");
 			return ret;
 		}
 		try {
 			ret = Integer.parseInt(s.substring(1));
 		} catch (NumberFormatException e) {
 			ret = Utl.NOT_INITIALIZED_INT;
-			log.error(e.getMessage());
+			log.log(Level.SEVERE, e.getMessage());
 		}
 		return ret;
 	}
@@ -100,7 +103,7 @@ public class StringUtils {
 	public static String arrayListToString(ArrayList<String> al, String delimiter) {
 		String s = "";
 		if (al == null) {
-			log.error("");
+			log.log(Level.SEVERE, "");
 			System.exit(-1);
 		}
 		boolean first = true;
@@ -116,5 +119,5 @@ public class StringUtils {
 	}
 	
 	
-	private static Logger log = LogManager.getLogger(StringUtils.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(StringUtils.class.getSimpleName());
 }

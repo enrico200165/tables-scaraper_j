@@ -2,12 +2,12 @@ package com.enrico200165.utils.net;
 
 import com.jcraft.jsch.*;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import javax.swing.*;
 import java.awt.*;
 import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 public class SftpHelper {
 
@@ -61,7 +61,7 @@ public class SftpHelper {
 			it().get(src,dest);
 
 		} catch (SftpException e) {
-			log.error("problema con get "+src+ " ->"+dest,e);
+			log.log(Level.SEVERE, "problema con get "+src+ " ->"+dest,e);
 			return false;
 		}
 		return true;
@@ -72,7 +72,7 @@ public class SftpHelper {
 		try {
 			vv = it().ls(dir);
 		} catch (SftpException e) {
-			log.error("problema con: ls "+dir);
+			log.log(Level.SEVERE, "problema con: ls "+dir);
 			return vv;
 		}
 		return vv;
@@ -231,6 +231,6 @@ public class SftpHelper {
 
 	private static String help = "guarda il codice originale per l'help";
 
-	private static Logger log = LogManager.getLogger(SftpHelper.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(SftpHelper.class.getSimpleName());
 
 }

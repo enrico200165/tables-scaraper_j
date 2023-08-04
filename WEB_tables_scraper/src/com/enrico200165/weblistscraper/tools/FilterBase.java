@@ -1,8 +1,8 @@
 package com.enrico200165.weblistscraper.tools;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 public class FilterBase {
 
 	FilterBase() {
@@ -57,5 +57,5 @@ public class FilterBase {
 	int nrTrueProspect;
 	int nrFalseProspect;
 
-	private static Logger log = LogManager.getLogger(FilterBase.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(FilterBase.class.getSimpleName());
 }

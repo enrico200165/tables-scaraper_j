@@ -6,12 +6,12 @@ import com.enrico200165.utils.files.IRenderableAsTextLine;
 import com.enrico200165.utils.files.TexLineRendererString;
 import com.enrico200165.utils.str_regex.StringUtils;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 /**
  * @author enrico
@@ -66,7 +66,7 @@ public abstract class JDBCEVSelectABC implements IRowSetSelector {
 				addField(md.getColumnName(i), md.getColumnType(i), md.getColumnDisplaySize(i), TipoChiave.UNDEFINED, 0);
 			}
 		} catch (SQLException e) {
-			log.error("", e);
+			log.log(Level.SEVERE, "", e.toString());
 		}
 		return true;
 	}
@@ -87,7 +87,7 @@ public abstract class JDBCEVSelectABC implements IRowSetSelector {
 	@Override
 	public boolean writeToFile(String fullFname, String delimiter, boolean withHeader) {
 		if (!loadFromDB()) {
-			log.error("failed to load from DB");
+			log.log(Level.SEVERE, "failed to load from DB");
 			return false;
 		}
 
@@ -129,7 +129,7 @@ public abstract class JDBCEVSelectABC implements IRowSetSelector {
 		Statement st;
 		try {
 			if (this.getMyDBConn() == null) {
-				log.fatal("connessione DB � null");
+				log.log(Level.SEVERE,"connessione DB � null");
 				dmdb.getConnection(true);
 				return -1;
 			}
@@ -139,9 +139,9 @@ public abstract class JDBCEVSelectABC implements IRowSetSelector {
 			while (res.next()) {
 				count = res.getInt(1);
 			}
-			log.debug("nr righe: " + count);
+			log.log( Level.FINE, "nr righe: " + count);
 		} catch (SQLException e) {
-			log.error("fallita query per numero elementi", e);
+			log.log(Level.SEVERE, "fallita query per numero elementi", e.toString());
 		}
 		return count;
 	}
@@ -168,5 +168,5 @@ public abstract class JDBCEVSelectABC implements IRowSetSelector {
 	String sqlStatement;
 	ResultSet rs;
 
-	private static Logger log = LogManager.getLogger(JDBCEVSelectABC.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(JDBCEVSelectABC.class.getSimpleName());
 }

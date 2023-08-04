@@ -3,9 +3,9 @@ package com.enrico200165.weblistscraper.tools;
 import com.enrico200165.utils.net.http.Utils;
 import com.enrico200165.utils.str_regex.NameValuePairString;
 import com.enrico200165.weblistscraper.common.WEBUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.junit.After;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
@@ -213,5 +213,5 @@ public class WEBUtilsTest {
 	}
 
 
-	private static Logger log = LogManager.getLogger(WEBUtilsTest.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(WEBUtilsTest.class.getSimpleName());
 }

@@ -2,8 +2,9 @@ package com.enrico200165.utils.files;
 
 import com.enrico200165.utils.str_regex.NameValuePairString;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 import java.util.List;
 
@@ -21,7 +22,7 @@ public class TextFileProcReplRegexes implements TextLineProcessorI {
     @Override
     public String processLine(String in) {
         if (replaces == null) {
-            log.error("replaces is null,esco");
+            log.log(Level.SEVERE, "replaces is null,esco");
             System.exit(1);
         }
 
@@ -35,6 +36,6 @@ public class TextFileProcReplRegexes implements TextLineProcessorI {
     }
 
     List<NameValuePairString> replaces;
-    private static Logger log = LogManager.getLogger(TextFileProcReplRegexes.class);
+    private static Logger log = LogManager.getLogManager().getLogger(TextFileProcReplRegexes.class.getName());
 
 }

@@ -3,8 +3,6 @@ package com.enrico200165.utils.rdb_jdbc.test;
 
 import com.enrico200165.utils.rdb_jdbc.JDBCEVTable;
 import com.enrico200165.utils.rdb_jdbc.RDBManagerMicrosoftSQLSrv;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -15,6 +13,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 public class MicrosoftSQLSrvTest {
 
@@ -199,7 +200,7 @@ public class MicrosoftSQLSrvTest {
 				fos.close();
 				fos = null;
 			} catch (IOException e) {
-				log.error("Eccezione di IO", e);
+				log.log(Level.SEVERE, "Eccezione di IO", e.toString());
 			}
 
 			log.info("scritto: " + pathName + " scritti: " + (rowNum));
@@ -207,12 +208,12 @@ public class MicrosoftSQLSrvTest {
 			ProcessBuilder pb = new ProcessBuilder("C:/Program Files (x86)/Notepad++/notepad++.exe", pathName);
 			pb.start();
 		} catch (Exception e) {
-			log.error("Eccezione di IO", e);
+			log.log(Level.SEVERE, "Eccezione di IO", e.toString());
 		}
 	}
 
 	static final String contactTable = "UA_IndivContactHistory";
 	ArrayList<String> contactTFields;
 
-	private static Logger log = LogManager.getLogger(MicrosoftSQLSrvTest.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(MicrosoftSQLSrvTest.class.getSimpleName());
 }

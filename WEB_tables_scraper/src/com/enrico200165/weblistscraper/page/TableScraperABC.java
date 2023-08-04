@@ -10,9 +10,10 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
+import java.util.logging.Level;
 
 abstract public class TableScraperABC {
 
@@ -37,7 +38,7 @@ abstract public class TableScraperABC {
     }
 
     public void setSessionManager(SessionManagerAbstr smPar) {
-        log.warn("esiste come patch al fatto che in alcuni casi quando viene creato "
+        log.log(Level.WARNING,  "esiste come patch al fatto che in alcuni casi quando viene creato "
                 + " un session manager non è disponibile, va ridisegnato tutto");
         this.smgr = smPar;
     }
@@ -66,7 +67,7 @@ abstract public class TableScraperABC {
         Result res = new Result();
         // get the table
         if (rw == null || rw.getJSoupDocument() == null) {
-            log.error("not fount doc for page: " + rw.dump());
+            log.log(Level.SEVERE, "not fount doc for page: " + rw.dump());
             return res.setRc(Result.RC.ERROR);
         }
         initEntryProcessor(entryProcessor);
@@ -91,7 +92,7 @@ abstract public class TableScraperABC {
             if (tableNotFoundOK(res)) {
                 return res;
             } else {
-                log.error("not found table: \"" + pageConfig.TableSelectCSS() + "\" in page: " + page.html());
+                log.log(Level.SEVERE, "not found table: \"" + pageConfig.TableSelectCSS() + "\" in page: " + page.html());
                 return res.setRc(Result.RC.ERROR);
             }
         }
@@ -101,7 +102,7 @@ abstract public class TableScraperABC {
         String entryCSS = pageConfig.EntrySelectCSS();
         Elements entriesInPage = table.select(entryCSS);
         if (entriesInPage == null || entriesInPage.size() <= 0) {
-            log.error("not fount entries: \"" + entryCSS + "\" in html: " + table.html());
+            log.log(Level.SEVERE, "not fount entries: \"" + entryCSS + "\" in html: " + table.html());
             return res.setRc(Result.RC.ERROR);
         }
 
@@ -112,7 +113,7 @@ abstract public class TableScraperABC {
                 log.info("non posso fare scrape, esco, max exceeded: " + (sl.getReads() - 1) + "/" + sl.getReads());
                 return res.setContinua(false);
             }
-            log.debug("read entry nr: " + sl.getReads());
+            log.log( Level.FINE, "read entry nr: " + sl.getReads());
 
             smgr.incrRawEntriesEsaminate();
 
@@ -130,7 +131,7 @@ abstract public class TableScraperABC {
                 entryProcessor.processWebEntry(entry, formURL, annotations.toString(), excludeIt);
             } else {
                 log.info("Excluded HTML entry\n"+annotations.toString());
-                log.debug("entry content:\n"+entry.text());
+                log.log( Level.FINE, "entry content:\n"+entry.text());
             }
         }
 
@@ -156,5 +157,5 @@ abstract public class TableScraperABC {
     protected SessionManagerAbstr smgr;
     protected PageConfigABC pageConfig;
 
-    private static Logger log = LogManager.getLogger(TableScraperABC.class.getSimpleName());
+    private static Logger log = LogManager.getLogManager().getLogger(TableScraperABC.class.getSimpleName());
 }

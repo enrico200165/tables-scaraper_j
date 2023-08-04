@@ -8,17 +8,15 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="javax.mail" level="application" />
-    <orderEntry type="library" name="jcraft.jsch" level="application" />
-    <orderEntry type="library" name="apache.logging.log4j.api" level="application" />
-    <orderEntry type="library" name="yaml.snakeyaml" level="application" />
-    <orderEntry type="library" name="junit" level="application" />
-    <orderEntry type="library" name="javax.persistence.api" level="application" />
-    <orderEntry type="library" name="guicedee.services.log4j.core" level="application" />
-    <orderEntry type="library" name="javax.ws.rs.api" level="application" />
-    <orderEntry type="library" name="glassfish.jersey.core.client" level="application" />
-    <orderEntry type="library" name="atomikos.transactions.eclipselink" level="application" />
-    <orderEntry type="library" name="eclipse.persistence.eclipselink" level="application" />
-    <orderEntry type="library" name="github.gotson.sqlite.jdbc" level="application" />
+    <orderEntry type="library" name="sun.mail.javax" level="project" />
+    <orderEntry type="library" name="commons.logging" level="project" />
+    <orderEntry type="library" name="jcraft.jsch" level="project" />
+    <orderEntry type="library" name="yaml.snakeyaml" level="project" />
+    <orderEntry type="library" name="log4j" level="project" />
+    <orderEntry type="library" name="junit" level="project" />
+    <orderEntry type="library" name="javax.persistence.api" level="project" />
+    <orderEntry type="library" name="eclipse.persistence.eclipselink" level="project" />
+    <orderEntry type="library" name="javax.ws.rs.api" level="project" />
+    <orderEntry type="library" name="jsoup" level="project" />
   </component>
 </module>
