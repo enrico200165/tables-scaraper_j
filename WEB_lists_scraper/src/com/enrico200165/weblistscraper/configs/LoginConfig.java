@@ -1,8 +1,8 @@
 package com.enrico200165.weblistscraper.configs;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 public class LoginConfig {
 
@@ -17,5 +17,5 @@ public class LoginConfig {
 
     public String jsoupLoginFormSelector;
 
-    private static Logger log = LogManager.getLogger(LoginConfig.class.getSimpleName());
+    private static Logger log = LogManager.getLogManager().getLogger(LoginConfig.class.getSimpleName());
 }

@@ -1,7 +1,8 @@
 package com.enrico200165.utils.rdb_jdbc;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 import java.io.IOException;
 
@@ -23,9 +24,9 @@ public class RDBManagerMicrosoftSQLSrv extends RDBManager {
 
 	protected String buildConnStr() {
 		if (host.length() == 0 || dbName.length() == 0) {
-			log.error("you forgot the patchy initialization of MS Sequel server (host & dbname set in a set method");
+			log.log(Level.SEVERE, "you forgot the patchy initialization of MS Sequel server (host & dbname set in a set method");
 		}
-		log.warn("al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal "
+		log.log(Level.WARNING,  "al momento funziona solo con integrated security. Per supportare entrambi i modi va portata fuori dal "
 				+ "costruttore la costruzione della stringa, in un metodo dedicato");
 		String s = "jdbc:sqlserver://";
 		if (host != null && host.length() > 0)
@@ -52,11 +53,11 @@ public class RDBManagerMicrosoftSQLSrv extends RDBManager {
 			log.info("I do nothing");
 			return true;
 		} catch (IOException e) {
-			log.error("non sono riuscito ad avviare MS SQL Server da java", e);
+			log.log(Level.SEVERE, "non sono riuscito ad avviare MS SQL Server da java", e.toString());
 			return false;
 		}
 	}
 
 	String host;
-	private static Logger log = LogManager.getLogger(RDBManagerMicrosoftSQLSrv.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(RDBManagerMicrosoftSQLSrv.class.getSimpleName());
 }

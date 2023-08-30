@@ -1,8 +1,9 @@
 package com.enrico200165.utils.various;
 
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 import java.io.File;
 import java.lang.management.ManagementFactory;
@@ -23,14 +24,14 @@ public class Utl {
     public static int intFromString(String s) {
         int ret = NOT_INITIALIZED_INT;
         if (s == null || s.length() <= 0) {
-            log.error("string null or empty, cannot convert to int");
+            log.log(Level.SEVERE, "string null or empty, cannot convert to int");
             return ret;
         }
         try {
             ret = Integer.parseInt(s);
         } catch (NumberFormatException e) {
             ret = NOT_INITIALIZED_INT;
-            log.error(e.getMessage());
+            log.log(Level.SEVERE, e.getMessage());
         }
         return ret;
     }
@@ -136,7 +137,7 @@ public class Utl {
     public static boolean envVarDirsExist(String envVar) {
         String val = System.getenv(envVar);
         if (val == null || val.length() <= 0) {
-            log.error("not existing env var: " + envVar);
+            log.log(Level.SEVERE, "not existing env var: " + envVar);
             return false;
         }
 
@@ -151,16 +152,16 @@ public class Utl {
             if (s.endsWith("\\*")) s = s.substring(0, s.length() - 2);
             File dir = new File(s);
             if (!dir.exists()) {
-                log.error("in env: " + envVar + "=" + val + "\n nonexisting dir: '" + s + "'");
+                log.log(Level.SEVERE, "in env: " + envVar + "=" + val + "\n nonexisting dir: '" + s + "'");
                 ok = false;
                 return false;
             }
             if (!dir.isDirectory()) {
                 if (!dir.isFile() && !dir.getName().endsWith(".jar") && !dir.getName().endsWith(".zip")) {
-                    log.error("in env: " + envVar + "=" + val + "\nexisting but not a dir: " + s);
+                    log.log(Level.SEVERE, "in env: " + envVar + "=" + val + "\nexisting but not a dir: " + s);
                     ok = false;
                 } else {
-                    log.debug("just to set a breakpoint");
+                    log.log( Level.FINE, "just to set a breakpoint");
                 }
             }
         }
@@ -174,7 +175,7 @@ public class Utl {
         for (String envName : envs) {
             if (!ENVS_NOT_DIRS.contains(envName)) {
                 if (!envVarDirsExist(envName)) {
-                    log.error("variable: " + envName);
+                    log.log(Level.SEVERE, "variable: " + envName);
                     ok = false;
                 }
             }
@@ -217,7 +218,7 @@ public class Utl {
     public static boolean fileExistInEnvVarDirs(String fName, String envVar) {
         String val = System.getenv(envVar);
         if (val == null || val.length() <= 0) {
-            log.error("not existing env var: " + envVar);
+            log.log(Level.SEVERE, "not existing env var: " + envVar);
             return false;
         }
         return fileExistInDirsString(fName, val);
@@ -227,7 +228,7 @@ public class Utl {
 
         String val = System.getProperty(prop);
         if (val == null || val.length() <= 0) {
-            log.error("not existing property: " + prop);
+            log.log(Level.SEVERE, "not existing property: " + prop);
             return false;
         }
         return fileExistInDirsString(fName, val);
@@ -290,7 +291,7 @@ public class Utl {
                     String pathname = dirStr + "\\\\" + child;
                     File curFile = new File(pathname);
                     if (!curFile.exists()) {
-                        log.error("");
+                        log.log(Level.SEVERE, "");
                         return false;
                     }
                     if (!curFile.isFile()) {
@@ -352,7 +353,7 @@ public class Utl {
                     String pathname = dirStr + "\\\\" + child;
                     File curFile = new File(pathname);
                     if (!curFile.exists()) {
-                        log.error("");
+                        log.log(Level.SEVERE, "");
                         return false;
                     }
                     if (!curFile.isFile()) {
@@ -399,5 +400,5 @@ public class Utl {
 
     public static final String ENCODING_UTF8 = "UTF8";
 
-    private static Logger log = LogManager.getLogger(Utl.class.getSimpleName());
+    private static Logger log = LogManager.getLogManager().getLogger(Utl.class.getSimpleName());
 }

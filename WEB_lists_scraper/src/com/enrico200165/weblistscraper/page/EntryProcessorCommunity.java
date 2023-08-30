@@ -9,12 +9,12 @@ import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import com.enrico200165.weblistscraper.tools.ClientWrapper;
 import com.enrico200165.weblistscraper.tools.Result;
 import com.enrico200165.weblistscraper.tools.Result.RC;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.jsoup.nodes.Element;
 
 import java.util.Date;
-
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 public abstract class EntryProcessorCommunity extends EntryProcessorABC {
 
@@ -24,7 +24,7 @@ public abstract class EntryProcessorCommunity extends EntryProcessorABC {
         if (tCfgPar == null)
             log.info("tCfgPar == null");
 
-        log.warn("maybe cw should be passed as parameter? don't know");
+        log.log(Level.WARNING,  "maybe cw should be passed as parameter? don't know");
         this.cw = smPar.getClientWrapper();
         storeProspect = false;
         contactType = ContactType.SIMULATED;
@@ -67,7 +67,7 @@ public abstract class EntryProcessorCommunity extends EntryProcessorABC {
             entryW.store(DBManagerMKT, /* skip if present */  new Date(), true, true);
             // the long prospect ID is set by the automatic synch, deactivated just after
         } else {
-            log.warn("cannot save prospect " + " max exceeded: " + smgr.getSessionLimits().getSaves() + "/"
+            log.log(Level.WARNING,  "cannot save prospect " + " max exceeded: " + smgr.getSessionLimits().getSaves() + "/"
                     + smgr.getSessionLimits().getMaxNewProspectsSaves() + " no actions seem possible, EXITING, prospect=\n"
                     + entryW.IDsToString());
             return res.setContinua(false).setRc(RC.MUST_EXIT).setErrorMessage("max store contacts exceeded");
@@ -75,7 +75,7 @@ public abstract class EntryProcessorCommunity extends EntryProcessorABC {
 
         // ########## contatto il cliente ##########
         if (!smgr.getSessionLimits().canContactEntry()) {
-            log.debug("session limits says cannot contact prospect: " + entryW.toString());
+            log.log( Level.FINE, "session limits says cannot contact prospect: " + entryW.toString());
             return res.setRc(RC.ACTION_NOT_ALLOWED).setErrorMessage("session limits says cannot contact prospect: " + entryW.toString());
         }
 
@@ -124,5 +124,5 @@ public abstract class EntryProcessorCommunity extends EntryProcessorABC {
     protected ClientWrapper cw;
 
 
-    private static Logger log = LogManager.getLogger(EntryProcessorCommunity.class.getSimpleName());
+    private static Logger log = LogManager.getLogManager().getLogger(EntryProcessorCommunity.class.getSimpleName());
 }

@@ -1,7 +1,8 @@
 package com.enrico200165.utils.rdb_jdbc;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 /**
  * @author it068498
@@ -15,7 +16,7 @@ public class JDBCEVUtility {
 
 	public static String escapeForSQL(String originale) {
 		if (originale == null) {
-			log.error("errore, string null");
+			log.log(Level.SEVERE, "errore, string null");
 			return "";
 		}
 		originale = originale.replace("'", "''");
@@ -38,7 +39,7 @@ public class JDBCEVUtility {
 	 */
 	public static String escapeGeneric(String originale) {
 		if (originale == null) {
-			log.error("errore, string null");
+			log.log(Level.SEVERE, "errore, string null");
 			return "";
 		}
 		originale = originale.replace("'", "''");
@@ -62,5 +63,5 @@ public class JDBCEVUtility {
 		return d;
 	}
 
-	private static Logger log = LogManager.getLogger(JDBCEVUtility.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(JDBCEVUtility.class.getSimpleName());
 }

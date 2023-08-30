@@ -1,7 +1,8 @@
 package com.enrico200165.utils.net.http;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 import java.net.MalformedURLException;
 import java.net.URI;
@@ -27,7 +28,7 @@ public class Utils {
 		String ret = "";
 
 		if (uri == null) {
-			log.error("");
+			log.log(Level.SEVERE, "");
 		}
 
 		ret += uri.getScheme() + "://" + uri.getHost() + uri.getPath();
@@ -62,7 +63,7 @@ public class Utils {
 		try {
 			if (host == null) {
 				if (url == null) { //entrambi nulli
-					log.error("entrambi nulli");
+					log.log(Level.SEVERE, "entrambi nulli");
 					uri = null;
 				} else {
 					// host null quindi assoluta
@@ -81,7 +82,7 @@ public class Utils {
 						uri = new URI(url);
 					} else {
 						if (url.startsWith("http")) {
-							log.warn("situazione anomala");
+							log.log(Level.WARNING,  "situazione anomala");
 							uri = null;
 						} else {  //situazione normale
 							if (!url.startsWith("/"))
@@ -100,10 +101,10 @@ public class Utils {
 				}
 			}
 			if (uri == null)
-				log.error("problem building URI from host: \"" + host + "\" and url: \"" + url + "\"");
+				log.log(Level.SEVERE, "problem building URI from host: \"" + host + "\" and url: \"" + url + "\"");
 			return uri;
 		} catch (Exception e) {
-			log.error("", e);
+			log.log(Level.SEVERE, "", e.toString());
 		}
 
 
@@ -144,7 +145,7 @@ public class Utils {
 				return ret;
 			}
 		} finally {
-			log.debug(url + " became " + ret);
+			log.log( Level.FINE, url + " became " + ret);
 			return ret;
 		}
 	}
@@ -174,7 +175,7 @@ public class Utils {
 		if (!isCorrectURL(url)) {
 			if (!isCorrectURL("http://google.com" + url)) {
 				// rifiuta URL relative come /a
-				log.error("esco, not a correct URL: " + url);
+				log.log(Level.SEVERE, "esco, not a correct URL: " + url);
 				System.exit(1);
 			}
 		}
@@ -189,7 +190,7 @@ public class Utils {
 	}
 
 
-	private static Logger log = LogManager.getLogger(Utils.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(Utils.class.getSimpleName());
 
 
 }

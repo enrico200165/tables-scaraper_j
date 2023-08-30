@@ -6,8 +6,6 @@ import com.enrico200165.utils.str_regex.NameValuePairString;
 import com.enrico200165.weblistscraper.common.WEBUtils;
 import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.page.PageProcDescr;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.Entity;
@@ -21,7 +19,9 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 public class ClientWrapper {
 
@@ -57,7 +57,7 @@ public class ClientWrapper {
         URI ret = null;
 
         if (relURI.getAuthority() != null && relURI.getAuthority().length() > 0) {
-            log.debug("input URI was not relative: " + relURI.toString());
+            log.log( Level.FINE, "input URI was not relative: " + relURI.toString());
             return relURI;
         }
 
@@ -111,7 +111,7 @@ public class ClientWrapper {
         log.info("loading page, delay: " + delay + " URL: " + Utils.URLFromURI(uri));
 
         if (!Utils.isUsableURI(uri)) {
-            log.error("URI not usable: " + uri);
+            log.log(Level.SEVERE, "URI not usable: " + uri);
             System.exit(1);
         }
         ResponseWrapper rw = new ResponseWrapper();
@@ -130,7 +130,7 @@ public class ClientWrapper {
         hiddenFormFields.clear();
         ResponseWrapper rw = simpleGET(pageURI, 0);
         if (rw.it().getStatus() != 200) {
-            log.error("some problems with form: " + rw.it().getStatus());
+            log.log(Level.SEVERE, "some problems with form: " + rw.it().getStatus());
             System.exit(1);
         }
         WEBUtils.getFormFields(rw, hiddenFormFields, formSelector);
@@ -141,7 +141,7 @@ public class ClientWrapper {
                                       InvocationBuilderWrapper ibw, int delaySecs) {
         URI uri = Utils.URIFromURLString(uriString,this.getHost());
         if (uri == null) {
-            log.error("ESCO: failed to create URI from string: " + uriString);
+            log.log(Level.SEVERE, "ESCO: failed to create URI from string: " + uriString);
             System.exit(1);
         }
         return simplePOST(uri, formFields, ibw, delaySecs);
@@ -150,7 +150,7 @@ public class ClientWrapper {
     public ResponseWrapper simplePOST(URI uri, List<NameValuePairString> formFields, InvocationBuilderWrapper overrideIbw, int delaySecs) {
 
         if (null == formFields || formFields.size() <= 0) {
-            log.error("form fields not set, aborting");
+            log.log(Level.SEVERE, "form fields not set, aborting");
             System.exit(-1);
         }
         if (uri.getScheme() == null || uri.getScheme().length() <= 0) {
@@ -159,7 +159,7 @@ public class ClientWrapper {
             try {
                 uri = new URI(path);
             } catch (URISyntaxException e) {
-                log.error("", e);
+                log.log(Level.SEVERE, "", e.toString());
                 System.exit(1);
             }
         }
@@ -177,9 +177,9 @@ public class ClientWrapper {
         ResponseWrapper rw = new ResponseWrapper(frmReqBld.post(Entity.form(form)));
         rw.analyzeResponse(true, this);
         if (rw.it().getStatus() != 200)
-            log.debug("after POST " + baseTarget.getUri() + " status: " + rw.dump());
+            log.log( Level.FINE, "after POST " + baseTarget.getUri() + " status: " + rw.dump());
         else
-            log.debug("OK POST " + baseTarget.getUri() + " " + rw.dump());
+            log.log( Level.FINE, "OK POST " + baseTarget.getUri() + " " + rw.dump());
         return rw;
     }
 
@@ -189,7 +189,7 @@ public class ClientWrapper {
         final String loginPageURL = hcfg.getLoginPageURL();
         ResponseWrapper rw = simpleGET(loginPageURL, 0);
         if (rw.it().getStatus() != 200) {
-            log.warn("some problem, maybe not blocking, getting page with login form: " + rw.it().getStatus());
+            log.log(Level.WARNING,  "some problem, maybe not blocking, getting page with login form: " + rw.it().getStatus());
             return false;
         }
         WEBUtils.getFormFields(rw, formFields, hcfg.getJsoupLoginFormSelector());
@@ -213,10 +213,10 @@ public class ClientWrapper {
 
     public ResponseWrapper getPage(HostConfig hcfg, PageProcDescr ppd, int delay, ArrayList<NameValuePairString> expected) {
         //String forDebugFullURL = fullURL(ppd.getRelUri());
-        //log.debug("load page: " + delay + " URL: " + forDebugFullURL);
+        //log.log( Level.FINE, "load page: " + delay + " URL: " + forDebugFullURL);
         if (ppd.isAuthenticate()) {
             if (!authenticate(hcfg)) {
-                log.error("authentication failed");
+                log.log(Level.SEVERE, "authentication failed");
                 return null;
             }
         }
@@ -224,14 +224,14 @@ public class ClientWrapper {
         ResponseWrapper rw = simpleGET(ppd.getUri(), delay);
         if (rw.it().getStatus() != 200) {
             // --- get fallito, proviamo ad autenticare ----
-            log.debug("failed to get: " + baseTarget.getUri() + " forse problema autenticazione, stato: " + rw.it().getStatus());
+            log.log( Level.FINE, "failed to get: " + baseTarget.getUri() + " forse problema autenticazione, stato: " + rw.it().getStatus());
             if (!authenticate(hcfg)) {
                 return null;
             }
             // -- dopo azione di recupero riprovo a caricare
             rw = simpleGET(ppd.getUri(), delay);
             if (rw.it().getStatus() != 200) {
-                log.error("page load fallito anche dopo autenticazione: " + rw.it().getStatus());
+                log.log(Level.SEVERE, "page load fallito anche dopo autenticazione: " + rw.it().getStatus());
             }
         } else {
             rw.checkContent(expected);
@@ -322,7 +322,7 @@ public class ClientWrapper {
 
     public boolean setHost(String url) {
         if (url == null) {
-            log.error("provided url is NULL");
+            log.log(Level.SEVERE, "provided url is NULL");
             System.exit(1);
             return true;
         }
@@ -331,7 +331,7 @@ public class ClientWrapper {
             uri = new URI(url);
         } catch (URISyntaxException e) {
             e.printStackTrace();
-            log.error("unable to extract host from URL: " + url);
+            log.log(Level.SEVERE, "unable to extract host from URL: " + url);
             System.exit(1);
         }
 
@@ -345,7 +345,7 @@ public class ClientWrapper {
 
     public void setClient(Client clientPar) {
         if (this.client != null) {
-            log.error("ESCO, il client non dovrebbe mai essere sostituito, usa questo metodo solo se client null");
+            log.log(Level.SEVERE, "ESCO, il client non dovrebbe mai essere sostituito, usa questo metodo solo se client null");
             System.exit(1);
         }
         client = clientPar;
@@ -362,7 +362,7 @@ public class ClientWrapper {
     int pageLoadDelay;
     FormManagerABC fm;
 
-    private static Logger log = LogManager.getLogger(ClientWrapper.class.getSimpleName());
+    private static Logger log = LogManager.getLogManager().getLogger(ClientWrapper.class.getSimpleName());
 
 
 }

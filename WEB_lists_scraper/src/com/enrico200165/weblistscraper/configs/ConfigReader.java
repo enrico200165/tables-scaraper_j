@@ -5,15 +5,16 @@ import com.enrico200165.utils.config.Exception_YAMLCfg_WrongType;
 import com.enrico200165.utils.config.YAML2Map;
 import com.enrico200165.weblistscraper.page.NextTablePageSelectorsABC;
 import com.enrico200165.weblistscraper.tools.*;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
 //import com.enrico200165.utils.config.PropertiesYAMLEV;
 
 
@@ -65,11 +66,11 @@ public class ConfigReader   {
 
             String k = e.getKey();
             Object value_o = (Object) e.getValue();
-            log.debug("analyzing key: " + fullKey(fatherKeyP, k));
+            log.log( Level.FINE, "analyzing key: " + fullKey(fatherKeyP, k));
 
             if (k.equals("")) {
             } else {
-                log.error("unmanaged key: " + fullKey(fatherKeyP,k));
+                log.log(Level.SEVERE, "unmanaged key: " + fullKey(fatherKeyP,k));
                 //System.exit(1);
             }
         }
@@ -106,7 +107,7 @@ public class ConfigReader   {
         for (Map.Entry<String, Object> e : taskListChildren.entrySet()) {
 
             String k = e.getKey(); Object value_o = (Object) e.getValue();
-            log.debug("analyzing key: " + fullKey(fatherKeyP, k));
+            log.log( Level.FINE, "analyzing key: " + fullKey(fatherKeyP, k));
             if (k.equals(ENTRY_ID_KEY)) {
             } else if (k.equals("loginFormURL")) {
                 lc.loginFormURL = e.getValue().toString();
@@ -123,7 +124,7 @@ public class ConfigReader   {
             } else if (k.equals("formAction")) {
                 lc.loginFormAction = e.getValue().toString();
             } else {
-                log.error("unmanaged key: " + fullKey(fatherKeyP,k,id));
+                log.log(Level.SEVERE, "unmanaged key: " + fullKey(fatherKeyP,k,id));
                 //System.exit(1);
             }
         }
@@ -144,12 +145,12 @@ public class ConfigReader   {
         for (Map.Entry<String, Object> e : taskListChildren.entrySet()) {
 
             String k = e.getKey(); Object value_o = (Object) e.getValue();
-            log.debug("analyzing key: " + fullKey(fatherKeyP, k));
+            log.log( Level.FINE, "analyzing key: " + fullKey(fatherKeyP, k));
 
             if (k.equals(ENTRY_ID_KEY)) {
             } else if (k.equals(HOST_URI)) {
                 try { hc.baseHostURI = new URI(e.getValue().toString()); }
-                catch(Exception exc) { log.error(exc); }
+                catch(Exception exc) { log.log(Level.SEVERE, exc.toString()); }
             } else if (k.equals(LOGIN_KEY)) {
                 lc = parseLogin(e,fullKey(fatherKeyP,k,id));
                 hc.loginFormURL = lc.loginFormURL;
@@ -158,7 +159,7 @@ public class ConfigReader   {
                 hc.user = lc.user_value;
                 hc.password = lc.password_value;
             } else {
-                log.error("unmanaged key: " + fullKey(fatherKeyP,k,id));
+                log.log(Level.SEVERE, "unmanaged key: " + fullKey(fatherKeyP,k,id));
                 System.exit(1);
             }
         }
@@ -179,7 +180,7 @@ public class ConfigReader   {
 
             String k = e.getKey();
             Object value_o = (Object) e.getValue();
-            log.debug("analyzing key: " + fullKey(fatherKeyP, k));
+            log.log( Level.FINE, "analyzing key: " + fullKey(fatherKeyP, k));
 
             if (k.equals(ENTRY_ID_KEY)) {
             } else if (k.equals("name"))   { chann.setName(e.getValue().toString());
@@ -187,7 +188,7 @@ public class ConfigReader   {
             } else if (k.equals("vendor")) { chann.setVendor(e.getValue().toString());
             } else if (k.equals("item"))   { chann.setItem(e.getValue().toString());
             } else {
-                log.error("unmanaged key: " + fullKey(fatherKeyP, k, id));
+                log.log(Level.SEVERE, "unmanaged key: " + fullKey(fatherKeyP, k, id));
                 System.exit(1);
             }
         }
@@ -208,7 +209,7 @@ public class ConfigReader   {
 
             String k = e.getKey();
             Object value_o = (Object) e.getValue();
-            log.debug("analyzing key: " + fullKey(fatherKeyP, k));
+            log.log( Level.FINE, "analyzing key: " + fullKey(fatherKeyP, k));
 
             if (k.equals(ENTRY_ID_KEY)) {
             } else if (k.equals("title_regex"))  { nextPageSel.setTitleRegex(e.getValue().toString());
@@ -217,7 +218,7 @@ public class ConfigReader   {
             } else if (k.equals("class_regex"))  { nextPageSel.setClasseRegex(e.getValue().toString());
             } else if (k.equals("testo_regex"))  { nextPageSel.setTestoRegex(e.getValue().toString());
             } else {
-                log.error("unmanaged key: " + fullKey(fatherKeyP, k, id));
+                log.log(Level.SEVERE, "unmanaged key: " + fullKey(fatherKeyP, k, id));
                 System.exit(1);
             }
         }
@@ -238,7 +239,7 @@ public class ConfigReader   {
 
             String k = e.getKey();
             Object value_o = (Object) e.getValue();
-            log.debug("analyzing key: " + fullKey(fatherKeyP, k));
+            log.log( Level.FINE, "analyzing key: " + fullKey(fatherKeyP, k));
 
             if (k.equals(ENTRY_ID_KEY)) {
             } else if (k.equals("max_entries_read"))  {
@@ -252,7 +253,7 @@ public class ConfigReader   {
             } else if (k.equals("max_HTTP_calls"))  {
                 limits.setMaxHTTPCalls(Integer.parseInt(e.getValue().toString()));
             } else {
-                log.error("unmanaged key: " + fullKey(fatherKeyP, k, id));
+                log.log(Level.SEVERE, "unmanaged key: " + fullKey(fatherKeyP, k, id));
                 System.exit(1);
             }
         }
@@ -272,13 +273,13 @@ public class ConfigReader   {
         for (Map.Entry<String, Object> e : taskListChildren.entrySet()) {
 
             String k = e.getKey(); Object value_o = (Object) e.getValue();
-            log.debug("analyzing key: " + fullKey(fatherKeyP, k));
+            log.log( Level.FINE, "analyzing key: " + fullKey(fatherKeyP, k));
 
             if (k.equals(ENTRY_ID_KEY)) {
             } else if (k.equals(REGEXES_VERTICAL_KEY)) {
                 List<String> regexes = parseRegexesVertical(e, fatherKeyP);
             } else {
-                log.error("unmanaged key: " + fullKey(fatherKeyP, k, id));
+                log.log(Level.SEVERE, "unmanaged key: " + fullKey(fatherKeyP, k, id));
                 System.exit(1);
             }
         }
@@ -298,11 +299,11 @@ public class ConfigReader   {
         for (Map.Entry<String, Object> e : taskListChildren.entrySet()) {
 
             String k = e.getKey(); Object value_o = (Object) e.getValue();
-            log.debug("analyzing key: " + fullKey(fatherKeyP, k));
+            log.log( Level.FINE, "analyzing key: " + fullKey(fatherKeyP, k));
 
             if (k.equals(ENTRY_ID_KEY)) {
             } else {
-                log.error("unmanaged key: " + fullKey(fatherKeyP, k, id));
+                log.log(Level.SEVERE, "unmanaged key: " + fullKey(fatherKeyP, k, id));
                 System.exit(1);
             }
         }
@@ -322,13 +323,13 @@ public class ConfigReader   {
         for (Map.Entry<String, Object> e : taskListChildren.entrySet()) {
 
             String k = e.getKey(); Object value_o = (Object) e.getValue();
-            log.debug("analyzing key: " + fullKey(fatherKeyP, k));
+            log.log( Level.FINE, "analyzing key: " + fullKey(fatherKeyP, k));
 
             if (k.equals(ENTRY_ID_KEY)) {
             } else if (k.equals(REGEXES_VERTICAL_KEY)) {
                 List<String> regexes = parseRegexesVertical(e, fatherKeyP);
             } else {
-                log.error("unmanaged key: " + fullKey(fatherKeyP, k, id));
+                log.log(Level.SEVERE, "unmanaged key: " + fullKey(fatherKeyP, k, id));
                 System.exit(1);
             }
         }
@@ -347,13 +348,13 @@ public class ConfigReader   {
         for (Map.Entry<String, Object> e : taskListChildren.entrySet()) {
 
             String k = e.getKey(); Object value_o = (Object) e.getValue();
-            log.debug("analyzing key: " + fullKey(fatherKeyP, k));
+            log.log( Level.FINE, "analyzing key: " + fullKey(fatherKeyP, k));
 
             if (k.equals(ENTRY_ID_KEY)) {
             } else if (k.equals(REGEXES_VERTICAL_KEY)) {
                 List<String> regexes = parseRegexesVertical(e, fatherKeyP);
             } else {
-                log.error("unmanaged key: " + fullKey(fatherKeyP, k, id));
+                log.log(Level.SEVERE, "unmanaged key: " + fullKey(fatherKeyP, k, id));
                 System.exit(1);
             }
         }
@@ -375,7 +376,7 @@ public class ConfigReader   {
 
             String k = e.getKey();
             Object value_o = (Object) e.getValue();
-            log.debug("analyzing key: " + fullKey(fatherKeyP, k));
+            log.log( Level.FINE, "analyzing key: " + fullKey(fatherKeyP, k));
 
             if (k.equals(ENTRY_ID_KEY)) {
             } else if (k.equals(TABLE_NEXT_SELECTOR))   {
@@ -398,9 +399,9 @@ public class ConfigReader   {
             }  else if (k.equals(TABLE_SELECTOR_KEY))   {
                 gCfg.htmlExclFilter = parseEntryHTMLExcludeFilter(e,fullKey(fatherKeyP, k));
             } else if (k.equals(ENTRY_ID_KEY))   {
-                log.warn("da implementare");
+                log.log(Level.WARNING,  "da implementare");
             } else {
-                log.error("unmanaged key: " + fullKey(fatherKeyP, k, id));
+                log.log(Level.SEVERE, "unmanaged key: " + fullKey(fatherKeyP, k, id));
                 System.exit(1);
             }
         }
@@ -421,7 +422,7 @@ public class ConfigReader   {
         for (Map.Entry<String , Object> e : taskListChildren.entrySet()) {
 
             String k = e.getKey(); Object value_o = (Object) e.getValue();
-            log.debug("analyzing key: "+fatherKeyP+"."+e.getKey());
+            log.log( Level.FINE, "analyzing key: "+fatherKeyP+"."+e.getKey());
 
             // fetch the values is they are in these format
             Map<String , Object> values = null;
@@ -437,7 +438,7 @@ public class ConfigReader   {
             } else if (k.equals(SESSION_LIMITS_KEY)) {
                 parseSessionLimits(e,fullKey(fatherKeyP,k));
             } else { // non-structured values
-                log.error("unmanaged key: "+fullKey(fatherKeyP,k,id));
+                log.log(Level.SEVERE, "unmanaged key: "+fullKey(fatherKeyP,k,id));
                 System.exit(1);
             }
         }
@@ -456,7 +457,7 @@ public class ConfigReader   {
             }  else if (k.equals(TASK_KEY)) {
                 parseTask(e,fullKey(fatherKeyP,k));
             } else {
-                log.error("unmanaged key: "+k+" exiting");
+                log.log(Level.SEVERE, "unmanaged key: "+k+" exiting");
                 System.exit(1);
             }
         }
@@ -470,7 +471,7 @@ public class ConfigReader   {
     public ScrapeGLobConfig parseYAMLConfig(String fpath) {
 
         if (Files.notExists(Paths.get(fpath))) {
-            log.error(fpath+" file does not exist, exiting ");
+            log.log(Level.SEVERE, fpath+" file does not exist, exiting ");
             System.exit(1);
         }
 
@@ -486,13 +487,13 @@ public class ConfigReader   {
                     parseTaskList(entry ,entry_type);
                     continue;
                 }
-                log.error("unmanaged entry type/key: "+entry_type+" exiting");
+                log.log(Level.SEVERE, "unmanaged entry type/key: "+entry_type+" exiting");
                 System.exit(1);
             }
         } catch (Exception_YAMLCfg_WrongType e) {
-            log.error(e);
+            log.log(Level.SEVERE, e.toString());
         } catch (Exception e) {
-            log.error(e);
+            log.log(Level.SEVERE, e.toString());
         }
 
         log.info("Completed yaml file parsing");
@@ -504,5 +505,5 @@ public class ConfigReader   {
     // todo qui solo per semplificare, dovrebbe essere locale
     ScrapeGLobConfig gCfg = null; // new ScrapeGLobConfig();
 
-    private static Logger log = LogManager.getLogger(ConfigReader.class.getSimpleName());
+    private static Logger log = LogManager.getLogManager().getLogger(ConfigReader.class.getSimpleName());
 }

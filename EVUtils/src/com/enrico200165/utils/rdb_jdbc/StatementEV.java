@@ -1,8 +1,8 @@
 package com.enrico200165.utils.rdb_jdbc;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -33,5 +33,5 @@ public class StatementEV {
 	}
 
 	Statement st;
-	private static Logger log = LogManager.getLogger(StatementEV.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(StatementEV.class.getSimpleName());
 }

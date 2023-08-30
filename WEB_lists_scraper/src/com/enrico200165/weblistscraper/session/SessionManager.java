@@ -7,8 +7,10 @@ import com.enrico200165.weblistscraper.tools.ClientWrapper;
 import com.enrico200165.weblistscraper.configs.SessionLimitsBase;
 import com.enrico200165.weblistscraper.page.PageProcDescr;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
+import java.util.logging.Level;
 
 public class SessionManager extends SessionManagerAbstr {
 
@@ -32,7 +34,7 @@ public class SessionManager extends SessionManagerAbstr {
 				res = descrOther.getProcessor().process(res.getpPDescr());
 			}
 			if (!res.result.isOk()) {
-				log.error("errore elaborando pDescr: ");
+				log.log(Level.SEVERE, "errore elaborando pDescr: ");
 				ret = false;
 				break;
 			}
@@ -47,10 +49,10 @@ public class SessionManager extends SessionManagerAbstr {
 
 	@Override
 	public void finalizeSession() {
-		log.warn("normally a derivd class should override this method");
+		log.log(Level.WARNING,  "normally a derivd class should override this method");
 	}
 
 	
 	
-	private static Logger log = LogManager.getLogger(SessionManager.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(SessionManager.class.getSimpleName());
 }

@@ -5,8 +5,10 @@ import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import com.enrico200165.weblistscraper.tools.Result;
 import org.jsoup.nodes.Element;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
+import java.util.logging.Level;
 
 /**
  * Elabora una riga di una tabella
@@ -31,13 +33,13 @@ public abstract class EntryProcessorABC {
 
 	
 	public void setSmgr(SessionManagerAbstr smgr) {
-		log.warn("this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter");
+		log.log(Level.WARNING,  "this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter");
 		this.smgr = smgr;
 	}
 
 
 	public void setPageConfig(PageConfigABC tCfg) {
-		log.warn("this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter");
+		log.log(Level.WARNING,  "this exists because because of a design problem (circular dependency) cannot set it in the constructor, where anyway there is a parameter");
 		this.pageConfig = tCfg;
 	}
 
@@ -48,5 +50,5 @@ public abstract class EntryProcessorABC {
 	protected SessionManagerAbstr smgr;
 	protected PageConfigABC pageConfig;
 		
-	private static Logger log = LogManager.getLogger(EntryProcessorABC.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(EntryProcessorABC.class.getSimpleName());
 }

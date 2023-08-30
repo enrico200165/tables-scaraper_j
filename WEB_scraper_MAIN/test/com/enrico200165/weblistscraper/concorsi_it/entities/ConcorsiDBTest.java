@@ -1,5 +1,7 @@
 package com.enrico200165.weblistscraper.concorsi_it.entities;
 
+import com.enrico200165.weblistscraper.concorsi_it.main.entities.Concor;
+import com.enrico200165.weblistscraper.concorsi_it.main.entities.ConcorsiDB;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

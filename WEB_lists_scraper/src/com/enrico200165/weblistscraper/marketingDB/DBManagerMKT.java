@@ -1,14 +1,15 @@
 package com.enrico200165.weblistscraper.marketingDB;
 
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-
 import javax.persistence.*;
 import javax.persistence.criteria.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+
 
 public class DBManagerMKT {
 
@@ -45,7 +46,7 @@ public class DBManagerMKT {
             entr.commit();
             return cResults.longValue();
         } catch (Exception e) {
-            log.error("");
+            log.log(Level.SEVERE, "");
             return -1;
         }
     }
@@ -186,7 +187,7 @@ public class DBManagerMKT {
             em.detach(p);
             return p;
         }
-        log.error("Exiting abnormal situation with contact userID: " + userID);
+        log.log(Level.SEVERE, "Exiting abnormal situation with contact userID: " + userID);
         System.exit(1);
         return null;
 
@@ -224,7 +225,7 @@ public class DBManagerMKT {
         }
         if (commitNow) {
             if (tx.isActive()) tx.commit();
-            else log.warn("committing and inactive tx, ignoring");
+            else log.log(Level.WARNING,  "committing and inactive tx, ignoring");
         }
 
         for (ProspectCoreData prospect : prospects) {
@@ -265,13 +266,13 @@ public class DBManagerMKT {
     public boolean storeContact(Contact contact, java.util.Date d, boolean skipIfPresent, boolean commitNow) {
 
         if (contact.getProspectID() == null || contact.getProspectID().length() <= 0) {
-            log.error("contact ID null for contact: " + "\n" + contact.toString());
+            log.log(Level.SEVERE, "contact ID null for contact: " + "\n" + contact.toString());
             System.exit(1);
         }
 
         if (findProspectByInternalID(contact.getProspectFK()) == null) {
             // dovrei controllare entrambe le foreign key
-            log.error("ESCO: prospect non esistente per contatto, prospect ID: " + contact.getProspectID());
+            log.log(Level.SEVERE, "ESCO: prospect non esistente per contatto, prospect ID: " + contact.getProspectID());
             System.exit(1);
             return false;
         }
@@ -352,7 +353,7 @@ public class DBManagerMKT {
             entr.commit();
             return cResults.intValue();
         } catch (Exception e) {
-            log.error("query to get contacts in date failed", e);
+            log.log(Level.SEVERE, "query to get contacts in date failed", e.toString());
             return -1;
         }
 
@@ -365,5 +366,5 @@ public class DBManagerMKT {
     }
 
     private EntityManager em;
-    private static Logger log = LogManager.getLogger(DBManagerMKT.class.getSimpleName());
+    private static Logger log = LogManager.getLogManager().getLogger(DBManagerMKT.class.getSimpleName());
 }

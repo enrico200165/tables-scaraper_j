@@ -1,8 +1,7 @@
 package com.enrico200165.utils.html;
 
-
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
+import java.util.logging.LogManager;
 
 
 public class A extends HTMLGenElement {
@@ -21,5 +20,5 @@ public class A extends HTMLGenElement {
 	String url;
 	String description;
 	
-	private static Logger log = LogManager.getLogger(A.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(A.class.getSimpleName());
 }

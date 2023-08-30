@@ -1,12 +1,12 @@
 package com.enrico200165.utils.files;
 
 import com.enrico200165.utils.various.Utl;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.util.ArrayList;
-
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 public class FileDirTreeWalk {
 
@@ -43,11 +43,11 @@ public class FileDirTreeWalk {
 
 		File dir = new File(curDir);
 		if (!dir.exists()) {
-			log.error(_baseName + " does not  exist");
+			log.log(Level.SEVERE, _baseName + " does not  exist");
 			return false;
 		}
 		if (!dir.isDirectory()) {
-			log.error(_baseName + " is not a directory");
+			log.log(Level.SEVERE, _baseName + " is not a directory");
 			return false;
 		}
 
@@ -64,7 +64,7 @@ public class FileDirTreeWalk {
 						continue;
 					}
 				if (!navigate(child, null)) {
-					log.error("");
+					log.log(Level.SEVERE, "");
 					return false;
 				}
 			}
@@ -82,7 +82,7 @@ public class FileDirTreeWalk {
 				FileHelper fpr = new FileHelper(this._baseName, f.getAbsolutePath(),"", Utl.ENCODING_UTF8);
 				fpr.setExtBufferPar(_globTextFileLine);
 				if (!fpr.performOnFileOrDir(f)) {
-					log.error("");
+					log.log(Level.SEVERE, "");
 					return false;
 				}
 			}
@@ -103,5 +103,5 @@ public class FileDirTreeWalk {
 	String _baseName;
 	ArrayList<TextFileLine> _globTextFileLine;
 
-	private static Logger log = LogManager.getLogger(FileDirTreeWalk.class);
+	private static Logger log = LogManager.getLogManager().getLogger(FileDirTreeWalk.class.getName());
 }

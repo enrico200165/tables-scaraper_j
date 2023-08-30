@@ -4,11 +4,11 @@ import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.configs.SessionLimitsBase;
 import com.enrico200165.weblistscraper.page.PageProcDescr;
 import com.enrico200165.weblistscraper.tools.ClientWrapper;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 import java.util.ArrayList;
-
+import java.util.logging.Level;
 
 public abstract class SessionManagerAbstr {
 
@@ -56,7 +56,7 @@ public abstract class SessionManagerAbstr {
 
     public ClientWrapper getClientWrapper() {
         if (cw == null) {
-            log.error("client wrapper è nullo");
+            log.log(Level.SEVERE, "client wrapper è nullo");
         }
         return SessionManagerAbstr.cw;
     }
@@ -65,7 +65,7 @@ public abstract class SessionManagerAbstr {
     public void printStatistics(PageConfigABC tableOrPageConfig) {
 
         // non più valido perchè una sessione può usare più di un PageConfigABC
-        log.error("spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage");
+        log.log(Level.SEVERE, "spostare statistiche in session, causando errore di compilazione riattivando codice sotto e rimuovendo il metodo di tage");
 
 		/*
 
@@ -104,7 +104,7 @@ public abstract class SessionManagerAbstr {
 
     public boolean setClientWrapper(ClientWrapper par) {
         if (cw != null) {
-            log.error("client wrapper è già impostato, IGNORO");
+            log.log(Level.SEVERE, "client wrapper è già impostato, IGNORO");
 //			System.exit(1);
             return false;
         }
@@ -141,5 +141,5 @@ public abstract class SessionManagerAbstr {
 
     ArrayList<PageProcDescr> pageProcDescrs;
 
-    private static Logger log = LogManager.getLogger(SessionManagerAbstr.class.getSimpleName());
+    private static Logger log = LogManager.getLogManager().getLogger(SessionManagerAbstr.class.getSimpleName());
 }

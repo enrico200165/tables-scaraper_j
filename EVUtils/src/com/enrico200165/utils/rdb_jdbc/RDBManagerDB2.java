@@ -1,8 +1,9 @@
 package com.enrico200165.utils.rdb_jdbc;
 
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 public class RDBManagerDB2 extends RDBManager {
 
@@ -23,11 +24,11 @@ public class RDBManagerDB2 extends RDBManager {
 	@Override
 	protected String buildConnStr() {
 		if (DBMSFullURL == null) {
-			log.error("DB URL is null, cannot open it");
+			log.log(Level.SEVERE, "DB URL is null, cannot open it");
 			return "";
 		}
 		return DBMSFullURL;
 	}
 
-	private static Logger log = LogManager.getLogger(RDBManagerDB2.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(RDBManagerDB2.class.getSimpleName());
 }

@@ -7,8 +7,6 @@ import com.enrico200165.weblistscraper.tools.ClientRespFilterEV;
 import com.enrico200165.weblistscraper.tools.ResponseWrapper;
 import com.enrico200165.weblistscraper.tools.Result;
 import com.enrico200165.weblistscraper.tools.Result.RC;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -26,6 +24,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 
 public class WEBUtils {
@@ -65,7 +66,7 @@ public class WEBUtils {
         if (els.size() == 1 && els.get(0) != null) {
             return els.get(0).text();
         }
-        log.error("no match per: " + sel);
+        log.log(Level.SEVERE, "no match per: " + sel);
         return null;
     }
 
@@ -76,7 +77,7 @@ public class WEBUtils {
             return els.get(0).attr(attr);
         }
 
-        log.error("unable to find attribute " + attr + " in " + entry);
+        log.log(Level.SEVERE, "unable to find attribute " + attr + " in " + entry);
         return null;
     }
 
@@ -149,7 +150,7 @@ public class WEBUtils {
     public static Client createClient(ClientRequestFilter reqF, ClientResponseFilter crespF, boolean recreate) throws IOException, ClassNotFoundException {
 
         if (client != null && recreate) {
-            log.warn("ricreo client");
+            log.log(Level.WARNING,  "ricreo client");
         }
 
         if (client == null || recreate) {
@@ -168,7 +169,7 @@ public class WEBUtils {
 
             client.property("enrico", "ottimo");
         } else {
-            log.warn("Client jax-rs già creato");
+            log.log(Level.WARNING,  "Client jax-rs già creato");
         }
         return client;
     }
@@ -205,13 +206,13 @@ public class WEBUtils {
         Document doc = rw.getJSoupDocument();
         Elements els = doc.select(formSelector); // per debug, dovrebbe essere uo
         if (els == null || els.size() <= 0) {
-            log.error("unable to find form at selector: " + formSelector);
+            log.log(Level.SEVERE, "unable to find form at selector: " + formSelector);
             System.exit(1);
             return false;
         }
         Element loginForm = els.get(0);
         if (loginForm == null) {
-            log.error("failed to get form to analyze at: " + rw.dump());
+            log.log(Level.SEVERE, "failed to get form to analyze at: " + rw.dump());
             System.exit(1);
         }
         // log.info("login form OUTER HTML\n" + loginForm.outerHtml());
@@ -224,7 +225,7 @@ public class WEBUtils {
             }
             String attrName = e.attr("name");
             hiddenFormFields.add(new NameValuePairString(attrName, e.val()));
-            log.debug("captured form input: " + attrName + " = " + e.val());
+            log.log( Level.FINE, "captured form input: " + attrName + " = " + e.val());
         }
         return false;
     }
@@ -293,7 +294,7 @@ public class WEBUtils {
         }
 
         if (els == null || els.size() != 1) {
-            log.error("jsoup selector on elements does not match 1");
+            log.log(Level.SEVERE, "jsoup selector on elements does not match 1");
             System.exit(1);
             return res.setContinua(false);
         }
@@ -312,7 +313,7 @@ public class WEBUtils {
             if (exitIfNotFound) {
                 res.setRc(RC.ERROR);
                 res.setErrorMessage("jsoup selector on elements does not match: " + jsoupSelector + "\n" + elsPar.html());
-                log.error(res.getErrorMessage());
+                log.log(Level.SEVERE, res.getErrorMessage());
             }
             return res.setContinua(false).setRetStr("");
         }
@@ -362,7 +363,7 @@ public class WEBUtils {
     public static boolean isDomainCorrect(String dom) {
 
         if (dom.equals("")) {
-            // log.warn("empty domain");
+            // log.log(Level.WARNING,  "empty domain");
             return true;
         }
 
@@ -372,7 +373,7 @@ public class WEBUtils {
     public static boolean isSubDomainOf(String sub, String dom, boolean acceptEqual) {
 
         if (!isDomainCorrect(sub) || !isDomainCorrect(dom)) {
-            log.error("exiting invalid domain(s): " + dom + " altro " + sub);
+            log.log(Level.SEVERE, "exiting invalid domain(s): " + dom + " altro " + sub);
             System.exit(1);
         }
         if (acceptEqual && sub.equals(dom)) return true;
@@ -394,7 +395,7 @@ public class WEBUtils {
     public static boolean isSubPathOf(String sub, String path, boolean acceptEqual) {
 
         if (!(isPathCorrect(sub) && isPathCorrect(path))) {
-            log.error("exiting invalid path(s): " + sub + " altro " + path);
+            log.log(Level.SEVERE, "exiting invalid path(s): " + sub + " altro " + path);
             isPathCorrect(path);
             isPathCorrect(sub);
             System.exit(1);
@@ -422,5 +423,5 @@ public class WEBUtils {
         return true;
     }
 
-    private static Logger log = LogManager.getLogger(WEBUtils.class.getSimpleName());
+    private static Logger log = LogManager.getLogManager().getLogger(WEBUtils.class.getSimpleName());
 }

@@ -1,7 +1,8 @@
 package com.enrico200165.utils.rdb_jdbc;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 import java.io.IOException;
 public class RDBManagerMySQL extends RDBManager {
@@ -28,7 +29,7 @@ public class RDBManagerMySQL extends RDBManager {
 			log.info("tento di avviare mysql server");
 			return true;
 		} catch (IOException e) {
-			log.error("non sono riuscito ad avviare mysql da java", e);
+			log.log(Level.SEVERE, "non sono riuscito ad avviare mysql da java", e.toString());
 			return false;
 		}
 	}
@@ -36,11 +37,11 @@ public class RDBManagerMySQL extends RDBManager {
 	@Override
 	protected String buildConnStr() {
 		if (DBMSFullURL == null) {
-			log.error("DB URL is null, cannot open it");
+			log.log(Level.SEVERE, "DB URL is null, cannot open it");
 			return "";
 		}
 		return DBMSFullURL;
 	}
 
-	private static Logger log = LogManager.getLogger(RDBManagerMySQL.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(RDBManagerMySQL.class.getSimpleName());
 }

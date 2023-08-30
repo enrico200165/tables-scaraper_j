@@ -1,9 +1,9 @@
 package com.enrico200165.weblistscraper.marketingDB;
 
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.junit.Before;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -231,5 +231,5 @@ public class DBManagerMKTTest {
 
     DBManagerMKT ch;
 
-    private static Logger log = LogManager.getLogger(DBManagerMKTTest.class.getSimpleName());
+    private static Logger log = LogManager.getLogManager().getLogger(DBManagerMKTTest.class.getSimpleName());
 }

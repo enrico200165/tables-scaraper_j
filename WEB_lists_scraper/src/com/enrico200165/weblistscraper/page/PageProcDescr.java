@@ -8,14 +8,14 @@ import com.enrico200165.weblistscraper.tools.FormManagerABC;
 import com.enrico200165.weblistscraper.tools.InvocationBuilderWrapper;
 import com.enrico200165.weblistscraper.tools.WebPageAction;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
-
+import java.util.logging.Level;
 
 
 /**
@@ -114,12 +114,12 @@ public class PageProcDescr {
 
 	public void setUri(String fullUrl) {
 		if (uri != null) {
-			log.error("attempt to set to "+fullUrl+" URI already set to "+uri);
+			log.log(Level.SEVERE, "attempt to set to "+fullUrl+" URI already set to "+uri);
 			System.exit(1);
 		}
 
 		if (!fullUrl.toLowerCase().contains(hostConfig.baseHostURI.toString())) {
-			log.warn("provided URI "+fullUrl+" does not match hostname: "+hostConfig.baseHostURI);
+			log.log(Level.WARNING,  "provided URI "+fullUrl+" does not match hostname: "+hostConfig.baseHostURI);
 		}
 
 		try {
@@ -205,5 +205,5 @@ public class PageProcDescr {
 	FormManagerABC formManager;
 	InvocationBuilderWrapper ibw;
 
-	private static Logger log = LogManager.getLogger(PageProcDescr.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(PageProcDescr.class.getSimpleName());
 }

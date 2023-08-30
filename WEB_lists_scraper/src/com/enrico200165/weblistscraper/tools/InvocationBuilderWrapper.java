@@ -1,8 +1,8 @@
 package com.enrico200165.weblistscraper.tools;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 import javax.ws.rs.client.Invocation.Builder;
 import java.util.HashMap;
 import java.util.Map;
@@ -52,5 +52,5 @@ public abstract class InvocationBuilderWrapper {
 	
 	protected Map<String, String> headers;
 
-	private static Logger log = LogManager.getLogger(InvocationBuilderWrapper.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(InvocationBuilderWrapper.class.getSimpleName());
 }

@@ -2,9 +2,9 @@ package com.enrico200165.weblistscraper.page;
 
 import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.tools.WebPageAction;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.junit.After;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -70,5 +70,5 @@ public class PageProcDescrTest {
 
     }
 
-    private static Logger log = LogManager.getLogger(PageProcDescrTest.class.getSimpleName());
+    private static Logger log = LogManager.getLogManager().getLogger(PageProcDescrTest.class.getSimpleName());
 }

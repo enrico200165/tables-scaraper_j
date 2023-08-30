@@ -1,7 +1,8 @@
 package com.enrico200165.utils.html;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 public class DIV extends HTMLGenElement {
 
@@ -19,9 +20,9 @@ public class DIV extends HTMLGenElement {
 	
 	public void addElement(HTMLElement e) {
 		if (stringContent.length() > 0) {
-			log.error("mischiati due tipi di contenuto");
+			log.log(Level.SEVERE, "mischiati due tipi di contenuto");
 		}
 		this.subElements.add(e);
 	}
-	private static Logger log = LogManager.getLogger(DIV.class);
+	private static Logger log = LogManager.getLogManager().getLogger(DIV.class.getName());
 }

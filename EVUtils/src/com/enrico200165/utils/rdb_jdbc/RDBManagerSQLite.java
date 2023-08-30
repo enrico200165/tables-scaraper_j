@@ -1,7 +1,8 @@
 package com.enrico200165.utils.rdb_jdbc;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,7 +19,7 @@ public class RDBManagerSQLite extends RDBManager {
 		if (mustExist) {
 			File f = new File(DBPathname);
 			if (!f.exists() || f.isDirectory()) {
-				log.error("sqlite db path does not exist:\n" + DBPathname);
+				log.log(Level.SEVERE, "sqlite db path does not exist:\n" + DBPathname);
 				throw (new IOException("File does NOT exists"));
 			}
 		}
@@ -31,7 +32,7 @@ public class RDBManagerSQLite extends RDBManager {
 	@Override
 	protected String buildConnStr() {
 		if (DBMSFullURL == null) {
-			log.error("DB URL is null, cannot open it");
+			log.log(Level.SEVERE, "DB URL is null, cannot open it");
 			return "";
 		}
 		return DBMSFullURL;
@@ -40,7 +41,7 @@ public class RDBManagerSQLite extends RDBManager {
 	public void setDriverName(String s) throws ClassNotFoundException {
 		this.driverClass = s;
 		Class.forName(this.driverClass);
-		log.debug("OK: JDBC driver caricato");
+		log.log( Level.FINE, "OK: JDBC driver caricato");
 	}
 
 	public String getDriverName() {
@@ -51,12 +52,12 @@ public class RDBManagerSQLite extends RDBManager {
 	}
 
 	public boolean startDBServer() {
-		log.debug("in sqlite non c'è nessun DB da avviare");
+		log.log( Level.FINE, "in sqlite non c'è nessun DB da avviare");
 		return true;
 	}
 
 	public boolean openDB(boolean createIfNotExists) {
-		log.trace("openDB() per sqlite adesso non fa assolutamente nulla, se ci sono problemi contolla qui");
+		log.log(Level.FINER, "openDB() per sqlite adesso non fa assolutamente nulla, se ci sono problemi contolla qui");
 		return true;
 	}
 
@@ -72,5 +73,5 @@ public class RDBManagerSQLite extends RDBManager {
 		return connectToDBMS() && openDB();
 	}
 
-	private static Logger log = LogManager.getLogger(RDBManagerSQLite.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(RDBManagerSQLite.class.getSimpleName());
 }

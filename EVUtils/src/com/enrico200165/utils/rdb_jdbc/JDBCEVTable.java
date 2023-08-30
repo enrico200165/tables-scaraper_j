@@ -1,11 +1,13 @@
 package com.enrico200165.utils.rdb_jdbc;
 
+import java.util.logging.Level;
+
 import java.sql.*;
 import java.util.*;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 /**
  * @author enrico
@@ -32,7 +34,7 @@ public class JDBCEVTable extends JDBCEVSelectABC {
 			nrRighe = st.executeUpdate("DELETE FROM " + this.getName());
 			log.info("tabella " + this.getName() + " tentata eliminazione di tutte le righe, righe ora: " + nrRighe);
 		} catch (SQLException e) {
-			log.error("tabella " + this.getName() + "cancellazione di tutte le righe fallita", e);
+			log.log(Level.SEVERE, "tabella " + this.getName() + "cancellazione di tutte le righe fallita", e.toString());
 		}
 
 		return false;
@@ -100,7 +102,7 @@ public class JDBCEVTable extends JDBCEVSelectABC {
 						separateValues += "'" + JDBCEVUtility.escapeForSQL(values[f.posInCSVFile]) + "'";
 						break;
 					default:
-						log.error("tipo non gestito: " + f.tipo);
+						log.log(Level.SEVERE, "tipo non gestito: " + f.tipo);
 						valuesTarget += values[f.posInCSVFile];
 						separateValues += values[f.posInCSVFile];
 					}
@@ -108,7 +110,7 @@ public class JDBCEVTable extends JDBCEVSelectABC {
 					if (f.getFieldName().equals("linea")) {
 						valuesTarget += " linea =" + linea;
 					} else {
-						log.error("campo " + f.getFieldName() + " con posizione in csv fuori range: " + f.posInCSVFile + " not in [0-"
+						log.log(Level.SEVERE, "campo " + f.getFieldName() + " con posizione in csv fuori range: " + f.posInCSVFile + " not in [0-"
 								+ values.length + "]");
 						return false;
 					}
@@ -122,15 +124,15 @@ public class JDBCEVTable extends JDBCEVSelectABC {
 		catch (SQLException e) {
 			// SQLite throws SQLException anzich�
 			// MySQLIntegrityConstraintViolationException
-			log.error("errore durante INSERT in tabella " + this.getName() + "\nstatement: " + s, e);
+			log.log(Level.SEVERE, "errore durante INSERT in tabella " + this.getName() + "\nstatement: " + s, e.toString());
 			return false;
 		}
 		catch (Exception e) {
 			if (!unique) {
-				log.error("INSERT in " + this.getName() + " valore gia presente, ma duplicati dovrebbero essere accettati");
+				log.log(Level.SEVERE, "INSERT in " + this.getName() + " valore gia presente, ma duplicati dovrebbero essere accettati");
 				return false;
 			}
-			log.warn("inserimento fallito: " + s, e);
+			log.log(Level.WARNING,  "inserimento fallito: " + s, e.toString());
 			return false;
 		}
 		return true;
@@ -138,11 +140,11 @@ public class JDBCEVTable extends JDBCEVSelectABC {
 
 	public boolean create() {
 		if (existsInDB()) {
-			log.warn("tabella " + this.getName() + " esiste gia");
+			log.log(Level.WARNING,  "tabella " + this.getName() + " esiste gia");
 			return true;
 		}
 		if (fields.size() <= 0) {
-			log.error("tabella " + this.getName() + " lista campi vuota");
+			log.log(Level.SEVERE, "tabella " + this.getName() + " lista campi vuota");
 			return false;
 		}
 		String createTableStStr = ""; // importante per la gestione delle
@@ -175,7 +177,7 @@ public class JDBCEVTable extends JDBCEVSelectABC {
 				log.info("creato indice su colonna " + idxStr + " per tabella: " + this.getName());
 			}
 		} catch (SQLException e) {
-			log.fatal("fallita creazione tabella", e);
+			log.log(Level.SEVERE, "fallita creazione tabella", e.toString());
 		}
 
 		return false;
@@ -201,14 +203,14 @@ public class JDBCEVTable extends JDBCEVSelectABC {
 		ResultSet rs;
 
 		if (this.getMyDBConn() == null) {
-			log.error("connessione nulla");
+			log.log(Level.SEVERE, "connessione nulla");
 			return false;
 		}
 
 		try {
 			dbm = this.getMyDBConn().getMetaData();
 		} catch (SQLException e) {
-			log.error("non riesco a ottenere i metadati", e);
+			log.log(Level.SEVERE, "non riesco a ottenere i metadati", e.toString());
 			return false;
 		}
 
@@ -224,7 +226,7 @@ public class JDBCEVTable extends JDBCEVSelectABC {
 				return true;
 			}
 		} catch (SQLException e) {
-			log.fatal("controllo se esiste tabella: " + tableName, e);
+			log.log(Level.SEVERE, "controllo se esiste tabella: " + tableName, e.toString());
 		}
 
 		return false;
@@ -238,6 +240,6 @@ public class JDBCEVTable extends JDBCEVSelectABC {
 
 	String tableName;
 
-	private static Logger log = LogManager.getLogger(JDBCEVTable.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(JDBCEVTable.class.getSimpleName());
 
 }

@@ -1,9 +1,9 @@
 package jax_rs;
 
 import com.enrico200165.utils.net.http.Utils;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.junit.Test;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
@@ -26,5 +26,5 @@ public class JAXRSUtils {
 		// assertEquals(true,WEBUtils.isRelative("//"));		
 	}
 
-	private static Logger log = LogManager.getLogger(JAXRSUtils.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(JAXRSUtils.class.getSimpleName());
 }

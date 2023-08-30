@@ -1,7 +1,9 @@
 package com.enrico200165.utils.ext_proc.single_thread;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import java.util.Collections;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 import java.util.ArrayList;
 
@@ -34,14 +36,12 @@ public abstract class aExecutor implements iExecutor {
 			cmd.add("command.com");
 			cmd.add("/C");
 		} else {
-			log.error("OS not recognized, exiting (FIX should be TRIVIAL, just add it");
+			log.log(Level.SEVERE, "OS not recognized, exiting (FIX should be TRIVIAL, just add it");
 			System.exit(1);
 			return null;
 		}
 		// append the cmd line arguments to the command line
-		for (int i = 0; i < argc.length; i++) {
-			cmd.add(argc[i]);
-		}
+        Collections.addAll(cmd, argc);
 
 		// spostiamo nell'array
 
@@ -83,5 +83,5 @@ public abstract class aExecutor implements iExecutor {
 	
 	abstract public void exec(String argsPar[], boolean isShellCommand);
 
-	private static Logger log = LogManager.getLogger(aExecutor.class);
+	private static final Logger log = LogManager.getLogManager().getLogger(aExecutor.class.getName());
 }

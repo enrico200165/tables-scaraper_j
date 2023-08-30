@@ -6,13 +6,13 @@ import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.configs.PageConfigABC;
 import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import com.enrico200165.weblistscraper.tools.*;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 import javax.ws.rs.core.Form;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 public class PageProcessor extends PageProcessorAbstr {
 
     public PageProcessor(HostConfig hostCOnfigPar, SessionManagerAbstr sess, PageConfigABC tcfgPar) {
@@ -20,13 +20,13 @@ public class PageProcessor extends PageProcessorAbstr {
         this.cw = sess.getClientWrapper();
         tcfg = tcfgPar;
         if (tcfgPar == null)
-            log.debug("per breakpoint");
+            log.log( Level.FINE, "per breakpoint");
     }
 
 
     @Override
     public void initTableScraperSpecific(TableScraperABC ts) {
-        log.error("should not pass here or make class abstract");
+        log.log(Level.SEVERE, "should not pass here or make class abstract");
     }
 
     @Override
@@ -43,7 +43,7 @@ public class PageProcessor extends PageProcessorAbstr {
             case LOGIN: {
                 if (cw.authenticate(hostConfig)) {
                 } else {
-                    log.error("could not authenticate");
+                    log.log(Level.SEVERE, "could not authenticate");
                 }
                 break;
             }
@@ -73,17 +73,17 @@ public class PageProcessor extends PageProcessorAbstr {
 
                     rw.analyzeResponse(true, cw);
                     if (!(rw.it().getStatus() == 200 || rw.it().getStatus() == 302)) {
-                        log.error("GESTIRE QUESTO ERRORE");
+                        log.log(Level.SEVERE, "GESTIRE QUESTO ERRORE");
                     }
                     scrapeFromRespWrapper(pageProcDescr, res, rw);
                 } else {
-                    log.error("GESTIRE QUESTO ERRORE");
+                    log.log(Level.SEVERE, "GESTIRE QUESTO ERRORE");
                 }
                 break;
             }
 
             default: {
-                log.error("operazione non gestita attualmente (POST?) esco");
+                log.log(Level.SEVERE, "operazione non gestita attualmente (POST?) esco");
                 System.exit(1);
                 break;
             }
@@ -93,7 +93,7 @@ public class PageProcessor extends PageProcessorAbstr {
             return res;
         }
         if (!res.result.isOk()) {
-            log.error("result is not OK:\n" + res);
+            log.log(Level.SEVERE, "result is not OK:\n" + res);
             return res;
         }
 
@@ -104,7 +104,7 @@ public class PageProcessor extends PageProcessorAbstr {
         ResponseWrapper rw;
         rw = cw.simpleGET(pageProcDescr.getUri(), 0);
         if (rw.it().getStatus() != 200) {
-            log.warn("some problem, getting page with form: " + rw.it().getStatus());
+            log.log(Level.WARNING,  "some problem, getting page with form: " + rw.it().getStatus());
             return null;
         }
 
@@ -127,13 +127,13 @@ public class PageProcessor extends PageProcessorAbstr {
             // log.info("added field to form: " + nvp.getKey() + " = " +
             // nvp.getValue());
         }
-        log.error("#################### post sembra fare login, perchè? ###############");
+        log.log(Level.SEVERE, "#################### post sembra fare login, perchè? ###############");
         //final String loginFormAction = pageProcDescr.getLoginFormAction();
         final String loginFormAction = pageProcDescr.getURL();
         rw = cw.simplePOST(loginFormAction, formFields, ibw, 0);
         rw.analyzeResponse(true, cw);
         if (!(rw.it().getStatus() == 200 || rw.it().getStatus() == 302)) {
-            log.error("");
+            log.log(Level.SEVERE, "");
         }
         return rw;
     }
@@ -165,6 +165,6 @@ public class PageProcessor extends PageProcessorAbstr {
     ClientWrapper cw;
     PageConfigABC tcfg;
     InvocationBuilderWrapper ibw;
-    private static Logger log = LogManager.getLogger(PageProcessor.class.getSimpleName());
+    private static Logger log = LogManager.getLogManager().getLogger(PageProcessor.class.getSimpleName());
 
 }

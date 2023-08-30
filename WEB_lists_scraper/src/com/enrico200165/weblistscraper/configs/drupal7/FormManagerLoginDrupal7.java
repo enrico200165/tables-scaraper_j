@@ -3,9 +3,9 @@ package com.enrico200165.weblistscraper.configs.drupal7;
 import com.enrico200165.utils.str_regex.NameValuePairString;
 import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.tools.FormManagerABC;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 import java.util.List;
 
 
@@ -26,5 +26,5 @@ public class FormManagerLoginDrupal7 extends FormManagerABC {
 		replaceVals.add(new NameValuePairString("aPASSWORD",hcfg.getPassword()));
 	}
 
-	private static Logger log = LogManager.getLogger(FormManagerLoginDrupal7.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(FormManagerLoginDrupal7.class.getSimpleName());
 }

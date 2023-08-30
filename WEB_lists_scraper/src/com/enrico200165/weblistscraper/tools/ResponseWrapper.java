@@ -3,8 +3,6 @@ package com.enrico200165.weblistscraper.tools;
 import com.enrico200165.utils.str_regex.NameValuePairString;
 import com.enrico200165.utils.str_regex.StringUtils;
 import com.enrico200165.weblistscraper.page.NextTablePageSelectorsABC;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -12,7 +10,9 @@ import org.jsoup.select.Elements;
 
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
-
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 public class ResponseWrapper {
 
     public ResponseWrapper(Response r) {
@@ -42,7 +42,7 @@ public class ResponseWrapper {
                 String location = null;
                 location = response.getHeaderString("Location");
                 if (followRedirect) {
-                    log.debug("follow redirect to: " + location);
+                    log.log( Level.FINE, "follow redirect to: " + location);
                     clientw.simpleGET(location, 0);
                 } else {
                     log.info("ignoring redirect to: " + location);
@@ -50,7 +50,7 @@ public class ResponseWrapper {
                 break;
             }
             case 403: {
-                log.error(statusString);
+                log.log(Level.SEVERE, statusString);
                 return false;
             }
             default: {
@@ -142,7 +142,7 @@ public class ResponseWrapper {
 
             if (found) {
                 log.info("found next table link: " + link.attr("href"));
-                log.error("rimuovere questo codice e ripristina normalità");
+                log.log(Level.SEVERE, "rimuovere questo codice e ripristina normalità");
                 // return link.attr("href");
                 return url;
             }
@@ -204,7 +204,9 @@ public class ResponseWrapper {
     }
 
     public String getResponseHTML() {
-        if (htmlPage == null) htmlPage = response.readEntity(String.class);
+
+        if (htmlPage == null)
+            htmlPage = response.readEntity(String.class);
         return htmlPage;
     }
 
@@ -231,5 +233,5 @@ public class ResponseWrapper {
     Response response;
     Document doc;
 
-    private static Logger log = LogManager.getLogger(ResponseWrapper.class.getSimpleName());
+    private static final Logger log = LogManager.getLogManager().getLogger(ResponseWrapper.class.getSimpleName());
 }

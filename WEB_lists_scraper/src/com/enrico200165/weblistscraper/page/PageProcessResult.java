@@ -1,8 +1,8 @@
 package com.enrico200165.weblistscraper.page;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 import com.enrico200165.weblistscraper.tools.Result;
 
 public class PageProcessResult {
@@ -31,5 +31,5 @@ public class PageProcessResult {
 	public Result result;
 	PageProcDescr pPDescr;
 
-	private static Logger log = LogManager.getLogger(PageProcessor.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(PageProcessor.class.getSimpleName());
 }

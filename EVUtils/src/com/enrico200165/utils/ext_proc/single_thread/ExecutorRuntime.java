@@ -1,7 +1,8 @@
 package com.enrico200165.utils.ext_proc.single_thread;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 
 public class ExecutorRuntime extends aExecutor {
@@ -30,12 +31,11 @@ public class ExecutorRuntime extends aExecutor {
 			int exitVal = proc.waitFor();
 			System.out.println("ExitValue: " + exitVal);
 		} catch (Throwable t) {
-			log.error(t);
-			t.printStackTrace();
+			log.log(Level.SEVERE,t.toString());
 		}
 	}
 
 
-	private static Logger log = LogManager.getLogger(ExecutorRuntime.class);
+	private static Logger log = LogManager.getLogManager().getLogger(ExecutorRuntime.class.getName());
 
 }

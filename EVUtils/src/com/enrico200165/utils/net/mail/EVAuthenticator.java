@@ -3,6 +3,7 @@ package com.enrico200165.utils.net.mail;
 import javax.mail.Authenticator;
 import javax.mail.PasswordAuthentication;
 
+
 public class EVAuthenticator extends Authenticator {
 
 	protected PasswordAuthentication getPasswordAuthentication() {

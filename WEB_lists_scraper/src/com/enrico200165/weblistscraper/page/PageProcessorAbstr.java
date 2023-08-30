@@ -5,9 +5,9 @@ import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 
 import com.enrico200165.weblistscraper.configs.HostConfig;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-/**
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.Level;/**
  * @author enrico
  * 
  *         ipotesi a posteriori: Elabora una pagina, eventualmente contenente una tabella, fa questo leggendo il descrittore della pagina ed
@@ -44,5 +44,5 @@ public abstract class PageProcessorAbstr {
 
 	HostConfig hostConfig;
 
-	private static Logger log = LogManager.getLogger(PageProcessorAbstr.class.getSimpleName());
+	private static Logger log = LogManager.getLogManager().getLogger(PageProcessorAbstr.class.getSimpleName());
 }

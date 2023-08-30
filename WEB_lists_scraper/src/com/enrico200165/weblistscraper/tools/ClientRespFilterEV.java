@@ -1,8 +1,6 @@
 package com.enrico200165.weblistscraper.tools;
 
 import com.enrico200165.cookies.CookieStoreEV;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 import javax.ws.rs.client.ClientRequestContext;
 import javax.ws.rs.client.ClientResponseContext;
@@ -15,6 +13,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 
 public class ClientRespFilterEV implements ClientResponseFilter {
@@ -27,10 +28,10 @@ public class ClientRespFilterEV implements ClientResponseFilter {
     @Override
     public void filter(ClientRequestContext requestContext, ClientResponseContext responseContext) throws IOException {
 
-        log.debug("status: " + responseContext.getStatus());
-        log.debug("date: " + responseContext.getDate());
-        log.debug("last-modified: " + responseContext.getLastModified());
-        log.debug("location: " + responseContext.getLocation());
+        log.log( Level.FINE, "status: " + responseContext.getStatus());
+        log.log( Level.FINE, "date: " + responseContext.getDate());
+        log.log( Level.FINE, "last-modified: " + responseContext.getLastModified());
+        log.log( Level.FINE, "location: " + responseContext.getLocation());
         String h = "\nheaders:\n";
         for (Entry<String, List<String>> header : responseContext.getHeaders().entrySet()) {
             h += "    " + header.getKey() + " :";
@@ -39,8 +40,8 @@ public class ClientRespFilterEV implements ClientResponseFilter {
             }
             h += "\n";
         }
-        log.debug(h);
-        log.debug("media-type: " + responseContext.getMediaType().getType());
+        log.log( Level.FINE, h);
+        log.log( Level.FINE, "media-type: " + responseContext.getMediaType().getType());
 
 
         // --- set cookies ---
@@ -48,7 +49,7 @@ public class ClientRespFilterEV implements ClientResponseFilter {
         if (cookies.size() > 0) {
             // cookies precedenti vanno rimossi a fine sessione, ex. session cookies, max age -1 (da implementare)
             // o uno per uno, ex ricevo existing cookie max age 0
-            log.debug("cookie size before " + cookieStore.size() + "\n" + cookieStore.dump());
+            log.log( Level.FINE, "cookie size before " + cookieStore.size() + "\n" + cookieStore.dump());
 
             // EVTODO
             int nr = 0;
@@ -61,9 +62,9 @@ public class ClientRespFilterEV implements ClientResponseFilter {
                 cookieStore.add(uri,hc);
                 nr++;
             }
-            log.debug(nr + " cookies ricevuti: \n" + cookieStore.dump());
+            log.log( Level.FINE, nr + " cookies ricevuti: \n" + cookieStore.dump());
         } else {
-            log.debug("no cookies");
+            log.log( Level.FINE, "no cookies");
         }
     }
 
@@ -87,5 +88,5 @@ public class ClientRespFilterEV implements ClientResponseFilter {
     Map<String, NewCookie> cr;
     CookieStoreEV cookieStore;
 
-    private static Logger log = LogManager.getLogger(ClientRespFilterEV.class.getSimpleName());
+    private static Logger log = LogManager.getLogManager().getLogger(ClientRespFilterEV.class.getSimpleName());
 }
