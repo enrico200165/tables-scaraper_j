@@ -10,8 +10,8 @@ import com.enrico200165.weblistscraper.tools.EntryCanActOnFilter;
 import com.enrico200165.weblistscraper.tools.EntryExcludeFilter;
 import com.enrico200165.weblistscraper.tools.EntryIncludeFilter;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 /**
  * Tage = table/page

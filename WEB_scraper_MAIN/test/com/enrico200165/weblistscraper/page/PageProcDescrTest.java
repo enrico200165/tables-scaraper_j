@@ -2,8 +2,8 @@ package com.enrico200165.weblistscraper.page;
 
 import com.enrico200165.weblistscraper.configs.HostConfig;
 import com.enrico200165.weblistscraper.tools.WebPageAction;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

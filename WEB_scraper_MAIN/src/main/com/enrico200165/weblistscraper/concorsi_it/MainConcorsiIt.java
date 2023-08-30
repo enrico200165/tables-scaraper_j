@@ -15,8 +15,8 @@ import com.enrico200165.weblistscraper.page.PageProcessor;
 import com.enrico200165.weblistscraper.page.TableScraperABC;
 import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import com.enrico200165.weblistscraper.tools.*;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientRequestFilter;

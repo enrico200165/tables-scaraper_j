@@ -1,4 +1,4 @@
-package com.enrico200165.weblistscraper.concorsi_it.entities;
+package main.com.enrico200165.weblistscraper.concorsi_it.entities;
 
 import com.enrico200165.utils.html.A;
 import com.enrico200165.utils.html.DIV;
@@ -7,13 +7,15 @@ import com.enrico200165.utils.html.Table;
 import com.enrico200165.utils.net.security.HashGeneratorUtils;
 import com.enrico200165.utils.str_regex.StringUtils;
 import com.enrico200165.weblistscraper.entities.EntityBase;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

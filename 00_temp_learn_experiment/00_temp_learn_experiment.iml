@@ -8,11 +8,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="jcraft.jsch" level="application" />
-    <orderEntry type="library" name="apache.logging.log4j.api" level="application" />
-    <orderEntry type="library" scope="TEST" name="junit" level="application" />
-    <orderEntry type="library" name="guicedee.services.log4j.core" level="application" />
-    <orderEntry type="library" name="glassfish.jersey.core.client" level="application" />
-    <orderEntry type="library" name="github.gotson.sqlite.jdbc" level="application" />
+    <orderEntry type="library" name="log4j" level="project" />
+    <orderEntry type="library" name="jcraft.jsch" level="project" />
+    <orderEntry type="library" scope="TEST" name="junit" level="project" />
   </component>
 </module>

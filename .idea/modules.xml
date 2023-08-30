@@ -5,7 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/00_temp_learn_experiment/00_temp_learn_experiment.iml" filepath="$PROJECT_DIR$/00_temp_learn_experiment/00_temp_learn_experiment.iml" />
       <module fileurl="file://$PROJECT_DIR$/EVUtils/EVUtils.iml" filepath="$PROJECT_DIR$/EVUtils/EVUtils.iml" />
       <module fileurl="file://$PROJECT_DIR$/WEB_scraper_MAIN/MAIN.iml" filepath="$PROJECT_DIR$/WEB_scraper_MAIN/MAIN.iml" />
-      <module fileurl="file://$PROJECT_DIR$/WEB_tables_scraper/WEB_tables_scraper.iml" filepath="$PROJECT_DIR$/WEB_tables_scraper/WEB_tables_scraper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WEB_lists_scraper/WEB_lists_scraper.iml" filepath="$PROJECT_DIR$/WEB_lists_scraper/WEB_lists_scraper.iml" />
     </modules>
   </component>
 </project>
