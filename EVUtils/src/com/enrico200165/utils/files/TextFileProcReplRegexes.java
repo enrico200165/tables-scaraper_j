@@ -36,6 +36,6 @@ public class TextFileProcReplRegexes implements TextLineProcessorI {
     }
 
     List<NameValuePairString> replaces;
-    private static Logger log = LogManager.getLogManager().getLogger(TextFileProcReplRegexes.class.getName());
+    static Logger log=Logger.getLogger(TextFileProcReplRegexes.class.getName());
 
 }

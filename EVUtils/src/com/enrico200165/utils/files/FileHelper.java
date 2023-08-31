@@ -352,5 +352,5 @@ public class FileHelper implements FileProcessorI {
 											// perform()
 	boolean intoInterBuff; // holds parameter for functionoid perform()
 
-	private static Logger log = LogManager.getLogManager().getLogger(FileHelper.class.getName());
+	static Logger log=Logger.getLogger(FileHelper.class.getName());
 }

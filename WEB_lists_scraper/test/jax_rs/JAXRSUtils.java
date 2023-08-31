@@ -26,5 +26,5 @@ public class JAXRSUtils {
 		// assertEquals(true,WEBUtils.isRelative("//"));		
 	}
 
-	private static Logger log = LogManager.getLogManager().getLogger(JAXRSUtils.class.getSimpleName());
+	static Logger log=Logger.getLogger(JAXRSUtils.class.getSimpleName());
 }

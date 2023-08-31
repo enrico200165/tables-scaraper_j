@@ -103,5 +103,5 @@ public class FileDirTreeWalk {
 	String _baseName;
 	ArrayList<TextFileLine> _globTextFileLine;
 
-	private static Logger log = LogManager.getLogManager().getLogger(FileDirTreeWalk.class.getName());
+	static Logger log=Logger.getLogger(FileDirTreeWalk.class.getName());
 }

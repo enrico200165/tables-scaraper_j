@@ -1,7 +1,6 @@
 package com.enrico200165.utils.ext_proc.single_thread;
 
 import java.util.logging.Level;
-import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 
@@ -36,6 +35,6 @@ public class ExecutorRuntime extends aExecutor {
 	}
 
 
-	private static Logger log = LogManager.getLogManager().getLogger(ExecutorRuntime.class.getName());
+	static Logger log=Logger.getLogger(ExecutorRuntime.class.getName());
 
 }

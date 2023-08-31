@@ -362,7 +362,7 @@ public class ClientWrapper {
     int pageLoadDelay;
     FormManagerABC fm;
 
-    private static Logger log = LogManager.getLogManager().getLogger(ClientWrapper.class.getSimpleName());
+    static Logger log=Logger.getLogger(ClientWrapper.class.getSimpleName());
 
 
 }

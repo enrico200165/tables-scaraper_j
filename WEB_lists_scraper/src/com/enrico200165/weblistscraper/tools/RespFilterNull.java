@@ -20,5 +20,5 @@ public class RespFilterNull implements ClientResponseFilter {
 
 	}
 
-	private static Logger log = LogManager.getLogManager().getLogger(RespFilterNull.class.getSimpleName());
+	static Logger log=Logger.getLogger(RespFilterNull.class.getSimpleName());
 }

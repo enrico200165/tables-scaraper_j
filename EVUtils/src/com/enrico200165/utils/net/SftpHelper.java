@@ -231,6 +231,6 @@ public class SftpHelper {
 
 	private static String help = "guarda il codice originale per l'help";
 
-	private static Logger log = LogManager.getLogManager().getLogger(SftpHelper.class.getSimpleName());
+	static Logger log=Logger.getLogger(SftpHelper.class.getSimpleName());
 
 }

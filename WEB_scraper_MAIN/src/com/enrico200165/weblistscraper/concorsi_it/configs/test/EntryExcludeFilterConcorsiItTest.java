@@ -2,6 +2,8 @@ package com.enrico200165.weblistscraper.concorsi_it.configs.test;
 
 import com.enrico200165.weblistscraper.tools.EntryExcludeFilter;
 import com.enrico200165.weblistscraper.tools.EntryExcludeFilterVanilla;
+
+
 import org.jsoup.nodes.Element;
 import org.jsoup.parser.Tag;
 import org.junit.After;
@@ -49,5 +51,5 @@ public class EntryExcludeFilterConcorsiItTest {
 	
 	EntryExcludeFilter filter;
 	
-	private static Logger log = LogManager.getLogManager().getLogger(EntryExcludeFilterConcorsiItTest.class.getName());
+	static Logger log=Logger.getLogger(EntryExcludeFilterConcorsiItTest.class.getName());
 }

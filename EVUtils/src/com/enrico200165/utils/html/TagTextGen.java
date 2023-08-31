@@ -107,6 +107,6 @@ public class TagTextGen {
 		return indent;
 	}
 
-	private static Logger log = LogManager.getLogManager().getLogger(TagTextGen.class.getSimpleName());
+	static Logger log=Logger.getLogger(TagTextGen.class.getSimpleName());
 
 }

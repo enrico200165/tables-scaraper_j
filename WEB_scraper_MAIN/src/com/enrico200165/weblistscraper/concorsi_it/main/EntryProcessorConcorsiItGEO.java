@@ -51,5 +51,5 @@ public class EntryProcessorConcorsiItGEO extends  EntryProcessorConcorsiBase {
 	}
 	
 	
-	private static Logger log = LogManager.getLogManager().getLogger(EntryProcessorConcorsiItGEO.class.getSimpleName());
+	static Logger log=Logger.getLogger(EntryProcessorConcorsiItGEO.class.getSimpleName());
 }

@@ -190,7 +190,7 @@ public class Utils {
 	}
 
 
-	private static Logger log = LogManager.getLogManager().getLogger(Utils.class.getSimpleName());
+	static Logger log=Logger.getLogger(Utils.class.getSimpleName());
 
 
 }

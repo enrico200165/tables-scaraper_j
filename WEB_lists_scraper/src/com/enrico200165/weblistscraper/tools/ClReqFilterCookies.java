@@ -97,5 +97,5 @@ public class ClReqFilterCookies implements ClientRequestFilter {
 
 	CookieStoreEV cookieStore;
 
-	private static Logger log = LogManager.getLogManager().getLogger(ClReqFilterCookies.class.getSimpleName());
+	static Logger log=Logger.getLogger(ClReqFilterCookies.class.getSimpleName());
 }

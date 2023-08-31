@@ -49,5 +49,5 @@ public class PageProcessorConcorsiIt extends PageProcessor {
 	SessionManagerAbstr sesMgr;
 	ConcorsiDB concDB;
 
-	private static Logger log = LogManager.getLogManager().getLogger(PageProcessorConcorsiIt.class.getSimpleName());
+	static Logger log=Logger.getLogger(PageProcessorConcorsiIt.class.getSimpleName());
 }

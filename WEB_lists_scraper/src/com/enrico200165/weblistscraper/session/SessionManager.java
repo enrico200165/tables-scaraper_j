@@ -54,5 +54,5 @@ public class SessionManager extends SessionManagerAbstr {
 
 	
 	
-	private static Logger log = LogManager.getLogManager().getLogger(SessionManager.class.getSimpleName());
+	static Logger log=Logger.getLogger(SessionManager.class.getSimpleName());
 }

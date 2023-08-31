@@ -9,5 +9,5 @@ import java.util.logging.Level;
 public class GlobalConfigConcorsiIt {
 
 
-    private static Logger log = LogManager.getLogManager().getLogger(PageProcDescr.class.getSimpleName());
+    static Logger log=Logger.getLogger(PageProcDescr.class.getSimpleName());
 }

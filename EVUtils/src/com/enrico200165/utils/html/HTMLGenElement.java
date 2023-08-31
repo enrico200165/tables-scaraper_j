@@ -151,5 +151,5 @@ public class HTMLGenElement implements IHTMLContent {
 	ArrayList<Attributoid> attributoids;
 	ArrayList<HTMLGenElement> subElements;
 
-	private static Logger log = LogManager.getLogManager().getLogger(HTMLGenElement.class.getName());
+	static Logger log=Logger.getLogger(HTMLGenElement.class.getName());
 }

@@ -52,5 +52,5 @@ public class EntryExcludeFilterVanilla extends EntryExcludeFilter {
 		return ret;
 	}
 
-	private static Logger log = LogManager.getLogManager().getLogger(EntryExcludeFilterVanilla.class.getName());
+	static Logger log=Logger.getLogger(EntryExcludeFilterVanilla.class.getName());
 }

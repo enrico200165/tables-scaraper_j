@@ -157,5 +157,5 @@ abstract public class TableScraperABC {
     protected SessionManagerAbstr smgr;
     protected PageConfigABC pageConfig;
 
-    private static Logger log = LogManager.getLogManager().getLogger(TableScraperABC.class.getSimpleName());
+    static Logger log=Logger.getLogger(TableScraperABC.class.getSimpleName());
 }

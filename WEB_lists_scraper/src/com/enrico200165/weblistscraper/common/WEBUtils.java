@@ -25,7 +25,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import java.util.logging.Level;
-import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 
@@ -423,5 +422,5 @@ public class WEBUtils {
         return true;
     }
 
-    private static Logger log = LogManager.getLogManager().getLogger(WEBUtils.class.getSimpleName());
+    static Logger log=Logger.getLogger(WEBUtils.class.getSimpleName());
 }

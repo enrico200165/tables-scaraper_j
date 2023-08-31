@@ -141,5 +141,5 @@ public abstract class SessionManagerAbstr {
 
     ArrayList<PageProcDescr> pageProcDescrs;
 
-    private static Logger log = LogManager.getLogManager().getLogger(SessionManagerAbstr.class.getSimpleName());
+    static Logger log=Logger.getLogger(SessionManagerAbstr.class.getSimpleName());
 }

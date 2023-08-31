@@ -1,5 +1,6 @@
 package com.enrico200165.utils.config;
 
+import com.enrico200165.utils.various.Utl;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.IOException;
@@ -7,7 +8,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Map;
 import java.util.logging.Level;
-import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public class YAML2Map {
@@ -42,5 +42,5 @@ public class YAML2Map {
     }
 
 
-    private static final Logger log = LogManager.getLogManager().getLogger(YAML2Map.class.getName());
+    static Logger log=Logger.getLogger(Utl.class.getSimpleName());
 }

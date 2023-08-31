@@ -70,5 +70,5 @@ public class Experiment  {
 	}
 
 
-	private static Logger log = LogManager.getLogManager().getLogger(Experiment.class.getSimpleName());
+	static Logger log=Logger.getLogger(Experiment.class.getSimpleName());
 }

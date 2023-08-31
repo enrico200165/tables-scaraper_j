@@ -52,5 +52,5 @@ public abstract class InvocationBuilderWrapper {
 	
 	protected Map<String, String> headers;
 
-	private static Logger log = LogManager.getLogManager().getLogger(InvocationBuilderWrapper.class.getSimpleName());
+	static Logger log=Logger.getLogger(InvocationBuilderWrapper.class.getSimpleName());
 }

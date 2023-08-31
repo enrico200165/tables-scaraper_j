@@ -52,5 +52,5 @@ public class EntryProcessorConcorsiItSearch extends  EntryProcessorConcorsiBase 
 		return true;
 	}
 
-	private static Logger log = LogManager.getLogManager().getLogger(EntryProcessorConcorsiItSearch.class.getSimpleName());
+	static Logger log=Logger.getLogger(EntryProcessorConcorsiItSearch.class.getSimpleName());
 }

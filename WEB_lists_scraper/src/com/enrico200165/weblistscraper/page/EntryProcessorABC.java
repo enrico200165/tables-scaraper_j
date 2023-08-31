@@ -50,5 +50,5 @@ public abstract class EntryProcessorABC {
 	protected SessionManagerAbstr smgr;
 	protected PageConfigABC pageConfig;
 		
-	private static Logger log = LogManager.getLogManager().getLogger(EntryProcessorABC.class.getSimpleName());
+	static Logger log=Logger.getLogger(EntryProcessorABC.class.getSimpleName());
 }

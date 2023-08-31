@@ -13,9 +13,10 @@
     <orderEntry type="library" name="yaml.snakeyaml" level="project" />
     <orderEntry type="library" name="javax.mail" level="project" />
     <orderEntry type="library" name="jsoup" level="project" />
-    <orderEntry type="library" name="javax.ws.rs.api" level="project" />
     <orderEntry type="library" name="javax.persistence.api" level="project" />
     <orderEntry type="library" name="junit" level="project" />
     <orderEntry type="library" name="eclipse.persistence.javax" level="project" />
+    <orderEntry type="library" name="glassfish.jersey.core.client" level="project" />
+    <orderEntry type="library" name="glassfish.jersey.media.json.jackson" level="project" />
   </component>
 </module>

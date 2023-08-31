@@ -39,5 +39,5 @@ public class EntryHTMLIncludeFilter extends FilterBase {
         return ret;
     }
 
-    private static Logger log = LogManager.getLogManager().getLogger(EntryHTMLIncludeFilter.class.getSimpleName());
+    static Logger log=Logger.getLogger(EntryHTMLIncludeFilter.class.getSimpleName());
 }

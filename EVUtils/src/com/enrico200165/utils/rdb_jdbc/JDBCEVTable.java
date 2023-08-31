@@ -240,6 +240,6 @@ public class JDBCEVTable extends JDBCEVSelectABC {
 
 	String tableName;
 
-	private static Logger log = LogManager.getLogManager().getLogger(JDBCEVTable.class.getSimpleName());
+	static Logger log=Logger.getLogger(JDBCEVTable.class.getSimpleName());
 
 }

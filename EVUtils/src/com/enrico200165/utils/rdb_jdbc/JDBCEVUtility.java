@@ -63,5 +63,5 @@ public class JDBCEVUtility {
 		return d;
 	}
 
-	private static Logger log = LogManager.getLogManager().getLogger(JDBCEVUtility.class.getSimpleName());
+	static Logger log=Logger.getLogger(JDBCEVUtility.class.getSimpleName());
 }

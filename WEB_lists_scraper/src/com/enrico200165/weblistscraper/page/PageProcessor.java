@@ -165,6 +165,6 @@ public class PageProcessor extends PageProcessorAbstr {
     ClientWrapper cw;
     PageConfigABC tcfg;
     InvocationBuilderWrapper ibw;
-    private static Logger log = LogManager.getLogManager().getLogger(PageProcessor.class.getSimpleName());
+    static Logger log=Logger.getLogger(PageProcessor.class.getSimpleName());
 
 }

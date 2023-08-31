@@ -44,5 +44,5 @@ public abstract class PageProcessorAbstr {
 
 	HostConfig hostConfig;
 
-	private static Logger log = LogManager.getLogManager().getLogger(PageProcessorAbstr.class.getSimpleName());
+	static Logger log=Logger.getLogger(PageProcessorAbstr.class.getSimpleName());
 }

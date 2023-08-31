@@ -30,5 +30,5 @@ public class RDBManagerDB2 extends RDBManager {
 		return DBMSFullURL;
 	}
 
-	private static Logger log = LogManager.getLogManager().getLogger(RDBManagerDB2.class.getSimpleName());
+	static Logger log=Logger.getLogger(RDBManagerDB2.class.getSimpleName());
 }

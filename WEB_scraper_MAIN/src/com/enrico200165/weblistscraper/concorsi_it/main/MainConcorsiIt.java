@@ -15,12 +15,12 @@ import com.enrico200165.weblistscraper.page.PageProcessor;
 import com.enrico200165.weblistscraper.page.TableScraperABC;
 import com.enrico200165.weblistscraper.session.SessionManagerAbstr;
 import com.enrico200165.weblistscraper.tools.*;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
-import java.util.logging.Level;
+
+
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientRequestFilter;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 // import com.sun.security.ntlm.Client;
 
@@ -153,5 +153,6 @@ public class MainConcorsiIt {
 
 	}
 
-	private static Logger log = LogManager.getLogManager().getLogger(MainConcorsiIt.class.getSimpleName());
+	// static Logger log=Logger.getLogger(MainConcorsiIt.class.getSimpleName());
+	static Logger log=Logger.getLogger(MainConcorsiIt.class.getSimpleName());
 }

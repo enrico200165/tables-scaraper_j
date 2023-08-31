@@ -124,5 +124,5 @@ public abstract class EntryProcessorCommunity extends EntryProcessorABC {
     protected ClientWrapper cw;
 
 
-    private static Logger log = LogManager.getLogManager().getLogger(EntryProcessorCommunity.class.getSimpleName());
+    static Logger log=Logger.getLogger(EntryProcessorCommunity.class.getSimpleName());
 }

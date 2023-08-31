@@ -13,7 +13,6 @@
     <orderEntry type="library" name="log4j" level="project" />
     <orderEntry type="library" name="junit" level="project" />
     <orderEntry type="library" name="javax.persistence.api" level="project" />
-    <orderEntry type="library" name="javax.ws.rs.api" level="project" />
     <orderEntry type="library" name="jcraft.jsch" level="project" />
   </component>
 </module>

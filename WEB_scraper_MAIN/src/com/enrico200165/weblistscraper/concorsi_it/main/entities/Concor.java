@@ -324,5 +324,5 @@ public class Concor extends EntityBase {
 
 	// --- fine scheda di sintesi ---
 
-	private static Logger log = LogManager.getLogManager().getLogger(Concor.class.getSimpleName());
+	static Logger log=Logger.getLogger(Concor.class.getSimpleName());
 }

@@ -46,6 +46,6 @@ public class EntryIncludeFilterVanilla extends com.enrico200165.weblistscraper.t
 		return ret;
 	}
 
-	private static Logger log = LogManager.getLogManager().getLogger(EntryIncludeFilterVanilla.class.getSimpleName());
+	static Logger log=Logger.getLogger(EntryIncludeFilterVanilla.class.getSimpleName());
 
 }

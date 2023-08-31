@@ -59,5 +59,5 @@ public class RDBManagerMicrosoftSQLSrv extends RDBManager {
 	}
 
 	String host;
-	private static Logger log = LogManager.getLogManager().getLogger(RDBManagerMicrosoftSQLSrv.class.getSimpleName());
+	static Logger log=Logger.getLogger(RDBManagerMicrosoftSQLSrv.class.getSimpleName());
 }

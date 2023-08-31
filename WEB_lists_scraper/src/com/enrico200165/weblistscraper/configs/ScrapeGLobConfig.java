@@ -157,5 +157,5 @@ public class ScrapeGLobConfig extends PageConfigABC {
 	protected ChannelIFC channelInfo;
     SessionLimitsBase sessionLimits;
 
-	private static Logger log = LogManager.getLogManager().getLogger(ScrapeGLobConfig.class.getSimpleName());
+	static Logger log=Logger.getLogger(ScrapeGLobConfig.class.getSimpleName());
 }

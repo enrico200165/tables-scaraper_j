@@ -1,14 +1,12 @@
 package com.enrico200165.utils.various;
 
 
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
-import java.util.logging.Level;
-
 import java.io.File;
 import java.lang.management.ManagementFactory;
 import java.lang.management.RuntimeMXBean;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -400,5 +398,5 @@ public class Utl {
 
     public static final String ENCODING_UTF8 = "UTF8";
 
-    private static Logger log = LogManager.getLogManager().getLogger(Utl.class.getSimpleName());
+    static Logger log=Logger.getLogger(Utl.class.getSimpleName());
 }

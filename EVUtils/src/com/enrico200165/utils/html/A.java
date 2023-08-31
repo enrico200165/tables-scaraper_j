@@ -20,5 +20,5 @@ public class A extends HTMLGenElement {
 	String url;
 	String description;
 	
-	private static Logger log = LogManager.getLogManager().getLogger(A.class.getSimpleName());
+	static Logger log=Logger.getLogger(A.class.getSimpleName());
 }

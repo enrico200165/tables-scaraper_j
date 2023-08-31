@@ -119,5 +119,5 @@ public class StringUtils {
 	}
 	
 	
-	private static Logger log = LogManager.getLogManager().getLogger(StringUtils.class.getSimpleName());
+	static Logger log=Logger.getLogger(StringUtils.class.getSimpleName());
 }

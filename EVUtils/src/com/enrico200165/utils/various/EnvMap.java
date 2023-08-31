@@ -38,5 +38,5 @@ public class EnvMap {
 	}
 
 	static Map<String, String> singletonEnvMap;
-	private static Logger log = LogManager.getLogManager().getLogger(EnvMap.class.getSimpleName());
+	static Logger log=Logger.getLogger(EnvMap.class.getSimpleName());
 }

@@ -9,7 +9,6 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
-import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 
@@ -183,5 +182,5 @@ public class ConcorsiDB {
     }
 
     EntityManager em;
-    private static Logger log = LogManager.getLogManager().getLogger(ConcorsiDB.class.getSimpleName());
+    static Logger log=Logger.getLogger(ConcorsiDB.class.getSimpleName());
 }

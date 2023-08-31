@@ -24,5 +24,5 @@ public class DIV extends HTMLGenElement {
 		}
 		this.subElements.add(e);
 	}
-	private static Logger log = LogManager.getLogManager().getLogger(DIV.class.getName());
+	static Logger log=Logger.getLogger(DIV.class.getName());
 }

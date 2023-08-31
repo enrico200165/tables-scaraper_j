@@ -130,5 +130,5 @@ public class SessionLimitsBase {
 	int contacts;
 	int reads;
 
-	private static Logger log = LogManager.getLogManager().getLogger(SessionLimitsBase.class.getSimpleName());
+	static Logger log=Logger.getLogger(SessionLimitsBase.class.getSimpleName());
 }

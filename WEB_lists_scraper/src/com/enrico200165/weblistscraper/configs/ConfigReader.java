@@ -505,5 +505,5 @@ public class ConfigReader   {
     // todo qui solo per semplificare, dovrebbe essere locale
     ScrapeGLobConfig gCfg = null; // new ScrapeGLobConfig();
 
-    private static Logger log = LogManager.getLogManager().getLogger(ConfigReader.class.getSimpleName());
+    static Logger log=Logger.getLogger(ConfigReader.class.getSimpleName());
 }

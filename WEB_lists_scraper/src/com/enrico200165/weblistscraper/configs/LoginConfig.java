@@ -17,5 +17,5 @@ public class LoginConfig {
 
     public String jsoupLoginFormSelector;
 
-    private static Logger log = LogManager.getLogManager().getLogger(LoginConfig.class.getSimpleName());
+    static Logger log=Logger.getLogger(LoginConfig.class.getSimpleName());
 }
